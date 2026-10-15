@@ -1,0 +1,243 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>રાજ્ય સરકાર — Teaching Guide</title>
+<style>:root{
+  --bg:#FBF9F4; --surface:#FFFFFF; --surface-2:#F3F0E7;
+  --ink:#241F16; --ink-2:#5B5647; --ink-3:#8C8672;
+  --line:#E4DFD0;
+  --accent:#8B5E34; --accent-ink:#3E2A17; --accent-bg:#F1E4D3;
+  --formula:#1F4E42; --formula-bg:#E3F0EA; --formula-line:#9FC6B7;
+  --exam:#7A2E2E; --exam-bg:#F6E4E1; --exam-line:#DBA9A4;
+  --mistake:#8A5A00; --mistake-bg:#FDF1D9; --mistake-line:#E9C877;
+  --check:#2E4E7A; --check-bg:#E4ECF6; --check-line:#A9C0DB;
+  --why:#5B5647; --why-bg:#F3F0E7; --why-line:#DAD4C2;
+  --font-display:'Fraunces','Noto Sans Gujarati',Georgia,serif;
+  --font-body:'Source Sans 3','Noto Sans Gujarati',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+    --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+    --line:#3A3428;
+    --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+    --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+    --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+    --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+    --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+    --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+  --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+  --line:#3A3428;
+  --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+  --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+  --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+  --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+  --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+  --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.75;padding:0 16px;font-size:16px}
+.wrap{max-width:760px;margin:0 auto;padding-block:32px 80px}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;text-wrap:balance;color:var(--ink)}
+h1{font-size:clamp(28px,6vw,38px);margin:0 0 6px}
+.subtitle{color:var(--ink-2);font-size:15px;margin:0 0 28px}
+h2{font-size:24px;margin:0 0 4px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+h2 .num{color:var(--accent);font-family:var(--font-mono);font-size:15px;font-weight:600}
+.part-why{color:var(--ink-2);font-size:14.5px;margin:0 0 18px;font-style:italic}
+h3{font-size:18px;margin:30px 0 10px;color:var(--accent-ink)}
+p{margin:0 0 12px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:36px}
+.legend-item{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-2)}
+.dot{width:10px;height:10px;border-radius:3px;flex:none}
+.dot.formula{background:var(--formula)} .dot.exam{background:var(--exam)} .dot.mistake{background:var(--mistake)}
+.dot.check{background:var(--check)} .dot.concept{background:var(--accent)} .dot.why{background:var(--why)}
+.part{padding:32px 0;border-top:1px solid var(--line)}
+.part:first-of-type{border-top:none}
+.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:32px}
+.toc ol{margin:8px 0 0;padding-left:0;list-style:none}
+.toc li{margin-bottom:5px;font-size:14.5px}
+.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ink-3)}
+.toc .n{font-family:var(--font-mono);color:var(--accent);font-size:13px;font-weight:600;margin-right:6px}
+.box{border-radius:12px;padding:14px 18px;margin:14px 0;border:1px solid;font-size:15px}
+.box .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;display:block}
+.formula-box{background:var(--formula-bg);border-color:var(--formula-line)}
+.formula-box .label{color:var(--formula)}
+.formula-box .f{font-family:var(--font-mono);font-size:18px;color:var(--formula);font-weight:600;margin:4px 0}
+.formula-box .meaning{color:var(--ink-2);font-size:14px}
+.concept-box{background:var(--surface);border-color:var(--line);border-left:3px solid var(--accent)}
+.concept-box .label{color:var(--accent)}
+.exam-box{background:var(--exam-bg);border-color:var(--exam-line)} .exam-box .label{color:var(--exam)}
+.mistake-box{background:var(--mistake-bg);border-color:var(--mistake-line)} .mistake-box .label{color:var(--mistake)}
+.check-box{background:var(--check-bg);border-color:var(--check-line)} .check-box .label{color:var(--check)}
+.why-box{background:var(--why-bg);border-color:var(--why-line)} .why-box .label{color:var(--why)}
+.extra-box{background:var(--surface);border:1px dashed var(--ink-3)} .extra-box .label{color:var(--ink-3)}
+.parent-box{background:var(--accent-bg);border-color:var(--accent)} .parent-box .label{color:var(--accent-ink)}
+.outcome{background:var(--surface);border:1px solid var(--accent);border-radius:12px;padding:14px 18px;margin:0 0 16px}
+.outcome .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;display:block}
+.submap{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 6px}
+.submap span{background:var(--surface-2);border:1px solid var(--line);border-radius:20px;padding:4px 12px;font-size:12.5px;color:var(--ink-2)}
+.next-line{font-size:14px;color:var(--ink-2);margin-top:18px;padding-top:14px;border-top:1px dashed var(--line)}
+.next-line b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{padding:8px 10px;border:1px solid var(--line);text-align:center}
+th{background:var(--surface-2);font-weight:600;color:var(--ink-2);font-size:12.5px}
+td.rowlabel{text-align:left;color:var(--ink-2);font-weight:600;background:var(--surface-2)}
+td.l{text-align:left}
+.tblwrap{overflow-x:auto}
+.example{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:14px 0;font-size:15px}
+.example .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px;display:block}
+.example .step{margin:3px 0}
+.example .step b{color:var(--ink-2);font-weight:600}
+.mono{font-family:var(--font-mono)}
+.remember{background:var(--accent-bg);border:1px solid var(--accent);border-radius:12px;padding:16px 20px;margin:16px 0}
+.remember .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:8px;display:block}
+.remember ol{margin:0;padding-left:18px} .remember li{margin-bottom:5px}
+.badge{display:inline-block;font-size:11px;font-family:var(--font-mono);padding:2px 8px;border-radius:20px;background:var(--exam-bg);color:var(--exam);border:1px solid var(--exam-line);margin-left:6px;vertical-align:middle}
+.diagram{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px;margin:16px 0}
+.diagram svg{display:block;width:100%;height:auto}
+.diagram-cap{text-align:center;font-size:13px;color:var(--ink-3);margin-top:6px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:600px){.pair{grid-template-columns:1fr}}
+.pair .diagram{margin:6px 0}
+.jumpicon{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:var(--formula);color:var(--surface);text-decoration:none;font-size:11px;font-weight:700;vertical-align:middle;margin-left:4px}
+.src{font-size:12.5px;color:var(--ink-3)}
+
+.session{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:6px 20px 18px;margin:28px 0}
+.session h2{margin-top:16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px}
+.meta span{background:var(--surface-2);border:1px solid var(--line);border-radius:20px;padding:3px 12px;font-size:12.5px;color:var(--ink-2)}
+.step{border-left:3px solid var(--line);padding:2px 0 2px 14px;margin:16px 0}
+.step .st{font-family:var(--font-mono);font-size:12px;font-weight:600;color:var(--accent);letter-spacing:.04em}
+.say{background:var(--accent-bg);border-radius:10px;padding:10px 14px;margin:8px 0;font-size:15px}
+.say::before{content:"🗣 તમે કહો: ";font-weight:600;color:var(--accent-ink)}
+.do{background:var(--formula-bg);border-radius:10px;padding:10px 14px;margin:8px 0;font-size:15px}
+.do::before{content:"✋ કરાવો: ";font-weight:600;color:var(--formula)}
+.ask{background:var(--check-bg);border-radius:10px;padding:10px 14px;margin:8px 0;font-size:15px}
+.ask::before{content:"❓ પૂછો: ";font-weight:600;color:var(--check)}
+.ask .ans{color:var(--ink-2);font-size:13.5px;display:block;margin-top:4px}
+.fix{background:var(--mistake-bg);border-radius:10px;padding:10px 14px;margin:8px 0;font-size:15px}
+.fix::before{content:"🔧 ભૂલ થાય તો: ";font-weight:600;color:var(--mistake)}
+.exit{background:var(--exam-bg);border:1px solid var(--exam-line);border-radius:10px;padding:10px 14px;margin:14px 0 4px;font-size:15px}
+.exit::before{content:"✅ આગળ વધતાં પહેલાં (3 માંથી 3 સાચા): ";font-weight:600;color:var(--exam)}
+.hw{font-size:14px;color:var(--ink-2);margin-top:10px}
+.plan td{font-size:13.5px}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@500;600&family=Noto+Sans+Gujarati:wght@400;600&display=swap" rel="stylesheet">
+<div class="wrap">
+<h1>પ્રકરણ 16 · રાજ્ય સરકાર — Teaching Guide</h1>
+<p class="subtitle">વાલી / શિક્ષક માટે · બાળકને પગલે-પગલે શીખવવાની યોજના · ધોરણ 7 સામાજિક વિજ્ઞાન · સાથે વાપરો: <a href="../Chapter%20Notes/Ch16%20State%20Government.html#intro" target="ss16ChapterNotes">Chapter Notes</a> અને <a href="../Revision%20Sheets/Ch16%20State%20Government%20-%20Revision%20Sheet.html">Revision Sheet</a></p>
+
+<div class="toc" id="plan">
+<b>આ guide કેવી રીતે વાપરવી</b>
+<ol>
+<li><span class="n">1</span>દરેક session ≈ 30 મિનિટ. આ પ્રકરણમાં ગુજરાત વિધાનસભા અને મુખ્યમંત્રી જેવા નામો છે — તેમના નામ બાળક પોતાની આસપાસથી શોધે.</li>
+<li><span class="n">2</span>ક્રમ: <b>તમે કહો</b> → <b>કરાવો</b> → <b>પૂછો</b>.</li>
+<li><span class="n">3</span>ભૂલ થાય તો <b>ભૂલ થાય તો</b> બોક્સની કડી જ સુધારો.</li>
+<li><span class="n">4</span>3 માંથી 3 exit-પ્રશ્ન સાચા થાય પછી જ આગળનો session.</li>
+</ol>
+</div>
+
+<h3>સામગ્રી (ઘરમાં મળી જાય)</h3>
+<div class="tblwrap"><table class="plan"><tr><th>વસ્તુ</th><th>શેના માટે</th></tr>
+<tr><td class="rowlabel">સફેદ કાગળ, રંગીન પેન</td><td class="l">S1: ત્રણ અંગોનું ચિત્ર; S2: 182 બેઠકનું ચિત્ર</td></tr>
+<tr><td class="rowlabel">ઈન્ટરનેટ ન હોય તો: છાપું કે પાઠ્યપુસ્તક પાન 98</td><td class="l">S2: ધારાસભ્યનું નામ શોધો</td></tr>
+<tr><td class="rowlabel">ઘરમાં ખાલી ડબ્બા (ત્રણ)</td><td class="l">S1: ત્રણ અંગો = ત્રણ ડબ્બા</td></tr></table></div>
+
+<h3>Session નકશો</h3>
+<div class="tblwrap"><table class="plan"><tr><th>#</th><th>વિષય</th><th>Notes</th><th>ઘરકામ (સ્વાધ્યાય પાન 107)</th></tr>
+<tr><td>1</td><td class="l">ત્રણ અંગો, રાજ્યપાલ, મુખ્યમંત્રી</td><td>01, 03</td><td class="l">પ્ર. 3(2), 3(3)</td></tr>
+<tr><td>2</td><td class="l">ધારાસભા: વિધાનસભા અને વિધાનપરિષદ</td><td>02</td><td class="l">પ્ર. 1, 2 (ખરું-ખોટું)</td></tr>
+<tr><td>3</td><td class="l">કારોબારીનાં કાર્યો અને ન્યાયતંત્ર</td><td>03, 04</td><td class="l">પ્ર. 4(1), 4(3)</td></tr>
+<tr><td>4</td><td class="l">આરોગ્ય અને યોજનાઓ</td><td>05</td><td class="l">પ્ર. 4(2), 5(2)</td></tr>
+<tr><td>5</td><td class="l">કેન્દ્ર-રાજ્ય વિષયો + પુનરાવર્તન</td><td>06, 07</td><td class="l">પ્ર. 5 (વિશેષ પ્રશ્નો)</td></tr></table></div>
+
+<!-- ===== SESSION 1 ===== -->
+<div class="session" id="s1">
+<h2><span class="num">S1</span>ત્રણ અંગો — ઘરની સોસાયટી સાથે</h2>
+<div class="meta"><span>⏱ 30 મિનિટ</span><span>Notes: <a href="../Chapter%20Notes/Ch16%20State%20Government.html#p1" target="ss16ChapterNotes">Part 01</a>, <a href="../Chapter%20Notes/Ch16%20State%20Government.html#p3" target="ss16ChapterNotes">Part 03</a></span><span>સામગ્રી: 3 ડબ્બા, કાગળ</span></div>
+<p><b>લક્ષ્ય:</b> ત્રણ અંગોનું કામ કહે; કોણ કાયદો ઘડે, કોણ અમલ કરે, કોણ ન્યાય આપે તે સોંપે.</p>
+<div class="step"><span class="st">પગલું 1 · ત્રણ ડબ્બા = ત્રણ અંગો (10 મિ.)</span>
+<div class="do">ડબ્બા પર નામ લખો: ધારાસભા, કારોબારી, ન્યાયતંત્ર. બાળક દરેક કામનું કાર્ડ બનાવી યોગ્ય ડબ્બામાં મૂકે: "નિયમ બનાવવા", "નિયમનો અમલ કરવો", "ઝઘડાનો નિર્ણય કરવો".</div>
+<div class="diagram"><svg viewBox="0 0 500 82" width="100%" style="max-width:500px;display:block;margin:6px auto" xmlns="http://www.w3.org/2000/svg" role="img"><text x="250.0" y="14.0" text-anchor="middle" font-size="12" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">રાજ્ય સરકારનાં ત્રણ અંગો</text><rect x="5.0" y="22" width="146.0" height="54" rx="9" fill="var(--surface)" stroke="var(--accent)" stroke-width="1.8"/><text x="78.0" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--accent)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ધારાસભા</text><text x="78.0" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">કાયદા ઘડે</text><line x1="154.0" y1="49.0" x2="172.0" y2="49.0" stroke="var(--ink-2)" stroke-width="1.6"/><polygon points="176.0,49.0 170.0,52.3 170.0,45.7" fill="var(--ink-2)"/><rect x="177.0" y="22" width="146.0" height="54" rx="9" fill="var(--surface)" stroke="var(--formula)" stroke-width="1.8"/><text x="250.0" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--formula)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">કારોબારી</text><text x="250.0" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">કાયદાનો અમલ</text><line x1="326.0" y1="49.0" x2="344.0" y2="49.0" stroke="var(--ink-2)" stroke-width="1.6"/><polygon points="348.0,49.0 342.0,52.3 342.0,45.7" fill="var(--ink-2)"/><rect x="349.0" y="22" width="146.0" height="54" rx="9" fill="var(--surface)" stroke="var(--check)" stroke-width="1.8"/><text x="422.0" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--check)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ન્યાયતંત્ર</text><text x="422.0" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">કાયદાનું રક્ષણ</text></svg><div class="diagram-cap">ત્રણ અંગો એકબીજાને તપાસે</div></div>
+<div class="fix">બાળક "કાયદા કારોબારી બનાવે" કહે → કડી: કારોબારી અમલ કરે, બનાવે ધારાસભા. બાળક સાથે ક્રિકેટ ઉદાહરણ: નિયમ કોણ બનાવે? મેદાનમાં કોણ અમલ કરાવે?</div></div>
+<div class="step"><span class="st">પગલું 2 · મુખ્યમંત્રી અને રાજ્યપાલ (10 મિ.)</span>
+<div class="ask">રાજ્યપાલની નિમણૂક કોણ કરે? મુખ્યમંત્રીની નિમણૂક કોણ કરે?<span class="ans">અપેક્ષિત: રાષ્ટ્રપતિ (કેન્દ્ર) રાજ્યપાલ નિમે; રાજ્યપાલ બહુમતી પક્ષના નેતાને મુખ્યમંત્રી નિમે.</span></div>
+<div class="diagram"><svg viewBox="0 0 520 82" width="100%" style="max-width:520px;display:block;margin:6px auto" xmlns="http://www.w3.org/2000/svg" role="img"><text x="260.0" y="14.0" text-anchor="middle" font-size="12" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">રાજ્યની કારોબારી — કોણ કોની નિમણૂક કરે</text><rect x="5.0" y="22" width="152.7" height="54" rx="9" fill="var(--surface)" stroke="var(--check)" stroke-width="1.8"/><text x="81.3" y="38.0" text-anchor="middle" font-size="11.5" fill="var(--check)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">રાજ્યપાલ</text><text x="81.3" y="53.0" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">કેન્દ્ર નિમણૂક</text><text x="81.3" y="68.0" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">5 વર્ષ</text><line x1="160.7" y1="49.0" x2="178.7" y2="49.0" stroke="var(--ink-2)" stroke-width="1.6"/><polygon points="182.7,49.0 176.7,52.3 176.7,45.7" fill="var(--ink-2)"/><rect x="183.7" y="22" width="152.7" height="54" rx="9" fill="var(--surface)" stroke="var(--accent)" stroke-width="1.8"/><text x="260.0" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--accent)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">મુખ્યમંત્રી</text><text x="260.0" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">બહુમતી પક્ષનો નેતા</text><line x1="339.3" y1="49.0" x2="357.3" y2="49.0" stroke="var(--ink-2)" stroke-width="1.6"/><polygon points="361.3,49.0 355.3,52.3 355.3,45.7" fill="var(--ink-2)"/><rect x="362.3" y="22" width="152.7" height="54" rx="9" fill="var(--surface)" stroke="var(--formula)" stroke-width="1.8"/><text x="438.7" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--formula)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">મંત્રીમંડળ</text><text x="438.7" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">મુખ્યમંત્રીની સલાહે</text></svg><div class="diagram-cap">કોણ કોની નિમણૂક કરે — ક્રમ</div></div>
+<div class="fix">"રાજ્યપાલ ચૂંટાય" કહે → કડી: નિમણૂક છે, ચૂંટણી નહીં. "રાજ્યપાલ નામના, મુખ્યમંત્રી વાસ્તવિક" — ઘરના વડા અને રોજિંદા નિર્ણય લેનાર જેવું.</div></div>
+<div class="exit">(1) કાયદા કોણ ઘડે? (2) રાજ્યપાલ કોણ નિમે? (3) ન્યાય કોણ આપે?<span class="src"> — જવાબ: ધારાસભા; રાષ્ટ્રપતિ; ન્યાયતંત્ર</span></div>
+</div>
+
+<!-- ===== SESSION 2 ===== -->
+<div class="session" id="s2">
+<h2><span class="num">S2</span>ધારાસભા — વિધાનસભા અને વિધાનપરિષદ</h2>
+<div class="meta"><span>⏱ 30 મિનિટ</span><span>Notes: <a href="../Chapter%20Notes/Ch16%20State%20Government.html#p2" target="ss16ChapterNotes">Part 02</a></span><span>સામગ્રી: કાગળ, પેન</span></div>
+<p><b>લક્ષ્ય:</b> બે ગૃહનો તફાવત (ઉપલું / નીચલું, મુદત, ઉંમર) અને ખરડાથી કાયદા સુધીનો ક્રમ સમજાવે.</p>
+<div class="step"><span class="st">પગલું 1 · બે ગૃહ (10 મિ.)</span>
+<div class="do">રાજ્યોની યાદી જુઓ (બિહાર, મહારાષ્ટ્ર, ઉત્તર પ્રદેશ, કર્ણાટક, તેલંગણા, આંધ્ર પ્રદેશ — વિધાનપરિષદવાળા). ગુજરાતનું નામ શોધો — નથી! પછી પૂછો: "ગુજરાતમાં વિધાનસભા છે, વિધાનપરિષદ નથી."</div>
+<div class="diagram"><svg viewBox="0 0 420 218" width="100%" style="max-width:420px;display:block;margin:6px auto" xmlns="http://www.w3.org/2000/svg" role="img"><text x="210.0" y="14.0" text-anchor="middle" font-size="12" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">કાર્યકાળ / મુદત (વર્ષ)</text><line x1="10" y1="110" x2="410" y2="110" stroke="var(--ink)" stroke-width="1.2"/><text x="410.0" y="106.0" text-anchor="end" font-size="9.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">0</text><rect x="34.0" y="51.7" width="85.3" height="58.3" rx="3" fill="var(--formula)" opacity="0.6"/><text x="76.7" y="46.7" text-anchor="middle" font-size="10.5" fill="var(--formula)" font-family="var(--font-mono)" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">5</text><text x="76.7" y="210.0" text-anchor="middle" font-size="10.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">વિધાનસભા</text><rect x="167.3" y="40.0" width="85.3" height="70.0" rx="3" fill="var(--formula)" opacity="0.6"/><text x="210.0" y="35.0" text-anchor="middle" font-size="10.5" fill="var(--formula)" font-family="var(--font-mono)" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">6</text><text x="210.0" y="210.0" text-anchor="middle" font-size="10.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">વિધાનપરિષદ સભ્ય</text><rect x="300.7" y="51.7" width="85.3" height="58.3" rx="3" fill="var(--formula)" opacity="0.6"/><text x="343.3" y="46.7" text-anchor="middle" font-size="10.5" fill="var(--formula)" font-family="var(--font-mono)" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">5</text><text x="343.3" y="210.0" text-anchor="middle" font-size="10.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">રાજ્યપાલ</text></svg><div class="diagram-cap">વિધાનસભા 5 વર્ષ · વિધાનપરિષદ 6 વર્ષ</div></div>
+<div class="ask">વિધાનસભા કાયમી ગૃહ છે કે નહીં?<span class="ans">અપેક્ષિત: ના — 5 વર્ષની મુદત પછી વિસર્જન. વિધાનપરિષદ કાયમી છે.</span></div>
+<div class="fix">"વિધાનસભા કાયમી" કહે → કડી: "કાયમી" શબ્દ = હંમેશાં રહેતું. વિધાનસભા મુદત પૂરી થતાં બદલાય; તેથી તે કાયમી નહીં. (પાઠ્યપુસ્તક પાન 99.)</div></div>
+<div class="step"><span class="st">પગલું 2 · 182 બેઠક (10 મિ.)</span>
+<div class="do">કાગળ પર નાના-નાના ટપકાં (બિંદુ) દોરો: 182 બેઠક. બાળક દરેક બિંદુ ગણે. પછી કહો: "આ એક-એક ધારાસભ્ય."</div>
+<div class="diagram"><svg viewBox="0 0 440 269" width="100%" style="max-width:440px;display:block;margin:6px auto" xmlns="http://www.w3.org/2000/svg" role="img"><text x="220.0" y="14.0" text-anchor="middle" font-size="12" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">દરેક બિંદુ = એક વિધાનસભા બેઠક</text><rect x="109.0" y="22" width="222" height="207" rx="8" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="122.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="137.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="152.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="167.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="182.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="197.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="212.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="227.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="242.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="257.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="272.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="287.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="302.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="317.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="122.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="137.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="152.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="167.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="182.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="197.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="212.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="227.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="242.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="257.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="272.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="287.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="302.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="317.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="122.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="137.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="152.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="167.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="182.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="197.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="212.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="227.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="242.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="257.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="272.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="287.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="302.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="317.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="122.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="137.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="152.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="167.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="182.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="197.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="212.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="227.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="242.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="257.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="272.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="287.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="302.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="317.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="122.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="137.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="152.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="167.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="182.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="197.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="212.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="227.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="242.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="257.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="272.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="287.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="302.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="317.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="122.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="137.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="152.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="167.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="182.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="197.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="212.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="227.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="242.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="257.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="272.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="287.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="302.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="317.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="122.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="137.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="152.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="167.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="182.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="197.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="212.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="227.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="242.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="257.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="272.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="287.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="302.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="317.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="122.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="137.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="152.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="167.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="182.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="197.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="212.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="227.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="242.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="257.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="272.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="287.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="302.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="317.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="122.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="137.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="152.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="167.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="182.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="197.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="212.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="227.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="242.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="257.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="272.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="287.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="302.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="317.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="122.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="137.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="152.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="167.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="182.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="197.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="212.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="227.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="242.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="257.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="272.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="287.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="302.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="317.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="122.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="137.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="152.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="167.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="182.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="197.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="212.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="227.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="242.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="257.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="272.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="287.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="302.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="317.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="122.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="137.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="152.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="167.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="182.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="197.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="212.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="227.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="242.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="257.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="272.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="287.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="302.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="317.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="122.5" cy="215.5" r="5" fill="var(--accent)"/><circle cx="137.5" cy="215.5" r="5" fill="var(--accent)"/><circle cx="152.5" cy="215.5" r="5" fill="var(--accent)"/><circle cx="167.5" cy="215.5" r="5" fill="var(--accent)"/><circle cx="182.5" cy="215.5" r="5" fill="var(--accent)"/><circle cx="197.5" cy="215.5" r="5" fill="var(--accent)"/><circle cx="212.5" cy="215.5" r="5" fill="var(--accent)"/><circle cx="227.5" cy="215.5" r="5" fill="var(--accent)"/><circle cx="242.5" cy="215.5" r="5" fill="var(--accent)"/><circle cx="257.5" cy="215.5" r="5" fill="var(--accent)"/><circle cx="272.5" cy="215.5" r="5" fill="var(--accent)"/><circle cx="287.5" cy="215.5" r="5" fill="var(--accent)"/><circle cx="302.5" cy="215.5" r="5" fill="var(--accent)"/><circle cx="317.5" cy="215.5" r="5" fill="var(--accent)"/><text x="220.0" y="243.0" text-anchor="middle" font-size="10.5" fill="var(--accent)" font-family="var(--font-mono)" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ગુજરાત વિધાનસભા — 182 બેઠક</text><text x="220.0" y="265.0" text-anchor="middle" font-size="11" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">13 × 14 = 182</text></svg><div class="diagram-cap">ગુજરાત વિધાનસભા — 182 બેઠક</div></div>
+<div class="diagram"><svg viewBox="0 0 420 218" width="100%" style="max-width:420px;display:block;margin:6px auto" xmlns="http://www.w3.org/2000/svg" role="img"><text x="210.0" y="14.0" text-anchor="middle" font-size="12" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">લઘુતમ વય (વર્ષ)</text><line x1="10" y1="110" x2="410" y2="110" stroke="var(--ink)" stroke-width="1.2"/><text x="410.0" y="106.0" text-anchor="end" font-size="9.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">0</text><rect x="34.0" y="68.0" width="85.3" height="42.0" rx="3" fill="var(--formula)" opacity="0.6"/><text x="76.7" y="63.0" text-anchor="middle" font-size="10.5" fill="var(--formula)" font-family="var(--font-mono)" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">18</text><text x="76.7" y="210.0" text-anchor="middle" font-size="10.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">મતદાર</text><rect x="167.3" y="51.7" width="85.3" height="58.3" rx="3" fill="var(--formula)" opacity="0.6"/><text x="210.0" y="46.7" text-anchor="middle" font-size="10.5" fill="var(--formula)" font-family="var(--font-mono)" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">25</text><text x="210.0" y="210.0" text-anchor="middle" font-size="10.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">વિધાનસભ્ય</text><rect x="300.7" y="40.0" width="85.3" height="70.0" rx="3" fill="var(--formula)" opacity="0.6"/><text x="343.3" y="35.0" text-anchor="middle" font-size="10.5" fill="var(--formula)" font-family="var(--font-mono)" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">30</text><text x="343.3" y="210.0" text-anchor="middle" font-size="10.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">વિધાનપરિષદ સભ્ય</text></svg><div class="diagram-cap">મતદાર 18; ધારાસભ્ય 25; વિધાનપરિષદ 30</div></div>
+<div class="fix">ઉંમર ગૂંચવાય → કડી: "મત = 18 (નાગરિક બનવું), ધારાસભ્ય = 25 (થોડો અનુભવ), ઉપલા ગૃહ = 30 (વધુ અનુભવ)" એ ક્રમથી યાદ કરો.</div></div>
+<div class="step"><span class="st">પગલું 3 · ખરડો → કાયદો (10 મિ.)</span>
+<div class="do">કાગળ પર "ખરડો" લખો; વિધાનસભા મંજૂર કરે; રાજ્યપાલ સહી કરે → "કાયદો". બાળક જાતે ક્રમ બોલે.</div>
+<div class="diagram"><svg viewBox="0 0 520 82" width="100%" style="max-width:520px;display:block;margin:6px auto" xmlns="http://www.w3.org/2000/svg" role="img"><text x="260.0" y="14.0" text-anchor="middle" font-size="12" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ખરડો કેવી રીતે કાયદો બને</text><rect x="5.0" y="22" width="108.0" height="54" rx="9" fill="var(--surface)" stroke="var(--accent)" stroke-width="1.8"/><text x="59.0" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--accent)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ખરડો</text><text x="59.0" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">(કાયદાનો મુસદ્દો)</text><line x1="116.0" y1="49.0" x2="134.0" y2="49.0" stroke="var(--ink-2)" stroke-width="1.6"/><polygon points="138.0,49.0 132.0,52.3 132.0,45.7" fill="var(--ink-2)"/><rect x="139.0" y="22" width="108.0" height="54" rx="9" fill="var(--surface)" stroke="var(--check)" stroke-width="1.8"/><text x="193.0" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--check)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">વિધાનસભા</text><text x="193.0" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">મંજૂર કરે</text><line x1="250.0" y1="49.0" x2="268.0" y2="49.0" stroke="var(--ink-2)" stroke-width="1.6"/><polygon points="272.0,49.0 266.0,52.3 266.0,45.7" fill="var(--ink-2)"/><rect x="273.0" y="22" width="108.0" height="54" rx="9" fill="var(--surface)" stroke="var(--exam)" stroke-width="1.8"/><text x="327.0" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--exam)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">રાજ્યપાલ</text><text x="327.0" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">સહી કરે</text><line x1="384.0" y1="49.0" x2="402.0" y2="49.0" stroke="var(--ink-2)" stroke-width="1.6"/><polygon points="406.0,49.0 400.0,52.3 400.0,45.7" fill="var(--ink-2)"/><rect x="407.0" y="22" width="108.0" height="54" rx="9" fill="var(--surface)" stroke="var(--formula)" stroke-width="1.8"/><text x="461.0" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--formula)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">કાયદો</text><text x="461.0" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">બને</text></svg><div class="diagram-cap">ખરડો → મંજૂરી → સહી → કાયદો</div></div></div>
+<div class="exit">(1) ગુજરાતમાં વિધાનપરિષદ છે? (2) ધારાસભ્ય બનવા વય? (3) ખરડો કાયદો ક્યારે બને?<span class="src"> — જવાબ: ના; 25 વર્ષ; રાજ્યપાલ સહી કરે ત્યારે</span></div>
+</div>
+
+<!-- ===== SESSION 3 ===== -->
+<div class="session" id="s3">
+<h2><span class="num">S3</span>કારોબારી અને ન્યાયતંત્ર</h2>
+<div class="meta"><span>⏱ 30 મિનિટ</span><span>Notes: <a href="../Chapter%20Notes/Ch16%20State%20Government.html#p3" target="ss16ChapterNotes">Part 03</a>, <a href="../Chapter%20Notes/Ch16%20State%20Government.html#p4" target="ss16ChapterNotes">Part 04</a></span><span>ઘરકામ: પ્ર. 4(1), 4(3)</span></div>
+<p><b>લક્ષ્ય:</b> મુખ્યમંત્રીનાં કાર્યો 5 મુદ્દામાં કહે; ફોજદારી અને દીવાની વિવાદનો ભેદ કહે.</p>
+<div class="step"><span class="st">પગલું 1 · મુખ્યમંત્રીનાં કાર્યો (15 મિ.)</span>
+<div class="do">બાળક એક ઘરનો "રાજ્ય" બનાવે: મુખ્યમંત્રી ઘરના વડા, મંત્રીઓ દરેક કામ વહેંચે. પાંચ કાર્ય કહે: મંત્રીમંડળની બેઠક, દેખરેખ, માર્ગદર્શન, જાણ, ખાતાની વહેંચણી.</div>
+<div class="ask">મુખ્યમંત્રી કઈ ત્રણ કક્ષાના મંત્રીઓ સાથે કામ કરે?<span class="ans">અપેક્ષિત: કેબિનેટ, રાજ્ય, નાયબ.</span></div></div>
+<div class="step"><span class="st">પગલું 2 · ફોજદારી કે દીવાની (10 મિ.)</span>
+<div class="say">"ચોરી થઈ — કઈ અદાલત? જમીન ઝઘડો — કઈ અદાલત?"</div>
+<div class="ask">બંને કેસ ક્યા પ્રકારના?<span class="ans">અપેક્ષિત: ચોરી = ફોજદારી; જમીન = દીવાની.</span></div>
+<div class="fix">જમીનને ફોજદારી કહે → કડી: ફોજદારીમાં ગુનો (ચોરી, મારામારી); દીવાનીમાં હક-મિલકતનો ઝઘડો.</div></div>
+<div class="exit">(1) મુખ્યમંત્રીની કઈ ત્રણ કક્ષાના મંત્રીઓ? (2) જમીનનો ઝઘડો ફોજદારી કે દીવાની? (3) ગુજરાતની વડી અદાલત ક્યાં?<span class="src"> — જવાબ: કેબિનેટ/રાજ્ય/નાયબ; દીવાની; અમદાવાદ</span></div>
+</div>
+
+<!-- ===== SESSION 4 ===== -->
+<div class="session" id="s4">
+<h2><span class="num">S4</span>આરોગ્ય — યોજના અને સેવા</h2>
+<div class="meta"><span>⏱ 30 મિનિટ</span><span>Notes: <a href="../Chapter%20Notes/Ch16%20State%20Government.html#p5" target="ss16ChapterNotes">Part 05</a></span><span>ઘરકામ: પ્ર. 4(2), 5(2)</span></div>
+<p><b>લક્ષ્ય:</b> રાજ્ય અને કેન્દ્રની યોજના અલગ પાડે; રાજ્ય સરકારનાં આરોગ્ય-કાર્યો 5 મુદ્દામાં લખે.</p>
+<div class="step"><span class="st">પગલું 1 · કોણની યોજના? (10 મિ.)</span>
+<div class="do">કોષ્ટક: "મુખ્યમંત્રી અમૃતમ્" અને "આયુષ્યમાન ભારત" — દરેકની બાજુમાં લખો: રાજ્ય કે કેન્દ્ર?</div>
+<div class="ask">મુખ્યમંત્રી અમૃતમ્ (મા) યોજના કોની?<span class="ans">અપેક્ષિત: રાજ્ય સરકાર. આયુષ્યમાન ભારત: કેન્દ્ર સરકાર (2018).</span></div>
+<div class="fix">"અમૃતમ્ કેન્દ્રની" કહે → કડી: નામમાં "મુખ્યમંત્રી" = રાજ્યના મુખ્યમંત્રી.</div></div>
+<div class="step"><span class="st">પગલું 2 · 108 અને આરોગ્ય દિવસ (10 મિ.)</span>
+<div class="ask">તાત્કાલિક સેવા માટે કયો નંબર? 8 માર્ચ કયો દિવસ?<span class="ans">અપેક્ષિત: 108 (તાત્કાલિક સેવા); વિશ્વ મહિલા દિવસ.</span></div>
+</div>
+<div class="exit">(1) અમૃતમ્ કોની યોજના? (2) તાત્કાલિક સેવા નંબર? (3) રાજ્ય સરકારનું એક આરોગ્ય-કાર્ય?<span class="src"> — જવાબ: રાજ્ય; 108; ઓરી-અછબડા-પોલિયો રસીકરણ</span></div>
+</div>
+
+<!-- ===== SESSION 5 ===== -->
+<div class="session" id="s5">
+<h2><span class="num">S5</span>કેન્દ્ર-રાજ્ય વિષયો + પુનરાવર્તન</h2>
+<div class="meta"><span>⏱ 30–40 મિનિટ</span><span>Notes: <a href="../Chapter%20Notes/Ch16%20State%20Government.html#p6" target="ss16ChapterNotes">Part 06</a>, <a href="../Chapter%20Notes/Ch16%20State%20Government.html#p7" target="ss16ChapterNotes">Part 07</a></span><span>સામગ્રી: Revision Sheet</span></div>
+<p><b>લક્ષ્ય:</b> ત્રણ યાદીની સંખ્યા અને વિષયો; 4 ગુણ વિધાનસભા અને 5 ગુણ મુખ્યમંત્રી સમજાવે.</p>
+<div class="step"><span class="st">પગલું 1 · ત્રણ યાદી (15 મિ.)</span>
+<div class="do">ત્રણ કાગળ પર ત્રણ યાદી લખો: સંઘયાદી (કેન્દ્ર), રાજ્યયાદી (રાજ્ય), સંયુક્ત (બંને). દરેક વિષય ચિઠ્ઠી પર લખી યોગ્ય યાદીમાં મૂકો: સંરક્ષણ, શિક્ષણ, વીજળી, રેલવે, કૃષિ, ફોજદારી કેસ.</div>
+<div class="diagram"><svg viewBox="0 0 420 218" width="100%" style="max-width:420px;display:block;margin:6px auto" xmlns="http://www.w3.org/2000/svg" role="img"><text x="210.0" y="14.0" text-anchor="middle" font-size="12" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">બંધારણની ત્રણ યાદીના વિષયોની સંખ્યા</text><line x1="10" y1="110" x2="410" y2="110" stroke="var(--ink)" stroke-width="1.2"/><text x="410.0" y="106.0" text-anchor="end" font-size="9.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">0</text><rect x="34.0" y="40.0" width="85.3" height="70.0" rx="3" fill="var(--formula)" opacity="0.6"/><text x="76.7" y="35.0" text-anchor="middle" font-size="10.5" fill="var(--formula)" font-family="var(--font-mono)" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">97</text><text x="76.7" y="210.0" text-anchor="middle" font-size="10.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">સંઘયાદી</text><rect x="167.3" y="62.4" width="85.3" height="47.6" rx="3" fill="var(--formula)" opacity="0.6"/><text x="210.0" y="57.4" text-anchor="middle" font-size="10.5" fill="var(--formula)" font-family="var(--font-mono)" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">66</text><text x="210.0" y="210.0" text-anchor="middle" font-size="10.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">રાજ્યયાદી</text><rect x="300.7" y="76.1" width="85.3" height="33.9" rx="3" fill="var(--formula)" opacity="0.6"/><text x="343.3" y="71.1" text-anchor="middle" font-size="10.5" fill="var(--formula)" font-family="var(--font-mono)" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">47</text><text x="343.3" y="210.0" text-anchor="middle" font-size="10.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">સંયુક્ત યાદી</text></svg><div class="diagram-cap">97 + 66 + 47 = 210 વિષયો</div></div>
+<div class="fix">શિક્ષણ સંઘયાદીમાં મૂકે → કડી: શિક્ષણ રાજ્યયાદીમાં; સંયુક્તમાં પણ. ગામની શાળા રાજ્ય ચલાવે તે ઉદાહરણથી યાદ કરાવો.</div></div>
+<div class="step"><span class="st">પગલું 2 · પુનરાવર્તન (15 મિ.)</span>
+<div class="do">Revision Sheet ખોલો. બાળક 8 સ્ક્રીનની કાર્ડ પોતાના શબ્દોમાં સમજાવે, અને "છેલ્લી ઘડીની ભૂલો"ની પટ્ટી વાંચે.</div></div>
+<div class="exit">(1) સંઘયાદીમાં કેટલા વિષય? (2) વિધાનપરિષદ ગુજરાતમાં? (3) મુખ્યમંત્રીનાં પાંચ કાર્યોમાંથી એક.<span class="src"> — જવાબ: 97; ના; મંત્રીમંડળની બેઠક બોલાવે</span></div>
+</div>
+
+<div class="parent-box box"><span class="label">પરીક્ષા પહેલાંના 2 દિવસ</span>
+દિવસ 1: Revision Sheet + ત્રણ યાદીનો ખેલ. દિવસ 2: સ્વાધ્યાય પાન 107 નો "વિશેષ પ્રશ્નો" (બાળ સાથે ચર્ચા કરો) અને 5 ગુણનો "મુખ્યમંત્રીનાં કાર્યો" જાતે લખાવો.</div>
+</div>
