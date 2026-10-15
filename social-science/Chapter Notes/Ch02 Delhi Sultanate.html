@@ -1,0 +1,240 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>દિલ્લી સલ્તનત — Chapter Notes</title>
+<style>:root{
+  --bg:#FBF9F4; --surface:#FFFFFF; --surface-2:#F3F0E7;
+  --ink:#241F16; --ink-2:#5B5647; --ink-3:#8C8672;
+  --line:#E4DFD0;
+  --accent:#8B5E34; --accent-ink:#3E2A17; --accent-bg:#F1E4D3;
+  --formula:#1F4E42; --formula-bg:#E3F0EA; --formula-line:#9FC6B7;
+  --exam:#7A2E2E; --exam-bg:#F6E4E1; --exam-line:#DBA9A4;
+  --mistake:#8A5A00; --mistake-bg:#FDF1D9; --mistake-line:#E9C877;
+  --check:#2E4E7A; --check-bg:#E4ECF6; --check-line:#A9C0DB;
+  --why:#5B5647; --why-bg:#F3F0E7; --why-line:#DAD4C2;
+  --font-display:'Fraunces','Noto Sans Gujarati',Georgia,serif;
+  --font-body:'Source Sans 3','Noto Sans Gujarati',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+    --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+    --line:#3A3428;
+    --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+    --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+    --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+    --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+    --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+    --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+  --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+  --line:#3A3428;
+  --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+  --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+  --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+  --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+  --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+  --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.75;padding:0 16px;font-size:16px}
+.wrap{max-width:760px;margin:0 auto;padding-block:32px 80px}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;text-wrap:balance;color:var(--ink)}
+h1{font-size:clamp(28px,6vw,38px);margin:0 0 6px}
+.subtitle{color:var(--ink-2);font-size:15px;margin:0 0 28px}
+h2{font-size:24px;margin:0 0 4px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+h2 .num{color:var(--accent);font-family:var(--font-mono);font-size:15px;font-weight:600}
+.part-why{color:var(--ink-2);font-size:14.5px;margin:0 0 18px;font-style:italic}
+h3{font-size:18px;margin:30px 0 10px;color:var(--accent-ink)}
+p{margin:0 0 12px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:36px}
+.legend-item{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-2)}
+.dot{width:10px;height:10px;border-radius:3px;flex:none}
+.dot.formula{background:var(--formula)} .dot.exam{background:var(--exam)} .dot.mistake{background:var(--mistake)}
+.dot.check{background:var(--check)} .dot.concept{background:var(--accent)} .dot.why{background:var(--why)}
+.part{padding:32px 0;border-top:1px solid var(--line)}
+.part:first-of-type{border-top:none}
+.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:32px}
+.toc ol{margin:8px 0 0;padding-left:0;list-style:none}
+.toc li{margin-bottom:5px;font-size:14.5px}
+.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ink-3)}
+.toc .n{font-family:var(--font-mono);color:var(--accent);font-size:13px;font-weight:600;margin-right:6px}
+.box{border-radius:12px;padding:14px 18px;margin:14px 0;border:1px solid;font-size:15px}
+.box .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;display:block}
+.formula-box{background:var(--formula-bg);border-color:var(--formula-line)}
+.formula-box .label{color:var(--formula)}
+.formula-box .f{font-family:var(--font-mono);font-size:18px;color:var(--formula);font-weight:600;margin:4px 0}
+.formula-box .meaning{color:var(--ink-2);font-size:14px}
+.concept-box{background:var(--surface);border-color:var(--line);border-left:3px solid var(--accent)}
+.concept-box .label{color:var(--accent)}
+.exam-box{background:var(--exam-bg);border-color:var(--exam-line)} .exam-box .label{color:var(--exam)}
+.mistake-box{background:var(--mistake-bg);border-color:var(--mistake-line)} .mistake-box .label{color:var(--mistake)}
+.check-box{background:var(--check-bg);border-color:var(--check-line)} .check-box .label{color:var(--check)}
+.why-box{background:var(--why-bg);border-color:var(--why-line)} .why-box .label{color:var(--why)}
+.extra-box{background:var(--surface);border:1px dashed var(--ink-3)} .extra-box .label{color:var(--ink-3)}
+.parent-box{background:var(--accent-bg);border-color:var(--accent)} .parent-box .label{color:var(--accent-ink)}
+.outcome{background:var(--surface);border:1px solid var(--accent);border-radius:12px;padding:14px 18px;margin:0 0 16px}
+.outcome .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;display:block}
+.submap{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 6px}
+.submap span{background:var(--surface-2);border:1px solid var(--line);border-radius:20px;padding:4px 12px;font-size:12.5px;color:var(--ink-2)}
+.next-line{font-size:14px;color:var(--ink-2);margin-top:18px;padding-top:14px;border-top:1px dashed var(--line)}
+.next-line b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{padding:8px 10px;border:1px solid var(--line);text-align:center}
+th{background:var(--surface-2);font-weight:600;color:var(--ink-2);font-size:12.5px}
+td.rowlabel{text-align:left;color:var(--ink-2);font-weight:600;background:var(--surface-2)}
+td.l{text-align:left}
+.tblwrap{overflow-x:auto}
+.example{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:14px 0;font-size:15px}
+.example .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px;display:block}
+.example .step{margin:3px 0}
+.example .step b{color:var(--ink-2);font-weight:600}
+.mono{font-family:var(--font-mono)}
+.remember{background:var(--accent-bg);border:1px solid var(--accent);border-radius:12px;padding:16px 20px;margin:16px 0}
+.remember .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:8px;display:block}
+.remember ol{margin:0;padding-left:18px} .remember li{margin-bottom:5px}
+.badge{display:inline-block;font-size:11px;font-family:var(--font-mono);padding:2px 8px;border-radius:20px;background:var(--exam-bg);color:var(--exam);border:1px solid var(--exam-line);margin-left:6px;vertical-align:middle}
+.diagram{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px;margin:16px 0}
+.diagram svg{display:block;width:100%;height:auto}
+.diagram-cap{text-align:center;font-size:13px;color:var(--ink-3);margin-top:6px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:600px){.pair{grid-template-columns:1fr}}
+.pair .diagram{margin:6px 0}
+.jumpicon{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:var(--formula);color:var(--surface);text-decoration:none;font-size:11px;font-weight:700;vertical-align:middle;margin-left:4px}
+.src{font-size:12.5px;color:var(--ink-3)}
+</style>
+
+<div class="wrap">
+<h1>પ્રકરણ 2 · દિલ્લી સલ્તનત</h1>
+<p class="subtitle">ધોરણ 7 સામાજિક વિજ્ઞાન (ઇતિહાસ) · GSEB ગુજરાતી માધ્યમ · પાઠ્યપુસ્તક: GSSTB, પાન 8–12</p>
+<div class="legend">
+<div class="legend-item"><span class="dot why"></span>કેમ / રોજિંદું ઉદાહરણ</div>
+<div class="legend-item"><span class="dot concept"></span>સમજવું જ પડે</div>
+<div class="legend-item"><span class="dot formula"></span>યાદ રાખવું — મુખ્ય મુદ્દો</div>
+<div class="legend-item"><span class="dot exam"></span>પરીક્ષામાં વારંવાર</div>
+<div class="legend-item"><span class="dot mistake"></span>સામાન્ય ભૂલ</div>
+<div class="legend-item"><span class="dot check"></span>જાતે ચકાસો</div>
+</div>
+<div class="toc">
+<b>પ્રકરણનો નકશો</b> — અંતિમ લક્ષ્ય: દિલ્લી સલ્તનતના પાંચ વંશો, તેમના મુખ્ય શાસકો, રાજ્ય-વ્યવસ્થા અને સ્થાપત્યો સમજાવવા.
+<ol>
+<li><span class="n">00</span><a href="#intro">પ્રકરણ શું કહે છે</a> — સલ્તનત શું છે અને કેટલો સમય ચાલી</li><li><span class="n">01</span><a href="#p1">દિલ્લી સલ્તનતના શાસકો</a> — ગુલામ, ખલજી, તુગલક, સૈયદ, લોદી</li><li><span class="n">02</span><a href="#p2">રાજ્ય-વ્યવસ્થા</a> — કેન્દ્ર, પ્રાંત, સ્થાનિક સ્તર; ઇક્તા</li><li><span class="n">03</span><a href="#p3">કિલ્લા અને અન્ય બાંધકામ</a> — કુતુબમિનાર, અલાઈ દરવાજો, ઢાઈ દિનકા ઝોંપડા</li><li><span class="n">04</span><a href="#p4">વિજયનગર અને બહમની</a> — બે હિંદુ-મુસ્લિમ મોટાં રાજ્યો</li><li><span class="n">05</span><a href="#p5">સારાંશ અને પરીક્ષાના જવાબ</a> — ટૂંકનોંધ અને MCQ</li>
+</ol>
+</div>
+
+<div class="part" id="intro">
+<h2><span class="num">00</span>પ્રકરણ શું કહે છે</h2>
+<p class="part-why">શા માટે ભણવું: દિલ્લી ભારતની રાજનીતિનું કેન્દ્ર કેમ રહ્યું, અને ત્યાં કેવાં શાસકો આવ્યાં.</p>
+<div class="outcome"><span class="label">આ પ્રકરણ પછી તમે</span>
+(1) દિલ્લી સલ્તનતના પાંચ વંશ અને તેમના મુખ્ય શાસક કહી શકશો, (2) સલ્તનતની કેન્દ્ર-પ્રાંત-સ્થાનિક વ્યવસ્થા સમજાવી શકશો, (3) કુતુબમિનાર, અલાઈ દરવાજો જેવાં સ્થાપત્યો ઓળખી શકશો, (4) વિજયનગર અને બહમની રાજ્યો સમજાવી શકશો.</div>
+<div class="concept-box box"><span class="label">શબ્દોનો પાયો</span><b>સલ્તનત</b> = <b>સુલતાન</b>નું રાજ્ય. સુલતાન એટલે એવો શાસક જેની સત્તા સર્વોપરી ગણાય. ઈ.સ. 1206થી 1526 સુધીનાં લગભગ <b>320 વર્ષ</b> દિલ્લી સલ્તનત ચાલી — વચ્ચે પાંચ વંશો બદલાયા.</div>
+<div class="why-box box"><span class="label">રોજિંદું ઉદાહરણ</span>આપણી શાળાની જેમ, દિલ્લી સલ્તનતમાં પણ "વંશ" એ પરિવારની ગાદી હતી. ગુલામ, ખલજી, તુગલક, સૈયદ અને લોદી — પાંચ વંશ એક પછી એક ગાદીએ આવ્યા.</div>
+<div class="remember"><span class="label">યાદ રાખો</span><ol><li>દિલ્લી સલ્તનત: ઈ.સ. 1206થી 1526 (લગભગ 320 વર્ષ).</li><li>પાંચ વંશ: ગુલામ (1206–1290), ખલજી (1290–1320), તુગલક (1320–1414), સૈયદ (1414–1451), લોદી (1451–1526).</li><li>સલ્તનતનો અંત: ઈ.સ. 1526માં ઇબ્રાહીમ લોદીનો પાણીપતના પ્રથમ યુદ્ધમાં બાબર સામે પરાજય.</li></ol></div>
+<div class="diagram"><svg viewBox="0 0 640 439" width="100%" style="max-width:640px;display:block;margin:6px auto" xmlns="http://www.w3.org/2000/svg" role="img"><text x="320.0" y="16" text-anchor="middle" font-size="12" fill="var(--ink-2)" stroke="var(--surface)" stroke-width="3" paint-order="stroke">દિલ્લી સલ્તનતના વંશો અને સમાંતર રાજ્યો — વર્ષ પ્રમાણે સ્કેલ</text><text x="142" y="48" text-anchor="end" font-size="11" fill="var(--ink)">ગુલામ (1206–1290)</text><rect x="156.3" y="36" width="87.7" height="18" rx="5" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="1.2"/><text x="160.3" y="49" font-size="10" fill="var(--accent-ink)">1206–1290</text><text x="142" y="94" text-anchor="end" font-size="11" fill="var(--ink)">ખલજી (1290–1320)</text><rect x="244.0" y="82" width="31.3" height="18" rx="5" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="1.2"/><text x="248.0" y="95" font-size="10" fill="var(--accent-ink)">1290–1320</text><text x="142" y="140" text-anchor="end" font-size="11" fill="var(--ink)">તુગલક (1320–1414)</text><rect x="275.3" y="128" width="98.2" height="18" rx="5" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="1.2"/><text x="279.3" y="141" font-size="10" fill="var(--accent-ink)">1320–1414</text><text x="142" y="186" text-anchor="end" font-size="11" fill="var(--ink)">સૈયદ (1414–1451)</text><rect x="373.5" y="174" width="38.6" height="18" rx="5" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="1.2"/><text x="377.5" y="187" font-size="10" fill="var(--accent-ink)">1414–1451</text><text x="142" y="232" text-anchor="end" font-size="11" fill="var(--ink)">લોદી (1451–1526)</text><rect x="412.2" y="220" width="78.3" height="18" rx="5" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="1.2"/><text x="416.2" y="233" font-size="10" fill="var(--accent-ink)">1451–1526</text><text x="142" y="278" text-anchor="end" font-size="11" fill="var(--ink)">વિજયનગર (1336–1646)</text><rect x="292.0" y="266" width="323.8" height="18" rx="5" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="1.2"/><text x="296.0" y="279" font-size="10" fill="var(--accent-ink)">1336–1646</text><text x="142" y="324" text-anchor="end" font-size="11" fill="var(--ink)">બહમની (1347–1518)</text><rect x="303.5" y="312" width="178.6" height="18" rx="5" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="1.2"/><text x="307.5" y="325" font-size="10" fill="var(--accent-ink)">1347–1518</text><line x1="150" y1="358" x2="620" y2="358" stroke="var(--ink-3)" stroke-width="1.2"/><line x1="202.2" y1="358" x2="202.2" y2="362" stroke="var(--ink-3)"/><text x="202.2" y="373" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">1250</text><line x1="254.4" y1="358" x2="254.4" y2="362" stroke="var(--ink-3)"/><text x="254.4" y="373" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">1300</text><line x1="306.7" y1="358" x2="306.7" y2="362" stroke="var(--ink-3)"/><text x="306.7" y="373" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">1350</text><line x1="358.9" y1="358" x2="358.9" y2="362" stroke="var(--ink-3)"/><text x="358.9" y="373" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">1400</text><line x1="411.1" y1="358" x2="411.1" y2="362" stroke="var(--ink-3)"/><text x="411.1" y="373" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">1450</text><line x1="463.3" y1="358" x2="463.3" y2="362" stroke="var(--ink-3)"/><text x="463.3" y="373" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">1500</text><line x1="515.6" y1="358" x2="515.6" y2="362" stroke="var(--ink-3)"/><text x="515.6" y="373" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">1550</text><line x1="567.8" y1="358" x2="567.8" y2="362" stroke="var(--ink-3)"/><text x="567.8" y="373" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">1600</text><line x1="620.0" y1="358" x2="620.0" y2="362" stroke="var(--ink-3)"/><text x="620.0" y="373" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">1650</text><circle cx="156.3" cy="358" r="3.2" fill="var(--mistake)"/><text x="161.3" y="388" font-size="10" fill="var(--mistake)">ગુલામવંશની શરૂઆત (1206)</text><circle cx="490.5" cy="358" r="3.2" fill="var(--mistake)"/><text x="495.5" y="403" font-size="10" fill="var(--mistake)">પાણીપતનું પહેલું યુદ્ધ (1526)</text><circle cx="531.2" cy="358" r="3.2" fill="var(--mistake)"/><text x="536.2" y="418" font-size="10" fill="var(--mistake)">વિજયનગર હાર (તાલીકોટા) (1565)</text></svg></div>
+<div class="diagram-cap">આકૃતિ 1 — દરેક પટ્ટી વંશના વર્ષો પ્રમાણે મુકાયેલી છે; વિજયનગર અને બહમની સમાંતર ચાલ્યાં.</div>
+</div>
+
+
+<!-- ============ PART 01 ============ -->
+<div class="part" id="p1">
+<h2><span class="num">01</span>દિલ્લી સલ્તનતના શાસકો</h2>
+<p class="part-why">શા માટે ભણવું: કયા વંશે કયા સમયમાં શાસન કર્યું, તે ક્રમ યાદ રાખવા.</p>
+
+<h3>ગુલામવંશ (ઈ.સ. 1206–1290)</h3>
+<p>ઈ.સ. 1192માં તરાઈના બીજા યુદ્ધમાં શિહાબુદ્દીન ઘોરીએ પૃથ્વીરાજ ચૌહાણને હરાવ્યો. ઘોરીના મૃત્યુ પછી તેનો ગુલામ <b>કુતુબુદ્દીન ઐબક</b> (1206) સલ્તનત ચલાવતો. પછી <b>ઇલ્તુત્મિશ</b> ગાદીએ આવ્યો; તેણે ‘ચહેલગાન’ (ચાલીસ તુર્ક અમીરોનું જૂથ) રચ્યું. ઇલ્તુત્મિશની પુત્રી <b>રઝિયા સુલતાના</b> દિલ્લીની પ્રથમ મહિલા શાસક બની.</p>
+<div class="concept-box box"><span class="label">ગુલામ શબ્દનો અર્થ</span>"ગુલામ" એટલે સેવક. આ શાસકો પહેલાં ઘોરીના ગુલામ (સેવક) હતા, પણ પોતાની બહાદુરીથી સુલતાન બન્યા — તેથી આ વંશને <b>ગુલામવંશ</b> કહેવાય છે.</div>
+<div class="mistake-box box"><span class="label">સામાન્ય ભૂલ</span>"રઝિયા એક મહિલા શાસક ન હતી" — ખોટું. રઝિયા દિલ્લીના સુલતાનની ગાદી પર આવનાર પ્રથમ મહિલા શાસક હતી.</div>
+<h3>ખલજી (1290–1320) અને તુગલક (1320–1414)</h3>
+<p>ખલજીઓમાં <b>અલાઉદ્દીન ખલજી</b> સૌથી પ્રસિદ્ધ હતો. તેણે બજાર-નિયંત્રણ, ભાવ-નિયમન અને સંગ્રહખોરી પર નિયંત્રણ જેવા સુધારા કર્યા. પછી <b>ગિયાસુદ્દીન તુગલક</b> દ્વારા તુગલક વંશ શરૂ થયો. <b>મુહમ્મદ-બિન-તુગલક</b>ની તરંગી યોજનાઓ (દૌલતાબાદમાં રાજધાની ખસેડવી વગેરે) જાણીતી છે; <b>ફિરોઝશાહ તુગલક</b> નવાં નગરો (જૌનપુર, ફિરોઝપુર, ફતેહાબાદ) વસાવ્યાં.</p>
+<div class="mistake-box box"><span class="label">સામાન્ય ભૂલ</span>"મુહમ્મદ તુગલકની યોજનાઓ સફળ રહી" — ખોટું. ઘણી યોજનાઓ અમલીકરણના અભાવે નિષ્ફળ ગઈ, તેથી તેને "તરંગી યોજનાઓ" કહે છે.</div>
+<h3>સૈયદ (1414–1451) અને લોદી (1451–1526)</h3>
+<p><b>સૈયદવંશ</b> પછી <b>બહલોલ લોદી</b> દ્વારા લોદી વંશ શરૂ થયો. લોદી વંશનો છેલ્લો સુલતાન <b>ઇબ્રાહીમ લોદી</b> હતો. 1526ના પાણીપતના પ્રથમ યુદ્ધમાં તે બાબર સામે હાર્યો અને સલ્તનતયુગનો અંત આવ્યો.</p>
+<div class="check-box box"><span class="label">જાતે ચકાસો</span>સલ્તનતનો છેલ્લો સુલતાન કોણ હતો અને તે કોની સામે હાર્યો?<br><span class="src">જવાબ: ઇબ્રાહીમ લોદી; બાબર સામે પાણીપતના પ્રથમ યુદ્ધ (1526)</span></div>
+
+<div class="next-line">→ <b>આગળ:</b> રાજ્ય-વ્યવસ્થા — Part 02.</div>
+</div>
+
+
+<!-- ============ PART 02 ============ -->
+<div class="part" id="p2">
+<h2><span class="num">02</span>રાજ્ય-વ્યવસ્થા</h2>
+<p class="part-why">શા માટે ભણવું: સલ્તનત વિશાળ દેશને કેવી રીતે ચલાવતી હતી તે સમજવા — કેન્દ્ર, પ્રાંત અને ગામ.</p>
+
+<div class="submap"><span>કેન્દ્રીય શાસન (સુલતાન + મંત્રીમંડળ)</span><span>પ્રાંતીય શાસન (ઇક્તા)</span><span>સ્થાનિક શાસન (શિક, પરગણા)</span></div>
+<h3>કેન્દ્રીય શાસન</h3>
+<p>સુલતાન સર્વોચ્ચ હતો. તેના <b>મંત્રીમંડળ</b>ના મુખ્ય મંત્રી <b>વઝીર</b> હતા. આ ઉપરાંત સેના, પત્રવ્યવહાર, ધર્મ, વિદેશ અને ગુપ્તચર વિભાગો હતા. અલાઉદ્દીન ખલજીના સમયમાં <b>ખેપિયા</b> (દૂતો) સરકારી આદેશો લઈ જતા.</p>
+<div class="concept-box box"><span class="label">કેમ આ કેન્દ્ર-પ્રાંત-સ્થાનિક સ્તર?</span>વિશાળ દેશ એક જ માણસથી ચલાવી શકાય નહિ. તેથી કામને ત્રણ સ્તરે વહેંચ્યું: <b>કેન્દ્ર</b> (નીતિ), <b>પ્રાંત</b> (વહીવટ), <b>ગામ/શહેર</b> (રોજિંદું કામ).</div>
+<h3>પ્રાંતીય શાસન — ઇક્તા</h3>
+<p>સલ્તનતકાળમાં પ્રાંતોને જાગીરમાં વહેંચવામાં આવતા, જેને <b>ઇક્તા</b> કહેતા. ઇક્તાદાર (ઇક્તાના માલિક) જમીનની આવક (મહેસૂલ) ઉઘરાવતા અને જરૂર પડે ત્યારે સુલતાનને લશ્કરી મદદ કરતા.</p>
+<div class="formula-box box"><span class="label">યાદ રાખવું — ઇક્તા</span><div class="f"><b>ઇક્તા</b> = પ્રાંતની જાગીર · <b>ઇક્તાદાર</b> = તેનો માલિક (મહેસૂલ + લશ્કર)</div><div class="meaning">આ વ્યવસ્થાથી કેન્દ્રને લશ્કર મળતું.</div></div>
+<h3>સ્થાનિક શાસન</h3>
+<p>પ્રાંતો <b>જિલ્લા</b> અને <b>તાલુકા</b>માં વહેંચાતા. જિલ્લાને <b>શિક</b> અને તાલુકાને <b>પરગણા</b> કહેતા. ગામમાં <b>મુકદ્દમ</b> (વહીવટી વડો), <b>પટવારી</b> અને <b>કારકુન</b> કામ કરતા.</p>
+<div class="mistake-box box"><span class="label">સામાન્ય ભૂલ</span>"પરગણું ગામ હતું" — ખોટું. પરગણું તાલુકા જેવો વિસ્તાર હતો; ગામ તેનાથી નીચેનું એકમ હતું.</div>
+<div class="check-box box"><span class="label">જાતે ચકાસો</span>ઇક્તાદાર શું કરતો અને શિક-પરગણા કયા સ્તરે હતાં?<br><span class="src">જવાબ: ઇક્તાદાર જમીનનું મહેસૂલ ઉઘરાવતો અને લશ્કરી મદદ કરતો; શિક (જિલ્લો) અને પરગણા (તાલુકો) સ્થાનિક સ્તરે હતાં.</span></div>
+
+<div class="next-line">→ <b>આગળ:</b> કિલ્લા અને અન્ય બાંધકામ — Part 03.</div>
+</div>
+
+
+<!-- ============ PART 03 ============ -->
+<div class="part" id="p3">
+<h2><span class="num">03</span>કિલ્લા અને અન્ય બાંધકામ</h2>
+<p class="part-why">શા માટે ભણવું: દિલ્લી સલ્તનતનાં સ્થાપત્યો ભારતમાં ઇસ્લામી શૈલીની શરૂઆત કઈ રીતે બન્યાં તે સમજવા.</p>
+
+<p>દિલ્લી સલ્તનત સાથે ભારતમાં ઇસ્લામી શૈલીનાં સ્થાપત્યો આવ્યાં. આ શૈલીમાં <b>મસ્જિદ, મકબરા અને રોજા</b> મુખ્ય હતાં.</p>
+<div class="tblwrap"><table><tr><th>સ્થાપત્ય</th><th>કોણે બનાવ્યું / ક્યારે</th><th>વિશેષતા</th></tr><tr><td class="rowlabel">કુવ્વત-ઉલ-ઇસ્લામ મસ્જિદ</td><td class="l">કુતુબુદ્દીન ઐબક</td><td class="l">દિલ્લીની સૌથી જૂની ઇસ્લામી ઇમારતોમાંની એક</td></tr><tr><td class="rowlabel">કુતુબમિનાર</td><td class="l">કુતુબુદ્દીન શરૂ; ઇલ્તુત્મિશે પૂર્ણ</td><td class="l">ઊંચો મિનાર; ઇલ્તુત્મિશે બાકીના બે માળ બાંધ્યા</td></tr><tr><td class="rowlabel">અલાઈ દરવાજો</td><td class="l">અલાઉદ્દીન ખલજી</td><td class="l">ખલજી વંશનો પ્રવેશદ્વાર</td></tr><tr><td class="rowlabel">ઢાઈ દિનકા ઝોંપડા</td><td class="l">કુતુબુદ્દીન ઐબકે બંધાવેલ (અજમેર)</td><td class="l">અજમેરમાં આવેલ ઇમારત</td></tr><tr><td class="rowlabel">સિરી કિલ્લો</td><td class="l">અલાઉદ્દીન ખલજી</td><td class="l">સિરી નામનું નગર અને કિલ્લો</td></tr></table></div>
+<div class="why-box box"><span class="label">રોજિંદું ઉદાહરણ</span>તમારા ગામના જૂના મકાનો અને દરવાજા જેમ વર્ષો પહેલાં બંધાયેલા છે, તેમ કુતુબમિનાર પણ આઠસો વર્ષ જૂનું સ્મારક છે.</div>
+<div class="formula-box box"><span class="label">યાદ રાખવું — ઇસ્લામી સ્થાપત્યના ત્રણ મુખ્ય પ્રકાર</span><div class="f"><b>મસ્જિદ</b> (પ્રાર્થના) · <b>મકબરો</b> (સમાધિ) · <b>રોજા</b> (દર્ગા)</div><div class="meaning">દિલ્લી સલ્તનતમાં આ ત્રણ મુખ્ય હતાં.</div></div>
+<div class="check-box box"><span class="label">જાતે ચકાસો</span>અલાઈ દરવાજો કયા સુલતાને બંધાવ્યો?<br><span class="src">જવાબ: અલાઉદ્દીન ખલજી</span></div>
+
+<div class="next-line">→ <b>આગળ:</b> વિજયનગર અને બહમની — Part 04.</div>
+</div>
+
+
+<!-- ============ PART 04 ============ -->
+<div class="part" id="p4">
+<h2><span class="num">04</span>વિજયનગર અને બહમની રાજ્યો</h2>
+<p class="part-why">શા માટે ભણવું: સલ્તનતના સમયમાં દક્ષિણમાં બે મોટાં રાજ્યો ઊભાં થયાં, તે સમજવા.</p>
+
+<h3>વિજયનગર સામ્રાજ્ય (ઈ.સ. 1336–1646)</h3>
+<p>હરિહરરાય અને બુક્કરાય બે ભાઈઓએ તુંગભદ્રા નદીના કિનારે વિજયનગર સ્થાપ્યું. તેઓ પહેલાં ગુરુ સ્વામી વિદ્યારણ્યના નામે ‘વિદ્યાનગર’ કહેતા. <b>સંગમવંશ, સાલુવવંશ, તુલુવવંશ અને અરવિંદુવંશ</b> શાસકો થયા. સૌથી પ્રસિદ્ધ શાસક <b>કૃષ્ણદેવરાય</b> (તુલુવવંશ) હતો; તે સંસ્કૃત અને તેલુગુ ભાષાનો વિદ્વાન અને ‘આંધ્રના ભોજ’ તરીકે ઓળખાયો. 1565માં <b>તાલીકોટા</b>ના યુદ્ધમાં વિજયનગરનો મુસ્લિમ રાજ્યોના સંઘ સામે પરાજય થયો.</p>
+<div class="mistake-box box"><span class="label">સામાન્ય ભૂલ</span>"વિજયનગર દિલ્લી સલ્તનતનો ભાગ હતું" — ખોટું. વિજયનગર દક્ષિણનું અલગ હિંદુ સામ્રાજ્ય હતું.</div>
+<h3>બહમની રાજ્ય (ઈ.સ. 1347–1518)</h3>
+<p>તુગલક સમયમાં ઝફરખાને (અલાઉદ્દીન બહમનશાહ નામ ધારણ કરીને) 1347માં બહમની રાજ્યની સ્થાપના કરી. રાજધાની પહેલાં ગુલબર્ગા અને પછી બીદર બની. 1518 પછી તે <b>પાંચ સ્વતંત્ર રાજ્યો</b> — બીજાપુર, અહમદનગર, ગોલકોંડા, બિદર અને બરાર — માં વહેંચાઈ ગયું.</p>
+<div class="formula-box box"><span class="label">યાદ રાખવું — બહમનીના પાંચ ભાગ</span><div class="f">બીજાપુર · અહમદનગર · ગોલકોંડા · બિદર · બરાર</div><div class="meaning">બહમની વિખેરાયા પછી બનેલાં પાંચ રાજ્યો.</div></div>
+<div class="check-box box"><span class="label">જાતે ચકાસો</span>બહમની રાજ્યના પાંચ ભાગ કયા હતા?<br><span class="src">જવાબ: બીજાપુર, અહમદનગર, ગોલકોંડા, બિદર, બરાર</span></div>
+
+<div class="next-line">→ <b>આગળ:</b> સારાંશ અને પરીક્ષાના જવાબ — Part 05.</div>
+</div>
+
+
+<!-- ============ PART 05 ============ -->
+<div class="part" id="p5">
+<h2><span class="num">05</span>સારાંશ અને પરીક્ષાના જવાબ</h2>
+<p class="part-why">શા માટે ભણવું: બધી વાત ગોઠવીને પરીક્ષામાં કેવા જવાબ લખવા તે જાણવા.</p>
+
+<div class="remember"><span class="label">યાદ રાખો</span><ol><li>દિલ્લી સલ્તનત ઈ.સ. 1206–1526: ગુલામ, ખલજી, તુગલક, સૈયદ, લોદી.</li><li>અલાઉદ્દીન ખલજી: બજાર-નિયમન, ભાવ-નિયમન; અલાઈ દરવાજો.</li><li>મુહમ્મદ તુગલક: તરંગી યોજનાઓ. ફિરોઝશાહ: નવાં નગરો.</li><li>વ્યવસ્થા: કેન્દ્ર (સુલતાન, વઝીર), પ્રાંત (ઇક્તા), સ્થાનિક (શિક, પરગણા, મુકદ્દમ, પટવારી).</li><li>સ્થાપત્ય: મસ્જિદ, મકબરો, રોજા; કુતુબમિનાર.</li><li>વિજયનગર (1336–1646, તાલીકોટા 1565); બહમની (1347–1518, પાંચ ભાગ).</li></ol></div>
+<h3>પરીક્ષાના નમૂના જવાબ</h3>
+<div class="example"><span class="label">1–2 ગુણ — એક-બે વાક્યમાં</span><div class="step"><b>પ્ર.</b> ઢાઈ દિનકા ઝોંપડા ક્યાં આવેલ છે?</div><div class="step"><b>જ.</b> ઢાઈ દિનકા ઝોંપડા અજમેર શહેરમાં આવેલ છે.</div><div class="step"><b>પ્ર.</b> પાણીપતનું પ્રથમ યુદ્ધ કોની વચ્ચે થયું હતું?</div><div class="step"><b>જ.</b> ઇબ્રાહીમ લોદી અને બાબર વચ્ચે (1526).</div></div>
+<div class="example"><span class="label">4 ગુણ — ટૂંકનોંધ</span><div class="step"><b>પ્ર.</b> દિલ્લી સલ્તનતની કેન્દ્રીય શાસન-વ્યવસ્થા સમજાવો.</div><div class="step"><b>જ.</b> સુલતાન સર્વોચ્ચ હતો અને મંત્રીમંડળમાં વઝીર મુખ્ય હતો. સેના, પત્રવ્યવહાર, ધર્મ, વિદેશ અને ગુપ્તચર વિભાગો હતા. અલાઉદ્દીનના સમયમાં ખેપિયા સરકારી આદેશ પહોંચાડતા.</div></div>
+
+</div>
+
+
+<div class="part" id="p6">
+<h2><span class="num">06</span>વિદ્યાર્થી માટે ટિપ્પણી</h2>
+<div class="why-box box"><span class="label">વાલી માટે</span>
+<ul>
+<li>બાળક પાંચ વંશને ક્રમમાં કહી શકે?</li>
+<li>પૂછો: "ઇક્તા અને શિક વચ્ચે શું ફેર?"</li>
+<li>સામાન્ય ભૂલ: ખલજી અને તુગલક ગૂંચવવા — તુગલકમાં ગિયાસુદ્દીન અને મુહમ્મદ તુગલક બંને આવે.</li>
+</ul></div>
+</div>
+
+</div>
+</body></html>

@@ -1,0 +1,242 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>મુઘલ સામ્રાજ્ય — Chapter Notes</title>
+<style>:root{
+  --bg:#FBF9F4; --surface:#FFFFFF; --surface-2:#F3F0E7;
+  --ink:#241F16; --ink-2:#5B5647; --ink-3:#8C8672;
+  --line:#E4DFD0;
+  --accent:#8B5E34; --accent-ink:#3E2A17; --accent-bg:#F1E4D3;
+  --formula:#1F4E42; --formula-bg:#E3F0EA; --formula-line:#9FC6B7;
+  --exam:#7A2E2E; --exam-bg:#F6E4E1; --exam-line:#DBA9A4;
+  --mistake:#8A5A00; --mistake-bg:#FDF1D9; --mistake-line:#E9C877;
+  --check:#2E4E7A; --check-bg:#E4ECF6; --check-line:#A9C0DB;
+  --why:#5B5647; --why-bg:#F3F0E7; --why-line:#DAD4C2;
+  --font-display:'Fraunces','Noto Sans Gujarati',Georgia,serif;
+  --font-body:'Source Sans 3','Noto Sans Gujarati',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+    --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+    --line:#3A3428;
+    --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+    --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+    --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+    --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+    --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+    --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+  --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+  --line:#3A3428;
+  --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+  --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+  --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+  --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+  --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+  --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.75;padding:0 16px;font-size:16px}
+.wrap{max-width:760px;margin:0 auto;padding-block:32px 80px}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;text-wrap:balance;color:var(--ink)}
+h1{font-size:clamp(28px,6vw,38px);margin:0 0 6px}
+.subtitle{color:var(--ink-2);font-size:15px;margin:0 0 28px}
+h2{font-size:24px;margin:0 0 4px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+h2 .num{color:var(--accent);font-family:var(--font-mono);font-size:15px;font-weight:600}
+.part-why{color:var(--ink-2);font-size:14.5px;margin:0 0 18px;font-style:italic}
+h3{font-size:18px;margin:30px 0 10px;color:var(--accent-ink)}
+p{margin:0 0 12px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:36px}
+.legend-item{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-2)}
+.dot{width:10px;height:10px;border-radius:3px;flex:none}
+.dot.formula{background:var(--formula)} .dot.exam{background:var(--exam)} .dot.mistake{background:var(--mistake)}
+.dot.check{background:var(--check)} .dot.concept{background:var(--accent)} .dot.why{background:var(--why)}
+.part{padding:32px 0;border-top:1px solid var(--line)}
+.part:first-of-type{border-top:none}
+.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:32px}
+.toc ol{margin:8px 0 0;padding-left:0;list-style:none}
+.toc li{margin-bottom:5px;font-size:14.5px}
+.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ink-3)}
+.toc .n{font-family:var(--font-mono);color:var(--accent);font-size:13px;font-weight:600;margin-right:6px}
+.box{border-radius:12px;padding:14px 18px;margin:14px 0;border:1px solid;font-size:15px}
+.box .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;display:block}
+.formula-box{background:var(--formula-bg);border-color:var(--formula-line)}
+.formula-box .label{color:var(--formula)}
+.formula-box .f{font-family:var(--font-mono);font-size:18px;color:var(--formula);font-weight:600;margin:4px 0}
+.formula-box .meaning{color:var(--ink-2);font-size:14px}
+.concept-box{background:var(--surface);border-color:var(--line);border-left:3px solid var(--accent)}
+.concept-box .label{color:var(--accent)}
+.exam-box{background:var(--exam-bg);border-color:var(--exam-line)} .exam-box .label{color:var(--exam)}
+.mistake-box{background:var(--mistake-bg);border-color:var(--mistake-line)} .mistake-box .label{color:var(--mistake)}
+.check-box{background:var(--check-bg);border-color:var(--check-line)} .check-box .label{color:var(--check)}
+.why-box{background:var(--why-bg);border-color:var(--why-line)} .why-box .label{color:var(--why)}
+.extra-box{background:var(--surface);border:1px dashed var(--ink-3)} .extra-box .label{color:var(--ink-3)}
+.parent-box{background:var(--accent-bg);border-color:var(--accent)} .parent-box .label{color:var(--accent-ink)}
+.outcome{background:var(--surface);border:1px solid var(--accent);border-radius:12px;padding:14px 18px;margin:0 0 16px}
+.outcome .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;display:block}
+.submap{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 6px}
+.submap span{background:var(--surface-2);border:1px solid var(--line);border-radius:20px;padding:4px 12px;font-size:12.5px;color:var(--ink-2)}
+.next-line{font-size:14px;color:var(--ink-2);margin-top:18px;padding-top:14px;border-top:1px dashed var(--line)}
+.next-line b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{padding:8px 10px;border:1px solid var(--line);text-align:center}
+th{background:var(--surface-2);font-weight:600;color:var(--ink-2);font-size:12.5px}
+td.rowlabel{text-align:left;color:var(--ink-2);font-weight:600;background:var(--surface-2)}
+td.l{text-align:left}
+.tblwrap{overflow-x:auto}
+.example{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:14px 0;font-size:15px}
+.example .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px;display:block}
+.example .step{margin:3px 0}
+.example .step b{color:var(--ink-2);font-weight:600}
+.mono{font-family:var(--font-mono)}
+.remember{background:var(--accent-bg);border:1px solid var(--accent);border-radius:12px;padding:16px 20px;margin:16px 0}
+.remember .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:8px;display:block}
+.remember ol{margin:0;padding-left:18px} .remember li{margin-bottom:5px}
+.badge{display:inline-block;font-size:11px;font-family:var(--font-mono);padding:2px 8px;border-radius:20px;background:var(--exam-bg);color:var(--exam);border:1px solid var(--exam-line);margin-left:6px;vertical-align:middle}
+.diagram{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px;margin:16px 0}
+.diagram svg{display:block;width:100%;height:auto}
+.diagram-cap{text-align:center;font-size:13px;color:var(--ink-3);margin-top:6px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:600px){.pair{grid-template-columns:1fr}}
+.pair .diagram{margin:6px 0}
+.jumpicon{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:var(--formula);color:var(--surface);text-decoration:none;font-size:11px;font-weight:700;vertical-align:middle;margin-left:4px}
+.src{font-size:12.5px;color:var(--ink-3)}
+</style>
+
+<div class="wrap">
+<h1>પ્રકરણ 3 · મુઘલ સામ્રાજ્ય</h1>
+<p class="subtitle">ધોરણ 7 સામાજિક વિજ્ઞાન (ઇતિહાસ) · GSEB ગુજરાતી માધ્યમ · પાઠ્યપુસ્તક: GSSTB, પાન 13–18</p>
+<div class="legend">
+<div class="legend-item"><span class="dot why"></span>કેમ / રોજિંદું ઉદાહરણ</div>
+<div class="legend-item"><span class="dot concept"></span>સમજવું જ પડે</div>
+<div class="legend-item"><span class="dot formula"></span>યાદ રાખવું — મુખ્ય મુદ્દો</div>
+<div class="legend-item"><span class="dot exam"></span>પરીક્ષામાં વારંવાર</div>
+<div class="legend-item"><span class="dot mistake"></span>સામાન્ય ભૂલ</div>
+<div class="legend-item"><span class="dot check"></span>જાતે ચકાસો</div>
+</div>
+<div class="toc">
+<b>પ્રકરણનો નકશો</b> — અંતિમ લક્ષ્ય: મુઘલ શાસકો, તેમનાં મુખ્ય કામ, મુઘલ વહીવટ અને સામ્રાજ્યનો અંત સમજાવવો.
+<ol>
+<li><span class="n">00</span><a href="#intro">પ્રકરણ શું કહે છે</a> — મુઘલ સામ્રાજ્યની સ્થાપના</li><li><span class="n">01</span><a href="#p1">મુઘલ શાસકો</a> — બાબર થી ઔરંગઝેબ</li><li><span class="n">02</span><a href="#p2">મુઘલ સમયના વીરો અને શિવાજી</a> — રાણા પ્રતાપ, છત્રપતિ શિવાજી</li><li><span class="n">03</span><a href="#p3">મુઘલ વહીવટ</a> — દીવાન-એ-આમ, મનસબદારી, મહેસૂલ</li><li><span class="n">04</span><a href="#p4">મુઘલકાલીન સંસ્કૃતિ</a> — સ્થાપત્ય, ચિત્રકલા, સાહિત્ય, સંગીત</li><li><span class="n">05</span><a href="#p5">સારાંશ અને પરીક્ષાના જવાબ</a> — ટૂંકનોંધ, MCQ</li>
+</ol>
+</div>
+
+<div class="part" id="intro">
+<h2><span class="num">00</span>પ્રકરણ શું કહે છે</h2>
+<p class="part-why">શા માટે ભણવું: તાજમહાલ, લાલકિલ્લો અને ફતેહપુર સિકરી જેવાં સ્થાપત્યો મુઘલ શાસકોએ બાંધ્યાં — તેમને સમજવા.</p>
+<div class="outcome"><span class="label">આ પ્રકરણ પછી તમે</span>
+(1) બાબરથી ઔરંગઝેબ સુધીના મુખ્ય મુઘલ શાસકો અને તેમનાં કામ કહી શકશો, (2) મનસબદારી અને મહેસૂલ-વ્યવસ્થા સમજાવી શકશો, (3) રાણા પ્રતાપ અને શિવાજી મહારાજની ભૂમિકા જણાવી શકશો, (4) મુઘલકાલીન સંસ્કૃતિ ઓળખી શકશો.</div>
+<div class="concept-box box"><span class="label">બાબરની આત્મકથા</span>બાબર ફારસી અને અરબી ભાષાનો જાણકાર, પ્રકૃતિપ્રેમી અને લેખક હતો. તેણે પોતાની આત્મકથા <b>‘તુઝુક-એ-બાબરી’</b> (બાબરનામા) લખી, જે વિશ્વસાહિત્યની પ્રસિદ્ધ કૃતિ છે.</div>
+<div class="why-box box"><span class="label">રોજિંદું ઉદાહરણ</span>તાજમહાલ, લાલકિલ્લો અને બુલંદ દરવાજો આજે પણ આપણા પ્રવાસનાં સ્થળો છે — તે બધાં મુઘલ શાસનની દેન છે.</div>
+<div class="remember"><span class="label">યાદ રાખો</span><ol><li>મુઘલ સામ્રાજ્ય: ઈ.સ. 1526 (બાબર) થી 1707 (ઔરંગઝેબનું અવસાન) સુધી મુખ્ય સમયગાળો.</li><li>પાણીપતનું પહેલું યુદ્ધ 1526: બાબર વિ. ઇબ્રાહીમ લોદી.</li><li>અકબર સૌથી મહાન મુઘલ શાસક ગણાય; તેણે મનસબદારી અને દીન-એ-ઇલાહી શરૂ કર્યાં.</li></ol></div>
+<div class="diagram"><svg viewBox="0 0 640 438" width="100%" style="max-width:640px;display:block;margin:6px auto" xmlns="http://www.w3.org/2000/svg" role="img"><text x="320.0" y="16" text-anchor="middle" font-size="12" fill="var(--ink-2)" stroke="var(--surface)" stroke-width="3" paint-order="stroke">મુઘલ શાસકોના વર્ષો અને મુખ્ય ઘટનાઓ — વર્ષ પ્રમાણે સ્કેલ</text><text x="142" y="48" text-anchor="end" font-size="11" fill="var(--ink)">બાબર (1526–1530)</text><rect x="164.8" y="36" width="9.9" height="18" rx="5" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="1.2"/><text x="168.8" y="49" font-size="10" fill="var(--accent-ink)">1526–1530</text><text x="142" y="94" text-anchor="end" font-size="11" fill="var(--ink)">હુમાયુ (1530–1556, વચ્ચે વિરામ)</text><rect x="174.7" y="82" width="64.3" height="18" rx="5" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="1.2"/><text x="178.7" y="95" font-size="10" fill="var(--accent-ink)">1530–1556</text><text x="142" y="140" text-anchor="end" font-size="11" fill="var(--ink)">અકબર (1556–1605)</text><rect x="239.1" y="128" width="121.2" height="18" rx="5" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="1.2"/><text x="243.1" y="141" font-size="10" fill="var(--accent-ink)">1556–1605</text><text x="142" y="186" text-anchor="end" font-size="11" fill="var(--ink)">જહાંગીર (1605–1627)</text><rect x="360.3" y="174" width="54.4" height="18" rx="5" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="1.2"/><text x="364.3" y="187" font-size="10" fill="var(--accent-ink)">1605–1627</text><text x="142" y="232" text-anchor="end" font-size="11" fill="var(--ink)">શાહજહાં (1627–1658)</text><rect x="414.7" y="220" width="76.7" height="18" rx="5" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="1.2"/><text x="418.7" y="233" font-size="10" fill="var(--accent-ink)">1627–1658</text><text x="142" y="278" text-anchor="end" font-size="11" fill="var(--ink)">ઔરંગઝેબ (1658–1707)</text><rect x="491.4" y="266" width="121.2" height="18" rx="5" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="1.2"/><text x="495.4" y="279" font-size="10" fill="var(--accent-ink)">1658–1707</text><line x1="150" y1="312" x2="620" y2="312" stroke="var(--ink-3)" stroke-width="1.2"/><line x1="224.2" y1="312" x2="224.2" y2="316" stroke="var(--ink-3)"/><text x="224.2" y="327" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">1550</text><line x1="347.9" y1="312" x2="347.9" y2="316" stroke="var(--ink-3)"/><text x="347.9" y="327" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">1600</text><line x1="471.6" y1="312" x2="471.6" y2="316" stroke="var(--ink-3)"/><text x="471.6" y="327" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">1650</text><line x1="595.3" y1="312" x2="595.3" y2="316" stroke="var(--ink-3)"/><text x="595.3" y="327" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">1700</text><circle cx="164.8" cy="312" r="3.2" fill="var(--mistake)"/><text x="169.8" y="342" font-size="10" fill="var(--mistake)">પાણીપતનું પહેલું યુદ્ધ (1526)</text><circle cx="199.5" cy="312" r="3.2" fill="var(--mistake)"/><text x="204.5" y="357" font-size="10" fill="var(--mistake)">શેરશાહે હુમાયુને હરાવ્યો (1540)</text><circle cx="239.1" cy="312" r="3.2" fill="var(--mistake)"/><text x="244.1" y="372" font-size="10" fill="var(--mistake)">પાણીપતનું બીજું યુદ્ધ (1556)</text><circle cx="288.5" cy="312" r="3.2" fill="var(--mistake)"/><text x="293.5" y="387" font-size="10" fill="var(--mistake)">હલ્દીઘાટી (1576)</text><circle cx="530.9" cy="312" r="3.2" fill="var(--mistake)"/><text x="535.9" y="402" font-size="10" fill="var(--mistake)">શિવાજીનું રાજ્યાભિષેક (1674)</text><circle cx="612.6" cy="312" r="3.2" fill="var(--mistake)"/><text x="617.6" y="417" font-size="10" fill="var(--mistake)">ઔરંગઝેબનું અવસાન (1707)</text></svg></div>
+<div class="diagram-cap">આકૃતિ 1 — શાસકોના વર્ષો અને મુખ્ય ઘટનાઓ વર્ષના પ્રમાણમાં મુકાયાં છે.</div>
+</div>
+
+
+<!-- ============ PART 01 ============ -->
+<div class="part" id="p1">
+<h2><span class="num">01</span>મુઘલ શાસકો</h2>
+<p class="part-why">શા માટે ભણવું: છ મુખ્ય શાસકોનાં કામ જાણવાં, કેમ કે પરીક્ષામાં તેમના વિશે ઘણા પ્રશ્નો આવે છે.</p>
+
+<div class="tblwrap"><table><tr><th>શાસક</th><th>સમય</th><th>મુખ્ય કામ</th></tr><tr><td class="rowlabel">બાબર</td><td class="l">ઈ.સ. 1526–1530</td><td class="l">પાણીપતના પહેલા યુદ્ધમાં ઇબ્રાહીમ લોદીને હરાવી મુઘલ સામ્રાજ્યની સ્થાપના; બાબરનામા લખ્યું</td></tr><tr><td class="rowlabel">હુમાયુ</td><td class="l">ઈ.સ. 1530–1540; 1555–1556</td><td class="l">શેરશાહ સામે હાર, ઈરાન ભાગ્યા; 1555માં પાછા જીતીને ગાદી મેળવી; પુસ્તકાલયની સીડીથી પડીને અવસાન</td></tr><tr><td class="rowlabel">શેરશાહ સૂરી</td><td class="l">ઈ.સ. 1540–1545</td><td class="l">રૂપિયાનું ચલણ; ગ્રાન્ડ ટ્રંક રોડ; ડાક વ્યવસ્થા; ધર્મશાળાઓ બંધાવી</td></tr><tr><td class="rowlabel">અકબર</td><td class="l">ઈ.સ. 1556–1605</td><td class="l">પાણીપતનું બીજું યુદ્ધ (1556); સામ્રાજ્ય વિસ્તાર; મનસબદારી; દીન-એ-ઇલાહી; ફતેહપુર સિકરીનો બુલંદ દરવાજો</td></tr><tr><td class="rowlabel">જહાંગીર</td><td class="l">ઈ.સ. 1605–1627</td><td class="l">ચિત્રકલાનો વિકાસ; નૂરજહાં સાથે લગ્ન; ગોલકોંડા સુધી વિજય</td></tr><tr><td class="rowlabel">શાહજહાં</td><td class="l">ઈ.સ. 1627–1658</td><td class="l">તાજમહાલ (મુમતાજમહલની યાદમાં); લાલકિલ્લો (દિલ્લી); મોતી મસ્જિદ</td></tr><tr><td class="rowlabel">ઔરંગઝેબ</td><td class="l">ઈ.સ. 1658–1707</td><td class="l">ભાઈઓ સાથે ગાદી માટે યુદ્ધ; દક્ષિણ ભારત પર વિજય; ધાર્મિક નીતિ; ઔરંગાબાદમાં રાબિયા-ઉદ-દૌરાનીનો મકબરો</td></tr></table></div>
+<div class="check-box box"><span class="label">જાતે ચકાસો</span>અકબરના સમયમાં કયું બીજું યુદ્ધ થયું હતું અને કોની વચ્ચે?<br><span class="src">જવાબ: પાણીપતનું બીજું યુદ્ધ (1556), અકબર અને હેમુ વચ્ચે</span></div>
+<h3>પાણીપતનાં યુદ્ધ</h3>
+<div class="formula-box box"><span class="label">યાદ રાખવું — પાણીપતનાં બે યુદ્ધ</span><div class="f">1526: બાબર વિ. ઇબ્રાહીમ લોદી · 1556: અકબર વિ. હેમુ</div><div class="meaning">બંને યુદ્ધ પાણીપત (હરિયાણા) માં થયાં; પહેલા યુદ્ધથી મુઘલ સત્તા શરૂ થઈ.</div></div>
+<div class="mistake-box box"><span class="label">સામાન્ય ભૂલ</span>"પાણીપતનું પહેલું યુદ્ધ શેરશાહ અને હુમાયુ વચ્ચે થયું" — ખોટું. તે બાબર અને ઇબ્રાહીમ લોદી વચ્ચે (1526) થયું.</div>
+<h3>અકબરની નીતિઓ</h3>
+<p>અકબરે રાજપૂતો સાથે સામાજિક સંબંધો બાંધ્યા; રાજપૂતો સેનામાં ઊંચા પદે નિમાયા. તેણે બધા ધર્મોના ઉત્તમ તત્ત્વોને એકઠાં કરીને <b>દીન-એ-ઇલાહી</b> નામનો સંપ્રદાય શરૂ કર્યો. રામાયણ, મહાભારત, અથર્વવેદ અને બાઇબલ જેવાં ગ્રંથોનો ફારસીમાં અનુવાદ કરાવ્યો. બાળલગ્ન અને સતીપ્રથાનો વિરોધ કર્યો; યાત્રાવેરો નાબૂદ કર્યો અને બળજબરીપૂર્વક ધર્માંતરણ પર પ્રતિબંધ મૂક્યો.</p>
+<div class="why-box box"><span class="label">રોજિંદું ઉદાહરણ</span>આજે જ્યારે આપણે ધર્મ-સહિષ્ણુતાની વાત કરીએ છીએ, ત્યારે અકબરની આ નીતિ એક ઉદાહરણ બને છે.</div>
+
+<div class="next-line">→ <b>આગળ:</b> મુઘલ સમયના વીરો અને શિવાજી — Part 02.</div>
+</div>
+
+
+<!-- ============ PART 02 ============ -->
+<div class="part" id="p2">
+<h2><span class="num">02</span>મુઘલ સમયના વીરો અને શિવાજી મહારાજ</h2>
+<p class="part-why">શા માટે ભણવું: મુઘલ સત્તાને પડકારનાર રાજપૂત અને મરાઠા વીરો વિશે જાણવા.</p>
+
+<ul>
+<li><b>રાણા સંગ્રામસિંહ (મેવાડ)</b> — બાબર સામે ખાનવાના યુદ્ધમાં હાર્યા (1527).</li>
+<li><b>મહારાણા પ્રતાપ (મેવાડ)</b> — અકબર સામે <b>હલ્દીઘાટી</b>નું યુદ્ધ (1576). હારી ગયા છતાં ગોગુંદાથી ઉદયપુરના વિસ્તારમાં સંઘર્ષ ચાલુ રાખ્યો; ચેતક ઘોડો પ્રસિદ્ધ.</li>
+<li><b>વીર દુર્ગાદાસ રાઠોડ (મારવાડ)</b> — ઔરંગઝેબના સમયમાં મારવાડની સ્વતંત્રતા માટે લડ્યા.</li>
+<li><b>છત્રપતિ શિવાજી મહારાજ</b> — જન્મ શિવનેરીના કિલ્લામાં (1627/1630). 1674માં <b>રાયગઢ</b>માં રાજ્યાભિષેક. પુરંદરની સંધિ (1665) પછી પણ તેમણે મુઘલો સાથે સંઘર્ષ ચાલુ રાખ્યો. તેમનું અષ્ટપ્રધાનમંડળ પ્રસિદ્ધ હતું.</li>
+</ul>
+<div class="concept-box box"><span class="label">શિવાજીની સિદ્ધિ શું?</span>મુઘલ સમ્રાટ સાથે હાર-જીતના ચક્ર છતાં શિવાજીએ <b>પોતાનું સ્વતંત્ર હિંદુ રાજ્ય</b> સ્થાપ્યું. રાયગઢમાં રાજ્યાભિષેક ‘હિંદુ સમ્રાટ’ તરીકેની ઓળખ આપે છે.</div>
+<div class="mistake-box box"><span class="label">સામાન્ય ભૂલ</span>"શિવાજીનો રાજ્યાભિષેક દિલ્લીમાં થયો" — ખોટું. રાજ્યાભિષેક 1674માં રાયગઢમાં થયો.</div>
+<div class="check-box box"><span class="label">જાતે ચકાસો</span>હલ્દીઘાટીનું યુદ્ધ કયા બે વચ્ચે થયું હતું?<br><span class="src">જવાબ: અકબર અને મહારાણા પ્રતાપ (1576)</span></div>
+
+<div class="next-line">→ <b>આગળ:</b> મુઘલ વહીવટ — Part 03.</div>
+</div>
+
+
+<!-- ============ PART 03 ============ -->
+<div class="part" id="p3">
+<h2><span class="num">03</span>મુઘલ વહીવટ</h2>
+<p class="part-why">શા માટે ભણવું: મુઘલ સામ્રાજ્ય આટલા મોટા વિસ્તારને કેવી રીતે ચલાવતું હતું, તે સમજવા.</p>
+
+<h3>કેન્દ્રીય વહીવટ</h3>
+<p>અકબરે મુઘલ વહીવટતંત્રની વ્યવસ્થિત સ્થાપના કરી. બાદશાહ સર્વોચ્ચ સેનાપતિ અને ન્યાયાધીશ હતો. તેને સલાહ આપવા <b>મંત્રીપરિષદ</b> હતી — તેને <b>દીવાન-એ-વઝીર-કુલ</b> કહેતા. સેનાના વડાને <b>મીર-એ-સામાન</b> અને <b>મીર બખ્શી</b> જેવા અધિકારીઓ હતા; સરકારી કારખાનાં માટે અલગ વિભાગ હતો.</p>
+<div class="submap"><span>બાદશાહ (સર્વોચ્ચ)</span><span>મંત્રીપરિષદ</span><span>મીર બખ્શી (સેના)</span><span>મીર-એ-સામાન</span><span>ન્યાયતંત્ર</span></div>
+<h3>મનસબદારી</h3>
+<p>અકબરે <b>મનસબદારી</b> વ્યવસ્થા શરૂ કરી. મનસબદાર પદ અને પગાર સાથે લશ્કર રાખતો. તેને પગાર <b>જાગીર</b> (જમીન) વડે અપાતો. મનસબદાર સેના અને મહેસૂલ બંને સાથે સંકળાયેલો હતો. આ પદ્ધતિ વિશ્વમાં અનોખી હતી.</p>
+<div class="concept-box box"><span class="label">મનસબદાર શબ્દનો અર્થ</span><b>મનસબ</b> = પદ/હોદ્દો. મનસબદાર એટલે ‘પદધારી’ — જેનો હોદ્દો તેના લશ્કર અને પગારથી નક્કી થતો.</div>
+<h3>મહેસૂલ</h3>
+<p>અકબરના મહેસૂલ-વ્યવસ્થાના સ્થાપક <b>ટોડરમલ</b> હતા. જમીનના વાર્ષિક ઉપજનો <b>ત્રીજો ભાગ</b> (1/3) મહેસૂલ તરીકે લેવાતો.</p>
+<div class="formula-box box"><span class="label">યાદ રાખવું — મહેસૂલ</span><div class="f"><b>1/3</b> ઉપજ = મહેસૂલ (ટોડરમલ)</div><div class="meaning">આ દર બહુ ઊંચો ન હતો, તેથી ખેડૂત માટે સ્થિર વ્યવસ્થા બની.</div></div>
+<div class="check-box box"><span class="label">જાતે ચકાસો</span>મનસબદારી કોણે શરૂ કરી અને મહેસૂલનો દર કેટલો હતો?<br><span class="src">જવાબ: અકબર; ઉપજનો 1/3 ભાગ</span></div>
+
+<div class="next-line">→ <b>આગળ:</b> મુઘલકાલીન સંસ્કૃતિ — Part 04.</div>
+</div>
+
+
+<!-- ============ PART 04 ============ -->
+<div class="part" id="p4">
+<h2><span class="num">04</span>મુઘલકાલીન સંસ્કૃતિ</h2>
+<p class="part-why">શા માટે ભણવું: મુઘલકાળે સ્થાપત્ય, ચિત્ર, સાહિત્ય અને સંગીતમાં શું આપ્યું, તે જાણવા.</p>
+
+<ul>
+<li><b>સ્થાપત્ય</b> — બાબરે આગ્રા અને લાહોરમાં બગીચા બનાવ્યા; શેરશાહે સાસારામમાં મકબરો; અકબરે આગ્રાનો કિલ્લો અને ફતેહપુર સિકરીનો <b>બુલંદ દરવાજો</b>; શાહજહાંએ <b>તાજમહાલ</b> અને <b>લાલકિલ્લો</b> બનાવ્યાં.</li>
+<li><b>ચિત્રકલા</b> — જહાંગીરના સમયમાં ચિત્રકલાનો ખૂબ વિકાસ થયો. અકબરના સમયમાં દરબારી ચિત્રકારો જેવા કે જશવંત અને ભસાવન પ્રખ્યાત હતા.</li>
+<li><b>સાહિત્ય</b> — ફારસી, અરબી અને હિંદી ભાષામાં સાહિત્ય રચાયું. અબુલફઝલે ‘અકબરનામા’ લખ્યું.</li>
+<li><b>સંગીત</b> — અકબરના દરબારમાં <b>તાનસેન</b> મહાન શાસ્ત્રીય ગાયક હતા.</li>
+</ul>
+<div class="tblwrap"><table><tr><th>ગ્રંથ / ક્ષેત્ર</th><th>વ્યક્તિ</th></tr><tr><td class="rowlabel">અકબરનામા</td><td class="l">અબુલફઝલ</td></tr><tr><td class="rowlabel">તાનસેન (સંગીત)</td><td class="l">અકબરના દરબારના ગાયક</td></tr><tr><td class="rowlabel">મરાઠી-ગુજરાતી ભક્તિ સાહિત્ય</td><td class="l">એકનાથ, જ્ઞાનેશ્વર, સ્વામી રામદાસ (પાઠ્યપુસ્તકમાં ઉલ્લેખ)</td></tr></table></div>
+<div class="why-box box"><span class="label">રોજિંદું ઉદાહરણ</span>તાજમહાલ જોતાં આપણે જે પ્રેમ અને સ્થાપત્યકલા અનુભવીએ છીએ, તે મુઘલ કાળની જ ભેટ છે.</div>
+
+<div class="next-line">→ <b>આગળ:</b> સારાંશ અને પરીક્ષાના જવાબ — Part 05.</div>
+</div>
+
+
+<!-- ============ PART 05 ============ -->
+<div class="part" id="p5">
+<h2><span class="num">05</span>સારાંશ અને પરીક્ષાના જવાબ</h2>
+<p class="part-why">શા માટે ભણવું: બધી વાત એક જગ્યાએ ગોઠવીને પરીક્ષામાં કેવા જવાબ લખવા તે જાણવા.</p>
+
+<div class="remember"><span class="label">યાદ રાખો</span><ol><li>શાસકો: બાબર (1526), હુમાયુ, શેરશાહ (રૂપિયો, ગ્રાન્ડ ટ્રંક રોડ), અકબર, જહાંગીર, શાહજહાં (તાજમહાલ), ઔરંગઝેબ.</li><li>પાણીપત: 1526 (બાબર-લોદી), 1556 (અકબર-હેમુ). હલ્દીઘાટી 1576 (અકબર-પ્રતાપ).</li><li>અકબર: મનસબદારી, દીન-એ-ઇલાહી, ફતેહપુર સિકરી નો બુલંદ દરવાજો. મહેસૂલ: ઉપજનો 1/3 (ટોડરમલ).</li><li>શિવાજી: 1674 રાયગઢ રાજ્યાભિષેક; પુરંદરની સંધિ 1665.</li><li>સંસ્કૃતિ: તાજમહાલ, લાલકિલ્લો, અકબરનામા, તાનસેન.</li></ol></div>
+<h3>પરીક્ષાના નમૂના જવાબ</h3>
+<div class="example"><span class="label">1–2 ગુણ — એક-બે વાક્યમાં</span><div class="step"><b>પ્ર.</b> લાલકિલ્લો કોણે બનાવડાવ્યો?</div><div class="step"><b>જ.</b> શાહજહાંએ દિલ્લીમાં લાલકિલ્લો બનાવડાવ્યો.</div><div class="step"><b>પ્ર.</b> અકબરનો જન્મ ક્યાં થયો હતો?</div><div class="step"><b>જ.</b> અકબરનો જન્મ અમરકોટમાં (ઈ.સ. 1542) થયો હતો.</div></div>
+<div class="example"><span class="label">4 ગુણ — ટૂંકનોંધ</span><div class="step"><b>પ્ર.</b> મુઘલ મનસબદારી સમજાવો.</div><div class="step"><b>જ.</b> અકબરે શરૂ કરેલી આ વ્યવસ્થામાં દરેક મનસબદારને પદ અને પગાર મળતો, તેની સાથે લશ્કર રાખવાનું રહેતું. પગાર જાગીર દ્વારા અપાતો. મનસબદાર સેના, મહેસૂલ અને ન્યાયમાં ભાગ લેતો.</div></div>
+
+</div>
+
+
+<div class="part" id="p6">
+<h2><span class="num">06</span>વિદ્યાર્થી માટે ટિપ્પણી</h2>
+<div class="why-box box"><span class="label">વાલી માટે</span>
+<ul>
+<li>બાળક બાબર, અકબર, શાહજહાં અને ઔરંગઝેબનાં મુખ્ય કામ કહી શકે?</li>
+<li>પૂછો: "પાણીપતનાં બે યુદ્ધમાં કોની વચ્ચે?"</li>
+<li>સામાન્ય ભૂલ: પહેલું અને બીજું પાણીપત ગૂંચવવાં.</li>
+</ul></div>
+</div>
+
+</div>
+</body></html>
