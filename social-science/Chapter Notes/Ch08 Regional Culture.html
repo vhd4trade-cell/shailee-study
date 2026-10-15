@@ -1,0 +1,176 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>પ્રાદેશિક સંસ્કૃતિનું ઘડતર — Chapter Notes</title>
+<style>:root{
+  --bg:#FBF9F4; --surface:#FFFFFF; --surface-2:#F3F0E7;
+  --ink:#241F16; --ink-2:#5B5647; --ink-3:#8C8672;
+  --line:#E4DFD0;
+  --accent:#8B5E34; --accent-ink:#3E2A17; --accent-bg:#F1E4D3;
+  --formula:#1F4E42; --formula-bg:#E3F0EA; --formula-line:#9FC6B7;
+  --exam:#7A2E2E; --exam-bg:#F6E4E1; --exam-line:#DBA9A4;
+  --mistake:#8A5A00; --mistake-bg:#FDF1D9; --mistake-line:#E9C877;
+  --check:#2E4E7A; --check-bg:#E4ECF6; --check-line:#A9C0DB;
+  --why:#5B5647; --why-bg:#F3F0E7; --why-line:#DAD4C2;
+  --font-display:'Fraunces','Noto Sans Gujarati',Georgia,serif;
+  --font-body:'Source Sans 3','Noto Sans Gujarati',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+    --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+    --line:#3A3428;
+    --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+    --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+    --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+    --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+    --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+    --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+  --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+  --line:#3A3428;
+  --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+  --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+  --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+  --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+  --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+  --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.75;padding:0 16px;font-size:16px}
+.wrap{max-width:760px;margin:0 auto;padding-block:32px 80px}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;text-wrap:balance;color:var(--ink)}
+h1{font-size:clamp(28px,6vw,38px);margin:0 0 6px}
+.subtitle{color:var(--ink-2);font-size:15px;margin:0 0 28px}
+h2{font-size:24px;margin:0 0 4px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+h2 .num{color:var(--accent);font-family:var(--font-mono);font-size:15px;font-weight:600}
+.part-why{color:var(--ink-2);font-size:14.5px;margin:0 0 18px;font-style:italic}
+h3{font-size:18px;margin:30px 0 10px;color:var(--accent-ink)}
+p{margin:0 0 12px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:36px}
+.legend-item{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-2)}
+.dot{width:10px;height:10px;border-radius:3px;flex:none}
+.dot.formula{background:var(--formula)} .dot.exam{background:var(--exam)} .dot.mistake{background:var(--mistake)}
+.dot.check{background:var(--check)} .dot.concept{background:var(--accent)} .dot.why{background:var(--why)}
+.part{padding:32px 0;border-top:1px solid var(--line)}
+.part:first-of-type{border-top:none}
+.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:32px}
+.toc ol{margin:8px 0 0;padding-left:0;list-style:none}
+.toc li{margin-bottom:5px;font-size:14.5px}
+.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ink-3)}
+.toc .n{font-family:var(--font-mono);color:var(--accent);font-size:13px;font-weight:600;margin-right:6px}
+.box{border-radius:12px;padding:14px 18px;margin:14px 0;border:1px solid;font-size:15px}
+.box .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;display:block}
+.formula-box{background:var(--formula-bg);border-color:var(--formula-line)}
+.formula-box .label{color:var(--formula)}
+.formula-box .f{font-family:var(--font-mono);font-size:18px;color:var(--formula);font-weight:600;margin:4px 0}
+.formula-box .meaning{color:var(--ink-2);font-size:14px}
+.concept-box{background:var(--surface);border-color:var(--line);border-left:3px solid var(--accent)}
+.concept-box .label{color:var(--accent)}
+.exam-box{background:var(--exam-bg);border-color:var(--exam-line)} .exam-box .label{color:var(--exam)}
+.mistake-box{background:var(--mistake-bg);border-color:var(--mistake-line)} .mistake-box .label{color:var(--mistake)}
+.check-box{background:var(--check-bg);border-color:var(--check-line)} .check-box .label{color:var(--check)}
+.why-box{background:var(--why-bg);border-color:var(--why-line)} .why-box .label{color:var(--why)}
+.extra-box{background:var(--surface);border:1px dashed var(--ink-3)} .extra-box .label{color:var(--ink-3)}
+.parent-box{background:var(--accent-bg);border-color:var(--accent)} .parent-box .label{color:var(--accent-ink)}
+.outcome{background:var(--surface);border:1px solid var(--accent);border-radius:12px;padding:14px 18px;margin:0 0 16px}
+.outcome .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;display:block}
+.submap{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 6px}
+.submap span{background:var(--surface-2);border:1px solid var(--line);border-radius:20px;padding:4px 12px;font-size:12.5px;color:var(--ink-2)}
+.next-line{font-size:14px;color:var(--ink-2);margin-top:18px;padding-top:14px;border-top:1px dashed var(--line)}
+.next-line b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{padding:8px 10px;border:1px solid var(--line);text-align:center}
+th{background:var(--surface-2);font-weight:600;color:var(--ink-2);font-size:12.5px}
+td.rowlabel{text-align:left;color:var(--ink-2);font-weight:600;background:var(--surface-2)}
+td.l{text-align:left}
+.tblwrap{overflow-x:auto}
+.example{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:14px 0;font-size:15px}
+.example .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px;display:block}
+.example .step{margin:3px 0}
+.example .step b{color:var(--ink-2);font-weight:600}
+.mono{font-family:var(--font-mono)}
+.remember{background:var(--accent-bg);border:1px solid var(--accent);border-radius:12px;padding:16px 20px;margin:16px 0}
+.remember .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:8px;display:block}
+.remember ol{margin:0;padding-left:18px} .remember li{margin-bottom:5px}
+.badge{display:inline-block;font-size:11px;font-family:var(--font-mono);padding:2px 8px;border-radius:20px;background:var(--exam-bg);color:var(--exam);border:1px solid var(--exam-line);margin-left:6px;vertical-align:middle}
+.diagram{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px;margin:16px 0}
+.diagram svg{display:block;width:100%;height:auto}
+.diagram-cap{text-align:center;font-size:13px;color:var(--ink-3);margin-top:6px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:600px){.pair{grid-template-columns:1fr}}
+.pair .diagram{margin:6px 0}
+.jumpicon{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:var(--formula);color:var(--surface);text-decoration:none;font-size:11px;font-weight:700;vertical-align:middle;margin-left:4px}
+.src{font-size:12.5px;color:var(--ink-3)}
+</style>
+
+<div class="wrap">
+<h1>પ્રકરણ 8 · પ્રાદેશિક સંસ્કૃતિનું ઘડતર</h1>
+<p class="subtitle">ધોરણ 7 સામાજિક વિજ્ઞાન · GSEB ગુજરાતી માધ્યમ · પાઠ્યપુસ્તક: GSSTB · પાન 41–49</p>
+<div class="legend">
+<div class="legend-item"><span class="dot why"></span>કેમ / રોજિંદું ઉદાહરણ</div>
+<div class="legend-item"><span class="dot concept"></span>સમજવું જ પડે</div>
+<div class="legend-item"><span class="dot formula"></span>યાદ રાખવું — મુખ્ય મુદ્દો</div>
+<div class="legend-item"><span class="dot exam"></span>પરીક્ષામાં વારંવાર</div>
+<div class="legend-item"><span class="dot mistake"></span>સામાન્ય ભૂલ</div>
+<div class="legend-item"><span class="dot check"></span>જાતે ચકાસો</div>
+</div>
+<div class="toc">
+<b>પ્રકરણનો નકશો</b> — અંતિમ લક્ષ્ય: ભારતની પ્રાદેશિક ભાષાઓ, તહેવારો, નૃત્ય, ચિત્રકલા અને મંદિર-શૈલીઓ સમજવી.
+<ol>
+<li><span class="n">00</span><a href="#intro">પ્રકરણ શું કહે છે</a> — પ્રાદેશિક સંસ્કૃતિનું ઘડતર</li><li><span class="n">01</span><a href="#p1">ભાષાઓનો વિકાસ</a> — મલયાલમ, બંગાળી, ગુજરાતી</li><li><span class="n">02</span><a href="#p2">તહેવારો</a> — જગન્નાથ રથયાત્રા, હોળી, ઓણમ, નવરાત્રિ</li><li><span class="n">03</span><a href="#p3">નૃત્ય, ચિત્રકલા અને શાસ્ત્રીય કળા</a> — કથકલી, મણિપુરી, કુચીપુડી, લઘુચિત્ર</li><li><span class="n">04</span><a href="#p4">મંદિર-શૈલીઓ</a> — નાગર, દ્રવિડ, વેસર</li><li><span class="n">05</span><a href="#p5">સારાંશ અને પરીક્ષાના જવાબ</a> — ટૂંકનોંધ અને જોડકાં</li>
+</ol>
+</div>
+
+<!-- ============ PART 00 ============ -->
+<div class="part" id="intro">
+<h2><span class="num">00</span>પ્રકરણ શું કહે છે</h2>
+<p class="part-why">શા માટે ભણવું: દરેક પ્રદેશની ભાષા, તહેવાર અને કળા તેની ઓળખ કેમ છે?</p>
+<div class="outcome"><span class="label">આ પ્રકરણ પછી તમે</span>
+(1) પ્રાદેશિક ભાષાઓનો વિકાસ સમજાવી શકશો, (2) મુખ્ય તહેવારો અને તેમનું મહત્ત્વ કહી શકશો, (3) શાસ્ત્રીય નૃત્યો અને મંદિર-શૈલીઓ ઓળખી શકશો.</div><div class="concept-box box"><span class="label">શબ્દોનો પાયો</span><b>પ્રાદેશિક સંસ્કૃતિ</b> = એક પ્રદેશના લોકોની ભાષા, ખાનપાન, વસ્ત્ર, કાવ્ય, નૃત્ય, સંગીત અને ચિત્રકલા. સદીઓથી આદાન-પ્રદાન થતું રહ્યું, છતાં દરેક પ્રદેશનો રંગ અલગ રહ્યો.</div><div class="remember"><span class="label">યાદ રાખો</span><ol><li>પ્રાદેશિક સંસ્કૃતિ = ભાષા + તહેવાર + કળા + નૃત્ય + મંદિરશૈલી.</li><li>ગુજરાતી: સંસ્કૃત, પ્રાકૃત અને અપભ્રંશમાંથી ઉતરી; નરસિંહ મહેતા ‘સાહિત્યયુગ’ના સૂત્રધાર.</li></ol></div>
+</div>
+
+<!-- ============ PART 01 ============ -->
+<div class="part" id="p1">
+<h2><span class="num">01</span>ભાષાઓનો વિકાસ</h2>
+<p class="part-why">શા માટે ભણવું: દરેક પ્રદેશની ભાષા કેવી રીતે ઘડાઈ, તે સમજવા.</p>
+<div class="concept-box box"><span class="label">ગુજરાતી ભાષાની વંશાવળી</span>સંસ્કૃત → પ્રાકૃત → અપભ્રંશ → ગુજરાતી. આચાર્ય હેમચંદ્રે અપભ્રંશનો ઉપયોગ કર્યો; પછી ગુજરાતી ભાષાનો વિકાસ થયો.</div><div class="tblwrap"><table><tr><th>ભાષા</th><th>ક્યાં</th><th>વિશેષ</th></tr><tr><td class="rowlabel">મલયાલમ</td><td class="l">કેરળ</td><td class="l">નવમી સદીમાં સ્થાપના; ‘લીલાતિલકમ્’ વ્યાકરણ ગ્રંથ</td></tr><tr><td class="rowlabel">બંગાળી</td><td class="l">બંગાળ</td><td class="l">સંસ્કૃતમાંથી ઉદ્ભવ; યુરોપિયન ભાષાઓનો પ્રભાવ</td></tr><tr><td class="rowlabel">ગુજરાતી</td><td class="l">ગુજરાત</td><td class="l">નરસિંહ મહેતા ‘સાહિત્યયુગ’ના સૂત્રધાર; મીરાંબાઈ અને ભાલણનો ફાળો</td></tr></table></div><div class="mistake-box box"><span class="label">સામાન્ય ભૂલ</span>"ગુજરાતી ભાષા સીધી સંસ્કૃતમાંથી આવી" — અધૂરું. વચ્ચે પ્રાકૃત અને અપભ્રંશ આવ્યા.</div><div class="check-box box"><span class="label">જાતે ચકાસો</span>ગુજરાતી ભાષાના વિકાસમાં કઈ ત્રણ ભાષાઓ આવી?<br><span class="src">જવાબ: સંસ્કૃત, પ્રાકૃત, અપભ્રંશ (ગુજરાતી તેમાંથી ઊતરી)</span></div>
+</div>
+
+<!-- ============ PART 02 ============ -->
+<div class="part" id="p2">
+<h2><span class="num">02</span>તહેવારો</h2>
+<p class="part-why">શા માટે ભણવું: ભારતના તહેવારો કેવી રીતે લોકજીવન સાથે જોડાયેલા છે, તે જાણવા.</p>
+<div class="tblwrap"><table><tr><th>તહેવાર</th><th>રાજ્ય / ધર્મ</th><th>મુખ્ય વાત</th></tr><tr><td class="rowlabel">જગન્નાથ રથયાત્રા</td><td class="l">ઓડિશા (પુરી); અમદાવાદ</td><td class="l">ભગવાન જગન્નાથ રથમાં નગરચર્યા; અમદાવાદની રથયાત્રા જાણીતી</td></tr><tr><td class="rowlabel">હોળી</td><td class="l">ભારત</td><td class="l">બે દિવસ: હોળી અને ધુળેટી; રંગોથી ઉજવણી</td></tr><tr><td class="rowlabel">ઓણમ</td><td class="l">કેરળ</td><td class="l">મલયાલમ મહિનાનો મુખ્ય તહેવાર; વલ્લમકાલી (હોડી સ્પર્ધા)</td></tr><tr><td class="rowlabel">નવરાત્રિ</td><td class="l">ગુજરાત</td><td class="l">નવ દિવસ દેવી પૂજા; ગરબા અને રાસ</td></tr><tr><td class="rowlabel">ઈદ, નાતાલ, પતેતી</td><td class="l">ધર્મ પ્રમાણે</td><td class="l">મુસ્લિમ, ખ્રિસ્તી અને પારસી તહેવારો</td></tr></table></div><div class="why-box box"><span class="label">રોજિંદું ઉદાહરણ</span>ગુજરાતનો ગરબો અને કેરળની વલ્લમકાલી — બંને તહેવારો પોતપોતાના પ્રદેશની ઓળખ છે.</div><div class="check-box box"><span class="label">જાતે ચકાસો</span>ઓણમ તહેવાર કયા રાજ્યનો છે અને તેની હોડી-સ્પર્ધાનું નામ શું?<br><span class="src">જવાબ: કેરળ; વલ્લમકાલી</span></div>
+</div>
+
+<!-- ============ PART 03 ============ -->
+<div class="part" id="p3">
+<h2><span class="num">03</span>નૃત્ય, ચિત્રકલા અને શાસ્ત્રીય કળા</h2>
+<p class="part-why">શા માટે ભણવું: દરેક શાસ્ત્રીય નૃત્યની ઓળખ જાણવા.</p>
+<div class="tblwrap"><table><tr><th>નૃત્ય</th><th>પ્રદેશ</th><th>ખાસિયત</th></tr><tr><td class="rowlabel">ભરતનાટ્યમ</td><td class="l">તમિલનાડુ</td><td class="l">ભરતમુનિનું નાટ્યશાસ્ત્ર; શાસ્ત્રીય નૃત્ય</td></tr><tr><td class="rowlabel">કથકલી</td><td class="l">કેરળ</td><td class="l">અભિનય અને રંગભૂષા મુખ્ય</td></tr><tr><td class="rowlabel">કુચીપુડી</td><td class="l">આંધ્રપ્રદેશ</td><td class="l">17મી સદીમાં સ્વરૂપ; સિદ્ધેન્દ્ર યોગી</td></tr><tr><td class="rowlabel">મણિપુરી</td><td class="l">મણિપુર</td><td class="l">ધીમી ગતિ; લાસ્ય અને તાંડવ</td></tr><tr><td class="rowlabel">કથક</td><td class="l">ઉત્તર ભારત</td><td class="l">કથા કહેવાની કળા; ‘ઘરાના’ પરંપરા</td></tr><tr><td class="rowlabel">બિહુ</td><td class="l">આસામ</td><td class="l">ઉલ્લાસ વ્યક્ત કરવા સ્ત્રી-પુરુષોનો સમૂહ-નૃત્ય</td></tr></table></div><div class="concept-box box"><span class="label">લઘુચિત્રો</span>લઘુચિત્રો નાના કદનાં ચિત્રો છે જે કાગળ-કાપડ પર બનતાં. અકબર, જહાંગીર અને શાહજહાંના સમયમાં લઘુચિત્રોનો ખૂબ વિકાસ થયો. ‘અકબરનામા’ અને ‘મહાભારત’ના ચિત્રો પ્રસિદ્ધ છે.</div><div class="mistake-box box"><span class="label">સામાન્ય ભૂલ</span>"કથક દક્ષિણ ભારતનું નૃત્ય છે" — ખોટું. કથક ઉત્તર ભારતનું શાસ્ત્રીય નૃત્ય છે.</div><div class="check-box box"><span class="label">જાતે ચકાસો</span>કથકલી કયા રાજ્યનું નૃત્ય છે?<br><span class="src">જવાબ: કેરળ</span></div>
+</div>
+
+<!-- ============ PART 04 ============ -->
+<div class="part" id="p4">
+<h2><span class="num">04</span>મંદિર-શૈલીઓ</h2>
+<p class="part-why">શા માટે ભણવું: નાગર, દ્રવિડ અને વેસર — ત્રણ શૈલી ઓળખવી.</p>
+<div class="tblwrap"><table><tr><th>શૈલી</th><th>વિસ્તાર</th><th>ઉદાહરણ</th></tr><tr><td class="rowlabel">નાગર</td><td class="l">ઉત્તર ભારત (હિમાલયથી વિંધ્ય)</td><td class="l">જગન્નાથ મંદિર (પુરી), કોણાર્ક, મોઢેરાનું સૂર્યમંદિર, ખજુરાહો</td></tr><tr><td class="rowlabel">દ્રવિડ</td><td class="l">દક્ષિણ ભારત (તમિલનાડુ, કર્ણાટક, કેરળ)</td><td class="l">બૃહદેશ્વર (તાંજોર), મીનાક્ષી (મદુરાઈ), મહાબલિપુરમ રથમંદિર</td></tr><tr><td class="rowlabel">વેસર</td><td class="l">મહારાષ્ટ્ર, ગોવા, કર્ણાટક, કૃષ્ણા નદી સુધી</td><td class="l">હોયસળેશ્વર મંદિર (હલેબીડ), કેશવ મંદિર (બેલૂર)</td></tr></table></div><div class="formula-box box"><span class="label">યાદ રાખવું — ત્રણ શૈલી</span><div class="f"><b>નાગર</b> = ઉત્તર · <b>દ્રવિડ</b> = દક્ષિણ · <b>વેસર</b> = મિશ્ર (ઉત્તર-દક્ષિણ)</div><div class="meaning">નાગર ઊંચાં ગોળ શિખર; દ્રવિડમાં ગોપુરમ (પ્રવેશદ્વાર).</div></div><div class="check-box box"><span class="label">જાતે ચકાસો</span>બૃહદેશ્વર મંદિર કઈ શૈલીનું છે?<br><span class="src">જવાબ: દ્રવિડ શૈલી (તમિલનાડુ)</span></div>
+</div>
+
+<!-- ============ PART 05 ============ -->
+<div class="part" id="p5">
+<h2><span class="num">05</span>સારાંશ અને પરીક્ષાના જવાબ</h2>
+<p class="part-why">શા માટે ભણવું: બધું ગોઠવીને પરીક્ષા માટે તૈયાર થવા.</p>
+<div class="remember"><span class="label">યાદ રાખો</span><ol><li>ભાષા: ગુજરાતી (સંસ્કૃત→પ્રાકૃત→અપભ્રંશ→ગુજરાતી), મલયાલમ (નવમી સદી), બંગાળી.</li><li>તહેવાર: રથયાત્રા, હોળી, ઓણમ, નવરાત્રિ.</li><li>નૃત્ય: ભરતનાટ્યમ, કથકલી, કુચીપુડી, મણિપુરી, કથક.</li><li>મંદિર: નાગર, દ્રવિડ, વેસર.</li></ol></div><div class="example"><span class="label">4 ગુણ — ટૂંકનોંધ</span><div class="step"><b>પ્ર.</b> નાગર અને દ્રવિડ શૈલીનો ફેર સમજાવો.</div><div class="step"><b>જ.</b> નાગર શૈલી ઉત્તર ભારતની છે અને તેમાં ઊંચાં ગોળ શિખર હોય છે. દ્રવિડ શૈલી દક્ષિણ ભારતની છે અને તેમાં પિરામિડ આકારનાં ગોપુરમ (પ્રવેશદ્વાર) હોય છે. બૃહદેશ્વર અને મીનાક્ષી મંદિર દ્રવિડ શૈલીનાં ઉદાહરણ છે.</div></div>
+</div>
+
+<div class="part" id="p6"><h2><span class="num">06</span>વિદ્યાર્થી માટે ટિપ્પણી</h2><div class="why-box box"><span class="label">વાલી માટે</span><ul><li>બાળક પ્રકરણના ત્રણ મુખ્ય મુદ્દા પોતાના શબ્દોમાં કહી શકે?</li><li>પૂછો: "આ વિષયમાં કઈ જગ્યા અને કયા વર્ષનો સંબંધ છે?"</li><li>સામાન્ય ભૂલ: સમાન લાગતા શબ્દો ગૂંચવવા.</li></ul></div></div>
+
+</div>
+</body></html>

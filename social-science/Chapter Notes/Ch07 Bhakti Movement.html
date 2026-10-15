@@ -1,0 +1,176 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ભક્તિયુગ: ધાર્મિક સમુદાયો અને વિચારકો — Chapter Notes</title>
+<style>:root{
+  --bg:#FBF9F4; --surface:#FFFFFF; --surface-2:#F3F0E7;
+  --ink:#241F16; --ink-2:#5B5647; --ink-3:#8C8672;
+  --line:#E4DFD0;
+  --accent:#8B5E34; --accent-ink:#3E2A17; --accent-bg:#F1E4D3;
+  --formula:#1F4E42; --formula-bg:#E3F0EA; --formula-line:#9FC6B7;
+  --exam:#7A2E2E; --exam-bg:#F6E4E1; --exam-line:#DBA9A4;
+  --mistake:#8A5A00; --mistake-bg:#FDF1D9; --mistake-line:#E9C877;
+  --check:#2E4E7A; --check-bg:#E4ECF6; --check-line:#A9C0DB;
+  --why:#5B5647; --why-bg:#F3F0E7; --why-line:#DAD4C2;
+  --font-display:'Fraunces','Noto Sans Gujarati',Georgia,serif;
+  --font-body:'Source Sans 3','Noto Sans Gujarati',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+    --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+    --line:#3A3428;
+    --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+    --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+    --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+    --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+    --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+    --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+  --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+  --line:#3A3428;
+  --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+  --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+  --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+  --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+  --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+  --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.75;padding:0 16px;font-size:16px}
+.wrap{max-width:760px;margin:0 auto;padding-block:32px 80px}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;text-wrap:balance;color:var(--ink)}
+h1{font-size:clamp(28px,6vw,38px);margin:0 0 6px}
+.subtitle{color:var(--ink-2);font-size:15px;margin:0 0 28px}
+h2{font-size:24px;margin:0 0 4px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+h2 .num{color:var(--accent);font-family:var(--font-mono);font-size:15px;font-weight:600}
+.part-why{color:var(--ink-2);font-size:14.5px;margin:0 0 18px;font-style:italic}
+h3{font-size:18px;margin:30px 0 10px;color:var(--accent-ink)}
+p{margin:0 0 12px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:36px}
+.legend-item{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-2)}
+.dot{width:10px;height:10px;border-radius:3px;flex:none}
+.dot.formula{background:var(--formula)} .dot.exam{background:var(--exam)} .dot.mistake{background:var(--mistake)}
+.dot.check{background:var(--check)} .dot.concept{background:var(--accent)} .dot.why{background:var(--why)}
+.part{padding:32px 0;border-top:1px solid var(--line)}
+.part:first-of-type{border-top:none}
+.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:32px}
+.toc ol{margin:8px 0 0;padding-left:0;list-style:none}
+.toc li{margin-bottom:5px;font-size:14.5px}
+.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ink-3)}
+.toc .n{font-family:var(--font-mono);color:var(--accent);font-size:13px;font-weight:600;margin-right:6px}
+.box{border-radius:12px;padding:14px 18px;margin:14px 0;border:1px solid;font-size:15px}
+.box .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;display:block}
+.formula-box{background:var(--formula-bg);border-color:var(--formula-line)}
+.formula-box .label{color:var(--formula)}
+.formula-box .f{font-family:var(--font-mono);font-size:18px;color:var(--formula);font-weight:600;margin:4px 0}
+.formula-box .meaning{color:var(--ink-2);font-size:14px}
+.concept-box{background:var(--surface);border-color:var(--line);border-left:3px solid var(--accent)}
+.concept-box .label{color:var(--accent)}
+.exam-box{background:var(--exam-bg);border-color:var(--exam-line)} .exam-box .label{color:var(--exam)}
+.mistake-box{background:var(--mistake-bg);border-color:var(--mistake-line)} .mistake-box .label{color:var(--mistake)}
+.check-box{background:var(--check-bg);border-color:var(--check-line)} .check-box .label{color:var(--check)}
+.why-box{background:var(--why-bg);border-color:var(--why-line)} .why-box .label{color:var(--why)}
+.extra-box{background:var(--surface);border:1px dashed var(--ink-3)} .extra-box .label{color:var(--ink-3)}
+.parent-box{background:var(--accent-bg);border-color:var(--accent)} .parent-box .label{color:var(--accent-ink)}
+.outcome{background:var(--surface);border:1px solid var(--accent);border-radius:12px;padding:14px 18px;margin:0 0 16px}
+.outcome .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;display:block}
+.submap{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 6px}
+.submap span{background:var(--surface-2);border:1px solid var(--line);border-radius:20px;padding:4px 12px;font-size:12.5px;color:var(--ink-2)}
+.next-line{font-size:14px;color:var(--ink-2);margin-top:18px;padding-top:14px;border-top:1px dashed var(--line)}
+.next-line b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{padding:8px 10px;border:1px solid var(--line);text-align:center}
+th{background:var(--surface-2);font-weight:600;color:var(--ink-2);font-size:12.5px}
+td.rowlabel{text-align:left;color:var(--ink-2);font-weight:600;background:var(--surface-2)}
+td.l{text-align:left}
+.tblwrap{overflow-x:auto}
+.example{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:14px 0;font-size:15px}
+.example .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px;display:block}
+.example .step{margin:3px 0}
+.example .step b{color:var(--ink-2);font-weight:600}
+.mono{font-family:var(--font-mono)}
+.remember{background:var(--accent-bg);border:1px solid var(--accent);border-radius:12px;padding:16px 20px;margin:16px 0}
+.remember .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:8px;display:block}
+.remember ol{margin:0;padding-left:18px} .remember li{margin-bottom:5px}
+.badge{display:inline-block;font-size:11px;font-family:var(--font-mono);padding:2px 8px;border-radius:20px;background:var(--exam-bg);color:var(--exam);border:1px solid var(--exam-line);margin-left:6px;vertical-align:middle}
+.diagram{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px;margin:16px 0}
+.diagram svg{display:block;width:100%;height:auto}
+.diagram-cap{text-align:center;font-size:13px;color:var(--ink-3);margin-top:6px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:600px){.pair{grid-template-columns:1fr}}
+.pair .diagram{margin:6px 0}
+.jumpicon{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:var(--formula);color:var(--surface);text-decoration:none;font-size:11px;font-weight:700;vertical-align:middle;margin-left:4px}
+.src{font-size:12.5px;color:var(--ink-3)}
+</style>
+
+<div class="wrap">
+<h1>પ્રકરણ 7 · ભક્તિયુગ: ધાર્મિક સમુદાયો અને વિચારકો</h1>
+<p class="subtitle">ધોરણ 7 સામાજિક વિજ્ઞાન · GSEB ગુજરાતી માધ્યમ · પાઠ્યપુસ્તક: GSSTB · પાન 36–41</p>
+<div class="legend">
+<div class="legend-item"><span class="dot why"></span>કેમ / રોજિંદું ઉદાહરણ</div>
+<div class="legend-item"><span class="dot concept"></span>સમજવું જ પડે</div>
+<div class="legend-item"><span class="dot formula"></span>યાદ રાખવું — મુખ્ય મુદ્દો</div>
+<div class="legend-item"><span class="dot exam"></span>પરીક્ષામાં વારંવાર</div>
+<div class="legend-item"><span class="dot mistake"></span>સામાન્ય ભૂલ</div>
+<div class="legend-item"><span class="dot check"></span>જાતે ચકાસો</div>
+</div>
+<div class="toc">
+<b>પ્રકરણનો નકશો</b> — અંતિમ લક્ષ્ય: ભક્તિ-સૂફી આંદોલનના સંતો, તેમના વિચારો અને સમાજ પરની અસર સમજવી.
+<ol>
+<li><span class="n">00</span><a href="#intro">પ્રકરણ શું કહે છે</a> — ભક્તિયુગ શું હતો</li><li><span class="n">01</span><a href="#p1">ભક્તિ અને સૂફી આંદોલન</a> — ઉદ્ભવ, સમાનતા, સાદો માર્ગ</li><li><span class="n">02</span><a href="#p2">મુખ્ય સંતો</a> — શંકરાચાર્ય, રામાનુજ, કબીર, ગુરુનાનક, નરસિંહ મહેતા, મીરાંબાઈ, તુલસીદાસ</li><li><span class="n">03</span><a href="#p3">મહારાષ્ટ્રના સંતો</a> — જ્ઞાનેશ્વર, નામદેવ, એકનાથ, તુકારામ, રામદાસ</li><li><span class="n">04</span><a href="#p4">સૂફી સંતો</a> — ચિશ્તી, સુહરાવર્દી</li><li><span class="n">05</span><a href="#p5">સારાંશ અને પરીક્ષાના જવાબ</a> — ટૂંકનોંધ અને જોડકાં</li>
+</ol>
+</div>
+
+<!-- ============ PART 00 ============ -->
+<div class="part" id="intro">
+<h2><span class="num">00</span>પ્રકરણ શું કહે છે</h2>
+<p class="part-why">શા માટે ભણવું: ભક્તિ અને સૂફી ચળવળ કેમ શરૂ થઈ?</p>
+<div class="outcome"><span class="label">આ પ્રકરણ પછી તમે</span>
+(1) ભક્તિ અને સૂફી આંદોલનનો અર્થ કહી શકશો, (2) મુખ્ય સંતો અને તેમના વિચારો ઓળખી શકશો, (3) મધ્યકાલીન સંતોનો સમય જણાવી શકશો.</div><div class="concept-box box"><span class="label">શબ્દોનો પાયો</span><b>ભક્તિ</b> = ઈશ્વર પ્રત્યે પ્રેમ અને શ્રદ્ધા. <b>સૂફી</b> = ઇસ્લામનો પ્રેમ-આધારિત રહસ્યવાદી માર્ગ. બંનેનો હેતુ ધર્મને સાદો, સમાનતાવાળો અને સૌ માટે ખુલ્લો બનાવવાનો હતો.</div><div class="why-box box"><span class="label">રોજિંદું ઉદાહરણ</span>નવરાત્રિમાં ગવાતાં ભજનો અને કબીરનાં દોહા આ ચળવળની દેન છે.</div><div class="remember"><span class="label">યાદ રાખો</span><ol><li>ભક્તિ-સૂફી આંદોલન: ઊંચનીચના ભેદ, અંધશ્રદ્ધા અને કર્મકાંડ સામે.</li><li>મુખ્ય સંદેશ: ઈશ્વર એક છે; ધર્મો એક જ માર્ગે લઈ જાય.</li><li>મધ્યકાલીન સંતો લોકભાષામાં (ગુજરાતી, હિંદી, મરાઠી) ઉપદેશ આપતા.</li></ol></div>
+</div>
+<div class="diagram"><svg viewBox="0 0 640 348" width="100%" style="max-width:640px;display:block;margin:6px auto" xmlns="http://www.w3.org/2000/svg" role="img"><text x="320.0" y="16" text-anchor="middle" font-size="12" fill="var(--ink-2)" stroke="var(--surface)" stroke-width="3" paint-order="stroke">મધ્યકાલીન સંતોનો સમયકાળ (પાઠ્યપુસ્તક મુજબ)</text><text x="142" y="48" text-anchor="end" font-size="11" fill="var(--ink)">નરસિંહ મહેતા (1412–1480)</text><rect x="331.3" y="36" width="76.1" height="18" rx="5" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="1.2"/><text x="335.3" y="49" font-size="10" fill="var(--accent-ink)">1412–1480</text><text x="142" y="94" text-anchor="end" font-size="11" fill="var(--ink)">મીરાંબાઈ (1498–1546)</text><rect x="427.5" y="82" width="53.7" height="18" rx="5" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="1.2"/><text x="431.5" y="95" font-size="10" fill="var(--accent-ink)">1498–1546</text><text x="142" y="140" text-anchor="end" font-size="11" fill="var(--ink)">તુલસીદાસ (1532–1623)</text><rect x="465.6" y="128" width="101.8" height="18" rx="5" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="1.2"/><text x="469.6" y="141" font-size="10" fill="var(--accent-ink)">1532–1623</text><text x="142" y="186" text-anchor="end" font-size="11" fill="var(--ink)">તુકારામ (1608–1650)</text><rect x="550.6" y="174" width="47.0" height="18" rx="5" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="1.2"/><text x="554.6" y="187" font-size="10" fill="var(--accent-ink)">1608–1650</text><text x="142" y="232" text-anchor="end" font-size="11" fill="var(--ink)">ગુરુનાનક (1469–1539)</text><rect x="395.1" y="220" width="78.3" height="18" rx="5" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="1.2"/><text x="399.1" y="233" font-size="10" fill="var(--accent-ink)">1469–1539</text><text x="142" y="278" text-anchor="end" font-size="11" fill="var(--ink)">જ્ઞાનેશ્વર (1276–1296)</text><rect x="179.1" y="266" width="22.4" height="18" rx="5" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="1.2"/><text x="183.1" y="279" font-size="10" fill="var(--accent-ink)">1276–1296</text><line x1="150" y1="312" x2="620" y2="312" stroke="var(--ink-3)" stroke-width="1.2"/><line x1="206.0" y1="312" x2="206.0" y2="316" stroke="var(--ink-3)"/><text x="206.0" y="327" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">1300</text><line x1="261.9" y1="312" x2="261.9" y2="316" stroke="var(--ink-3)"/><text x="261.9" y="327" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">1350</text><line x1="317.9" y1="312" x2="317.9" y2="316" stroke="var(--ink-3)"/><text x="317.9" y="327" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">1400</text><line x1="373.8" y1="312" x2="373.8" y2="316" stroke="var(--ink-3)"/><text x="373.8" y="327" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">1450</text><line x1="429.8" y1="312" x2="429.8" y2="316" stroke="var(--ink-3)"/><text x="429.8" y="327" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">1500</text><line x1="485.7" y1="312" x2="485.7" y2="316" stroke="var(--ink-3)"/><text x="485.7" y="327" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">1550</text><line x1="541.7" y1="312" x2="541.7" y2="316" stroke="var(--ink-3)"/><text x="541.7" y="327" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">1600</text><line x1="597.6" y1="312" x2="597.6" y2="316" stroke="var(--ink-3)"/><text x="597.6" y="327" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">1650</text></svg></div><div class="diagram-cap">આકૃતિ — પાઠ્યપુસ્તકમાં આપેલી તારીખો; દરેક પટ્ટી તેના વર્ષની સાચી જગ્યાએ.</div>
+<!-- ============ PART 01 ============ -->
+<div class="part" id="p1">
+<h2><span class="num">01</span>ભક્તિ અને સૂફી આંદોલન</h2>
+<p class="part-why">શા માટે ભણવું: આ આંદોલન કેમ લોકપ્રિય થયું, તે સમજવા.</p>
+<div class="concept-box box"><span class="label">સૂફી ચાર ધારા</span>સૂફી મતમાં ચાર મુખ્ય પરંપરાઓ હતી: <b>ચિશ્તી, સુહરાવર્દી, કાદરી, નક્શબંદી</b>. ભારતમાં ચિશ્તી સંપ્રદાય સૌથી લોકપ્રિય રહ્યો (મોઈનુદ્દીન ચિશ્તી, અજમેર).</div><div class="mistake-box box"><span class="label">સામાન્ય ભૂલ</span>"સૂફી મત ભારતમાં માત્ર હિંદુ-વિરોધી હતો" — ખોટું. સૂફી સંતોએ હિંદુ અને મુસ્લિમ બંનેને પ્રેમ અને સમભાવનો સંદેશ આપ્યો.</div><div class="check-box box"><span class="label">જાતે ચકાસો</span>ભારતમાં સૌથી લોકપ્રિય સૂફી પરંપરા કઈ?<br><span class="src">જવાબ: ચિશ્તી પરંપરા (મોઈનુદ્દીન ચિશ્તી, અજમેર)</span></div>
+</div>
+
+<!-- ============ PART 02 ============ -->
+<div class="part" id="p2">
+<h2><span class="num">02</span>મુખ્ય સંતો</h2>
+<p class="part-why">શા માટે ભણવું: કયા સંતે શું કહ્યું અને ક્યાંથી આવ્યા, તે યાદ રાખવા.</p>
+<div class="tblwrap"><table><tr><th>સંત</th><th>વિશેષ વાત</th></tr><tr><td class="rowlabel">શંકરાચાર્ય</td><td class="l">દક્ષિણ ભારતમાં; અદ્વૈતવાદ; જન્મ કાલડી</td></tr><tr><td class="rowlabel">રામાનુજાચાર્ય</td><td class="l">દક્ષિણમાં; ભક્તિમાર્ગનો સરળ ઉપદેશ; જન્મ પેરુમલતુર</td></tr><tr><td class="rowlabel">કબીર</td><td class="l">નિર્ગુણ ભક્તિ; ‘બીજક’ તેમનો સંગ્રહ; વણકર</td></tr><tr><td class="rowlabel">ગુરુનાનક</td><td class="l">શીખ ધર્મના સ્થાપક; ‘ગુરુ ગ્રંથસાહિબ’ (પવિત્ર ગ્રંથ)</td></tr><tr><td class="rowlabel">નરસિંહ મહેતા</td><td class="l">ગુજરાતી ભાષાના આદિકવિ; ‘વૈષ્ણવજન’ ભજન; જૂનાગઢ</td></tr><tr><td class="rowlabel">મીરાંબાઈ</td><td class="l">કૃષ્ણભક્ત; ગુજરાતી અને હિંદીમાં પદો; રાજકુમારી</td></tr><tr><td class="rowlabel">તુલસીદાસ</td><td class="l">‘રામચરિતમાનસ’ અને ‘વિનયપત્રિકા’</td></tr><tr><td class="rowlabel">સૂરદાસ</td><td class="l">કૃષ્ણભક્ત; વલ્લભાચાર્યના શિષ્ય; બ્રજભાષાના પદો</td></tr><tr><td class="rowlabel">રૈદાસ</td><td class="l">કબીરના ગુરુભાઈ; ગૃહસ્થ અને નિર્ગુણ સંત</td></tr></table></div><div class="mistake-box box"><span class="label">સામાન્ય ભૂલ</span>"નરસિંહ મહેતા ઉત્તર ભારતના સંત હતા" — ખોટું. તે ગુજરાતી ભાષાના આદિકવિ અને જૂનાગઢના સંત હતા.</div><div class="check-box box"><span class="label">જાતે ચકાસો</span>ગુજરાતી ભાષાના આદિકવિ કોણ?<br><span class="src">જવાબ: નરસિંહ મહેતા (1412–1480)</span></div>
+</div>
+
+<!-- ============ PART 03 ============ -->
+<div class="part" id="p3">
+<h2><span class="num">03</span>મહારાષ્ટ્રના સંતો</h2>
+<p class="part-why">શા માટે ભણવું: મહારાષ્ટ્રમાં ભક્તિ આંદોલન કેવી રીતે ચાલ્યું, તે જાણવા.</p>
+<div class="concept-box box"><span class="label">પંઢરપુર અને વિઠોબા</span>મહારાષ્ટ્રમાં ભક્તિ-આંદોલનનું મુખ્ય કેન્દ્ર પંઢરપુરનું વિઠોબા મંદિર હતું. જ્ઞાનેશ્વરે 15 વર્ષની ઉંમરે ભગવદ્ગીતા પરની ‘જ્ઞાનેશ્વરી’ ટીકા લખી.</div><div class="tblwrap"><table><tr><th>સંત</th><th>મુખ્ય કાર્ય</th></tr><tr><td class="rowlabel">જ્ઞાનેશ્વર</td><td class="l">ભગવદ્ગીતા પર ‘જ્ઞાનેશ્વરી’ ટીકા</td></tr><tr><td class="rowlabel">નામદેવ</td><td class="l">યુવાનીમાં અધર્મ માર્ગે હતા; પછી સાચા સંત</td></tr><tr><td class="rowlabel">એકનાથ</td><td class="l">ઊંચનીચના ભેદ અને નાતજાતનો વિરોધ</td></tr><tr><td class="rowlabel">તુકારામ</td><td class="l">મહારાષ્ટ્રના મહાન સંતકવિ</td></tr><tr><td class="rowlabel">સમર્થ ગુરુ રામદાસ</td><td class="l">શિવાજીના ગુરુ; ‘દાસબોધ’ ગ્રંથ</td></tr></table></div><div class="why-box box"><span class="label">રોજિંદું ઉદાહરણ</span>શિવાજીના ગુરુ રામદાસ હતા — ભક્તિ અને રાજકારણ ક્યારેક એકબીજા સાથે જોડાતાં.</div><div class="check-box box"><span class="label">જાતે ચકાસો</span>શિવાજીના ગુરુ કોણ હતા અને તેમનો ગ્રંથ કયો?<br><span class="src">જવાબ: સમર્થ ગુરુ રામદાસ; ‘દાસબોધ’</span></div>
+</div>
+
+<!-- ============ PART 04 ============ -->
+<div class="part" id="p4">
+<h2><span class="num">04</span>સૂફી સંતો</h2>
+<p class="part-why">શા માટે ભણવું: સૂફી સંતોએ સમાજમાં કઈ એકતા સાધી, તે સમજવા.</p>
+<div class="concept-box box"><span class="label">ચિશ્તી સંત</span>ભારતમાં અજમેરના મોઈનુદ્દીન ચિશ્તી, દિલ્લીના નિઝામુદ્દીન ઓલિયા, અને ગુજરાતમાં અહમદ ખટ્ટુ ગંજબક્ષ જેવા સૂફી સંતો થયા. તેમના દરગાહ આજે પણ લોકો માટે શ્રદ્ધાનું કેન્દ્ર છે.</div><div class="remember"><span class="label">યાદ રાખો</span><ol><li>સૂફીઓએ પ્રેમ અને સેવાનો સંદેશ આપ્યો; દરગાહો સામાન્ય લોકોનું મિલનસ્થળ.</li><li>સૂફી-ભક્તિ આંદોલને હિંદુ-મુસ્લિમ સમન્વય ઊભો કર્યો.</li></ol></div>
+</div>
+
+<!-- ============ PART 05 ============ -->
+<div class="part" id="p5">
+<h2><span class="num">05</span>સારાંશ અને પરીક્ષાના જવાબ</h2>
+<p class="part-why">શા માટે ભણવું: બધું ગોઠવીને પરીક્ષા માટે તૈયાર થવા.</p>
+<div class="remember"><span class="label">યાદ રાખો</span><ol><li>ભક્તિ: શંકરાચાર્ય, રામાનુજ, કબીર, નરસિંહ મહેતા, મીરાંબાઈ, તુલસીદાસ, સૂરદાસ, ગુરુનાનક.</li><li>મહારાષ્ટ્ર: જ્ઞાનેશ્વર, નામદેવ, એકનાથ, તુકારામ, રામદાસ.</li><li>સૂફી: ચિશ્તી, સુહરાવર્દી, કાદરી, નક્શબંદી.</li></ol></div><div class="example"><span class="label">4 ગુણ — ટૂંકનોંધ</span><div class="step"><b>પ્ર.</b> ભક્તિ આંદોલનની મુખ્ય વાત સમજાવો.</div><div class="step"><b>જ.</b> ભક્તિ આંદોલનમાં ઈશ્વર એક છે એમ કહેવાયું; ઊંચનીચના ભેદ, અંધશ્રદ્ધા અને મૂર્તિપૂજાના કર્મકાંડનો વિરોધ થયો. સંતોએ લોકભાષામાં સરળ ઉપદેશ આપ્યો, જેથી સામાન્ય લોકો સુધી ધર્મનો સાચો અર્થ પહોંચ્યો.</div></div>
+</div>
+
+<div class="part" id="p6"><h2><span class="num">06</span>વિદ્યાર્થી માટે ટિપ્પણી</h2><div class="why-box box"><span class="label">વાલી માટે</span><ul><li>બાળક પ્રકરણના ત્રણ મુખ્ય મુદ્દા પોતાના શબ્દોમાં કહી શકે?</li><li>પૂછો: "આ વિષયમાં કઈ જગ્યા અને કયા વર્ષનો સંબંધ છે?"</li><li>સામાન્ય ભૂલ: સમાન લાગતા શબ્દો ગૂંચવવા.</li></ul></div></div>
+
+</div>
+</body></html>
