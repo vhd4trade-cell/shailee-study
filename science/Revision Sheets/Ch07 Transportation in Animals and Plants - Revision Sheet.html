@@ -1,0 +1,145 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>પ્રાણીઓ અને વનસ્પતિઓમાં વહન — Revision Sheet</title>
+<style>:root{
+  --bg:#FBF9F4; --surface:#FFFFFF; --surface-2:#F3F0E7;
+  --ink:#241F16; --ink-2:#5B5647; --ink-3:#8C8672;
+  --line:#E4DFD0;
+  --accent:#8B5E34; --accent-ink:#3E2A17; --accent-bg:#F1E4D3;
+  --formula:#1F4E42; --formula-bg:#E3F0EA; --formula-line:#9FC6B7;
+  --exam:#7A2E2E; --exam-bg:#F6E4E1; --exam-line:#DBA9A4;
+  --mistake:#8A5A00; --mistake-bg:#FDF1D9; --mistake-line:#E9C877;
+  --check:#2E4E7A; --check-bg:#E4ECF6; --check-line:#A9C0DB;
+  --why:#5B5647; --why-bg:#F3F0E7; --why-line:#DAD4C2;
+  --font-display:'Fraunces','Noto Sans Gujarati',Georgia,serif;
+  --font-body:'Source Sans 3','Noto Sans Gujarati',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+    --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+    --line:#3A3428;
+    --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+    --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+    --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+    --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+    --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+    --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+  --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+  --line:#3A3428;
+  --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+  --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+  --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+  --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+  --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+  --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.75;padding:0 16px;font-size:16px}
+.wrap{max-width:760px;margin:0 auto;padding-block:32px 80px}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;text-wrap:balance;color:var(--ink)}
+h1{font-size:clamp(28px,6vw,38px);margin:0 0 6px}
+.subtitle{color:var(--ink-2);font-size:15px;margin:0 0 28px}
+h2{font-size:24px;margin:0 0 4px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+h2 .num{color:var(--accent);font-family:var(--font-mono);font-size:15px;font-weight:600}
+.part-why{color:var(--ink-2);font-size:14.5px;margin:0 0 18px;font-style:italic}
+h3{font-size:18px;margin:30px 0 10px;color:var(--accent-ink)}
+p{margin:0 0 12px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:36px}
+.legend-item{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-2)}
+.dot{width:10px;height:10px;border-radius:3px;flex:none}
+.dot.formula{background:var(--formula)} .dot.exam{background:var(--exam)} .dot.mistake{background:var(--mistake)}
+.dot.check{background:var(--check)} .dot.concept{background:var(--accent)} .dot.why{background:var(--why)}
+.part{padding:32px 0;border-top:1px solid var(--line)}
+.part:first-of-type{border-top:none}
+.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:32px}
+.toc ol{margin:8px 0 0;padding-left:0;list-style:none}
+.toc li{margin-bottom:5px;font-size:14.5px}
+.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ink-3)}
+.toc .n{font-family:var(--font-mono);color:var(--accent);font-size:13px;font-weight:600;margin-right:6px}
+.box{border-radius:12px;padding:14px 18px;margin:14px 0;border:1px solid;font-size:15px}
+.box .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;display:block}
+.formula-box{background:var(--formula-bg);border-color:var(--formula-line)}
+.formula-box .label{color:var(--formula)}
+.formula-box .f{font-family:var(--font-mono);font-size:18px;color:var(--formula);font-weight:600;margin:4px 0}
+.formula-box .meaning{color:var(--ink-2);font-size:14px}
+.concept-box{background:var(--surface);border-color:var(--line);border-left:3px solid var(--accent)}
+.concept-box .label{color:var(--accent)}
+.exam-box{background:var(--exam-bg);border-color:var(--exam-line)} .exam-box .label{color:var(--exam)}
+.mistake-box{background:var(--mistake-bg);border-color:var(--mistake-line)} .mistake-box .label{color:var(--mistake)}
+.check-box{background:var(--check-bg);border-color:var(--check-line)} .check-box .label{color:var(--check)}
+.why-box{background:var(--why-bg);border-color:var(--why-line)} .why-box .label{color:var(--why)}
+.extra-box{background:var(--surface);border:1px dashed var(--ink-3)} .extra-box .label{color:var(--ink-3)}
+.parent-box{background:var(--accent-bg);border-color:var(--accent)} .parent-box .label{color:var(--accent-ink)}
+.outcome{background:var(--surface);border:1px solid var(--accent);border-radius:12px;padding:14px 18px;margin:0 0 16px}
+.outcome .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;display:block}
+.submap{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 6px}
+.submap span{background:var(--surface-2);border:1px solid var(--line);border-radius:20px;padding:4px 12px;font-size:12.5px;color:var(--ink-2)}
+.next-line{font-size:14px;color:var(--ink-2);margin-top:18px;padding-top:14px;border-top:1px dashed var(--line)}
+.next-line b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{padding:8px 10px;border:1px solid var(--line);text-align:center}
+th{background:var(--surface-2);font-weight:600;color:var(--ink-2);font-size:12.5px}
+td.rowlabel{text-align:left;color:var(--ink-2);font-weight:600;background:var(--surface-2)}
+td.l{text-align:left}
+.tblwrap{overflow-x:auto}
+.example{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:14px 0;font-size:15px}
+.example .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px;display:block}
+.example .step{margin:3px 0}
+.example .step b{color:var(--ink-2);font-weight:600}
+.mono{font-family:var(--font-mono)}
+.remember{background:var(--accent-bg);border:1px solid var(--accent);border-radius:12px;padding:16px 20px;margin:16px 0}
+.remember .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:8px;display:block}
+.remember ol{margin:0;padding-left:18px} .remember li{margin-bottom:5px}
+.badge{display:inline-block;font-size:11px;font-family:var(--font-mono);padding:2px 8px;border-radius:20px;background:var(--exam-bg);color:var(--exam);border:1px solid var(--exam-line);margin-left:6px;vertical-align:middle}
+.diagram{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px;margin:16px 0}
+.diagram svg{display:block;width:100%;height:auto}
+.diagram-cap{text-align:center;font-size:13px;color:var(--ink-3);margin-top:6px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:600px){.pair{grid-template-columns:1fr}}
+.pair .diagram{margin:6px 0}
+.jumpicon{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:var(--formula);color:var(--surface);text-decoration:none;font-size:11px;font-weight:700;vertical-align:middle;margin-left:4px}
+.src{font-size:12.5px;color:var(--ink-3)}
+</style>
+
+<div class="wrap">
+<h1>પ્રકરણ 7 · પ્રાણીઓ અને વનસ્પતિઓમાં વહન — પુનરાવર્તન</h1>
+<p class="subtitle">ધોરણ 7 વિજ્ઞાન · ઝડપી પુનરાવર્તન</p>
+<div class="legend">
+<div class="legend-item"><span class="dot why"></span>કેમ / રોજિંદું ઉદાહરણ</div>
+<div class="legend-item"><span class="dot concept"></span>સમજવું જ પડે</div>
+<div class="legend-item"><span class="dot formula"></span>યાદ રાખવું — મુખ્ય મુદ્દો</div>
+<div class="legend-item"><span class="dot exam"></span>પરીક્ષામાં વારંવાર</div>
+<div class="legend-item"><span class="dot mistake"></span>સામાન્ય ભૂલ</div>
+<div class="legend-item"><span class="dot check"></span>જાતે ચકાસો</div>
+</div>
+
+<div class="part" id="cards"><h2><span class="num">A</span>મુખ્ય મુદ્દા</h2>
+<div class="formula-box box"><span class="label">રુધિર</span><div class="f">રુધિરરસ + રક્તકણ (હિમોગ્લોબિન → લાલ) + શ્વેતકણ (જંતુ સામે) + ત્રાકકણ (ગંઠાવું).</div><div class="meaning"><a href="../Chapter%20Notes/Ch07%20Transportation%20in%20Animals%20and%20Plants.html#p1">નોંધમાં જુઓ →</a></div></div>
+<div class="formula-box box"><span class="label">વાહિનીઓ</span><div class="f">ધમની (હૃદયથી, જાડી), શિરા (હૃદય તરફ, વાલ્વ), કેશિકા (અતિ પાતળી).</div><div class="meaning"><a href="../Chapter%20Notes/Ch07%20Transportation%20in%20Animals%20and%20Plants.html#p1">નોંધમાં જુઓ →</a></div></div>
+<div class="formula-box box"><span class="label">હૃદય</span><div class="f">ચાર ખંડ: 2 કર્ણક + 2 ક્ષેપક; પડદો; ધબકારા 72–80 પ્રતિ મિનિટ; સ્ટેથોસ્કોપ.</div><div class="meaning"><a href="../Chapter%20Notes/Ch07%20Transportation%20in%20Animals%20and%20Plants.html#p2">નોંધમાં જુઓ →</a></div></div>
+<div class="formula-box box"><span class="label">ઉત્સર્જન</span><div class="f">મૂત્રપિંડ (ગાળણ) → મૂત્રવાહિની → મૂત્રાશય → મૂત્રમાર્ગ; મૂત્ર 95 % પાણી. પરસેવો: પાણી + ક્ષાર + યુરિયા.</div><div class="meaning"><a href="../Chapter%20Notes/Ch07%20Transportation%20in%20Animals%20and%20Plants.html#p3">નોંધમાં જુઓ →</a></div></div>
+<div class="formula-box box"><span class="label">વનસ્પતિ</span><div class="f">મૂળરોમ → જલવાહક (પાણી-ખનીજ); અન્નવાહક (ખોરાક); બાષ્પોત્સર્જન → ખેંચાણ, ઠંડક.</div><div class="meaning"><a href="../Chapter%20Notes/Ch07%20Transportation%20in%20Animals%20and%20Plants.html#p4">નોંધમાં જુઓ →</a></div></div>
+</div>
+<div class="part" id="pics"><h2><span class="num">B</span>ચિત્રથી પુનરાવર્તન</h2>
+<div class="diagram" style="display:flex;flex-wrap:wrap;justify-content:center"><div class="diagram"><svg viewBox="0 0 720 250" width="100%" style="max-width:720px;display:block;margin:6px auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ત્રણ રુધિરવાહિનીઓ (પાન 71–72)"><text x="360.0" y="16.0" font-size="12" fill="var(--ink)" text-anchor="middle" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ત્રણ રુધિરવાહિનીઓ (પાન 71–72)</text><rect x="147.0" y="30" width="187.3" height="32" rx="5" fill="var(--ink-3)" opacity=".16"/><text x="240.7" y="49.5" font-size="10" fill="var(--ink)" text-anchor="middle" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">રુધિર ક્યાં લઈ જાય</text><rect x="336.3" y="30" width="187.3" height="32" rx="5" fill="var(--ink-3)" opacity=".16"/><text x="430.0" y="49.5" font-size="10" fill="var(--ink)" text-anchor="middle" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">દીવાલ</text><rect x="525.7" y="30" width="187.3" height="32" rx="5" fill="var(--ink-3)" opacity=".16"/><text x="619.3" y="49.5" font-size="10" fill="var(--ink)" text-anchor="middle" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ખાસ વાત</text><text x="140.0" y="94.7" font-size="10.5" fill="var(--exam)" text-anchor="end" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ધમની (artery)</text><rect x="147.0" y="65.0" width="187.3" height="52" rx="5" fill="var(--exam)" opacity=".22" stroke="var(--exam)" stroke-width="1"/><text x="240.7" y="94.3" font-size="9.3" fill="var(--ink)" text-anchor="middle" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">હૃદયમાંથી શરીરના ભાગો તરફ (સામાન્ય રીતે ઑક્સિજનયુક્ત)</text><rect x="336.3" y="65.0" width="187.3" height="52" rx="5" fill="var(--exam)" opacity=".22" stroke="var(--exam)" stroke-width="1"/><text x="430.0" y="94.3" font-size="9.3" fill="var(--ink)" text-anchor="middle" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">જાડી, સ્થિતિસ્થાપક</text><rect x="525.7" y="65.0" width="187.3" height="52" rx="5" fill="var(--exam)" opacity=".22" stroke="var(--exam)" stroke-width="1"/><text x="619.3" y="94.3" font-size="9.3" fill="var(--ink)" text-anchor="middle" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ઝડપી, વધુ દબાણવાળો પ્રવાહ</text><text x="140.0" y="148.7" font-size="10.5" fill="var(--check)" text-anchor="end" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">શિરા (vein)</text><rect x="147.0" y="119.0" width="187.3" height="52" rx="5" fill="var(--check)" opacity=".22" stroke="var(--check)" stroke-width="1"/><text x="240.7" y="148.3" font-size="9.3" fill="var(--ink)" text-anchor="middle" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">શરીરના ભાગોમાંથી હૃદય તરફ (સામાન્ય રીતે CO₂યુક્ત)</text><rect x="336.3" y="119.0" width="187.3" height="52" rx="5" fill="var(--check)" opacity=".22" stroke="var(--check)" stroke-width="1"/><text x="430.0" y="148.3" font-size="9.3" fill="var(--ink)" text-anchor="middle" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">પાતળી</text><rect x="525.7" y="119.0" width="187.3" height="52" rx="5" fill="var(--check)" opacity=".22" stroke="var(--check)" stroke-width="1"/><text x="619.3" y="148.3" font-size="9.3" fill="var(--ink)" text-anchor="middle" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">વાલ્વ — રુધિર ફક્ત હૃદય તરફ</text><text x="140.0" y="202.7" font-size="10.5" fill="var(--formula)" text-anchor="end" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">રુધિરકેશિકા (capillary)</text><rect x="147.0" y="173.0" width="187.3" height="52" rx="5" fill="var(--formula)" opacity=".22" stroke="var(--formula)" stroke-width="1"/><text x="240.7" y="202.3" font-size="9.3" fill="var(--ink)" text-anchor="middle" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ધમનીનાં છેડે → પેશીઓ પાસે</text><rect x="336.3" y="173.0" width="187.3" height="52" rx="5" fill="var(--formula)" opacity=".22" stroke="var(--formula)" stroke-width="1"/><text x="430.0" y="202.3" font-size="9.3" fill="var(--ink)" text-anchor="middle" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">અતિ પાતળી નળીઓ</text><rect x="525.7" y="173.0" width="187.3" height="52" rx="5" fill="var(--formula)" opacity=".22" stroke="var(--formula)" stroke-width="1"/><text x="619.3" y="202.3" font-size="9.3" fill="var(--ink)" text-anchor="middle" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ફરી જોડાઈ શિરા બનાવે</text><text x="360.0" y="240.0" font-size="9.5" fill="var(--ink-3)" text-anchor="middle" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">કુપ્ફુસીય ધમની કાર્બન ડાયૉક્સાઇડયુક્ત, કુપ્ફુસીય શિરા ઑક્સિજનયુક્ત રુધિર વહે (પાન 72) — એટલે "ધમની = ઑક્સિજનયુક્ત" હંમેશાં સાચું નહિ.</text></svg></div></div><div class="diagram-cap">આકૃતિ 3 — <a href="../Chapter%20Notes/Ch07%20Transportation%20in%20Animals%20and%20Plants.html#p1">નોંધમાં વિગત →</a></div>
+<div class="diagram" style="display:flex;flex-wrap:wrap;justify-content:center"><svg viewBox="0 0 560 430" width="100%" style="max-width:560px;display:block;margin:6px auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="હૃદય"><text x="280.0" y="18.0" font-size="12" fill="var(--ink)" text-anchor="middle" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">માનવ હૃદયના ચાર ખંડ — સરળ આકૃતિ (પાન 73, આકૃતિ 7.4)</text><rect x="150" y="90" width="130" height="100" rx="22" fill="#3a63c4" opacity=".32" stroke="#3a63c4" stroke-width="2.4"/><text x="215.0" y="144.0" font-size="11" fill="var(--ink)" text-anchor="middle" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">જમણું કર્ણક</text><rect x="292" y="90" width="130" height="100" rx="22" fill="#d7263d" opacity=".32" stroke="#d7263d" stroke-width="2.4"/><text x="357.0" y="144.0" font-size="11" fill="var(--ink)" text-anchor="middle" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ડાબું કર્ણક</text><rect x="150" y="202" width="130" height="150" rx="22" fill="#3a63c4" opacity=".32" stroke="#3a63c4" stroke-width="2.4"/><text x="215.0" y="281.0" font-size="11" fill="var(--ink)" text-anchor="middle" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">જમણું ક્ષેપક</text><rect x="292" y="202" width="130" height="150" rx="22" fill="#d7263d" opacity=".32" stroke="#d7263d" stroke-width="2.4"/><text x="357.0" y="281.0" font-size="11" fill="var(--ink)" text-anchor="middle" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ડાબું ક્ષેપક</text><line x1="286" y1="86" x2="286" y2="360" stroke="var(--ink-2)" stroke-width="3"/><text x="286.0" y="380.0" font-size="10" fill="var(--ink-2)" text-anchor="middle" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">વચ્ચેનો પડદો — બંને પ્રકારનું રુધિર ભેગું થતું નથી</text><line x1="180.0" y1="56.0" x2="180.0" y2="82.8" stroke="#3a63c4" stroke-width="3"/><polygon points="180.0,90.0 175.5,82.2 184.5,82.2" fill="#3a63c4"/><text x="174.0" y="48.0" font-size="10" fill="#3a63c4" text-anchor="end" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">મહાશિરા (શરીરમાંથી)</text><line x1="332.0" y1="90.0" x2="332.0" y2="56.0" stroke="#d7263d" stroke-width="3"/><polygon points="332.0,56.0 332.0,56.0 332.0,56.0" fill="#d7263d"/><text x="340.0" y="48.0" font-size="10" fill="#d7263d" text-anchor="start" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">કુપ્ફુસીય શિરા (ફેફસાંથી)</text><line x1="250.0" y1="210.0" x2="250.0" y2="209.0" stroke="#3a63c4" stroke-width="1"/><polygon points="250.0,209.0 250.0,209.0 250.0,209.0" fill="#3a63c4"/><text x="140.0" y="266.0" font-size="10" fill="#3a63c4" text-anchor="end" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ક્ષેપકથી કુપ્ફુસીય ધમની → ફેફસાં</text><text x="442.0" y="266.0" font-size="10" fill="#d7263d" text-anchor="start" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ક્ષેપકથી મહાધમની → શરીર</text><text x="280.0" y="424.0" font-size="10" fill="var(--ink-3)" text-anchor="middle" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">લાલ = ઑક્સિજનયુક્ત; ભૂરું = કાર્બન ડાયૉક્સાઇડયુક્ત (પુસ્તકની આકૃતિની જેમ)</text></svg></div><div class="diagram-cap">આકૃતિ 5 — <a href="../Chapter%20Notes/Ch07%20Transportation%20in%20Animals%20and%20Plants.html#p2">નોંધમાં વિગત →</a></div>
+<div class="diagram" style="display:flex;flex-wrap:wrap;justify-content:center"><svg viewBox="0 0 460 360" width="100%" style="max-width:460px;display:block;margin:6px auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ઉત્સર્જન"><text x="210.0" y="18.0" font-size="12" fill="var(--ink)" text-anchor="middle" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">મનુષ્યનું ઉત્સર્જનતંત્ર — સરળ આકૃતિ (પાન 76, આકૃતિ 7.6)</text><ellipse cx="132.0" cy="86" rx="30" ry="44" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="2.4" transform="rotate(12 132.0 86)"/><path d="M142.0,118 C146.0,170 188.0,200 200.0,248" fill="none" stroke="var(--mistake)" stroke-width="4"/><ellipse cx="288.0" cy="86" rx="30" ry="44" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="2.4" transform="rotate(-12 288.0 86)"/><path d="M278.0,118 C274.0,170 232.0,200 220.0,248" fill="none" stroke="var(--mistake)" stroke-width="4"/><ellipse cx="210.0" cy="262" rx="46" ry="30" fill="var(--exam-bg)" stroke="var(--exam)" stroke-width="2.4"/><line x1="210.0" y1="292" x2="210.0" y2="326" stroke="var(--formula)" stroke-width="5"/><line x1="110.0" y1="80" x2="63.0" y2="56" stroke="var(--ink-3)" stroke-width="1"/><text x="60.0" y="60.0" font-size="10.5" fill="var(--accent)" text-anchor="end" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">મૂત્રપિંડ (2)</text><line x1="174.0" y1="190" x2="103.0" y2="186" stroke="var(--ink-3)" stroke-width="1"/><text x="100.0" y="190.0" font-size="10.5" fill="var(--mistake)" text-anchor="end" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">મૂત્રવાહિની (2)</text><line x1="240.0" y1="262" x2="297.0" y2="254" stroke="var(--ink-3)" stroke-width="1"/><text x="300.0" y="258.0" font-size="10.5" fill="var(--exam)" text-anchor="start" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">મૂત્રાશય</text><line x1="214.0" y1="310" x2="247.0" y2="318" stroke="var(--ink-3)" stroke-width="1"/><text x="250.0" y="322.0" font-size="10.5" fill="var(--formula)" text-anchor="start" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">મૂત્રમાર્ગ → મૂત્રછિદ્ર</text></svg></div><div class="diagram-cap">આકૃતિ 9 — <a href="../Chapter%20Notes/Ch07%20Transportation%20in%20Animals%20and%20Plants.html#p3">નોંધમાં વિગત →</a></div>
+<div class="diagram" style="display:flex;flex-wrap:wrap;justify-content:center"><div class="diagram"><svg viewBox="0 0 660 176" width="100%" style="max-width:660px;display:block;margin:6px auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="બે વાહક પેશી (પાન 78–79)"><text x="330.0" y="16.0" font-size="12" fill="var(--ink)" text-anchor="middle" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">બે વાહક પેશી (પાન 78–79)</text><rect x="147.0" y="30" width="252.0" height="32" rx="5" fill="var(--ink-3)" opacity=".16"/><text x="273.0" y="49.5" font-size="10" fill="var(--ink)" text-anchor="middle" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">શું વહન કરે</text><rect x="401.0" y="30" width="252.0" height="32" rx="5" fill="var(--ink-3)" opacity=".16"/><text x="527.0" y="49.5" font-size="10" fill="var(--ink)" text-anchor="middle" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ક્યાં થી ક્યાં</text><text x="140.0" y="93.7" font-size="10.5" fill="var(--check)" text-anchor="end" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">જલવાહક પેશી (xylem)</text><rect x="147.0" y="65.0" width="252.0" height="50" rx="5" fill="var(--check)" opacity=".22" stroke="var(--check)" stroke-width="1"/><text x="273.0" y="93.4" font-size="9.8" fill="var(--ink)" text-anchor="middle" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">પાણી અને ખનીજક્ષારો</text><rect x="401.0" y="65.0" width="252.0" height="50" rx="5" fill="var(--check)" opacity=".22" stroke="var(--check)" stroke-width="1"/><text x="527.0" y="93.4" font-size="9.8" fill="var(--ink)" text-anchor="middle" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">મૂળ → પ્રકાંડ → ડાળી → પર્ણ</text><text x="140.0" y="145.7" font-size="10.5" fill="var(--formula)" text-anchor="end" font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">અન્નવાહક પેશી (phloem)</text><rect x="147.0" y="117.0" width="252.0" height="50" rx="5" fill="var(--formula)" opacity=".22" stroke="var(--formula)" stroke-width="1"/><text x="273.0" y="145.4" font-size="9.8" fill="var(--ink)" text-anchor="middle" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">પર્ણે બનાવેલો ખોરાક</text><rect x="401.0" y="117.0" width="252.0" height="50" rx="5" fill="var(--formula)" opacity=".22" stroke="var(--formula)" stroke-width="1"/><text x="527.0" y="145.4" font-size="9.8" fill="var(--ink)" text-anchor="middle" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">પર્ણ → વનસ્પતિના બધા ભાગો</text></svg></div></div><div class="diagram-cap">આકૃતિ 12 — <a href="../Chapter%20Notes/Ch07%20Transportation%20in%20Animals%20and%20Plants.html#p4">નોંધમાં વિગત →</a></div>
+</div>
+<div class="part" id="quiz"><h2><span class="num">C</span>ઝડપી પ્રશ્નો</h2>
+<div class="check-box box"><span class="label">જાતે ચકાસો 1</span>હૃદયના ઉપરના ખંડ?<br><span class="src">જવાબ: કર્ણકો (atria)</span> <a href="../Chapter%20Notes/Ch07%20Transportation%20in%20Animals%20and%20Plants.html#p2">નોંધ →</a></div>
+<div class="check-box box"><span class="label">જાતે ચકાસો 2</span>નાડી દર આરામમાં?<br><span class="src">જવાબ: ≈72–80 પ્રતિ મિનિટ</span> <a href="../Chapter%20Notes/Ch07%20Transportation%20in%20Animals%20and%20Plants.html#p2">નોંધ →</a></div>
+<div class="check-box box"><span class="label">જાતે ચકાસો 3</span>ખોરાક કઈ પેશીથી?<br><span class="src">જવાબ: અન્નવાહક</span> <a href="../Chapter%20Notes/Ch07%20Transportation%20in%20Animals%20and%20Plants.html#p4">નોંધ →</a></div>
+<div class="check-box box"><span class="label">જાતે ચકાસો 4</span>મૂત્રનો મોટો ભાગ?<br><span class="src">જવાબ: 95 % પાણી</span> <a href="../Chapter%20Notes/Ch07%20Transportation%20in%20Animals%20and%20Plants.html#p3">નોંધ →</a></div>
+</div>
+<div class="why-box box"><span class="label">વાલી માટે</span>આકૃતિ 5 ના નામ ઢાંકી ચાર ખંડ બોલાવો; પછી કાર્ડ.</div>
+</div>
+</body></html>
