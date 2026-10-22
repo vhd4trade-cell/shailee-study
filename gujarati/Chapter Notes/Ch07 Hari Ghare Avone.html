@@ -1,0 +1,195 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>હરિ, ઘરે આવોને! — Chapter Notes</title>
+<style>:root{
+  --bg:#FBF9F4; --surface:#FFFFFF; --surface-2:#F3F0E7;
+  --ink:#241F16; --ink-2:#5B5647; --ink-3:#8C8672;
+  --line:#E4DFD0;
+  --accent:#8B5E34; --accent-ink:#3E2A17; --accent-bg:#F1E4D3;
+  --formula:#1F4E42; --formula-bg:#E3F0EA; --formula-line:#9FC6B7;
+  --exam:#7A2E2E; --exam-bg:#F6E4E1; --exam-line:#DBA9A4;
+  --mistake:#8A5A00; --mistake-bg:#FDF1D9; --mistake-line:#E9C877;
+  --check:#2E4E7A; --check-bg:#E4ECF6; --check-line:#A9C0DB;
+  --why:#5B5647; --why-bg:#F3F0E7; --why-line:#DAD4C2;
+  --font-display:'Fraunces','Noto Sans Gujarati',Georgia,serif;
+  --font-body:'Source Sans 3','Noto Sans Gujarati',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+    --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+    --line:#3A3428;
+    --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+    --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+    --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+    --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+    --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+    --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+  --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+  --line:#3A3428;
+  --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+  --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+  --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+  --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+  --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+  --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.75;padding:0 16px;font-size:16px}
+.wrap{max-width:760px;margin:0 auto;padding-block:32px 80px}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;text-wrap:balance;color:var(--ink)}
+h1{font-size:clamp(28px,6vw,38px);margin:0 0 6px}
+.subtitle{color:var(--ink-2);font-size:15px;margin:0 0 28px}
+h2{font-size:24px;margin:0 0 4px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+h2 .num{color:var(--accent);font-family:var(--font-mono);font-size:15px;font-weight:600}
+.part-why{color:var(--ink-2);font-size:14.5px;margin:0 0 18px;font-style:italic}
+h3{font-size:18px;margin:30px 0 10px;color:var(--accent-ink)}
+p{margin:0 0 12px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:36px}
+.legend-item{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-2)}
+.dot{width:10px;height:10px;border-radius:3px;flex:none}
+.dot.formula{background:var(--formula)} .dot.exam{background:var(--exam)} .dot.mistake{background:var(--mistake)}
+.dot.check{background:var(--check)} .dot.concept{background:var(--accent)} .dot.why{background:var(--why)}
+.part{padding:32px 0;border-top:1px solid var(--line)}
+.part:first-of-type{border-top:none}
+.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:32px}
+.toc ol{margin:8px 0 0;padding-left:0;list-style:none}
+.toc li{margin-bottom:5px;font-size:14.5px}
+.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ink-3)}
+.toc .n{font-family:var(--font-mono);color:var(--accent);font-size:13px;font-weight:600;margin-right:6px}
+.box{border-radius:12px;padding:14px 18px;margin:14px 0;border:1px solid;font-size:15px}
+.box .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;display:block}
+.formula-box{background:var(--formula-bg);border-color:var(--formula-line)}
+.formula-box .label{color:var(--formula)}
+.formula-box .f{font-family:var(--font-mono);font-size:18px;color:var(--formula);font-weight:600;margin:4px 0}
+.formula-box .meaning{color:var(--ink-2);font-size:14px}
+.concept-box{background:var(--surface);border-color:var(--line);border-left:3px solid var(--accent)}
+.concept-box .label{color:var(--accent)}
+.exam-box{background:var(--exam-bg);border-color:var(--exam-line)} .exam-box .label{color:var(--exam)}
+.mistake-box{background:var(--mistake-bg);border-color:var(--mistake-line)} .mistake-box .label{color:var(--mistake)}
+.check-box{background:var(--check-bg);border-color:var(--check-line)} .check-box .label{color:var(--check)}
+.why-box{background:var(--why-bg);border-color:var(--why-line)} .why-box .label{color:var(--why)}
+.extra-box{background:var(--surface);border:1px dashed var(--ink-3)} .extra-box .label{color:var(--ink-3)}
+.parent-box{background:var(--accent-bg);border-color:var(--accent)} .parent-box .label{color:var(--accent-ink)}
+.outcome{background:var(--surface);border:1px solid var(--accent);border-radius:12px;padding:14px 18px;margin:0 0 16px}
+.outcome .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;display:block}
+.submap{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 6px}
+.submap span{background:var(--surface-2);border:1px solid var(--line);border-radius:20px;padding:4px 12px;font-size:12.5px;color:var(--ink-2)}
+.next-line{font-size:14px;color:var(--ink-2);margin-top:18px;padding-top:14px;border-top:1px dashed var(--line)}
+.next-line b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{padding:8px 10px;border:1px solid var(--line);text-align:center}
+th{background:var(--surface-2);font-weight:600;color:var(--ink-2);font-size:12.5px}
+td.rowlabel{text-align:left;color:var(--ink-2);font-weight:600;background:var(--surface-2)}
+td.l{text-align:left}
+.tblwrap{overflow-x:auto}
+.example{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:14px 0;font-size:15px}
+.example .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px;display:block}
+.example .step{margin:3px 0}
+.example .step b{color:var(--ink-2);font-weight:600}
+.mono{font-family:var(--font-mono)}
+.remember{background:var(--accent-bg);border:1px solid var(--accent);border-radius:12px;padding:16px 20px;margin:16px 0}
+.remember .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:8px;display:block}
+.remember ol{margin:0;padding-left:18px} .remember li{margin-bottom:5px}
+.badge{display:inline-block;font-size:11px;font-family:var(--font-mono);padding:2px 8px;border-radius:20px;background:var(--exam-bg);color:var(--exam);border:1px solid var(--exam-line);margin-left:6px;vertical-align:middle}
+.diagram{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px;margin:16px 0}
+.diagram svg{display:block;width:100%;height:auto}
+.diagram-cap{text-align:center;font-size:13px;color:var(--ink-3);margin-top:6px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:600px){.pair{grid-template-columns:1fr}}
+.pair .diagram{margin:6px 0}
+.jumpicon{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:var(--formula);color:var(--surface);text-decoration:none;font-size:11px;font-weight:700;vertical-align:middle;margin-left:4px}
+.src{font-size:12.5px;color:var(--ink-3)}
+</style>
+
+<div class="wrap">
+<h1>પાઠ 7 · હરિ, ઘરે આવોને!</h1>
+<p class="subtitle">ધોરણ 7 ગુજરાતી (પ્રથમ ભાષા) · GSEB ગુજરાતી માધ્યમ · પાન 39–41</p>
+<div class="legend">
+<div class="legend-item"><span class="dot why"></span>કેમ / રોજિંદું ઉદાહરણ</div>
+<div class="legend-item"><span class="dot concept"></span>સમજવું જ પડે</div>
+<div class="legend-item"><span class="dot formula"></span>યાદ રાખવું — મુખ્ય મુદ્દો</div>
+<div class="legend-item"><span class="dot exam"></span>પરીક્ષામાં વારંવાર</div>
+<div class="legend-item"><span class="dot mistake"></span>સામાન્ય ભૂલ</div>
+<div class="legend-item"><span class="dot check"></span>જાતે ચકાસો</div>
+</div>
+<div class="toc">
+<b>પ્રકરણનો નકશો</b> — અંતિમ લક્ષ્ય: પાઠનો સાર, પાત્રો-સંદેશ, શબ્દભંડોળ, વ્યાકરણ અને પરીક્ષાના જવાબ.
+<ol>
+<li><span class="n">00</span><a href="#intro">પાઠ એક નજરે</a> — લોકગીત</li><li><span class="n">01</span><a href="#p1">કથાસાર / કાવ્યસાર</a> — ક્રમ પ્રમાણે</li><li><span class="n">02</span><a href="#p2">પાત્રો અને સંદેશ</a> — લક્ષણ, સંદેશ</li><li><span class="n">03</span><a href="#p3">શબ્દભંડોળ</a> — શબ્દાર્થ, રૂઢિપ્રયોગ, કહેવત</li><li><span class="n">04</span><a href="#p4">વ્યાકરણ / ભાષાસજ્જતા</a> — આ પાઠનું વ્યાકરણ</li><li><span class="n">05</span><a href="#p5">પરીક્ષાના પ્રશ્નો</a> — પ્રશ્ન-જવાબ બેન્ક</li><li><span class="n">06</span><a href="#p6">સારાંશ</a></li>
+</ol>
+</div>
+
+<!-- ============ PART 00 ============ -->
+<div class="part" id="intro">
+<h2><span class="num">00</span>પાઠ એક નજરે</h2>
+<p class="part-why">શા માટે ભણવું: લોકગીતની તળપદી ભાષા અને મહેમાનના આતિથ્યની ઉત્કટ તૈયારીનો ભાવ સમજવો.</p>
+<div class="outcome"><span class="label">આ પ્રકરણ પછી તમે</span>
+પાઠનો કથાસાર / ભાવ કહી શકશો, પાત્રો અને સંદેશ સમજાવી શકશો, શબ્દાર્થ-રૂઢિપ્રયોગ-વ્યાકરણ યાદ રાખી શકશો અને પરીક્ષાના પ્રશ્નોના જવાબ લખી શકશો.</div><div class="tblwrap"><table><tr><th>વિગત</th><th>માહિતી</th></tr><tr><td class="rowlabel">પાઠ</td><td class="l">7. હરિ, ઘરે આવોને!</td></tr><tr><td class="rowlabel">પ્રકાર</td><td class="l">લોકગીત</td></tr><tr><td class="rowlabel">લેખક / કવિ</td><td class="l">લોકગીત (રચયિતા અજ્ઞાત)</td></tr><tr><td class="rowlabel">પાઠ્યપુસ્તક પાન</td><td class="l">પાન 39–41</td></tr></table></div><div class="concept-box box"><span class="label">લેખક / કવિ પરિચય (પુસ્તક પ્રમાણે)</span>આ એક સરસ મજાનું <b>લોકગીત</b> છે. <b>લોકગીતના કોઈ રચયિતા હોતા નથી.</b> લોકગીત એટલે <b>લોકો દ્વારા, લોકો માટે રચાતું અને ગવાતું ગીત</b>; તેમાં લોકોના આનંદ, ગમા-અણગમા અને સુખ-દુઃખની વાત હૃદયસ્પર્શી રીતે થાય છે. અહીં <b>મહેમાનના સ્વાગતની તૈયારી</b>નું રસપ્રદ વર્ણન છે; લોકગીતમાં <b>તળપદા શબ્દો</b>ની શક્તિ જોવા મળે છે.</div>
+<div class="next-line">→ <b>આગળ:</b> કથાસાર / કાવ્યસાર</div>
+</div>
+
+
+<!-- ============ PART 01 ============ -->
+<div class="part" id="p1">
+<h2><span class="num">01</span>કથાસાર / કાવ્યસાર</h2>
+<p class="part-why">શા માટે ભણવું: પરીક્ષામાં પાઠ પર આધારિત પ્રશ્નો પૂછાય છે — પહેલાં પાઠ કેમ બન્યો તે સમજો.</p>
+<h3>ગીતનો ભાવ</h3><p>ગીતમાં એક સ્ત્રી પોતાના <b>વાલમ (પ્રિયજન/મહેમાન — ‘હરિ’)</b>ને ઘરે આવવાનું નિમંત્રણ આપે છે અને તેમના સ્વાગત માટે કઈ કઈ તૈયારી કરશે તે ગાય છે. દરેક કડીના અંતે ટેક: <b>“…મારે ઘરે આવોને… શેરી વળાવી સજ કરું, ઘરે આવોને!”</b></p>
+<h3>તૈયારીની યાદી</h3><div class="tblwrap"><table><tr><th>શાને માટે</th><th>ગીતમાં શું આપશે/કરશે</th></tr><tr><td class="rowlabel">સ્વચ્છતા અને સુશોભન</td><td class="l">શેરી વળાવી સજ કરું; આંગણિયે ફૂલ પથરાવું</td></tr><tr><td class="rowlabel">રહેવા-ઊંઘવાની વ્યવસ્થા</td><td class="l">ઉતારા અને ઓરડા; <b>મેડીના મોલ</b>; પોઢણ માટે <b>ઢોલિયો</b>, <b>હિંડોળા ખાટ</b></td></tr><tr><td class="rowlabel">દૈનિક ક્રિયાઓ</td><td class="l"><b>દાતણ</b> — દાડમી, <b>કણેરી કાંબ</b>; <b>નાવણ</b> — કુંડિયું, <b>જમનાજીનાં નીર</b></td></tr><tr><td class="rowlabel">ભોજન</td><td class="l"><b>લાપસી</b>, <b>સાકરિયો કંસાર</b></td></tr><tr><td class="rowlabel">મનોરંજન</td><td class="l"><b>સોગઠી</b>, <b>પાસાની જોડ</b></td></tr></table></div>
+<div class="formula-box box"><span class="label">કાવ્ય (પાઠ્યપુસ્તક પ્રમાણે)</span><div class="f" style="line-height:1.9;font-size:1.02em">શેરી વળાવી સજ કરું, ઘરે આવોને!<br>આંગણિયે પથરાવું ફૂલ, વાલમ ઘરે આવોને.<br>        ઉતારા દેશું, ઓરડા ઘરે આવોને,<br>        દેશું દેશું મેડીના મોલ, મારે ઘરે આવોને… શેરી.<br>દાતણ દેશું દાડમી ઘરે આવોને,<br>દેશું દેશું કણેરી કાંબ, મારે ઘરે આવોને… શેરી.<br>        નાવણ દેશું કુંડિયું ઘરે આવોને,<br>        દેશું દેશું જમનાજીનાં નીર, મારે ઘરે આવોને… શેરી.<br>ભોજન દેશું લાપસી ઘરે આવોને,<br>દેશું દેશું સાકરિયો કંસાર, મારે ઘરે આવોને… શેરી.<br>        રમત-દેશું સોગઠી ઘરે આવોને,<br>        દેશું દેશું પાસાની જોડ, મારે ઘરે આવોને… શેરી.<br>પોઢણ દેશું ઢોલિયો, ઘરે આવોને,<br>દેશું દેશું હિંડોળા ખાટ, મારે ઘરે આવોને… શેરી.</div></div><h3>ભાવાર્થ — પંક્તિ પ્રમાણે</h3><div class="tblwrap"><table><tr><th>પંક્તિ</th><th>ભાવાર્થ</th></tr><tr><td class="rowlabel">શેરી વળાવી સજ કરું</td><td class="l">શેરી સાફ કરી શણગારી દઉં</td></tr><tr><td class="rowlabel">આંગણિયે પથરાવું ફૂલ</td><td class="l">આંગણામાં ફૂલ પાથરું</td></tr><tr><td class="rowlabel">દાતણ દેશું દાડમી</td><td class="l">દાતણ માટે દાડમની ડાળી</td></tr><tr><td class="rowlabel">પોઢણ દેશું ઢોલિયો</td><td class="l">સૂવા માટે ખાટલો આપીશ</td></tr></table></div>
+<div class="next-line">→ <b>આગળ:</b> પાત્રો-સંદેશ</div>
+</div>
+
+
+<!-- ============ PART 02 ============ -->
+<div class="part" id="p2">
+<h2><span class="num">02</span>પાત્રો અને સંદેશ</h2>
+<p class="part-why">શા માટે ભણવું: લાંબા જવાબોમાં પાત્રના ગુણ અને પાઠનો સંદેશ લખવાનો હોય છે.</p>
+<h3>પાઠનો સંદેશ / મુખ્ય મુદ્દા</h3><div class="remember"><span class="label">યાદ રાખો</span><ol><li><b>આતિથ્ય</b> — મહેમાનનું ભાવભર્યું સ્વાગત એ આપણી સંસ્કૃતિ.</li><li>લોકગીતમાં <b>તળપદા શબ્દો</b> અને લય દ્વારા આનંદ વ્યક્ત થાય છે.</li><li>લોકગીતના રચયિતા હોતા નથી — લોકો પેઢી દર પેઢી ગાય છે.</li></ol></div><h3>યાદ રાખવા જેવાં વાક્યો / પંક્તિઓ</h3><div class="check-box box"><span class="label">મુખ્ય વાક્ય</span>“શેરી વળાવી સજ કરું, ઘરે આવોને!”</div>
+<div class="next-line">→ <b>આગળ:</b> શબ્દભંડોળ</div>
+</div>
+
+
+<!-- ============ PART 03 ============ -->
+<div class="part" id="p3">
+<h2><span class="num">03</span>શબ્દભંડોળ</h2>
+<p class="part-why">શા માટે ભણવું: કહેવત અને રૂઢિપ્રયોગના અર્થ પરીક્ષામાં સીધા પૂછાય છે.</p>
+<h3>શબ્દાર્થ (પાઠ્યપુસ્તક)</h3><div class="tblwrap"><table><tr><th>શબ્દ</th><th>અર્થ</th></tr><tr><td class="rowlabel">શેરી</td><td class="l">ફળિયું, પોળ</td></tr><tr><td class="rowlabel">ઉતારા</td><td class="l">ઊતરવાનું મુકામ</td></tr><tr><td class="rowlabel">મેડી</td><td class="l">નાનો માળ</td></tr><tr><td class="rowlabel">કણેરી કાંબ</td><td class="l">કણેરની કૂમળી ડાળીની ચીપ (દાતણ)</td></tr><tr><td class="rowlabel">સોગઠી</td><td class="l">સોગઠાબાજીની રમત</td></tr><tr><td class="rowlabel">ઢોલિયો</td><td class="l">ખાટલો, પલંગ</td></tr><tr><td class="rowlabel">હિંડોળો</td><td class="l">હીંચકો</td></tr></table></div>
+<div class="next-line">→ <b>આગળ:</b> વ્યાકરણ</div>
+</div>
+
+
+<!-- ============ PART 04 ============ -->
+<div class="part" id="p4">
+<h2><span class="num">04</span>વ્યાકરણ / ભાષાસજ્જતા</h2>
+<p class="part-why">શા માટે ભણવું: ભાષાસજ્જતાના મુદ્દા (નિયમ + ઉદાહરણ) સ્વાધ્યાયમાં અને પરીક્ષામાં આવે છે.</p>
+<p><b>લોકબોલીના શબ્દો</b> (સ્વાધ્યાય 5): ‘આઈવા’, ‘સાયેબ’, ‘તીયારે’ જેવા શબ્દોને પ્રમાણભૂત ગુજરાતીમાં ફરી લખવા (આવ્યા, સાહેબ, ત્યારે), પછી પોતાની બોલીમાં.</p><p><b>શબ્દયાદી</b> (સ્વાધ્યાય 6): રાન = જંગલ; રાનને લગતું = રાનેરી.</p><p><b>પત્રલેખન</b> (સ્વાધ્યાય 10): ‘મહેમાનગતિની મજા’ વિશે મિત્રને પત્ર.</p>
+<div class="next-line">→ <b>આગળ:</b> પ્રશ્ન-જવાબ</div>
+</div>
+
+
+<!-- ============ PART 05 ============ -->
+<div class="part" id="p5">
+<h2><span class="num">05</span>પરીક્ષાના પ્રશ્નો</h2>
+<p class="part-why">શા માટે ભણવું: Sem-1 પેપર: એક વાક્ય [8], 2–3 વાક્ય [6], વિસ્તાર [6], સાચું-ખોટું [4], કહેવત [2], કાવ્યપંક્તિ [2] (હસ્તલિખિત પેપર-પદ્ધતિ મુજબ).</p>
+<div class="why-box box"><span class="label">નોંધ</span>નીચેના જવાબો <b>આ પાઠના આધારે અમે લખેલા નમૂના</b> છે. પાઠ્યપુસ્તકના સ્વાધ્યાયનો સત્તાવાર જવાબ-પત્રક / સ્વાધ્યાયપોથીના ઉકેલ પુસ્તકો મળ્યા પછી.</div><h3>એક વાક્યમાં જવાબ (પ્રશ્ન-1 અ, 8 ગુણ પ્રકારના)</h3><div class="example"><span class="label">એક વાક્ય</span><div class="step"><b>પ્ર.</b> લોકગીતના રચયિતા કોણ હોય છે?</div><div class="step"><b>જ.</b> લોકગીતના કોઈ રચયિતા હોતા નથી; લોકો દ્વારા રચાય છે.</div><div class="step"><b>પ્ર.</b> લોકગીત એટલે શું?</div><div class="step"><b>જ.</b> લોકો દ્વારા, લોકો માટે રચાતું અને ગવાતું ગીત.</div><div class="step"><b>પ્ર.</b> ગીતમાં દાતણ માટે શું આપવાનું કહ્યું છે?</div><div class="step"><b>જ.</b> દાડમી (દાડમની ડાળી) અને કણેરી કાંબ.</div><div class="step"><b>પ્ર.</b> નાવણ માટે શું આપશે?</div><div class="step"><b>જ.</b> કુંડિયું અને જમનાજીનાં નીર.</div><div class="step"><b>પ્ર.</b> ભોજનમાં શું પીરસશે?</div><div class="step"><b>જ.</b> લાપસી અને સાકરિયો કંસાર.</div><div class="step"><b>પ્ર.</b> રમત માટે શું આપશે?</div><div class="step"><b>જ.</b> સોગઠી અને પાસાની જોડ.</div><div class="step"><b>પ્ર.</b> પોઢણ માટે શું આપશે?</div><div class="step"><b>જ.</b> ઢોલિયો અને હિંડોળા ખાટ.</div><div class="step"><b>પ્ર.</b> ગીતમાં કોને ઘરે આવવાનું કહ્યું છે?</div><div class="step"><b>જ.</b> વાલમ (હરિ)ને.</div></div><h3>બે-ત્રણ વાક્યમાં જવાબ (પ્રશ્ન-1 બ, 6 ગુણ પ્રકારના)</h3><div class="example"><span class="label">2–3 વાક્ય</span><div class="step"><b>પ્ર.</b> નાવણ માટે જમનાજીનાં નીર આપવાનું શા માટે કહ્યું હશે?</div><div class="step"><b>જ.</b> જમનાજીનાં નીર પવિત્ર ગણાય છે; મહેમાનને સૌથી સારું, પવિત્ર પાણી આપવાનો આદર બતાવવા કહ્યું હશે.</div><div class="step"><b>પ્ર.</b> મહેમાનના આવતાં પહેલાં ગીતમાં કઈ તૈયારીઓ કહી છે?</div><div class="step"><b>જ.</b> શેરી વળાવી સજાવવી, આંગણામાં ફૂલ પાથરવાં, ઉતારા-ઓરડા, દાતણ-નાવણની, ભોજન (લાપસી-કંસાર), રમત અને સૂવાની વ્યવસ્થા.</div></div><h3>વિસ્તારથી જવાબ (પ્રશ્ન-2 અ, 6 ગુણ પ્રકારના)</h3><div class="example"><span class="label">વિસ્તારથી</span><div class="step"><b>પ્ર.</b> ‘હરિ, ઘરે આવોને!’ લોકગીતનો ભાવ લખો.</div><div class="step"><b>જ.</b> આ લોકગીતમાં એક સ્ત્રી પ્રિય મહેમાન (વાલમ/હરિ)ને ઘરે આવવા નિમંત્રણ આપે છે અને સ્વાગતની તૈયારી ગાય છે: શેરી વળાવી સજાવવી, આંગણામાં ફૂલ પાથરવાં, ઊતરવા ઉતારા-ઓરડા-મેડી, દાતણ, નાવણ, લાપસી-કંસારનું ભોજન, સોગઠી-પાસાની રમત અને ઢોલિયો-હિંડોળા ખાટ. તળપદા શબ્દો અને લય દ્વારા આતિથ્યભાવ પ્રગટ થાય છે.</div></div><h3>સાચું કે ખોટું (પ્રશ્ન-3 અ, 4 ગુણ પ્રકારના)</h3><div class="tblwrap"><table><tr><th>વિધાન</th><th>જવાબ</th></tr><tr><td class="rowlabel">લોકગીતના રચયિતા જાણીતા હોય છે.</td><td class="l">✘ ખોટું</td></tr><tr><td class="rowlabel">ગીતમાં ભોજન માટે લાપસી-કંસાર કહ્યાં છે.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">ગીતમાં રમત માટે સોગઠીની વાત છે.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">ગીતમાં નાવણ માટે જમનાજીનાં નીર છે.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">ગીતમાં દાતણ માટે લીમડાની ડાળી કહી છે.</td><td class="l">✘ ખોટું</td></tr></table></div><h3>કાવ્યપંક્તિ પૂર્ણ કરો (2 ગુણ પ્રકારના)</h3><div class="tblwrap"><table><tr><th>અધૂરી પંક્તિ</th><th>ખૂટતો ભાગ</th></tr><tr><td class="rowlabel">શેરી વળાવી સજ કરું, ___!</td><td class="l">ઘરે આવોને</td></tr><tr><td class="rowlabel">આંગણિયે પથરાવું ___, વાલમ ઘરે આવોને</td><td class="l">ફૂલ</td></tr><tr><td class="rowlabel">નાવણ દેશું ___ ઘરે આવોને</td><td class="l">કુંડિયું</td></tr><tr><td class="rowlabel">ભોજન દેશું ___ ઘરે આવોને</td><td class="l">લાપસી</td></tr><tr><td class="rowlabel">પોઢણ દેશું ___, ઘરે આવોને</td><td class="l">ઢોલિયો</td></tr></table></div>
+<div class="next-line">→ <b>આગળ:</b> સારાંશ</div>
+</div>
+
+
+<!-- ============ PART 06 ============ -->
+<div class="part" id="p6">
+<h2><span class="num">06</span>સારાંશ — યાદ રાખો</h2>
+<p class="part-why">શા માટે ભણવું: છેલ્લી ઘડીએ એક નજરમાં પુનરાવર્તન.</p>
+<div class="remember"><span class="label">યાદ રાખો</span><ol><li>લોકગીત = લોકો દ્વારા, લોકો માટે; રચયિતા નહીં.</li><li>મહેમાનના સ્વાગતની તૈયારી: શેરી, ફૂલ, ઉતારા, દાતણ, નાવણ, લાપસી-કંસાર, સોગઠી, ઢોલિયો.</li><li>શબ્દાર્થ: શેરી, ઉતારા, મેડી, કણેરી કાંબ, સોગઠી, ઢોલિયો, હિંડોળો.</li></ol></div>
+</div>
+
+</div>
+</body></html>

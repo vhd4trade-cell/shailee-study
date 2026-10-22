@@ -1,0 +1,194 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ગુજરાતનાં ગરવાં લોકગાયિકા — Chapter Notes</title>
+<style>:root{
+  --bg:#FBF9F4; --surface:#FFFFFF; --surface-2:#F3F0E7;
+  --ink:#241F16; --ink-2:#5B5647; --ink-3:#8C8672;
+  --line:#E4DFD0;
+  --accent:#8B5E34; --accent-ink:#3E2A17; --accent-bg:#F1E4D3;
+  --formula:#1F4E42; --formula-bg:#E3F0EA; --formula-line:#9FC6B7;
+  --exam:#7A2E2E; --exam-bg:#F6E4E1; --exam-line:#DBA9A4;
+  --mistake:#8A5A00; --mistake-bg:#FDF1D9; --mistake-line:#E9C877;
+  --check:#2E4E7A; --check-bg:#E4ECF6; --check-line:#A9C0DB;
+  --why:#5B5647; --why-bg:#F3F0E7; --why-line:#DAD4C2;
+  --font-display:'Fraunces','Noto Sans Gujarati',Georgia,serif;
+  --font-body:'Source Sans 3','Noto Sans Gujarati',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+    --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+    --line:#3A3428;
+    --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+    --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+    --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+    --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+    --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+    --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+  --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+  --line:#3A3428;
+  --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+  --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+  --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+  --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+  --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+  --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.75;padding:0 16px;font-size:16px}
+.wrap{max-width:760px;margin:0 auto;padding-block:32px 80px}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;text-wrap:balance;color:var(--ink)}
+h1{font-size:clamp(28px,6vw,38px);margin:0 0 6px}
+.subtitle{color:var(--ink-2);font-size:15px;margin:0 0 28px}
+h2{font-size:24px;margin:0 0 4px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+h2 .num{color:var(--accent);font-family:var(--font-mono);font-size:15px;font-weight:600}
+.part-why{color:var(--ink-2);font-size:14.5px;margin:0 0 18px;font-style:italic}
+h3{font-size:18px;margin:30px 0 10px;color:var(--accent-ink)}
+p{margin:0 0 12px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:36px}
+.legend-item{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-2)}
+.dot{width:10px;height:10px;border-radius:3px;flex:none}
+.dot.formula{background:var(--formula)} .dot.exam{background:var(--exam)} .dot.mistake{background:var(--mistake)}
+.dot.check{background:var(--check)} .dot.concept{background:var(--accent)} .dot.why{background:var(--why)}
+.part{padding:32px 0;border-top:1px solid var(--line)}
+.part:first-of-type{border-top:none}
+.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:32px}
+.toc ol{margin:8px 0 0;padding-left:0;list-style:none}
+.toc li{margin-bottom:5px;font-size:14.5px}
+.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ink-3)}
+.toc .n{font-family:var(--font-mono);color:var(--accent);font-size:13px;font-weight:600;margin-right:6px}
+.box{border-radius:12px;padding:14px 18px;margin:14px 0;border:1px solid;font-size:15px}
+.box .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;display:block}
+.formula-box{background:var(--formula-bg);border-color:var(--formula-line)}
+.formula-box .label{color:var(--formula)}
+.formula-box .f{font-family:var(--font-mono);font-size:18px;color:var(--formula);font-weight:600;margin:4px 0}
+.formula-box .meaning{color:var(--ink-2);font-size:14px}
+.concept-box{background:var(--surface);border-color:var(--line);border-left:3px solid var(--accent)}
+.concept-box .label{color:var(--accent)}
+.exam-box{background:var(--exam-bg);border-color:var(--exam-line)} .exam-box .label{color:var(--exam)}
+.mistake-box{background:var(--mistake-bg);border-color:var(--mistake-line)} .mistake-box .label{color:var(--mistake)}
+.check-box{background:var(--check-bg);border-color:var(--check-line)} .check-box .label{color:var(--check)}
+.why-box{background:var(--why-bg);border-color:var(--why-line)} .why-box .label{color:var(--why)}
+.extra-box{background:var(--surface);border:1px dashed var(--ink-3)} .extra-box .label{color:var(--ink-3)}
+.parent-box{background:var(--accent-bg);border-color:var(--accent)} .parent-box .label{color:var(--accent-ink)}
+.outcome{background:var(--surface);border:1px solid var(--accent);border-radius:12px;padding:14px 18px;margin:0 0 16px}
+.outcome .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;display:block}
+.submap{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 6px}
+.submap span{background:var(--surface-2);border:1px solid var(--line);border-radius:20px;padding:4px 12px;font-size:12.5px;color:var(--ink-2)}
+.next-line{font-size:14px;color:var(--ink-2);margin-top:18px;padding-top:14px;border-top:1px dashed var(--line)}
+.next-line b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{padding:8px 10px;border:1px solid var(--line);text-align:center}
+th{background:var(--surface-2);font-weight:600;color:var(--ink-2);font-size:12.5px}
+td.rowlabel{text-align:left;color:var(--ink-2);font-weight:600;background:var(--surface-2)}
+td.l{text-align:left}
+.tblwrap{overflow-x:auto}
+.example{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:14px 0;font-size:15px}
+.example .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px;display:block}
+.example .step{margin:3px 0}
+.example .step b{color:var(--ink-2);font-weight:600}
+.mono{font-family:var(--font-mono)}
+.remember{background:var(--accent-bg);border:1px solid var(--accent);border-radius:12px;padding:16px 20px;margin:16px 0}
+.remember .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:8px;display:block}
+.remember ol{margin:0;padding-left:18px} .remember li{margin-bottom:5px}
+.badge{display:inline-block;font-size:11px;font-family:var(--font-mono);padding:2px 8px;border-radius:20px;background:var(--exam-bg);color:var(--exam);border:1px solid var(--exam-line);margin-left:6px;vertical-align:middle}
+.diagram{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px;margin:16px 0}
+.diagram svg{display:block;width:100%;height:auto}
+.diagram-cap{text-align:center;font-size:13px;color:var(--ink-3);margin-top:6px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:600px){.pair{grid-template-columns:1fr}}
+.pair .diagram{margin:6px 0}
+.jumpicon{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:var(--formula);color:var(--surface);text-decoration:none;font-size:11px;font-weight:700;vertical-align:middle;margin-left:4px}
+.src{font-size:12.5px;color:var(--ink-3)}
+</style>
+
+<div class="wrap">
+<h1>પાઠ 10 · ગુજરાતનાં ગરવાં લોકગાયિકા</h1>
+<p class="subtitle">ધોરણ 7 ગુજરાતી (પ્રથમ ભાષા) · GSEB ગુજરાતી માધ્યમ · પાન 58–64</p>
+<div class="legend">
+<div class="legend-item"><span class="dot why"></span>કેમ / રોજિંદું ઉદાહરણ</div>
+<div class="legend-item"><span class="dot concept"></span>સમજવું જ પડે</div>
+<div class="legend-item"><span class="dot formula"></span>યાદ રાખવું — મુખ્ય મુદ્દો</div>
+<div class="legend-item"><span class="dot exam"></span>પરીક્ષામાં વારંવાર</div>
+<div class="legend-item"><span class="dot mistake"></span>સામાન્ય ભૂલ</div>
+<div class="legend-item"><span class="dot check"></span>જાતે ચકાસો</div>
+</div>
+<div class="toc">
+<b>પ્રકરણનો નકશો</b> — અંતિમ લક્ષ્ય: પાઠનો સાર, પાત્રો-સંદેશ, શબ્દભંડોળ, વ્યાકરણ અને પરીક્ષાના જવાબ.
+<ol>
+<li><span class="n">00</span><a href="#intro">પાઠ એક નજરે</a> — ચરિત્રનિબંધ (દિવાળીબેન ભીલ)</li><li><span class="n">01</span><a href="#p1">કથાસાર / કાવ્યસાર</a> — ક્રમ પ્રમાણે</li><li><span class="n">02</span><a href="#p2">પાત્રો અને સંદેશ</a> — લક્ષણ, સંદેશ</li><li><span class="n">03</span><a href="#p3">શબ્દભંડોળ</a> — શબ્દાર્થ, રૂઢિપ્રયોગ, કહેવત</li><li><span class="n">04</span><a href="#p4">વ્યાકરણ / ભાષાસજ્જતા</a> — આ પાઠનું વ્યાકરણ</li><li><span class="n">05</span><a href="#p5">પરીક્ષાના પ્રશ્નો</a> — પ્રશ્ન-જવાબ બેન્ક</li><li><span class="n">06</span><a href="#p6">સારાંશ</a></li>
+</ol>
+</div>
+
+<!-- ============ PART 00 ============ -->
+<div class="part" id="intro">
+<h2><span class="num">00</span>પાઠ એક નજરે</h2>
+<p class="part-why">શા માટે ભણવું: શાસ્ત્રીય તાલીમ વિના માત્ર સાધના અને પ્રતિભાથી શિખર સુધી પહોંચેલાં લોકગાયિકા — સ્વાવલંબન અને મહેનતની પ્રેરણા.</p>
+<div class="outcome"><span class="label">આ પ્રકરણ પછી તમે</span>
+પાઠનો કથાસાર / ભાવ કહી શકશો, પાત્રો અને સંદેશ સમજાવી શકશો, શબ્દાર્થ-રૂઢિપ્રયોગ-વ્યાકરણ યાદ રાખી શકશો અને પરીક્ષાના પ્રશ્નોના જવાબ લખી શકશો.</div><div class="tblwrap"><table><tr><th>વિગત</th><th>માહિતી</th></tr><tr><td class="rowlabel">પાઠ</td><td class="l">10. ગુજરાતનાં ગરવાં લોકગાયિકા</td></tr><tr><td class="rowlabel">પ્રકાર</td><td class="l">ચરિત્રનિબંધ (દિવાળીબેન ભીલ)</td></tr><tr><td class="rowlabel">લેખક / કવિ</td><td class="l">પન્ના ત્રિવેદી</td></tr><tr><td class="rowlabel">પાઠ્યપુસ્તક પાન</td><td class="l">પાન 58–64</td></tr></table></div><div class="concept-box box"><span class="label">લેખક / કવિ પરિચય (પુસ્તક પ્રમાણે)</span><b>પન્ના ત્રિવેદી</b>નું જન્મસ્થળ <b>સિદ્ધપુર</b>; <b>વીર નર્મદ દક્ષિણ ગુજરાત યુનિવર્સિટી</b>માં અધ્યાપક. વાર્તાકાર, કવયિત્રી, વિવેચક, અનુવાદક-સંપાદક. કાવ્યસંગ્રહ ‘<b>મોઝાર</b>’; વાર્તાસંગ્રહો ‘<b>એકાંતની ચીસ</b>’ અને ‘<b>રંગ વિનાનો રંગ</b>’. તેમનાં પુસ્તકો ગુજરાત સાહિત્ય અકાદમી, ગુજરાતી સાહિત્ય પરિષદ અને સાહિત્ય અકાદમી, દિલ્હી દ્વારા પુરસ્કૃત. આ ચરિત્રનિબંધમાં ગુજરાતનાં <b>કોકિલકંઠી નૈસર્ગિક ગાયિકા પદ્મશ્રી દિવાળીબેન ભીલ</b>નો પરિચય — તેમની <b>સાદગી, સરળતા અને નિખાલસતા</b> સાથે.</div>
+<div class="next-line">→ <b>આગળ:</b> કથાસાર / કાવ્યસાર</div>
+</div>
+
+
+<!-- ============ PART 01 ============ -->
+<div class="part" id="p1">
+<h2><span class="num">01</span>કથાસાર / કાવ્યસાર</h2>
+<p class="part-why">શા માટે ભણવું: પરીક્ષામાં પાઠ પર આધારિત પ્રશ્નો પૂછાય છે — પહેલાં પાઠ કેમ બન્યો તે સમજો.</p>
+<h3>જીવન-કથા (ક્રમ)</h3><ol><li><b>લોકગીત</b> = રચયિતા કોઈ એક વ્યક્તિ નહીં, લોકસમૂહમાં <b>કંઠસ્થ પરંપરા</b> રૂપે ગવાતું ગીત. લોકગીતોનો અનોખો નારીકંઠ = <b>દિવાળીબેન</b>, ‘<b>ગુજરાતી લોકગીતોનાં લતા (મંગેશકર)</b>’.</li><li><b>જન્મ 2 જૂન 1943</b>, <b>દલખાણિયા</b> ગામ (<b>ધારી તાલુકો, અમરેલી જિલ્લો</b>); મૂળ અટક <b>લાઠિયા</b>. પિતા <b>પૂંજાભાઈ</b>ને <b>રેલવેમાં નોકરી</b> મળતાં ગામ છોડી <b>જૂનાગઢ</b> આવ્યા ત્યારે દિવાળીબેનની ઉંમર <b>લગભગ નવેક વર્ષ</b>; ત્યારથી <b>ગિરનારના ખોળે</b> રહ્યાં.</li><li><b>કોઈ શાસ્ત્રીય તાલીમ વિના</b> ગાયિકા; માતા <b>મોંઘીબેન</b> ગૃહિણી; હરતાં-ફરતાં-દળતાં ગીત ગાય અને નાનકડી દિવાળી ઝીલે. નાનકડી ઉંમરે <b>નિશાળે કક્કો-બારાખડી</b> ઘૂંટ્યાં. <b>પિતાએ હોંશે હોંશે લગ્ન કરી નાખ્યાં</b>; સાસરે રાજકોટ ગયાં, પણ <b>પિતાને વાંધો પડતાં</b> દીકરીને પાછી તેડાવી લીધી — <b>માત્ર બે દિવસનું લગ્નજીવન</b>; ‘કડવો ઘૂંટડો’ ગળી <b>સ્વરસાધનાનો આશરો</b> લીધો.</li><li><b>સ્વાવલંબન</b>: ‘લૂગડાંને થીંગડું દઈ શકાય, પેટને નહીં’; કુટુંબને મદદ — <b>બાલમંદિરમાં તેડાગર</b>, <b>વીસેક વર્ષની ઉંમરે હોસ્પિટલમાં નોકરી</b>, <b>રસોઈ</b> કામ પણ. ‘ઘસાઈને ઊજળા થવાનો ગુણ’.</li><li><b>હેમુ ગઢવી</b> રાજકોટ <b>આકાશવાણી</b> માટે લોકગીતોનું <b>ધ્વનિમુદ્રણ</b> કરવા ગામેગામ ફરતા; <b>જૂનાગઢ</b>માં મોડી રાતે <b>“ઝાંઝ-પખાજ વેણા જંતર વાગે… વનમાં ઝીણા બોલે મોર…”</b> સાંભળ્યું — <b>સત્તરેક વર્ષની કન્યા</b> — ‘ચાલો! ફેરો ફોગટ નથી ગયો.’ આકાશવાણી પર રેકોર્ડિંગ; <b>‘ફૂલ ઊતર્યાં ફૂલવાડીએ રે લોલ’</b> પ્રથમ લોકગીત; <b>₹25 પુરસ્કાર</b> (તે સમયે મોટી રકમ).</li><li><b>રતુભાઈ અદાણી</b>ની પ્રેરણાથી <b>લોકસંગીત મહોત્સવ — દિલ્હી</b>; <b>પ્રથમ વિજેતા</b>. <b>કલ્યાણજીભાઈ</b>એ મુંબઈના કાર્યક્રમમાં <b>₹111</b> આપી પાર્શ્વગાયિકા તરીકે આમંત્રણ આપ્યું; <b>અવિનાશ વ્યાસ</b> પણ; ફિલ્મ <b>‘જેસલ તોરલ’</b>માં <b>‘પાપ તારું પરકાશ…’</b>. <b>નારાયણ સ્વામી, કાનદાસ બાપુ</b> સાથે પણ ગાયું.</li><li><b>વિદેશ</b>: લગભગ <b>પંદર દેશો</b> — બ્રિટન, અમેરિકા, ન્યૂઝીલૅન્ડ, ફ્રાંસ, પાકિસ્તાન વગેરે. <b>સન્માન:</b> લંડનની ગુજરાતી સોસાયટી; સૌરાષ્ટ્ર યુનિવર્સિટીનો <b>‘હેમુ ગઢવી એવૉર્ડ’</b>; ‘ગુજરાત વાઇબ્રન્ટ એવૉર્ડ’; ‘ગુજરાત સરકારનો ગૌરવ પુરસ્કાર’; ‘કવિ કાગ એવૉર્ડ’; <b>1990માં ‘પદ્મશ્રી’</b>.</li><li>સાદગી — શામળો વર્ણ, કપાળે કંકુનો ચાંદલો, સાડીનો પાલવ; <b>ગળું સદાય ‘બિનહરીફ’</b>, <b>અજોડ ગાયિકા</b>. <b>અવસાન 19 મે 2016</b> (72 વર્ષ), જૂનાગઢ. ‘<b>કોયલ</b>’ — વસંતમાં ગાય, દિવાળીબેને બારે માસ ગાઈ વસંત સર્જી.</li></ol>
+
+<div class="next-line">→ <b>આગળ:</b> પાત્રો-સંદેશ</div>
+</div>
+
+
+<!-- ============ PART 02 ============ -->
+<div class="part" id="p2">
+<h2><span class="num">02</span>પાત્રો અને સંદેશ</h2>
+<p class="part-why">શા માટે ભણવું: લાંબા જવાબોમાં પાત્રના ગુણ અને પાઠનો સંદેશ લખવાનો હોય છે.</p>
+<h3>પાત્રો / મુખ્ય વ્યક્તિઓ</h3><div class="tblwrap"><table><tr><th>નામ</th><th>પરિચય / લક્ષણ</th></tr><tr><td class="rowlabel">દિવાળીબેન ભીલ</td><td class="l">કોકિલકંઠી લોકગાયિકા — સ્વાવલંબી, સાદાં, નિખાલસ, અજોડ કંઠ; પદ્મશ્રી</td></tr><tr><td class="rowlabel">હેમુ ગઢવી</td><td class="l">લોકગાયક; દિવાળીબેનને શોધી આકાશવાણી પર લાવ્યા</td></tr><tr><td class="rowlabel">રતુભાઈ અદાણી</td><td class="l">સમાજસેવક — લોકસંગીત મહોત્સવ-દિલ્હી જવા પ્રેરણા</td></tr><tr><td class="rowlabel">કલ્યાણજી / અવિનાશ વ્યાસ</td><td class="l">સંગીતકારો — ફિલ્મ-ગાયન માટે તક</td></tr></table></div><h3>પાઠનો સંદેશ / મુખ્ય મુદ્દા</h3><div class="remember"><span class="label">યાદ રાખો</span><ol><li><b>નિઃસ્વાર્થ ભાવે અથાગ પરિશ્રમ</b> અને પ્રતિભાથી શિખર સુધી પહોંચાય — તાલીમ વિના પણ.</li><li><b>સ્વાવલંબન</b> અને મુશ્કેલીમાં ભાંગી ન પડવું.</li><li>લોકગીતો ગુજરાતની ઓળખ — તેમને જાળવવાં.</li><li>સાદગી અને નિખાલસતા — સિદ્ધિ છતાં ધરતી પર પગ.</li></ol></div><h3>યાદ રાખવા જેવાં વાક્યો / પંક્તિઓ</h3><div class="check-box box"><span class="label">મુખ્ય વાક્ય</span>“લૂગડાંને થીંગડું દઈ શકાય પણ પેટને કંઈ ઓછું જ થીંગડું દેવાય!”</div><div class="check-box box"><span class="label">મુખ્ય વાક્ય</span>“ગળું સદાય ‘બિનહરીફ’ રહ્યું.”</div><div class="check-box box"><span class="label">મુખ્ય વાક્ય</span>“નથી છતાં સ્વરદેહે સદા આપણા કાળજામાં સચવાઈ રહેશે.”</div>
+<div class="next-line">→ <b>આગળ:</b> શબ્દભંડોળ</div>
+</div>
+
+
+<!-- ============ PART 03 ============ -->
+<div class="part" id="p3">
+<h2><span class="num">03</span>શબ્દભંડોળ</h2>
+<p class="part-why">શા માટે ભણવું: કહેવત અને રૂઢિપ્રયોગના અર્થ પરીક્ષામાં સીધા પૂછાય છે.</p>
+<h3>શબ્દાર્થ (પાઠ્યપુસ્તક)</h3><div class="tblwrap"><table><tr><th>શબ્દ</th><th>અર્થ</th></tr><tr><td class="rowlabel">પરંપરા</td><td class="l">ઘણા કાળથી ચાલતો આવેલો રિવાજ</td></tr><tr><td class="rowlabel">શાસ્ત્રીય</td><td class="l">શાસ્ત્ર સંબંધી, શાસ્ત્રશુદ્ધ</td></tr><tr><td class="rowlabel">પાનેતર</td><td class="l">કન્યાને પરણતી વખતે પહેરવાનું ધોળું વસ્ત્ર</td></tr><tr><td class="rowlabel">દિવ્ય</td><td class="l">દૈવી, અદ્ભુત</td></tr><tr><td class="rowlabel">આરાધના</td><td class="l">પૂજા, સેવા</td></tr><tr><td class="rowlabel">સ્વાવલંબન</td><td class="l">પોતાના પર આધાર રાખવો, સ્વનિર્ભરતા</td></tr><tr><td class="rowlabel">તેડાગર</td><td class="l">તેડી લાવનાર (બાલમંદિર હેલ્પર)</td></tr><tr><td class="rowlabel">ધ્વનિમુદ્રણ</td><td class="l">ધ્વનિને અંકિત કરવો તે</td></tr><tr><td class="rowlabel">રઝળપાટ</td><td class="l">રઝળવાની ધમાલ કે મહેનત</td></tr><tr><td class="rowlabel">બોલબાલા</td><td class="l">ચલણ, ચડતી કળા</td></tr><tr><td class="rowlabel">નૈસર્ગિક</td><td class="l">કુદરતી</td></tr><tr><td class="rowlabel">પ્રતિભા</td><td class="l">કાંતિ</td></tr><tr><td class="rowlabel">પુરસ્કાર</td><td class="l">ઇનામ</td></tr><tr><td class="rowlabel">નવાજવું</td><td class="l">વધાવવું, ભેટ આપવી</td></tr><tr><td class="rowlabel">પાર્શ્વગાયક</td><td class="l">પડદા પાછળ રહીને ગાનાર (પ્લેબેક સિંગર)</td></tr><tr><td class="rowlabel">સવાયું</td><td class="l">સવાગણું, ચડિયાતું</td></tr><tr><td class="rowlabel">બેજોડ</td><td class="l">જેની જોડ નથી તેવું</td></tr></table></div><h3>રૂઢિપ્રયોગ</h3><div class="tblwrap"><table><tr><th>રૂઢિપ્રયોગ</th><th>અર્થ</th></tr><tr><td class="rowlabel">કડવો ઘૂંટડો ગળવો</td><td class="l">મન મનાવી લેવું</td></tr><tr><td class="rowlabel">આશરો લેવો</td><td class="l">આશ્રય કે આધાર તળે જવું</td></tr><tr><td class="rowlabel">સમજણ પાકી હોવી</td><td class="l">પૂરતી જાણકારી હોવી</td></tr><tr><td class="rowlabel">કાળજી રાખવી</td><td class="l">ચીવટ, ચિંતા, દરકાર રાખવી</td></tr><tr><td class="rowlabel">પડકાર ઝીલવો</td><td class="l">કામ પાર પાડવાનું સ્વીકારી લેવું</td></tr><tr><td class="rowlabel">ઊડીને આંખે વળગવું</td><td class="l">તરત નજરમાં આવવું</td></tr><tr><td class="rowlabel">ભાળ મેળવવી</td><td class="l">તપાસ કરવી</td></tr><tr><td class="rowlabel">ઝોલે ચઢવું</td><td class="l">ઊંઘ આવવી</td></tr><tr><td class="rowlabel">ઉત્સાહનો પાર ન રહેવો</td><td class="l">અતિશય આનંદિત થવું</td></tr><tr><td class="rowlabel">ફેરો ફોગટ જવો</td><td class="l">કામમાં નિષ્ફળ રહેવું</td></tr><tr><td class="rowlabel">બોલબાલા હોવી</td><td class="l">ચલણ કે ચડતી કળા હોવી</td></tr><tr><td class="rowlabel">ગુંજતું થવું</td><td class="l">નામના થવી, પ્રસિદ્ધિ મળવી</td></tr><tr><td class="rowlabel">ડંકો વગાડવો</td><td class="l">છાપ બેસાડવી</td></tr><tr><td class="rowlabel">ઘેલું લગાડવું</td><td class="l">ધૂન લગાડવી</td></tr><tr><td class="rowlabel">વિક્રમ સર્જવો</td><td class="l">ઊંચી સિદ્ધિ મેળવવી</td></tr><tr><td class="rowlabel">પરિશ્રમ રેડવો</td><td class="l">ખૂબ મહેનત કરવી</td></tr><tr><td class="rowlabel">સ્તબ્ધ થઈ જવું</td><td class="l">નવાઈ-આશ્ચર્ય પામવું</td></tr><tr><td class="rowlabel">આકાશ આંબવું</td><td class="l">સિદ્ધિ મેળવવી</td></tr><tr><td class="rowlabel">જીવંત મૂર્તિ બની રહેવું</td><td class="l">આદર, માન મેળવવા</td></tr><tr><td class="rowlabel">અમર થઈ જવું</td><td class="l">કાયમી યાદ રહેવું</td></tr><tr><td class="rowlabel">પ્રેરણાનું ઝરણું બની રહેવું</td><td class="l">માર્ગદર્શક બનવું</td></tr></table></div><h3>કહેવત</h3><div class="tblwrap"><table><tr><th>કહેવત</th><th>અર્થ</th></tr><tr><td class="rowlabel">એક સાંધે ત્યાં તેર તૂટે</td><td class="l">એક મુશ્કેલીથી માંડ માર્ગ કાઢીએ ત્યાં બીજી મુશ્કેલી આવી ઊભી રહે</td></tr><tr><td class="rowlabel">કામ કર્યું તેણે કામણ કર્યું</td><td class="l">કામ કરનાર સૌને પ્રિય લાગે</td></tr><tr><td class="rowlabel">ઘસાઈને ઊજળા થવું</td><td class="l">બીજાને સહાયરૂપ થઈ કામ કરીને સંતોષ મેળવવો</td></tr></table></div>
+<div class="next-line">→ <b>આગળ:</b> વ્યાકરણ</div>
+</div>
+
+
+<!-- ============ PART 04 ============ -->
+<div class="part" id="p4">
+<h2><span class="num">04</span>વ્યાકરણ / ભાષાસજ્જતા</h2>
+<p class="part-why">શા માટે ભણવું: ભાષાસજ્જતાના મુદ્દા (નિયમ + ઉદાહરણ) સ્વાધ્યાયમાં અને પરીક્ષામાં આવે છે.</p>
+<h3>ક્રિયાવિશેષણ અને આખ્યાત — ભાષાસજ્જતા (પાન 63–64)</h3><p>જેમ <b>નામનાં આકાર, રંગ, ગુણ</b> વગેરે વિશેષતા <b>વિશેષણ</b> બતાવે છે, તેમ <b>ક્રિયા કે ઘટનાની વિશેષતા ક્રિયાવિશેષણ</b> બતાવે છે. ક્રિયાપદમાં બે પ્રકારના શબ્દો આવે છે: <b>(1) આખ્યાત અને (2) ક્રિયાવિશેષણ</b>.</p><div class="tblwrap"><table><tr><th>શબ્દ</th><th>શું બતાવે</th><th>ઉદાહરણ</th></tr><tr><td class="rowlabel">આખ્યાત</td><td class="l"><b>ક્રિયા, ઘટના કે સ્થિતિ</b> બતાવનાર — શું બને છે/કોઈ શું કરે છે</td><td class="l">ગાયું, બોલ્યો, બનાવ્યું</td></tr><tr><td class="rowlabel">ક્રિયાવિશેષણ</td><td class="l">ક્રિયા કે ઘટના <b>કેવી રીતે</b> બને/થાય તે</td><td class="l">ધીમેથી, ઝડપથી, સૂસવાટાથી, મંદ મંદ, ધીમે ધીમે</td></tr></table></div><p><b>યાદ રાખો:</b> વાક્યમાં <b>ક્રિયાવિશેષણ આખ્યાત પહેલાં જ</b> આવે છે. ઘણી વાર ક્રિયાવિશેષણ <b>બે વાર</b> વપરાય છે (ધીમે ધીમે) — એ તેનો ખાસ ઉપયોગ છે.</p><div class="tblwrap"><table><tr><th>વાક્ય</th><th>સમજૂતી</th></tr><tr><td class="rowlabel">પાર્થે <u>સુંદર</u> ગીત ગાયું.</td><td class="l">સુંદર = ગીત (નામ)નું <b>વિશેષણ</b> — ગીત સુંદર છે.</td></tr><tr><td class="rowlabel">પાર્થે ગીત <u>સુંદર</u> ગાયું.</td><td class="l">સુંદર = ગાવાની ક્રિયાનું <b>ક્રિયાવિશેષણ</b> — ગાવાની રીત સુંદર.</td></tr><tr><td class="rowlabel">મેના ખૂબ <u>ધીમેથી</u> બોલે છે.</td><td class="l">ધીમેથી = ક્રિયાવિશેષણ</td></tr><tr><td class="rowlabel">કૃષ્ણે <u>ઝડપથી</u> ચાલવા માંડ્યું.</td><td class="l">ઝડપથી = ક્રિયાવિશેષણ</td></tr></table></div><p><b>ખાલી જગ્યા:</b> “પવન ……… વાતો હતો.” — ધીમે ધીમે, સૂસવાટાથી, ઝડપથી, મંદ મંદ — વગેરે ક્રિયાવિશેષણો મૂકી શકાય.</p>
+<div class="next-line">→ <b>આગળ:</b> પ્રશ્ન-જવાબ</div>
+</div>
+
+
+<!-- ============ PART 05 ============ -->
+<div class="part" id="p5">
+<h2><span class="num">05</span>પરીક્ષાના પ્રશ્નો</h2>
+<p class="part-why">શા માટે ભણવું: Sem-1 પેપર: એક વાક્ય [8], 2–3 વાક્ય [6], વિસ્તાર [6], સાચું-ખોટું [4], કહેવત [2], કાવ્યપંક્તિ [2] (હસ્તલિખિત પેપર-પદ્ધતિ મુજબ).</p>
+<div class="why-box box"><span class="label">નોંધ</span>નીચેના જવાબો <b>આ પાઠના આધારે અમે લખેલા નમૂના</b> છે. પાઠ્યપુસ્તકના સ્વાધ્યાયનો સત્તાવાર જવાબ-પત્રક / સ્વાધ્યાયપોથીના ઉકેલ પુસ્તકો મળ્યા પછી.</div><h3>એક વાક્યમાં જવાબ (પ્રશ્ન-1 અ, 8 ગુણ પ્રકારના)</h3><div class="example"><span class="label">એક વાક્ય</span><div class="step"><b>પ્ર.</b> દિવાળીબેન ભીલનો જન્મ ક્યારે અને ક્યાં થયો?</div><div class="step"><b>જ.</b> 2 જૂન 1943, દલખાણિયા (ધારી તાલુકો, અમરેલી જિલ્લો).</div><div class="step"><b>પ્ર.</b> દિવાળીબેનની મૂળ અટક શી હતી?</div><div class="step"><b>જ.</b> લાઠિયા.</div><div class="step"><b>પ્ર.</b> દિવાળીબેનના પિતાનું નામ શું?</div><div class="step"><b>જ.</b> પૂંજાભાઈ.</div><div class="step"><b>પ્ર.</b> દિવાળીબેન કઈ ઉંમરે જૂનાગઢ આવ્યાં?</div><div class="step"><b>જ.</b> લગભગ નવેક વર્ષની ઉંમરે.</div><div class="step"><b>પ્ર.</b> દિવાળીબેનને ‘ગુજરાતી લોકગીતોનાં લતા’ કોણે/કેમ કહ્યાં?</div><div class="step"><b>જ.</b> તેમના અજોડ લોકગીતગાયનને કારણે તેઓ ‘ગુજરાતી લોકગીતોનાં લતા (મંગેશકર)’ તરીકે જાણીતાં થયાં.</div><div class="step"><b>પ્ર.</b> દિવાળીબેનને શોધનાર કોણ?</div><div class="step"><b>જ.</b> હેમુ ગઢવી.</div><div class="step"><b>પ્ર.</b> રેડિયો માટે રેકોર્ડિંગ થયેલું તેમનું પ્રથમ લોકગીત કયું?</div><div class="step"><b>જ.</b> ‘ફૂલ ઊતર્યાં ફૂલવાડીએ રે લોલ’.</div><div class="step"><b>પ્ર.</b> એ માટે કેટલા રૂપિયાનો પુરસ્કાર મળ્યો?</div><div class="step"><b>જ.</b> પચ્ચીસ રૂપિયા.</div><div class="step"><b>પ્ર.</b> કલ્યાણજીભાઈએ કેટલા રૂપિયા આપી નવાજ્યાં?</div><div class="step"><b>જ.</b> ₹111 (એકસો અગિયાર).</div><div class="step"><b>પ્ર.</b> તેમને ભારત સરકારનો કયો પુરસ્કાર ક્યારે મળ્યો?</div><div class="step"><b>જ.</b> પદ્મશ્રી, 1990માં.</div><div class="step"><b>પ્ર.</b> દિવાળીબેનનું અવસાન ક્યારે થયું?</div><div class="step"><b>જ.</b> 19 મે, 2016 — 72 વર્ષની ઉંમરે, જૂનાગઢમાં.</div><div class="step"><b>પ્ર.</b> ‘જેસલ તોરલ’ ફિલ્મમાં તેમણે કયું ગીત ગાયું?</div><div class="step"><b>જ.</b> ‘પાપ તારું પરકાશ…’.</div></div><h3>બે-ત્રણ વાક્યમાં જવાબ (પ્રશ્ન-1 બ, 6 ગુણ પ્રકારના)</h3><div class="example"><span class="label">2–3 વાક્ય</span><div class="step"><b>પ્ર.</b> બાળપણથી જ દિવાળીબેન સમજદાર હતાં એમ શાના આધારે કહી શકાય?</div><div class="step"><b>જ.</b> નાની ઉંમરે લગ્નજીવન તૂટવા છતાં તેમણે ભાંગી ન પડતાં સ્વરસાધનાનો આશરો લીધો; કુટુંબ પર ભારરૂપ ન બને તે માટે બાલમંદિરમાં તેડાગર, હોસ્પિટલમાં નોકરી અને રસોઈ જેવાં કામો કર્યાં.</div><div class="step"><b>પ્ર.</b> દિવાળીબેનનો અવાજ ગુજરાતના ઘેર ઘેર કેવી રીતે ગુંજતો થયો?</div><div class="step"><b>જ.</b> હેમુ ગઢવીએ તેમનો અવાજ સાંભળી આકાશવાણી પર રેકોર્ડ કરાવ્યો; ‘ફૂલ ઊતર્યાં ફૂલવાડીએ રે લોલ’ રેડિયો પર પ્રસારિત થયું અને પછી તેમનો અવાજ ઘેર ઘેર ગુંજતો થયો.</div><div class="step"><b>પ્ર.</b> દિવાળીબેન શ્રેષ્ઠ ગાયિકા હતાં — આવું કેવી રીતે કહી શકાય?</div><div class="step"><b>જ.</b> શાસ્ત્રીય તાલીમ વિના તેમણે લોકગીતો ગાઈ પંદરેક દેશોમાં કાર્યક્રમો કર્યા, અનેક પુરસ્કારો મેળવ્યા — પદ્મશ્રી સુધી; તેમનું ગળું ‘બિનહરીફ’ રહ્યું અને કોઈ તેમની નકલ ન કરી શક્યું.</div></div><h3>વિસ્તારથી જવાબ (પ્રશ્ન-2 અ, 6 ગુણ પ્રકારના)</h3><div class="example"><span class="label">વિસ્તારથી</span><div class="step"><b>પ્ર.</b> દિવાળીબેન ભીલનો પરિચય આપો.</div><div class="step"><b>જ.</b> દિવાળીબેન ભીલનો જન્મ 2 જૂન 1943ના રોજ દલખાણિયા (ધારી, અમરેલી)માં થયો; નવેક વર્ષની ઉંમરે પિતા પૂંજાભાઈ સાથે જૂનાગઢ આવ્યાં. કોઈ શાસ્ત્રીય તાલીમ વિના માતા પાસેથી ગીતો ઝીલ્યાં. બે દિવસનું લગ્નજીવન જીવી સ્વરસાધનામાં જોડાયાં અને સ્વાવલંબનથી નોકરી-રસોઈ કર્યાં. હેમુ ગઢવીએ તેમને શોધી આકાશવાણી પર ગવડાવ્યાં; પછી દિલ્હીના લોકસંગીત મહોત્સવમાં પ્રથમ વિજેતા, ‘જેસલ તોરલ’માં ‘પાપ તારું પરકાશ…’ ગાયું. 1990માં પદ્મશ્રી મળ્યો. 19 મે, 2016ના રોજ 72 વર્ષે અવસાન થયું; પણ સ્વરદેહે તેઓ સદા જીવંત છે.</div></div><h3>સાચું કે ખોટું (પ્રશ્ન-3 અ, 4 ગુણ પ્રકારના)</h3><div class="tblwrap"><table><tr><th>વિધાન</th><th>જવાબ</th></tr><tr><td class="rowlabel">દિવાળીબેનની મૂળ અટક લાઠિયા હતી.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">દિવાળીબેને લોકસંગીતની શાસ્ત્રીય તાલીમ લીધી હતી.</td><td class="l">✘ ખોટું</td></tr><tr><td class="rowlabel">હેમુ ગઢવીએ આકાશવાણી માટે તેમનું પ્રથમ રેકોર્ડિંગ કરાવ્યું.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">તેમને 1990માં પદ્મશ્રી મળ્યો.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">દિવાળીબેનનું અવસાન 2016માં થયું.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">લગ્નજીવન ઘણાં વર્ષ ચાલ્યું.</td><td class="l">✘ ખોટું</td></tr></table></div>
+<div class="next-line">→ <b>આગળ:</b> સારાંશ</div>
+</div>
+
+
+<!-- ============ PART 06 ============ -->
+<div class="part" id="p6">
+<h2><span class="num">06</span>સારાંશ — યાદ રાખો</h2>
+<p class="part-why">શા માટે ભણવું: છેલ્લી ઘડીએ એક નજરમાં પુનરાવર્તન.</p>
+<div class="remember"><span class="label">યાદ રાખો</span><ol><li>લેખિકા પન્ના ત્રિવેદી (સિદ્ધપુર); મોઝાર, એકાંતની ચીસ, રંગ વિનાનો રંગ.</li><li>દિવાળીબેન: 2 જૂન 1943, દલખાણિયા; લાઠિયા; જૂનાગઢ (નવેક વર્ષે); ગિરનારના ખોળે.</li><li>હેમુ ગઢવી → આકાશવાણી → ‘ફૂલ ઊતર્યાં ફૂલવાડીએ’ (₹25) → દિલ્હી પ્રથમ → જેસલ તોરલ → 1990 પદ્મશ્રી.</li><li>અવસાન 19 મે 2016 (72 વર્ષ). વ્યાકરણ: ક્રિયાવિશેષણ, આખ્યાત.</li></ol></div>
+</div>
+
+</div>
+</body></html>

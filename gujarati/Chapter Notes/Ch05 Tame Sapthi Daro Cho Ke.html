@@ -1,0 +1,196 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>તમે સાપથી ડરો છો કે? — Chapter Notes</title>
+<style>:root{
+  --bg:#FBF9F4; --surface:#FFFFFF; --surface-2:#F3F0E7;
+  --ink:#241F16; --ink-2:#5B5647; --ink-3:#8C8672;
+  --line:#E4DFD0;
+  --accent:#8B5E34; --accent-ink:#3E2A17; --accent-bg:#F1E4D3;
+  --formula:#1F4E42; --formula-bg:#E3F0EA; --formula-line:#9FC6B7;
+  --exam:#7A2E2E; --exam-bg:#F6E4E1; --exam-line:#DBA9A4;
+  --mistake:#8A5A00; --mistake-bg:#FDF1D9; --mistake-line:#E9C877;
+  --check:#2E4E7A; --check-bg:#E4ECF6; --check-line:#A9C0DB;
+  --why:#5B5647; --why-bg:#F3F0E7; --why-line:#DAD4C2;
+  --font-display:'Fraunces','Noto Sans Gujarati',Georgia,serif;
+  --font-body:'Source Sans 3','Noto Sans Gujarati',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+    --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+    --line:#3A3428;
+    --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+    --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+    --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+    --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+    --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+    --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+  --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+  --line:#3A3428;
+  --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+  --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+  --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+  --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+  --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+  --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.75;padding:0 16px;font-size:16px}
+.wrap{max-width:760px;margin:0 auto;padding-block:32px 80px}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;text-wrap:balance;color:var(--ink)}
+h1{font-size:clamp(28px,6vw,38px);margin:0 0 6px}
+.subtitle{color:var(--ink-2);font-size:15px;margin:0 0 28px}
+h2{font-size:24px;margin:0 0 4px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+h2 .num{color:var(--accent);font-family:var(--font-mono);font-size:15px;font-weight:600}
+.part-why{color:var(--ink-2);font-size:14.5px;margin:0 0 18px;font-style:italic}
+h3{font-size:18px;margin:30px 0 10px;color:var(--accent-ink)}
+p{margin:0 0 12px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:36px}
+.legend-item{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-2)}
+.dot{width:10px;height:10px;border-radius:3px;flex:none}
+.dot.formula{background:var(--formula)} .dot.exam{background:var(--exam)} .dot.mistake{background:var(--mistake)}
+.dot.check{background:var(--check)} .dot.concept{background:var(--accent)} .dot.why{background:var(--why)}
+.part{padding:32px 0;border-top:1px solid var(--line)}
+.part:first-of-type{border-top:none}
+.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:32px}
+.toc ol{margin:8px 0 0;padding-left:0;list-style:none}
+.toc li{margin-bottom:5px;font-size:14.5px}
+.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ink-3)}
+.toc .n{font-family:var(--font-mono);color:var(--accent);font-size:13px;font-weight:600;margin-right:6px}
+.box{border-radius:12px;padding:14px 18px;margin:14px 0;border:1px solid;font-size:15px}
+.box .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;display:block}
+.formula-box{background:var(--formula-bg);border-color:var(--formula-line)}
+.formula-box .label{color:var(--formula)}
+.formula-box .f{font-family:var(--font-mono);font-size:18px;color:var(--formula);font-weight:600;margin:4px 0}
+.formula-box .meaning{color:var(--ink-2);font-size:14px}
+.concept-box{background:var(--surface);border-color:var(--line);border-left:3px solid var(--accent)}
+.concept-box .label{color:var(--accent)}
+.exam-box{background:var(--exam-bg);border-color:var(--exam-line)} .exam-box .label{color:var(--exam)}
+.mistake-box{background:var(--mistake-bg);border-color:var(--mistake-line)} .mistake-box .label{color:var(--mistake)}
+.check-box{background:var(--check-bg);border-color:var(--check-line)} .check-box .label{color:var(--check)}
+.why-box{background:var(--why-bg);border-color:var(--why-line)} .why-box .label{color:var(--why)}
+.extra-box{background:var(--surface);border:1px dashed var(--ink-3)} .extra-box .label{color:var(--ink-3)}
+.parent-box{background:var(--accent-bg);border-color:var(--accent)} .parent-box .label{color:var(--accent-ink)}
+.outcome{background:var(--surface);border:1px solid var(--accent);border-radius:12px;padding:14px 18px;margin:0 0 16px}
+.outcome .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;display:block}
+.submap{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 6px}
+.submap span{background:var(--surface-2);border:1px solid var(--line);border-radius:20px;padding:4px 12px;font-size:12.5px;color:var(--ink-2)}
+.next-line{font-size:14px;color:var(--ink-2);margin-top:18px;padding-top:14px;border-top:1px dashed var(--line)}
+.next-line b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{padding:8px 10px;border:1px solid var(--line);text-align:center}
+th{background:var(--surface-2);font-weight:600;color:var(--ink-2);font-size:12.5px}
+td.rowlabel{text-align:left;color:var(--ink-2);font-weight:600;background:var(--surface-2)}
+td.l{text-align:left}
+.tblwrap{overflow-x:auto}
+.example{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:14px 0;font-size:15px}
+.example .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px;display:block}
+.example .step{margin:3px 0}
+.example .step b{color:var(--ink-2);font-weight:600}
+.mono{font-family:var(--font-mono)}
+.remember{background:var(--accent-bg);border:1px solid var(--accent);border-radius:12px;padding:16px 20px;margin:16px 0}
+.remember .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:8px;display:block}
+.remember ol{margin:0;padding-left:18px} .remember li{margin-bottom:5px}
+.badge{display:inline-block;font-size:11px;font-family:var(--font-mono);padding:2px 8px;border-radius:20px;background:var(--exam-bg);color:var(--exam);border:1px solid var(--exam-line);margin-left:6px;vertical-align:middle}
+.diagram{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px;margin:16px 0}
+.diagram svg{display:block;width:100%;height:auto}
+.diagram-cap{text-align:center;font-size:13px;color:var(--ink-3);margin-top:6px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:600px){.pair{grid-template-columns:1fr}}
+.pair .diagram{margin:6px 0}
+.jumpicon{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:var(--formula);color:var(--surface);text-decoration:none;font-size:11px;font-weight:700;vertical-align:middle;margin-left:4px}
+.src{font-size:12.5px;color:var(--ink-3)}
+</style>
+
+<div class="wrap">
+<h1>પાઠ 5 · તમે સાપથી ડરો છો કે?</h1>
+<p class="subtitle">ધોરણ 7 ગુજરાતી (પ્રથમ ભાષા) · GSEB ગુજરાતી માધ્યમ · પાન 24–30</p>
+<div class="legend">
+<div class="legend-item"><span class="dot why"></span>કેમ / રોજિંદું ઉદાહરણ</div>
+<div class="legend-item"><span class="dot concept"></span>સમજવું જ પડે</div>
+<div class="legend-item"><span class="dot formula"></span>યાદ રાખવું — મુખ્ય મુદ્દો</div>
+<div class="legend-item"><span class="dot exam"></span>પરીક્ષામાં વારંવાર</div>
+<div class="legend-item"><span class="dot mistake"></span>સામાન્ય ભૂલ</div>
+<div class="legend-item"><span class="dot check"></span>જાતે ચકાસો</div>
+</div>
+<div class="toc">
+<b>પ્રકરણનો નકશો</b> — અંતિમ લક્ષ્ય: પાઠનો સાર, પાત્રો-સંદેશ, શબ્દભંડોળ, વ્યાકરણ અને પરીક્ષાના જવાબ.
+<ol>
+<li><span class="n">00</span><a href="#intro">પાઠ એક નજરે</a> — સંવાદાત્મક માહિતીલેખ</li><li><span class="n">01</span><a href="#p1">કથાસાર / કાવ્યસાર</a> — ક્રમ પ્રમાણે</li><li><span class="n">02</span><a href="#p2">પાત્રો અને સંદેશ</a> — લક્ષણ, સંદેશ</li><li><span class="n">03</span><a href="#p3">શબ્દભંડોળ</a> — શબ્દાર્થ, રૂઢિપ્રયોગ, કહેવત</li><li><span class="n">04</span><a href="#p4">વ્યાકરણ / ભાષાસજ્જતા</a> — આ પાઠનું વ્યાકરણ</li><li><span class="n">05</span><a href="#p5">પરીક્ષાના પ્રશ્નો</a> — પ્રશ્ન-જવાબ બેન્ક</li><li><span class="n">06</span><a href="#p6">સારાંશ</a></li>
+</ol>
+</div>
+
+<!-- ============ PART 00 ============ -->
+<div class="part" id="intro">
+<h2><span class="num">00</span>પાઠ એક નજરે</h2>
+<p class="part-why">શા માટે ભણવું: સાપ વિશેની સાચી માહિતી જાણી ખોટી માન્યતાઓ અને બિનજરૂરી ડર દૂર કરવો.</p>
+<div class="outcome"><span class="label">આ પ્રકરણ પછી તમે</span>
+પાઠનો કથાસાર / ભાવ કહી શકશો, પાત્રો અને સંદેશ સમજાવી શકશો, શબ્દાર્થ-રૂઢિપ્રયોગ-વ્યાકરણ યાદ રાખી શકશો અને પરીક્ષાના પ્રશ્નોના જવાબ લખી શકશો.</div><div class="tblwrap"><table><tr><th>વિગત</th><th>માહિતી</th></tr><tr><td class="rowlabel">પાઠ</td><td class="l">5. તમે સાપથી ડરો છો કે?</td></tr><tr><td class="rowlabel">પ્રકાર</td><td class="l">સંવાદાત્મક માહિતીલેખ</td></tr><tr><td class="rowlabel">લેખક / કવિ</td><td class="l">જયંતભાઈ પટેલ</td></tr><tr><td class="rowlabel">પાઠ્યપુસ્તક પાન</td><td class="l">પાન 24–30</td></tr></table></div><div class="concept-box box"><span class="label">લેખક / કવિ પરિચય (પુસ્તક પ્રમાણે)</span>જયંતભાઈ મોહનલાલ પટેલનો જન્મ <b>ધંધુકા તાલુકાના હરિપુરા ગામે ઈ.સ. 1940</b>માં; મૂળ વતન <b>ધંધુકા તાલુકાનું ભડિયાદ</b>. ગુજરાત વિદ્યાપીઠના <b>મહાદેવ દેસાઈ સમાજસેવા મહાવિદ્યાલય</b>માં ગુજરાતીના અધ્યાપક. ‘<b>વાર્તા સાહિત્ય</b>’ વિશે લખ્યું છે. આ એકમમાં <b>સાપ વિશે રસપ્રદ માહિતી</b> સંવાદરૂપે આપી છે; સમાજમાં સાપનો ડર સામાન્ય છે અને કેટલીક <b>ખોટી માન્યતાઓ</b> પણ છે — આ માહિતી વાંચી તે દૂર થાય છે.</div>
+<div class="next-line">→ <b>આગળ:</b> કથાસાર / કાવ્યસાર</div>
+</div>
+
+
+<!-- ============ PART 01 ============ -->
+<div class="part" id="p1">
+<h2><span class="num">01</span>કથાસાર / કાવ્યસાર</h2>
+<p class="part-why">શા માટે ભણવું: પરીક્ષામાં પાઠ પર આધારિત પ્રશ્નો પૂછાય છે — પહેલાં પાઠ કેમ બન્યો તે સમજો.</p>
+<h3>પાત્રો અને પ્રસંગ</h3><p><b>સોનલ</b> (નાની), <b>ભાભી</b>, <b>બા</b>, <b>ભાઈ</b>, <b>રામુ</b>. <b>શ્રાવણ માસની અંધારી પાંચમ = નાગપંચમી</b>; ભાભી પાણિયારા પર <b>નાગનું ચિત્ર</b> આળેખી પૂજા કરે છે — દીવો, <b>કુલેર</b>નું નૈવેદ્ય; ઉપવાસ-એકટાણું. સોનલ પૂછે છે: “નાગના બદલે ઉંદરનું ચિત્ર આળેખે તો શું થાય?” — ભાઈ સાપ વિશે સાચી માહિતી સમજાવે છે.</p>
+<h3>સાપ વિશે સાચી માહિતી (પાઠ મુજબ)</h3><div class="tblwrap"><table><tr><th>મુદ્દો</th><th>માહિતી</th></tr><tr><td class="rowlabel">પ્રકાર</td><td class="l">આપણા દેશમાં <b>આશરે 216 પ્રકારના સાપ</b>; બધા નાગ નથી, <b>બધા ઝેરી નથી</b>; ઝેરી સાપ બહુ ઓછા</td></tr><tr><td class="rowlabel">મોટો / નાનો સાપ</td><td class="l"><b>અજગર</b> સૌથી લાંબો અને વજનમાં સૌથી વધારે — ક્યારેક <b>આશરે 8 મીટર, દોઢસો કિલો</b>; નાનામાં નાનો સાપ <b>12–13 સેન્ટિમીટર</b></td></tr><tr><td class="rowlabel">આયુષ્ય</td><td class="l">સરેરાશ <b>25 વર્ષ</b></td></tr><tr><td class="rowlabel">કાંચળી</td><td class="l">સાપ <b>કાંચળી ઉતારે</b> — <b>72 થી 210 દિવસના ગાળે</b>; પૂરેપૂરી ન ઊતરે તો <b>માંદો પડે</b>. <b>મુંબઈની હાફકિન ઇન્સ્ટિટ્યૂટ</b>માં સાપ-ઝેરનો અભ્યાસ અને ઇન્જેક્શન</td></tr><tr><td class="rowlabel">મૂછ / મણિ</td><td class="l"><b>મૂછ</b> ફૂટતી જ નથી, શરીરે વાળ નથી; <b>નાગનો મણિ</b> પણ બનાવટી વાત</td></tr><tr><td class="rowlabel">આહાર</td><td class="l">સાપ દૂધ પીએ ખરો પણ પાણીની જેમ — <b>એકલું દૂધ આહાર નથી</b>; સાપ <b>શાકાહારી નથી</b> (ઉંદર, દેડકાં)</td></tr><tr><td class="rowlabel">ગળવું</td><td class="l">ઉંદર <b>પહેલાં માથું મોંમાં</b> લઈ ગળે; <b>ઝેર પાચનમાં મદદ</b> કરે; અજગર <b>આઠ મહિના</b> ભૂખ્યો રહી શકે</td></tr><tr><td class="rowlabel">જીભ</td><td class="l"><b>બે જીભ નથી</b> — જીભને <b>બે પાંખિયાં</b> (દ્વિજિહ્વા/બેજીભો); જીભ <b>ઘ્રાણેન્દ્રિય</b> જેવું કામ કરે</td></tr><tr><td class="rowlabel">આંખ-કાન</td><td class="l">આંખોને <b>પોપચાં નથી</b>; <b>બહુ લાંબું જોઈ શકતો નથી</b>; <b>કાન નથી</b></td></tr><tr><td class="rowlabel">મોરલી</td><td class="l">સાપ મોરલીએ નથી ડોલતો; ડોલતો દેખાય તે <b>હુમલાની તૈયારી</b></td></tr><tr><td class="rowlabel">નોળિયો</td><td class="l">સાપનો દુશ્મન; વધારે ચાલાક અને ચંચળ તેથી જીતે; વનસ્પતિ સૂંઘવાની વાત ખોટી; મૂળ ખોદે તે <b>દાંત તીક્ષ્ણ કરવા</b></td></tr><tr><td class="rowlabel">પ્રજનન</td><td class="l">કેટલાક <b>ઈંડાં મૂકે</b>, કેટલાક <b>બચ્ચાંને જન્મ</b> આપે; <b>નાગણ 50–55 ઈંડાં</b> આપે; બધાં બચ્ચાં જીવતાં નથી</td></tr><tr><td class="rowlabel">ઉપયોગિતા</td><td class="l">ખેતીને નુકસાન કરતા <b>ઉંદર, કોળ</b> વગેરેને ખાય; <b>માણસજાતનો મિત્ર</b></td></tr></table></div>
+<h3>પૌરાણિક નામો (પાઠમાં)</h3><p>શેષશાયી વિષ્ણુના ચિત્રમાં <b>અનંત, વાસુકિ, શેષ, પદ્મનાભ, કંબલ, શંખપાલ, ધૃતરાષ્ટ્ર, તક્ષક, કાલિય</b> વગેરે સાપની જાતો ગણાવી છે; <b>કર્કોટક</b> સાપ નળ-દમયંતીની વાર્તામાં; <b>તક્ષક</b> સાપે <b>પરીક્ષિત રાજાને</b> કરડ્યો હતો.</p>
+
+<div class="next-line">→ <b>આગળ:</b> પાત્રો-સંદેશ</div>
+</div>
+
+
+<!-- ============ PART 02 ============ -->
+<div class="part" id="p2">
+<h2><span class="num">02</span>પાત્રો અને સંદેશ</h2>
+<p class="part-why">શા માટે ભણવું: લાંબા જવાબોમાં પાત્રના ગુણ અને પાઠનો સંદેશ લખવાનો હોય છે.</p>
+<h3>પાત્રો / મુખ્ય વ્યક્તિઓ</h3><div class="tblwrap"><table><tr><th>નામ</th><th>પરિચય / લક્ષણ</th></tr><tr><td class="rowlabel">સોનલ</td><td class="l">જિજ્ઞાસુ નાની છોકરી — પ્રશ્નો પૂછે છે</td></tr><tr><td class="rowlabel">ભાભી</td><td class="l">નાગપંચમીની પૂજા કરે છે; પાણિયારા પર નાગ આળેખે છે</td></tr><tr><td class="rowlabel">ભાઈ</td><td class="l">સાપ વિશે વૈજ્ઞાનિક માહિતી આપનાર</td></tr><tr><td class="rowlabel">બા</td><td class="l">નાગપંચમીનું વ્રત સમજાવનાર</td></tr></table></div><h3>પાઠનો સંદેશ / મુખ્ય મુદ્દા</h3><div class="remember"><span class="label">યાદ રાખો</span><ol><li>સાપ વિશેની <b>ખોટી માન્યતાઓ</b> (દૂધ, મૂછ, મણિ, મોરલી, બે જીભ) સાચી નથી.</li><li>બધા સાપ ઝેરી નથી; સાપ <b>ખેડૂતનો મિત્ર</b> — ઉંદર ખાય છે.</li><li>સાપને ઓળખતાં શીખીએ તો ડર ન રહે.</li></ol></div><h3>યાદ રાખવા જેવાં વાક્યો / પંક્તિઓ</h3><div class="check-box box"><span class="label">મુખ્ય વાક્ય</span>“બધા સાપ નાગ નથી હોતા, ને બધા સાપ ઝેરી હોતા નથી.”</div><div class="check-box box"><span class="label">મુખ્ય વાક્ય</span>“સાપ તો માણસજાતનો મિત્ર પણ છે.”</div>
+<div class="next-line">→ <b>આગળ:</b> શબ્દભંડોળ</div>
+</div>
+
+
+<!-- ============ PART 03 ============ -->
+<div class="part" id="p3">
+<h2><span class="num">03</span>શબ્દભંડોળ</h2>
+<p class="part-why">શા માટે ભણવું: કહેવત અને રૂઢિપ્રયોગના અર્થ પરીક્ષામાં સીધા પૂછાય છે.</p>
+<h3>શબ્દાર્થ (પાઠ્યપુસ્તક)</h3><div class="tblwrap"><table><tr><th>શબ્દ</th><th>અર્થ</th></tr><tr><td class="rowlabel">આળેખવું</td><td class="l">દોરવું, ચિતરવું</td></tr><tr><td class="rowlabel">એકટાણું</td><td class="l">એક ટંક જમવું તે</td></tr><tr><td class="rowlabel">ભોરિંગ</td><td class="l">મોટો નાગ</td></tr><tr><td class="rowlabel">દમ કાઢે</td><td class="l">થકવી દે, હંફાવે</td></tr><tr><td class="rowlabel">શેષશાયી</td><td class="l">શેષનાગ ઉપર સૂનાર (વિષ્ણુ)</td></tr><tr><td class="rowlabel">ત્વચા</td><td class="l">ચામડી</td></tr><tr><td class="rowlabel">તરેહ</td><td class="l">ભાત, જાત</td></tr><tr><td class="rowlabel">હેરત</td><td class="l">નવાઈ</td></tr><tr><td class="rowlabel">ઘ્રાણેન્દ્રિય</td><td class="l">સૂંઘવાની ઇન્દ્રિય, નાક</td></tr></table></div><h3>શબ્દસમૂહ માટે એક શબ્દ</h3><div class="tblwrap"><table><tr><th>શબ્દસમૂહ</th><th>એક શબ્દ</th></tr><tr><td class="rowlabel">ઘી-ગોળ સાથે ચોળેલો બાજરી વગેરેનો લોટ</td><td class="l">કુલેર</td></tr></table></div><h3>રૂઢિપ્રયોગ</h3><div class="tblwrap"><table><tr><th>રૂઢિપ્રયોગ</th><th>અર્થ</th></tr><tr><td class="rowlabel">મોંમાં પાણી આવવું</td><td class="l">ખૂબ ભૂખ લાગવી, ગમતી વસ્તુ ખાવાની તીવ્ર ઇચ્છા થવી</td></tr><tr><td class="rowlabel">માંડીને વાત કહેવી</td><td class="l">શાંતિથી, શરૂઆતથી બધી વાત કહેવી</td></tr><tr><td class="rowlabel">વહારે આવવું</td><td class="l">મદદે આવવું</td></tr></table></div><h3>કહેવત</h3><div class="tblwrap"><table><tr><th>કહેવત</th><th>અર્થ</th></tr><tr><td class="rowlabel">સાપ કાઢતાં ઘો પેઠી</td><td class="l">એક મુશ્કેલી દૂર થતાં બીજી મુશ્કેલી આવી ઊભી રહે</td></tr></table></div>
+<div class="next-line">→ <b>આગળ:</b> વ્યાકરણ</div>
+</div>
+
+
+<!-- ============ PART 04 ============ -->
+<div class="part" id="p4">
+<h2><span class="num">04</span>વ્યાકરણ / ભાષાસજ્જતા</h2>
+<p class="part-why">શા માટે ભણવું: ભાષાસજ્જતાના મુદ્દા (નિયમ + ઉદાહરણ) સ્વાધ્યાયમાં અને પરીક્ષામાં આવે છે.</p>
+<p><b>વિધાનો ‘હા’/‘ના’</b> (સ્વાધ્યાય 4): સાપ વિશેની સાચી હકીકત = ‘હા’; ખોટી માન્યતા = ‘ના’.</p><p><b>ક્રમિક વિસ્તરણ વાક્ય</b> (સ્વાધ્યાય 9): એક નાના વાક્યમાં એક એક શબ્દ ઉમેરી મોટું વાક્ય બનાવવું — “આજે સવારે વરસાદ પડ્યો” → “આજે સવારે અમદાવાદ શહેરમાં ચાર કલાક વીજળીના ગડગડાટ સાથે ધોધમાર વરસાદ પડ્યો.”</p><p><b>કાળ</b> (સ્વાધ્યાય 10): હું બજાર ગયો હતો (ભૂત) / જાઉં છું (વર્તમાન) / જઈશ (ભવિષ્ય).</p>
+<div class="next-line">→ <b>આગળ:</b> પ્રશ્ન-જવાબ</div>
+</div>
+
+
+<!-- ============ PART 05 ============ -->
+<div class="part" id="p5">
+<h2><span class="num">05</span>પરીક્ષાના પ્રશ્નો</h2>
+<p class="part-why">શા માટે ભણવું: Sem-1 પેપર: એક વાક્ય [8], 2–3 વાક્ય [6], વિસ્તાર [6], સાચું-ખોટું [4], કહેવત [2], કાવ્યપંક્તિ [2] (હસ્તલિખિત પેપર-પદ્ધતિ મુજબ).</p>
+<div class="why-box box"><span class="label">નોંધ</span>નીચેના જવાબો <b>આ પાઠના આધારે અમે લખેલા નમૂના</b> છે. પાઠ્યપુસ્તકના સ્વાધ્યાયનો સત્તાવાર જવાબ-પત્રક / સ્વાધ્યાયપોથીના ઉકેલ પુસ્તકો મળ્યા પછી.</div><h3>એક વાક્યમાં જવાબ (પ્રશ્ન-1 અ, 8 ગુણ પ્રકારના)</h3><div class="example"><span class="label">એક વાક્ય</span><div class="step"><b>પ્ર.</b> આપણા દેશમાં આશરે કેટલા પ્રકારના સાપ છે?</div><div class="step"><b>જ.</b> 216.</div><div class="step"><b>પ્ર.</b> સૌથી લાંબો સાપ કયો?</div><div class="step"><b>જ.</b> અજગર.</div><div class="step"><b>પ્ર.</b> સાપની સરેરાશ આયુ કેટલી?</div><div class="step"><b>જ.</b> પચીસ વર્ષ.</div><div class="step"><b>પ્ર.</b> સાપ કાંચળી ક્યારે ઉતારે?</div><div class="step"><b>જ.</b> 72 થી 210 દિવસના ગાળે.</div><div class="step"><b>પ્ર.</b> સાપના ઝેરનો અભ્યાસ ક્યાં થાય છે?</div><div class="step"><b>જ.</b> મુંબઈની હાફકિન ઇન્સ્ટિટ્યૂટમાં.</div><div class="step"><b>પ્ર.</b> સાપની જીભને શું હોય છે?</div><div class="step"><b>જ.</b> બે પાંખિયાં (બે ફાંટા).</div><div class="step"><b>પ્ર.</b> નાગણ એક સાથે કેટલાં ઈંડાં આપે?</div><div class="step"><b>જ.</b> 50–55.</div><div class="step"><b>પ્ર.</b> નાગપંચમી કયા મહિનામાં આવે છે?</div><div class="step"><b>જ.</b> શ્રાવણ (અંધારી પાંચમ).</div><div class="step"><b>પ્ર.</b> સાપ મુખ્યત્વે ખેતીને નુકસાન કરતા કયા જીવ ખાય?</div><div class="step"><b>જ.</b> ઉંદર, કોળ વગેરે.</div><div class="step"><b>પ્ર.</b> સાપ કોનો દુશ્મન ગણાય?</div><div class="step"><b>જ.</b> નોળિયો સાપનો દુશ્મન છે.</div></div><h3>બે-ત્રણ વાક્યમાં જવાબ (પ્રશ્ન-1 બ, 6 ગુણ પ્રકારના)</h3><div class="example"><span class="label">2–3 વાક્ય</span><div class="step"><b>પ્ર.</b> સાપ માણસજાતને કેવી રીતે ઉપયોગી બને છે?</div><div class="step"><b>જ.</b> સાપ ખેતીને નુકસાન કરનાર ઉંદર, કોળ વગેરેને ખાઈ જાય છે; તેથી ખેડૂતને ફાયદો થાય છે. ઝેરી સાપ બહુ ઓછા છે, એટલે સાપ માણસજાતનો મિત્ર ગણાય.</div><div class="step"><b>પ્ર.</b> સાપ વિશેની કઈ ખોટી માન્યતાઓ પાઠમાંથી જાણવા મળે છે?</div><div class="step"><b>જ.</b> સાપ દૂધ પીએ છે, સાપને બે જીભ હોય, મૂછ ફૂટે, નાગને કીમતી મણિ હોય, સાપ મોરલીએ ડોલે — આ બધી માન્યતાઓ ખોટી છે.</div><div class="step"><b>પ્ર.</b> સાપની જીભ વિશે પાઠમાં શું કહ્યું છે?</div><div class="step"><b>જ.</b> સાપને બે જીભ નથી; તેની જીભને બે પાંખિયાં (ફાંટા) હોય છે, તેથી તે દ્વિજિહ્વા કહેવાય. જીભ ઘ્રાણેન્દ્રિયનું કામ કરે છે અને ખોરાક શોધવા અને દુશ્મનને જાણવામાં કામ આવે છે.</div></div><h3>વિસ્તારથી જવાબ (પ્રશ્ન-2 અ, 6 ગુણ પ્રકારના)</h3><div class="example"><span class="label">વિસ્તારથી</span><div class="step"><b>પ્ર.</b> ‘તમે સાપથી ડરો છો કે?’ — પાઠમાં આપેલી સાપ વિશેની માહિતી તમારા શબ્દોમાં લખો.</div><div class="step"><b>જ.</b> આપણા દેશમાં આશરે 216 પ્રકારના સાપ છે; બધા ઝેરી નથી. અજગર સૌથી મોટો, નાનો સાપ 12–13 સે.મી.નો. સાપ કાંચળી ઉતારે છે; સાપ શાકાહારી નથી, ઉંદર ખાય છે; દૂધ તેનો આહાર નથી. જીભને બે પાંખિયાં હોય છે; આંખોને પોપચાં અને કાન નથી. મોરલીએ ડોલવાની વાત ખોટી છે. નોળિયો સાપનો દુશ્મન છે. સાપ ખેતીને નુકસાન કરતા જીવ ખાય એટલે મિત્ર છે, તેથી તેનાથી ડરવાને બદલે તેને ઓળખવો જોઈએ.</div></div><h3>સાચું કે ખોટું (પ્રશ્ન-3 અ, 4 ગુણ પ્રકારના)</h3><div class="tblwrap"><table><tr><th>વિધાન</th><th>જવાબ</th></tr><tr><td class="rowlabel">સાપ દૂધ પીએ છે — એ માન્યતા સાચી નથી.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">સાપને બે જીભ હોય છે.</td><td class="l">✘ ખોટું</td></tr><tr><td class="rowlabel">સાપને કાન હોતા નથી.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">બધા સાપ ઝેરી હોય છે.</td><td class="l">✘ ખોટું</td></tr><tr><td class="rowlabel">સાપ ઘરડો થાય ત્યારે મૂછ ફૂટે છે.</td><td class="l">✘ ખોટું</td></tr><tr><td class="rowlabel">પૂરેપૂરી કાંચળી ન ઊતરે તો સાપ માંદો પડે.</td><td class="l">✔ સાચું</td></tr></table></div>
+<div class="next-line">→ <b>આગળ:</b> સારાંશ</div>
+</div>
+
+
+<!-- ============ PART 06 ============ -->
+<div class="part" id="p6">
+<h2><span class="num">06</span>સારાંશ — યાદ રાખો</h2>
+<p class="part-why">શા માટે ભણવું: છેલ્લી ઘડીએ એક નજરમાં પુનરાવર્તન.</p>
+<div class="remember"><span class="label">યાદ રાખો</span><ol><li>લેખક જયંતભાઈ પટેલ (1940, હરિપુરા); સંવાદરૂપ માહિતીલેખ.</li><li>નાગપંચમી = શ્રાવણ અંધારી પાંચમ; કુલેર, એકટાણું.</li><li>216 પ્રકાર; અજગર સૌથી મોટો; આયુ ~25 વર્ષ; કાંચળી 72–210 દિવસે.</li><li>ખોટી માન્યતાઓ: દૂધ, મૂછ, મણિ, મોરલી, બે જીભ. સાપ ખેડૂતનો મિત્ર.</li></ol></div>
+</div>
+
+</div>
+</body></html>
