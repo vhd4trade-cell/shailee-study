@@ -1,0 +1,185 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>પૂરક વાચન 4 — મોંઘી પૂતળી — Chapter Notes</title>
+<style>:root{
+  --bg:#FBF9F4; --surface:#FFFFFF; --surface-2:#F3F0E7;
+  --ink:#241F16; --ink-2:#5B5647; --ink-3:#8C8672;
+  --line:#E4DFD0;
+  --accent:#8B5E34; --accent-ink:#3E2A17; --accent-bg:#F1E4D3;
+  --formula:#1F4E42; --formula-bg:#E3F0EA; --formula-line:#9FC6B7;
+  --exam:#7A2E2E; --exam-bg:#F6E4E1; --exam-line:#DBA9A4;
+  --mistake:#8A5A00; --mistake-bg:#FDF1D9; --mistake-line:#E9C877;
+  --check:#2E4E7A; --check-bg:#E4ECF6; --check-line:#A9C0DB;
+  --why:#5B5647; --why-bg:#F3F0E7; --why-line:#DAD4C2;
+  --font-display:'Fraunces','Noto Sans Gujarati',Georgia,serif;
+  --font-body:'Source Sans 3','Noto Sans Gujarati',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+    --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+    --line:#3A3428;
+    --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+    --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+    --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+    --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+    --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+    --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+  --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+  --line:#3A3428;
+  --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+  --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+  --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+  --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+  --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+  --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.75;padding:0 16px;font-size:16px}
+.wrap{max-width:760px;margin:0 auto;padding-block:32px 80px}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;text-wrap:balance;color:var(--ink)}
+h1{font-size:clamp(28px,6vw,38px);margin:0 0 6px}
+.subtitle{color:var(--ink-2);font-size:15px;margin:0 0 28px}
+h2{font-size:24px;margin:0 0 4px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+h2 .num{color:var(--accent);font-family:var(--font-mono);font-size:15px;font-weight:600}
+.part-why{color:var(--ink-2);font-size:14.5px;margin:0 0 18px;font-style:italic}
+h3{font-size:18px;margin:30px 0 10px;color:var(--accent-ink)}
+p{margin:0 0 12px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:36px}
+.legend-item{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-2)}
+.dot{width:10px;height:10px;border-radius:3px;flex:none}
+.dot.formula{background:var(--formula)} .dot.exam{background:var(--exam)} .dot.mistake{background:var(--mistake)}
+.dot.check{background:var(--check)} .dot.concept{background:var(--accent)} .dot.why{background:var(--why)}
+.part{padding:32px 0;border-top:1px solid var(--line)}
+.part:first-of-type{border-top:none}
+.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:32px}
+.toc ol{margin:8px 0 0;padding-left:0;list-style:none}
+.toc li{margin-bottom:5px;font-size:14.5px}
+.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ink-3)}
+.toc .n{font-family:var(--font-mono);color:var(--accent);font-size:13px;font-weight:600;margin-right:6px}
+.box{border-radius:12px;padding:14px 18px;margin:14px 0;border:1px solid;font-size:15px}
+.box .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;display:block}
+.formula-box{background:var(--formula-bg);border-color:var(--formula-line)}
+.formula-box .label{color:var(--formula)}
+.formula-box .f{font-family:var(--font-mono);font-size:18px;color:var(--formula);font-weight:600;margin:4px 0}
+.formula-box .meaning{color:var(--ink-2);font-size:14px}
+.concept-box{background:var(--surface);border-color:var(--line);border-left:3px solid var(--accent)}
+.concept-box .label{color:var(--accent)}
+.exam-box{background:var(--exam-bg);border-color:var(--exam-line)} .exam-box .label{color:var(--exam)}
+.mistake-box{background:var(--mistake-bg);border-color:var(--mistake-line)} .mistake-box .label{color:var(--mistake)}
+.check-box{background:var(--check-bg);border-color:var(--check-line)} .check-box .label{color:var(--check)}
+.why-box{background:var(--why-bg);border-color:var(--why-line)} .why-box .label{color:var(--why)}
+.extra-box{background:var(--surface);border:1px dashed var(--ink-3)} .extra-box .label{color:var(--ink-3)}
+.parent-box{background:var(--accent-bg);border-color:var(--accent)} .parent-box .label{color:var(--accent-ink)}
+.outcome{background:var(--surface);border:1px solid var(--accent);border-radius:12px;padding:14px 18px;margin:0 0 16px}
+.outcome .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;display:block}
+.submap{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 6px}
+.submap span{background:var(--surface-2);border:1px solid var(--line);border-radius:20px;padding:4px 12px;font-size:12.5px;color:var(--ink-2)}
+.next-line{font-size:14px;color:var(--ink-2);margin-top:18px;padding-top:14px;border-top:1px dashed var(--line)}
+.next-line b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{padding:8px 10px;border:1px solid var(--line);text-align:center}
+th{background:var(--surface-2);font-weight:600;color:var(--ink-2);font-size:12.5px}
+td.rowlabel{text-align:left;color:var(--ink-2);font-weight:600;background:var(--surface-2)}
+td.l{text-align:left}
+.tblwrap{overflow-x:auto}
+.example{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:14px 0;font-size:15px}
+.example .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px;display:block}
+.example .step{margin:3px 0}
+.example .step b{color:var(--ink-2);font-weight:600}
+.mono{font-family:var(--font-mono)}
+.remember{background:var(--accent-bg);border:1px solid var(--accent);border-radius:12px;padding:16px 20px;margin:16px 0}
+.remember .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:8px;display:block}
+.remember ol{margin:0;padding-left:18px} .remember li{margin-bottom:5px}
+.badge{display:inline-block;font-size:11px;font-family:var(--font-mono);padding:2px 8px;border-radius:20px;background:var(--exam-bg);color:var(--exam);border:1px solid var(--exam-line);margin-left:6px;vertical-align:middle}
+.diagram{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px;margin:16px 0}
+.diagram svg{display:block;width:100%;height:auto}
+.diagram-cap{text-align:center;font-size:13px;color:var(--ink-3);margin-top:6px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:600px){.pair{grid-template-columns:1fr}}
+.pair .diagram{margin:6px 0}
+.jumpicon{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:var(--formula);color:var(--surface);text-decoration:none;font-size:11px;font-weight:700;vertical-align:middle;margin-left:4px}
+.src{font-size:12.5px;color:var(--ink-3)}
+</style>
+
+<div class="wrap">
+<h1>પાઠ 25 · પૂરક વાચન 4 — મોંઘી પૂતળી</h1>
+<p class="subtitle">ધોરણ 7 ગુજરાતી (પ્રથમ ભાષા) · GSEB ગુજરાતી માધ્યમ · પાન 145–146</p>
+<div class="legend">
+<div class="legend-item"><span class="dot why"></span>કેમ / રોજિંદું ઉદાહરણ</div>
+<div class="legend-item"><span class="dot concept"></span>સમજવું જ પડે</div>
+<div class="legend-item"><span class="dot formula"></span>યાદ રાખવું — મુખ્ય મુદ્દો</div>
+<div class="legend-item"><span class="dot exam"></span>પરીક્ષામાં વારંવાર</div>
+<div class="legend-item"><span class="dot mistake"></span>સામાન્ય ભૂલ</div>
+<div class="legend-item"><span class="dot check"></span>જાતે ચકાસો</div>
+</div>
+<div class="toc">
+<b>પ્રકરણનો નકશો</b> — અંતિમ લક્ષ્ય: પાઠનો સાર, પાત્રો-સંદેશ, શબ્દભંડોળ, વ્યાકરણ અને પરીક્ષાના જવાબ.
+<ol>
+<li><span class="n">00</span><a href="#intro">પાઠ એક નજરે</a> — ચાતુર્ય કથા (કાલિદાસ)</li><li><span class="n">01</span><a href="#p1">કથાસાર / કાવ્યસાર</a> — ક્રમ પ્રમાણે</li><li><span class="n">02</span><a href="#p2">પાત્રો અને સંદેશ</a> — લક્ષણ, સંદેશ</li><li><span class="n">03</span><a href="#p3">શબ્દભંડોળ</a> — શબ્દાર્થ, રૂઢિપ્રયોગ, કહેવત</li><li><span class="n">04</span><a href="#p5">પરીક્ષાના પ્રશ્નો</a> — પ્રશ્ન-જવાબ બેન્ક</li><li><span class="n">05</span><a href="#p6">સારાંશ</a></li>
+</ol>
+</div>
+
+<!-- ============ PART 00 ============ -->
+<div class="part" id="intro">
+<h2><span class="num">00</span>પાઠ એક નજરે</h2>
+<p class="part-why">શા માટે ભણવું: દેખાવમાં સરખી વસ્તુ-વ્યક્તિમાં ભીતરના ગુણ જુદા હોઈ શકે — સાંભળેલું પચાવી જીવનમાં ઉતારવું.</p>
+<div class="outcome"><span class="label">આ પ્રકરણ પછી તમે</span>
+પાઠનો કથાસાર / ભાવ કહી શકશો, પાત્રો અને સંદેશ સમજાવી શકશો, શબ્દાર્થ-રૂઢિપ્રયોગ-વ્યાકરણ યાદ રાખી શકશો અને પરીક્ષાના પ્રશ્નોના જવાબ લખી શકશો.</div><div class="tblwrap"><table><tr><th>વિગત</th><th>માહિતી</th></tr><tr><td class="rowlabel">પાઠ</td><td class="l">25. પૂરક વાચન 4 — મોંઘી પૂતળી</td></tr><tr><td class="rowlabel">પ્રકાર</td><td class="l">ચાતુર્ય કથા (કાલિદાસ)</td></tr><tr><td class="rowlabel">લેખક / કવિ</td><td class="l">સંકલિત</td></tr><tr><td class="rowlabel">પાઠ્યપુસ્તક પાન</td><td class="l">પાન 145–146</td></tr></table></div><div class="concept-box box"><span class="label">લેખક / કવિ પરિચય (પુસ્તક પ્રમાણે)</span>‘મોંઘી પૂતળી’ એક <b>ચાતુર્ય કથા</b> છે, જેમાં <b>પંડિત કાલિદાસ બુદ્ધિપૂર્વક ત્રણ પૂતળીઓમાંથી મોંઘી કઈ</b> તે તારવી આપે છે. સંદેશ: <b>બહારથી એકસમાન જણાતી વસ્તુ કે વ્યક્તિમાં ભીતરના ગુણો જુદા હોઈ શકે</b>.</div>
+<div class="next-line">→ <b>આગળ:</b> કથાસાર / કાવ્યસાર</div>
+</div>
+
+
+<!-- ============ PART 01 ============ -->
+<div class="part" id="p1">
+<h2><span class="num">01</span>કથાસાર / કાવ્યસાર</h2>
+<p class="part-why">શા માટે ભણવું: પરીક્ષામાં પાઠ પર આધારિત પ્રશ્નો પૂછાય છે — પહેલાં પાઠ કેમ બન્યો તે સમજો.</p>
+<h3>કથા</h3><ol><li><b>ભોજરાજા</b>ના દરબારમાં એક <b>પૂતળી વેચનાર</b> ત્રણ પૂતળીઓ લઈ આવ્યો — “કોઈ સાચી કિંમત કહી શક્યું નથી.” <b>પંડિત કાલિદાસ</b> તે દિવસે બહારગામ.</li><li>રાજાના પંડિતો-ઝવેરીઓએ વજન-કસ જોયાં — <b>બધી સરખી</b> લાગી; તેથી કિંમત <b>એકસરખી</b> કહી.</li><li>બીજે દિવસે <b>કાલિદાસ</b>એ ત્રણે પૂતળીઓના <b>કાનમાં તાર</b> નાખ્યો: <b>1) બીજા કાનમાંથી બહાર</b>; <b>2) મોંમાંથી બહાર</b>; <b>3) પેટમાં ઊતરી ગયો</b>.</li><li>કાલિદાસે કિંમતો કહી: <b>પહેલી — એક કોડી; બીજી — દસ કોડી; ત્રીજી — સવા લાખ રૂપિયા</b>!</li><li><b>સમજૂતી:</b> પહેલી = <b>એક કાનથી સાંભળી બીજા કાનેથી કાઢે</b> (સલાહ ન માને); બીજી = <b>સાંભળેલું બીજાને કહી દે</b>, પોતે અમલ ન કરે; ત્રીજી = <b>સાંભળેલું પચાવે અને જીવનમાં ઉતારે</b> — સાચી કિંમતી.</li><li>રાજાએ ત્રીજી પૂતળી <b>સવા લાખમાં</b> ખરીદી; વેપારી ખુશ થઈ બીજી બે ભેટ ધરી ગયો; <b>કાલિદાસની કીર્તિ</b> ફેલાઈ.</li></ol>
+
+<div class="next-line">→ <b>આગળ:</b> પાત્રો-સંદેશ</div>
+</div>
+
+
+<!-- ============ PART 02 ============ -->
+<div class="part" id="p2">
+<h2><span class="num">02</span>પાત્રો અને સંદેશ</h2>
+<p class="part-why">શા માટે ભણવું: લાંબા જવાબોમાં પાત્રના ગુણ અને પાઠનો સંદેશ લખવાનો હોય છે.</p>
+<h3>પાત્રો / મુખ્ય વ્યક્તિઓ</h3><div class="tblwrap"><table><tr><th>નામ</th><th>પરિચય / લક્ષણ</th></tr><tr><td class="rowlabel">ભોજરાજા</td><td class="l">વિદ્યાપ્રેમી રાજા</td></tr><tr><td class="rowlabel">કાલિદાસ</td><td class="l">ચતુર પંડિત — ત્રણ પૂતળીની કિંમત તારવે</td></tr><tr><td class="rowlabel">પૂતળી વેચનાર</td><td class="l">ત્રણ પૂતળીઓનો વેપારી</td></tr></table></div><h3>પાઠનો સંદેશ / મુખ્ય મુદ્દા</h3><div class="remember"><span class="label">યાદ રાખો</span><ol><li><b>દેખાવ સરખો, ગુણ જુદા</b>.</li><li><b>સાંભળેલું પચાવી જીવનમાં ઉતારનાર</b> સૌથી મૂલ્યવાન.</li><li>બુદ્ધિચાતુર્ય — કાલિદાસ.</li></ol></div>
+<div class="next-line">→ <b>આગળ:</b> શબ્દભંડોળ</div>
+</div>
+
+
+<!-- ============ PART 03 ============ -->
+<div class="part" id="p3">
+<h2><span class="num">03</span>શબ્દભંડોળ</h2>
+<p class="part-why">શા માટે ભણવું: કહેવત અને રૂઢિપ્રયોગના અર્થ પરીક્ષામાં સીધા પૂછાય છે.</p>
+<h3>શબ્દાર્થ (પાઠ્યપુસ્તક)</h3><div class="tblwrap"><table><tr><th>શબ્દ</th><th>અર્થ</th></tr><tr><td class="rowlabel">મસલત</td><td class="l">સાથે મળીને થતી વિચારણા</td></tr><tr><td class="rowlabel">ઝવેરી</td><td class="l">ઝવેરાતનો વેપારી</td></tr><tr><td class="rowlabel">શરત</td><td class="l">કરાર, બોલી</td></tr><tr><td class="rowlabel">ખાનદાન</td><td class="l">સારા ઘરનું</td></tr><tr><td class="rowlabel">કીર્તિ</td><td class="l">ખ્યાતિ, નામના</td></tr><tr><td class="rowlabel">ચોમેર</td><td class="l">ચારે તરફ</td></tr><tr><td class="rowlabel">જીવ હેઠો બેઠો</td><td class="l">શાંતિ થઈ</td></tr></table></div>
+<div class="next-line">→ <b>આગળ:</b> પ્રશ્ન-જવાબ</div>
+</div>
+
+
+<!-- ============ PART 04 ============ -->
+<div class="part" id="p5">
+<h2><span class="num">04</span>પરીક્ષાના પ્રશ્નો</h2>
+<p class="part-why">શા માટે ભણવું: Sem-1 પેપર: એક વાક્ય [8], 2–3 વાક્ય [6], વિસ્તાર [6], સાચું-ખોટું [4], કહેવત [2], કાવ્યપંક્તિ [2] (હસ્તલિખિત પેપર-પદ્ધતિ મુજબ).</p>
+<div class="why-box box"><span class="label">નોંધ</span>નીચેના જવાબો <b>આ પાઠના આધારે અમે લખેલા નમૂના</b> છે. પાઠ્યપુસ્તકના સ્વાધ્યાયનો સત્તાવાર જવાબ-પત્રક / સ્વાધ્યાયપોથીના ઉકેલ પુસ્તકો મળ્યા પછી.</div><h3>એક વાક્યમાં જવાબ (પ્રશ્ન-1 અ, 8 ગુણ પ્રકારના)</h3><div class="example"><span class="label">એક વાક્ય</span><div class="step"><b>પ્ર.</b> ‘મોંઘી પૂતળી’ કથાના પંડિત કોણ?</div><div class="step"><b>જ.</b> કાલિદાસ.</div><div class="step"><b>પ્ર.</b> રાજા કોણ હતા?</div><div class="step"><b>જ.</b> ભોજરાજા.</div><div class="step"><b>પ્ર.</b> કુલ કેટલી પૂતળીઓ હતી?</div><div class="step"><b>જ.</b> ત્રણ.</div><div class="step"><b>પ્ર.</b> ત્રીજી પૂતળીની કિંમત?</div><div class="step"><b>જ.</b> સવા લાખ રૂપિયા.</div><div class="step"><b>પ્ર.</b> કાલિદાસે પૂતળીની કિંમત શાનાથી તારવી?</div><div class="step"><b>જ.</b> કાનમાં તાર નાખીને — તે ક્યાંથી બહાર આવે છે તે જોઈને.</div></div><h3>બે-ત્રણ વાક્યમાં જવાબ (પ્રશ્ન-1 બ, 6 ગુણ પ્રકારના)</h3><div class="example"><span class="label">2–3 વાક્ય</span><div class="step"><b>પ્ર.</b> ત્રીજી પૂતળી સૌથી મોંઘી કેમ ગણાઈ?</div><div class="step"><b>જ.</b> ત્રીજી પૂતળીના કાનમાં નાખેલો તાર પેટમાં ઊતરી ગયો — એટલે તે સાંભળેલું પચાવી લેનાર માણસ જેવી છે; સાંભળેલું જીવનમાં ઉતારનાર સૌથી મૂલ્યવાન ગણાય.</div></div><h3>સાચું કે ખોટું (પ્રશ્ન-3 અ, 4 ગુણ પ્રકારના)</h3><div class="tblwrap"><table><tr><th>વિધાન</th><th>જવાબ</th></tr><tr><td class="rowlabel">ત્રણેય પૂતળીઓ દેખાવમાં સરખી હતી.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">પહેલી પૂતળીની કિંમત સવા લાખ હતી.</td><td class="l">✘ ખોટું</td></tr></table></div>
+<div class="next-line">→ <b>આગળ:</b> સારાંશ</div>
+</div>
+
+
+<!-- ============ PART 05 ============ -->
+<div class="part" id="p6">
+<h2><span class="num">05</span>સારાંશ — યાદ રાખો</h2>
+<p class="part-why">શા માટે ભણવું: છેલ્લી ઘડીએ એક નજરમાં પુનરાવર્તન.</p>
+<div class="remember"><span class="label">યાદ રાખો</span><ol><li>ભોજરાજા — કાલિદાસ — ત્રણ પૂતળી.</li><li>કાનમાં તાર: બીજા કાને / મોંમાંથી / પેટમાં.</li><li>કિંમત: 1 કોડી · 10 કોડી · સવા લાખ રૂપિયા.</li></ol></div>
+</div>
+
+</div>
+</body></html>

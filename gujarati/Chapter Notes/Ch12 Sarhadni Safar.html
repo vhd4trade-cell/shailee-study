@@ -1,0 +1,194 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>સરહદની સફર — Chapter Notes</title>
+<style>:root{
+  --bg:#FBF9F4; --surface:#FFFFFF; --surface-2:#F3F0E7;
+  --ink:#241F16; --ink-2:#5B5647; --ink-3:#8C8672;
+  --line:#E4DFD0;
+  --accent:#8B5E34; --accent-ink:#3E2A17; --accent-bg:#F1E4D3;
+  --formula:#1F4E42; --formula-bg:#E3F0EA; --formula-line:#9FC6B7;
+  --exam:#7A2E2E; --exam-bg:#F6E4E1; --exam-line:#DBA9A4;
+  --mistake:#8A5A00; --mistake-bg:#FDF1D9; --mistake-line:#E9C877;
+  --check:#2E4E7A; --check-bg:#E4ECF6; --check-line:#A9C0DB;
+  --why:#5B5647; --why-bg:#F3F0E7; --why-line:#DAD4C2;
+  --font-display:'Fraunces','Noto Sans Gujarati',Georgia,serif;
+  --font-body:'Source Sans 3','Noto Sans Gujarati',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+    --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+    --line:#3A3428;
+    --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+    --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+    --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+    --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+    --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+    --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+  --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+  --line:#3A3428;
+  --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+  --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+  --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+  --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+  --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+  --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.75;padding:0 16px;font-size:16px}
+.wrap{max-width:760px;margin:0 auto;padding-block:32px 80px}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;text-wrap:balance;color:var(--ink)}
+h1{font-size:clamp(28px,6vw,38px);margin:0 0 6px}
+.subtitle{color:var(--ink-2);font-size:15px;margin:0 0 28px}
+h2{font-size:24px;margin:0 0 4px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+h2 .num{color:var(--accent);font-family:var(--font-mono);font-size:15px;font-weight:600}
+.part-why{color:var(--ink-2);font-size:14.5px;margin:0 0 18px;font-style:italic}
+h3{font-size:18px;margin:30px 0 10px;color:var(--accent-ink)}
+p{margin:0 0 12px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:36px}
+.legend-item{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-2)}
+.dot{width:10px;height:10px;border-radius:3px;flex:none}
+.dot.formula{background:var(--formula)} .dot.exam{background:var(--exam)} .dot.mistake{background:var(--mistake)}
+.dot.check{background:var(--check)} .dot.concept{background:var(--accent)} .dot.why{background:var(--why)}
+.part{padding:32px 0;border-top:1px solid var(--line)}
+.part:first-of-type{border-top:none}
+.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:32px}
+.toc ol{margin:8px 0 0;padding-left:0;list-style:none}
+.toc li{margin-bottom:5px;font-size:14.5px}
+.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ink-3)}
+.toc .n{font-family:var(--font-mono);color:var(--accent);font-size:13px;font-weight:600;margin-right:6px}
+.box{border-radius:12px;padding:14px 18px;margin:14px 0;border:1px solid;font-size:15px}
+.box .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;display:block}
+.formula-box{background:var(--formula-bg);border-color:var(--formula-line)}
+.formula-box .label{color:var(--formula)}
+.formula-box .f{font-family:var(--font-mono);font-size:18px;color:var(--formula);font-weight:600;margin:4px 0}
+.formula-box .meaning{color:var(--ink-2);font-size:14px}
+.concept-box{background:var(--surface);border-color:var(--line);border-left:3px solid var(--accent)}
+.concept-box .label{color:var(--accent)}
+.exam-box{background:var(--exam-bg);border-color:var(--exam-line)} .exam-box .label{color:var(--exam)}
+.mistake-box{background:var(--mistake-bg);border-color:var(--mistake-line)} .mistake-box .label{color:var(--mistake)}
+.check-box{background:var(--check-bg);border-color:var(--check-line)} .check-box .label{color:var(--check)}
+.why-box{background:var(--why-bg);border-color:var(--why-line)} .why-box .label{color:var(--why)}
+.extra-box{background:var(--surface);border:1px dashed var(--ink-3)} .extra-box .label{color:var(--ink-3)}
+.parent-box{background:var(--accent-bg);border-color:var(--accent)} .parent-box .label{color:var(--accent-ink)}
+.outcome{background:var(--surface);border:1px solid var(--accent);border-radius:12px;padding:14px 18px;margin:0 0 16px}
+.outcome .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;display:block}
+.submap{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 6px}
+.submap span{background:var(--surface-2);border:1px solid var(--line);border-radius:20px;padding:4px 12px;font-size:12.5px;color:var(--ink-2)}
+.next-line{font-size:14px;color:var(--ink-2);margin-top:18px;padding-top:14px;border-top:1px dashed var(--line)}
+.next-line b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{padding:8px 10px;border:1px solid var(--line);text-align:center}
+th{background:var(--surface-2);font-weight:600;color:var(--ink-2);font-size:12.5px}
+td.rowlabel{text-align:left;color:var(--ink-2);font-weight:600;background:var(--surface-2)}
+td.l{text-align:left}
+.tblwrap{overflow-x:auto}
+.example{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:14px 0;font-size:15px}
+.example .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px;display:block}
+.example .step{margin:3px 0}
+.example .step b{color:var(--ink-2);font-weight:600}
+.mono{font-family:var(--font-mono)}
+.remember{background:var(--accent-bg);border:1px solid var(--accent);border-radius:12px;padding:16px 20px;margin:16px 0}
+.remember .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:8px;display:block}
+.remember ol{margin:0;padding-left:18px} .remember li{margin-bottom:5px}
+.badge{display:inline-block;font-size:11px;font-family:var(--font-mono);padding:2px 8px;border-radius:20px;background:var(--exam-bg);color:var(--exam);border:1px solid var(--exam-line);margin-left:6px;vertical-align:middle}
+.diagram{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px;margin:16px 0}
+.diagram svg{display:block;width:100%;height:auto}
+.diagram-cap{text-align:center;font-size:13px;color:var(--ink-3);margin-top:6px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:600px){.pair{grid-template-columns:1fr}}
+.pair .diagram{margin:6px 0}
+.jumpicon{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:var(--formula);color:var(--surface);text-decoration:none;font-size:11px;font-weight:700;vertical-align:middle;margin-left:4px}
+.src{font-size:12.5px;color:var(--ink-3)}
+</style>
+
+<div class="wrap">
+<h1>પાઠ 12 · સરહદની સફર</h1>
+<p class="subtitle">ધોરણ 7 ગુજરાતી (પ્રથમ ભાષા) · GSEB ગુજરાતી માધ્યમ · પાન 73–81</p>
+<div class="legend">
+<div class="legend-item"><span class="dot why"></span>કેમ / રોજિંદું ઉદાહરણ</div>
+<div class="legend-item"><span class="dot concept"></span>સમજવું જ પડે</div>
+<div class="legend-item"><span class="dot formula"></span>યાદ રાખવું — મુખ્ય મુદ્દો</div>
+<div class="legend-item"><span class="dot exam"></span>પરીક્ષામાં વારંવાર</div>
+<div class="legend-item"><span class="dot mistake"></span>સામાન્ય ભૂલ</div>
+<div class="legend-item"><span class="dot check"></span>જાતે ચકાસો</div>
+</div>
+<div class="toc">
+<b>પ્રકરણનો નકશો</b> — અંતિમ લક્ષ્ય: પાઠનો સાર, પાત્રો-સંદેશ, શબ્દભંડોળ, વ્યાકરણ અને પરીક્ષાના જવાબ.
+<ol>
+<li><span class="n">00</span><a href="#intro">પાઠ એક નજરે</a> — પ્રવાસ-સંવાદ (તવાંગયાત્રા)</li><li><span class="n">01</span><a href="#p1">કથાસાર / કાવ્યસાર</a> — ક્રમ પ્રમાણે</li><li><span class="n">02</span><a href="#p2">પાત્રો અને સંદેશ</a> — લક્ષણ, સંદેશ</li><li><span class="n">03</span><a href="#p3">શબ્દભંડોળ</a> — શબ્દાર્થ, રૂઢિપ્રયોગ, કહેવત</li><li><span class="n">04</span><a href="#p4">વ્યાકરણ / ભાષાસજ્જતા</a> — આ પાઠનું વ્યાકરણ</li><li><span class="n">05</span><a href="#p5">પરીક્ષાના પ્રશ્નો</a> — પ્રશ્ન-જવાબ બેન્ક</li><li><span class="n">06</span><a href="#p6">સારાંશ</a></li>
+</ol>
+</div>
+
+<!-- ============ PART 00 ============ -->
+<div class="part" id="intro">
+<h2><span class="num">00</span>પાઠ એક નજરે</h2>
+<p class="part-why">શા માટે ભણવું: પૂર્વોત્તર ભારતની તવાંગયાત્રા — ધર્મ, પ્રકૃતિ અને રાષ્ટ્રપ્રેમનો સંગમ; વતનથી દૂર વતનના માણસોની આત્મીયતા.</p>
+<div class="outcome"><span class="label">આ પ્રકરણ પછી તમે</span>
+પાઠનો કથાસાર / ભાવ કહી શકશો, પાત્રો અને સંદેશ સમજાવી શકશો, શબ્દાર્થ-રૂઢિપ્રયોગ-વ્યાકરણ યાદ રાખી શકશો અને પરીક્ષાના પ્રશ્નોના જવાબ લખી શકશો.</div><div class="tblwrap"><table><tr><th>વિગત</th><th>માહિતી</th></tr><tr><td class="rowlabel">પાઠ</td><td class="l">12. સરહદની સફર</td></tr><tr><td class="rowlabel">પ્રકાર</td><td class="l">પ્રવાસ-સંવાદ (તવાંગયાત્રા)</td></tr><tr><td class="rowlabel">લેખક / કવિ</td><td class="l">ડૉ. પૂર્ણિમા ભાડેસિયા</td></tr><tr><td class="rowlabel">પાઠ્યપુસ્તક પાન</td><td class="l">પાન 73–81</td></tr></table></div><div class="concept-box box"><span class="label">લેખક / કવિ પરિચય (પુસ્તક પ્રમાણે)</span>ડૉ. પૂર્ણિમા ભાડેસિયાનું મૂળ વતન <b>લાઠી</b>; <b>મોરબીમાં વસે</b>; <b>એમ.બી.બી.એસ.</b>; <b>સ્ત્રીરોગ નિષ્ણાત</b>. <b>સિંધુ દર્શન યાત્રા, પરશુરામ-કુંડયાત્રા, શહીદ સ્વરાજદ્વીપ નમન યાત્રા, મોઈરાંગ (મણિપુર) યાત્રા, તવાંગ તીર્થયાત્રા</b> જેવી રાષ્ટ્રીય યાત્રાઓ કરી છે. <b>અરુણાચલ પ્રદેશમાં દર વર્ષે યોજાતી તવાંગયાત્રા</b> પૂર્વોત્તર ભારતને સમજવા માટે મહત્ત્વની; <b>ધર્મ, પ્રકૃતિ અને રાષ્ટ્રપ્રેમની ત્રિવેણી</b>; વતનથી દૂર વતનના માણસો મળે ત્યારે થતી <b>આત્મીયતા</b>.</div>
+<div class="next-line">→ <b>આગળ:</b> કથાસાર / કાવ્યસાર</div>
+</div>
+
+
+<!-- ============ PART 01 ============ -->
+<div class="part" id="p1">
+<h2><span class="num">01</span>કથાસાર / કાવ્યસાર</h2>
+<p class="part-why">શા માટે ભણવું: પરીક્ષામાં પાઠ પર આધારિત પ્રશ્નો પૂછાય છે — પહેલાં પાઠ કેમ બન્યો તે સમજો.</p>
+<h3>કથાનો ક્રમ</h3><ol><li><b>સરવણજી</b> (પાટણ જિલ્લાના ચલવાડા) તવાંગયાત્રામાં જોડાવા આવે છે; હિન્દી-અંગ્રેજીમાં ચાલતી સભા વચ્ચે <b>પંજીકરણ (નોંધણી)</b> વખતે જાણે છે કે અન્ય ગુજરાતીઓ પણ છે — “<b>જીવમાં જીવ આવ્યો</b>.” ભોજન વખતે ગુજરાતના <b>પચ્ચીસેક જણ</b> ભેગા થાય છે; <b>“જ્યાં જ્યાં વસે એક ગુજરાતી ત્યાં સદાકાળ ગુજરાત!”</b> જુદા જુદા પ્રદેશની <b>બોલી અને વાનગીઓ</b>.</li><li><b>યાત્રાનો ક્રમ:</b> દર વર્ષે <b>નવેમ્બર</b>માં <b>આસામના ગુવાહાટી</b>થી યાત્રા શરૂ. <b>ગુવાહાટી</b> — <b>કામાખ્યાદેવી</b> (શક્તિપીઠ; ભારતમાં <b>કુલ 51 શક્તિપીઠો</b>). <b>તેજપુર</b> — <b>અગ્નિગઢ</b>, <b>બાણાસુર</b> (દાનવ)નું નગર; <b>ઓખા (ઉષા) બાણાસુરની પુત્રી</b>; કૃષ્ણનો પૌત્ર <b>અનિરુદ્ધ</b> ઓખાને પરણ્યો — <b>પૂર્વ-પશ્ચિમનો સંગમ</b>.</li><li><b>ભાલુકપોંગ</b> = અરુણાચલ પ્રદેશનું <b>પ્રવેશદ્વાર</b>; પછી <b>બોમડીલા</b>; <b>1962માં ચીને આક્રમણ</b> કરી અહીં સુધી કબજો કરેલો; <b>બૌદ્ધ મઠો અને ગોમ્પા</b>.</li><li><b>જસવંતગઢ</b> — <b>જસવંતસિંહ</b> નામના સૈનિકે <b>1962ના યુદ્ધમાં 72 કલાક સુધી એકલા હાથે ચીની સેનાને રોકી</b>; <b>સ્મૃતિમંદિર</b>. બીજા વીર <b>જોગીંદરબાબા</b> — <b>મરણોત્તર પરમવીરચક્ર</b>. <b>શહીદ સ્મારક તવાંગ શહેરમાં</b>.</li><li><b>તવાંગ</b>: બૌદ્ધધર્મની ઝાંખી; <b>છઠ્ઠા દલાઈ લામાનું જન્મસ્થળ</b>; <b>ગુરુ નાનકદેવનું તપસ્યાસ્થળ (નાનક લામા)</b>; <b>ઝાંગ વૉટર ફૉલ</b> અને <b>શોન્ગો ત્સેર લેક</b>. <b>તવાંગની વસ્તી આશરે 11,000</b>, જિલ્લાનું મુખ્ય મથક. યાત્રા <b>બૂમ લા બોર્ડર</b> (ભારત-ભૂતાન-ચીન/તિબેટ સરહદ, <b>બૉર્ડર પર્સનલ મિટિંગ પોઇન્ટ</b>) સુધી; <b>છેલ્લો પડાવ તવાંગ શહેર</b> એટલે <b>તવાંગ તીર્થયાત્રા</b>.</li><li><b>યાત્રાનો હેતુ:</b> <b>દૂર સરહદે રહેતા લોકોને વિશેષ આત્મીયતા આપી ભારત સાથે જોડવા</b>; શહીદ સૈનિકોને નમન; <b>તિબેટની સ્વતંત્રતા</b>નો સંકલ્પ; ચીને દબાવેલી ભારતની ભૂમિ પાછી મેળવવાનો સંકલ્પ. યાત્રા <b>રાષ્ટ્રીય, ધાર્મિક અને પ્રાકૃતિક</b> — ત્રણેય દૃષ્ટિએ મહત્ત્વની.</li><li>અંતે સૌ “<b>જય શ્રી કૃષ્ણ, શુભ રાત્રી, ગુડ નાઇટ</b>” કહી પોતપોતાના નિવાસસ્થાને ગયા.</li></ol>
+
+<div class="next-line">→ <b>આગળ:</b> પાત્રો-સંદેશ</div>
+</div>
+
+
+<!-- ============ PART 02 ============ -->
+<div class="part" id="p2">
+<h2><span class="num">02</span>પાત્રો અને સંદેશ</h2>
+<p class="part-why">શા માટે ભણવું: લાંબા જવાબોમાં પાત્રના ગુણ અને પાઠનો સંદેશ લખવાનો હોય છે.</p>
+<h3>પાત્રો / મુખ્ય વ્યક્તિઓ</h3><div class="tblwrap"><table><tr><th>નામ</th><th>પરિચય / લક્ષણ</th></tr><tr><td class="rowlabel">સરવણજી</td><td class="l">ચલવાડા (પાટણ)ના; કોઠાસૂઝવાળા; ગુજરાતીઓને શોધી ખુશ થાય છે</td></tr><tr><td class="rowlabel">ડૉ. જયંતીભાઈ / જયદીપભાઈ</td><td class="l">યાત્રાની માહિતી આપનાર</td></tr><tr><td class="rowlabel">ચંદ્રિકાબેન, હરેશભાઈ, હસમુખભાઈ, કલ્પેશભાઈ, ધરતીબહેન, અમૃતભાઈ</td><td class="l">યાત્રાળુઓ — પ્રશ્નો પૂછે છે</td></tr></table></div><h3>પાઠનો સંદેશ / મુખ્ય મુદ્દા</h3><div class="remember"><span class="label">યાદ રાખો</span><ol><li><b>ત્રિવેણી: ધર્મ, પ્રકૃતિ, રાષ્ટ્રપ્રેમ</b>.</li><li>શહીદોનું સ્મરણ — જસવંતસિંહ (72 કલાક), જોગીંદરબાબા (મરણોત્તર પરમવીરચક્ર).</li><li>ગુજરાતી જ્યાં વસે ત્યાં ગુજરાત — આત્મીયતા; ભાષા-બોલીનું વૈવિધ્ય.</li></ol></div><h3>યાદ રાખવા જેવાં વાક્યો / પંક્તિઓ</h3><div class="check-box box"><span class="label">મુખ્ય વાક્ય</span>“જ્યાં જ્યાં વસે એક ગુજરાતી ત્યાં સદાકાળ ગુજરાત!”</div>
+<div class="next-line">→ <b>આગળ:</b> શબ્દભંડોળ</div>
+</div>
+
+
+<!-- ============ PART 03 ============ -->
+<div class="part" id="p3">
+<h2><span class="num">03</span>શબ્દભંડોળ</h2>
+<p class="part-why">શા માટે ભણવું: કહેવત અને રૂઢિપ્રયોગના અર્થ પરીક્ષામાં સીધા પૂછાય છે.</p>
+<h3>શબ્દાર્થ (પાઠ્યપુસ્તક)</h3><div class="tblwrap"><table><tr><th>શબ્દ</th><th>અર્થ</th></tr><tr><td class="rowlabel">પંજીકરણ</td><td class="l">નોંધણી, રજિસ્ટ્રેશન</td></tr><tr><td class="rowlabel">સ્વૈચ્છિક</td><td class="l">પોતાની ઇચ્છા પ્રમાણેનું, મરજિયાત</td></tr><tr><td class="rowlabel">ગરવું</td><td class="l">ગૌરવશાળી, મહાન</td></tr><tr><td class="rowlabel">અસાંજો</td><td class="l">અમારો (કચ્છી)</td></tr><tr><td class="rowlabel">અનેરી</td><td class="l">અનન્ય, અસાધારણ</td></tr><tr><td class="rowlabel">શક્તિપીઠ</td><td class="l">દેવીનું સ્થાનક</td></tr></table></div><h3>શબ્દસમૂહ માટે એક શબ્દ</h3><div class="tblwrap"><table><tr><th>શબ્દસમૂહ</th><th>એક શબ્દ</th></tr><tr><td class="rowlabel">પ્રવેશ માટેનું દ્વાર</td><td class="l">પ્રવેશદ્વાર</td></tr><tr><td class="rowlabel">સાધુનો આશ્રમ</td><td class="l">મઠ</td></tr><tr><td class="rowlabel">કોઈની સ્મૃતિમાં બંધાયેલું મંદિર</td><td class="l">સ્મૃતિમંદિર</td></tr><tr><td class="rowlabel">મરણ પછીનું</td><td class="l">મરણોત્તર</td></tr><tr><td class="rowlabel">વીરની ગાથા</td><td class="l">વીરગાથા</td></tr><tr><td class="rowlabel">પગલાંની છાપ</td><td class="l">પદચિહ્ન</td></tr><tr><td class="rowlabel">રહેવા માટેનું સ્થાન</td><td class="l">નિવાસસ્થાન</td></tr><tr><td class="rowlabel">તપસ્યાનું સ્થળ</td><td class="l">તપસ્યાસ્થળ</td></tr></table></div><h3>રૂઢિપ્રયોગ</h3><div class="tblwrap"><table><tr><th>રૂઢિપ્રયોગ</th><th>અર્થ</th></tr><tr><td class="rowlabel">જીવમાં જીવ આવવો</td><td class="l">શાંતિ થવી, ઉચાટ દૂર થવો</td></tr><tr><td class="rowlabel">રાજીના રેડ થઈ જવું</td><td class="l">બહુ ખુશ થઈ જવું</td></tr><tr><td class="rowlabel">તડાકા મારવા</td><td class="l">ગપસપ કરવી, ડિંગો મારવી</td></tr><tr><td class="rowlabel">ટાપસી પૂરવી</td><td class="l">ચાલતી વાતમાં હાજિયો પૂરવો</td></tr></table></div>
+<div class="next-line">→ <b>આગળ:</b> વ્યાકરણ</div>
+</div>
+
+
+<!-- ============ PART 04 ============ -->
+<div class="part" id="p4">
+<h2><span class="num">04</span>વ્યાકરણ / ભાષાસજ્જતા</h2>
+<p class="part-why">શા માટે ભણવું: ભાષાસજ્જતાના મુદ્દા (નિયમ + ઉદાહરણ) સ્વાધ્યાયમાં અને પરીક્ષામાં આવે છે.</p>
+<p><b>ભાષા – બોલી:</b> લખવામાં/જાહેરમાં વપરાતી <b>માન્ય (શિષ્ટ) ગુજરાતી = ભાષા</b>; ઘરે-અંગત વર્તનમાં વસવાટના ઢબે બોલાતી = <b>બોલી</b>. ગુજરાતની બોલીઓ: <b>પટણી, કાઠિયાવાડી, સુરતી, ચરોતરી, સોરઠી, કચ્છી, ડાંગી</b>.</p><div class="tblwrap"><table><tr><th>માન્ય ગુજરાતી</th><th>સુરતી</th><th>કાઠિયાવાડી</th><th>કચ્છી</th></tr><tr><td class="rowlabel">મારી આગળ આગળ દોડવા માંડ.</td><td class="l">મારી આગળ ડોડવા લાગની.</td><td class="l">મારી મોર્ય ઘોડવા મંડય.</td><td class="l">મું ની અગિયા ધોડ.</td></tr><tr><td class="rowlabel">ભેંસની પાછળ પાછળ ચાલ્યો જા.</td><td class="l">ભેંહની પાછળ પાછળ ચાઈલો જા.</td><td class="l">ડોબાની વાંહે વયો જા.</td><td class="l">મેં ની પુઠિયા પુઠિયા હલ્યો વિઠા.</td></tr><tr><td class="rowlabel">રસોડામાંથી થોડીક ખાંડ લાવ.</td><td class="l">રહોડા મહીંથી થોડી ખાંડ લાવની.</td><td class="l">રહોડાની માલીપાથી લગરીક મોરસ લાવ્ય.</td><td class="l">રસોરેમિંજા થુડીક ખન ખણી અચ.</td></tr><tr><td class="rowlabel">એ તો કાલે ગામડે ગયો છે.</td><td class="l">એ તો કાલે ગામ પર ગઈલો.</td><td class="l">ઈતો કાલ્ય ગામડે ગ્યો સે.</td><td class="l">ઉ ત કાલ ગામડે વ્યો આય.</td></tr></table></div><p><b>શબ્દસમૂહ એક, ભાષા અનેક:</b> શુભ સવાર = સુપ્રભાત; જન્મદિવસની શુભેચ્છા = જન્મદિનસ્ય શુભાશયાઃ; કેમ છો? = કથમ્ અસ્તિ ભવાન્?; ખૂબ સારું = બહુ સમીચીનમ્; આવો = આગચ્છતુ; બેસો = ઉપવિશતુ; માફ કરજો = ક્ષમ્યતામ્.</p><p><b>નામયોગી (સ્વાધ્યાય 8):</b> વિશે, પર, સુધી, તરફ, દ્વારા.</p>
+<div class="next-line">→ <b>આગળ:</b> પ્રશ્ન-જવાબ</div>
+</div>
+
+
+<!-- ============ PART 05 ============ -->
+<div class="part" id="p5">
+<h2><span class="num">05</span>પરીક્ષાના પ્રશ્નો</h2>
+<p class="part-why">શા માટે ભણવું: Sem-1 પેપર: એક વાક્ય [8], 2–3 વાક્ય [6], વિસ્તાર [6], સાચું-ખોટું [4], કહેવત [2], કાવ્યપંક્તિ [2] (હસ્તલિખિત પેપર-પદ્ધતિ મુજબ).</p>
+<div class="why-box box"><span class="label">નોંધ</span>નીચેના જવાબો <b>આ પાઠના આધારે અમે લખેલા નમૂના</b> છે. પાઠ્યપુસ્તકના સ્વાધ્યાયનો સત્તાવાર જવાબ-પત્રક / સ્વાધ્યાયપોથીના ઉકેલ પુસ્તકો મળ્યા પછી.</div><h3>એક વાક્યમાં જવાબ (પ્રશ્ન-1 અ, 8 ગુણ પ્રકારના)</h3><div class="example"><span class="label">એક વાક્ય</span><div class="step"><b>પ્ર.</b> તવાંગયાત્રા ક્યાંથી શરૂ થાય છે?</div><div class="step"><b>જ.</b> આસામના ગુવાહાટીથી.</div><div class="step"><b>પ્ર.</b> તવાંગયાત્રા ક્યારે નીકળે છે?</div><div class="step"><b>જ.</b> દર વર્ષે નવેમ્બર માસમાં.</div><div class="step"><b>પ્ર.</b> ભારતમાં કુલ કેટલાં શક્તિપીઠો છે?</div><div class="step"><b>જ.</b> એકાવન.</div><div class="step"><b>પ્ર.</b> અરુણાચલ પ્રદેશનું પ્રવેશદ્વાર કયું?</div><div class="step"><b>જ.</b> ભાલુકપોંગ.</div><div class="step"><b>પ્ર.</b> જસવંતસિંહે કેટલા કલાક ચીની સેનાને રોકી?</div><div class="step"><b>જ.</b> 72 કલાક.</div><div class="step"><b>પ્ર.</b> જસવંતસિંહ રાવતનું સ્મૃતિમંદિર ક્યાં છે?</div><div class="step"><b>જ.</b> જસવંતગઢમાં.</div><div class="step"><b>પ્ર.</b> મરણોત્તર પરમવીરચક્ર કોને મળ્યો?</div><div class="step"><b>જ.</b> જોગીંદરબાબાને.</div><div class="step"><b>પ્ર.</b> છઠ્ઠા દલાઈ લામાનું જન્મસ્થળ ક્યાં?</div><div class="step"><b>જ.</b> તવાંગમાં.</div><div class="step"><b>પ્ર.</b> તવાંગની વસ્તી આશરે કેટલી?</div><div class="step"><b>જ.</b> 11,000.</div><div class="step"><b>પ્ર.</b> યાત્રાનો છેલ્લો પડાવ કયો?</div><div class="step"><b>જ.</b> તવાંગ શહેર.</div></div><h3>બે-ત્રણ વાક્યમાં જવાબ (પ્રશ્ન-1 બ, 6 ગુણ પ્રકારના)</h3><div class="example"><span class="label">2–3 વાક્ય</span><div class="step"><b>પ્ર.</b> તવાંગયાત્રાનો હેતુ શો છે?</div><div class="step"><b>જ.</b> દૂર સરહદે રહેતા લોકોને વિશેષ આત્મીયતા આપી ભારત સાથે જોડવા, શહીદોને નમન કરવા અને દેશપ્રેમ-સંકલ્પ દૃઢ કરવા.</div><div class="step"><b>પ્ર.</b> જસવંતગઢની વાતને અનેરી કેમ કહી?</div><div class="step"><b>જ.</b> કારણ કે 1962ના યુદ્ધમાં જસવંતસિંહ નામના સૈનિકે 72 કલાક સુધી એકલા હાથે ચીની સેનાને રોકી રાખી — એ વીરગાથા આજે ઘેર ઘેર ગવાય છે.</div><div class="step"><b>પ્ર.</b> તવાંગયાત્રા ત્રણ દૃષ્ટિએ મહત્ત્વ ધરાવે છે એમ શાથી કહેવાય?</div><div class="step"><b>જ.</b> રાષ્ટ્રીય (સરહદ, શહીદસ્મારક), ધાર્મિક (કામાખ્યા, બૌદ્ધ મઠ, ગુરુ નાનક) અને પ્રાકૃતિક (ઝાંગ વૉટર ફૉલ, શોન્ગો ત્સેર લેક) — ત્રણેય રીતે.</div></div><h3>વિસ્તારથી જવાબ (પ્રશ્ન-2 અ, 6 ગુણ પ્રકારના)</h3><div class="example"><span class="label">વિસ્તારથી</span><div class="step"><b>પ્ર.</b> ‘સરહદની સફર’ પાઠનો સાર લખો.</div><div class="step"><b>જ.</b> પાઠમાં અરુણાચલ પ્રદેશની તવાંગયાત્રાનું વર્ણન છે. ગુવાહાટીથી યાત્રા શરૂ થાય છે — કામાખ્યાદેવીનું શક્તિપીઠ, તેજપુરનો અગ્નિગઢ, ભાલુકપોંગ-બોમડીલા, જસવંતગઢમાં જસવંતસિંહનું સ્મૃતિમંદિર, તવાંગમાં યુદ્ધસ્મારક, દલાઈ લામાનું જન્મસ્થળ અને ગુરુ નાનકનું તપસ્યાસ્થળ. યાત્રામાં ગુજરાતના લોકો મળે ત્યારે ઊભી થતી આત્મીયતા બતાવી છે. યાત્રાનો હેતુ સરહદ પરના લોકોને ભારત સાથે જોડવાનો છે.</div></div><h3>સાચું કે ખોટું (પ્રશ્ન-3 અ, 4 ગુણ પ્રકારના)</h3><div class="tblwrap"><table><tr><th>વિધાન</th><th>જવાબ</th></tr><tr><td class="rowlabel">તવાંગયાત્રા દર વર્ષે નવેમ્બરમાં ગુવાહાટીથી નીકળે છે.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">ભારતમાં 51 શક્તિપીઠો છે.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">જસવંતસિંહે 7 કલાક ચીનીઓને રોક્યા.</td><td class="l">✘ ખોટું</td></tr><tr><td class="rowlabel">ઓખા બાણાસુરની પુત્રી હતી.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">તવાંગ છઠ્ઠા દલાઈ લામાનું જન્મસ્થળ છે.</td><td class="l">✔ સાચું</td></tr></table></div>
+<div class="next-line">→ <b>આગળ:</b> સારાંશ</div>
+</div>
+
+
+<!-- ============ PART 06 ============ -->
+<div class="part" id="p6">
+<h2><span class="num">06</span>સારાંશ — યાદ રાખો</h2>
+<p class="part-why">શા માટે ભણવું: છેલ્લી ઘડીએ એક નજરમાં પુનરાવર્તન.</p>
+<div class="remember"><span class="label">યાદ રાખો</span><ol><li>લેખિકા ડૉ. પૂર્ણિમા ભાડેસિયા (લાઠી/મોરબી; સ્ત્રીરોગ નિષ્ણાત).</li><li>તવાંગયાત્રા — નવેમ્બર, ગુવાહાટીથી; કામાખ્યા (51 શક્તિપીઠ), તેજપુર-અગ્નિગઢ (ઓખા–અનિરુદ્ધ), ભાલુકપોંગ-બોમડીલા, જસવંતગઢ (72 કલાક), તવાંગ.</li><li>તવાંગ: દલાઈ લામા-જન્મસ્થળ, ગુરુ નાનક-તપસ્યાસ્થળ; વસ્તી ~11000.</li><li>વ્યાકરણ: ભાષા-બોલી; નામયોગી.</li></ol></div>
+</div>
+
+</div>
+</body></html>
