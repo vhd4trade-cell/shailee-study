@@ -1,0 +1,184 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>कोऽरुक् — Chapter Notes</title>
+<style>:root{
+  --bg:#FBF9F4; --surface:#FFFFFF; --surface-2:#F3F0E7;
+  --ink:#241F16; --ink-2:#5B5647; --ink-3:#8C8672;
+  --line:#E4DFD0;
+  --accent:#8B5E34; --accent-ink:#3E2A17; --accent-bg:#F1E4D3;
+  --formula:#1F4E42; --formula-bg:#E3F0EA; --formula-line:#9FC6B7;
+  --exam:#7A2E2E; --exam-bg:#F6E4E1; --exam-line:#DBA9A4;
+  --mistake:#8A5A00; --mistake-bg:#FDF1D9; --mistake-line:#E9C877;
+  --check:#2E4E7A; --check-bg:#E4ECF6; --check-line:#A9C0DB;
+  --why:#5B5647; --why-bg:#F3F0E7; --why-line:#DAD4C2;
+  --font-display:'Fraunces','Noto Sans Gujarati',Georgia,serif;
+  --font-body:'Source Sans 3','Noto Sans Gujarati',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+    --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+    --line:#3A3428;
+    --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+    --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+    --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+    --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+    --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+    --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+  --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+  --line:#3A3428;
+  --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+  --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+  --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+  --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+  --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+  --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.75;padding:0 16px;font-size:16px}
+.wrap{max-width:760px;margin:0 auto;padding-block:32px 80px}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;text-wrap:balance;color:var(--ink)}
+h1{font-size:clamp(28px,6vw,38px);margin:0 0 6px}
+.subtitle{color:var(--ink-2);font-size:15px;margin:0 0 28px}
+h2{font-size:24px;margin:0 0 4px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+h2 .num{color:var(--accent);font-family:var(--font-mono);font-size:15px;font-weight:600}
+.part-why{color:var(--ink-2);font-size:14.5px;margin:0 0 18px;font-style:italic}
+h3{font-size:18px;margin:30px 0 10px;color:var(--accent-ink)}
+p{margin:0 0 12px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:36px}
+.legend-item{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-2)}
+.dot{width:10px;height:10px;border-radius:3px;flex:none}
+.dot.formula{background:var(--formula)} .dot.exam{background:var(--exam)} .dot.mistake{background:var(--mistake)}
+.dot.check{background:var(--check)} .dot.concept{background:var(--accent)} .dot.why{background:var(--why)}
+.part{padding:32px 0;border-top:1px solid var(--line)}
+.part:first-of-type{border-top:none}
+.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:32px}
+.toc ol{margin:8px 0 0;padding-left:0;list-style:none}
+.toc li{margin-bottom:5px;font-size:14.5px}
+.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ink-3)}
+.toc .n{font-family:var(--font-mono);color:var(--accent);font-size:13px;font-weight:600;margin-right:6px}
+.box{border-radius:12px;padding:14px 18px;margin:14px 0;border:1px solid;font-size:15px}
+.box .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;display:block}
+.formula-box{background:var(--formula-bg);border-color:var(--formula-line)}
+.formula-box .label{color:var(--formula)}
+.formula-box .f{font-family:var(--font-mono);font-size:18px;color:var(--formula);font-weight:600;margin:4px 0}
+.formula-box .meaning{color:var(--ink-2);font-size:14px}
+.concept-box{background:var(--surface);border-color:var(--line);border-left:3px solid var(--accent)}
+.concept-box .label{color:var(--accent)}
+.exam-box{background:var(--exam-bg);border-color:var(--exam-line)} .exam-box .label{color:var(--exam)}
+.mistake-box{background:var(--mistake-bg);border-color:var(--mistake-line)} .mistake-box .label{color:var(--mistake)}
+.check-box{background:var(--check-bg);border-color:var(--check-line)} .check-box .label{color:var(--check)}
+.why-box{background:var(--why-bg);border-color:var(--why-line)} .why-box .label{color:var(--why)}
+.extra-box{background:var(--surface);border:1px dashed var(--ink-3)} .extra-box .label{color:var(--ink-3)}
+.parent-box{background:var(--accent-bg);border-color:var(--accent)} .parent-box .label{color:var(--accent-ink)}
+.outcome{background:var(--surface);border:1px solid var(--accent);border-radius:12px;padding:14px 18px;margin:0 0 16px}
+.outcome .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;display:block}
+.submap{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 6px}
+.submap span{background:var(--surface-2);border:1px solid var(--line);border-radius:20px;padding:4px 12px;font-size:12.5px;color:var(--ink-2)}
+.next-line{font-size:14px;color:var(--ink-2);margin-top:18px;padding-top:14px;border-top:1px dashed var(--line)}
+.next-line b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{padding:8px 10px;border:1px solid var(--line);text-align:center}
+th{background:var(--surface-2);font-weight:600;color:var(--ink-2);font-size:12.5px}
+td.rowlabel{text-align:left;color:var(--ink-2);font-weight:600;background:var(--surface-2)}
+td.l{text-align:left}
+.tblwrap{overflow-x:auto}
+.example{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:14px 0;font-size:15px}
+.example .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px;display:block}
+.example .step{margin:3px 0}
+.example .step b{color:var(--ink-2);font-weight:600}
+.mono{font-family:var(--font-mono)}
+.remember{background:var(--accent-bg);border:1px solid var(--accent);border-radius:12px;padding:16px 20px;margin:16px 0}
+.remember .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:8px;display:block}
+.remember ol{margin:0;padding-left:18px} .remember li{margin-bottom:5px}
+.badge{display:inline-block;font-size:11px;font-family:var(--font-mono);padding:2px 8px;border-radius:20px;background:var(--exam-bg);color:var(--exam);border:1px solid var(--exam-line);margin-left:6px;vertical-align:middle}
+.diagram{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px;margin:16px 0}
+.diagram svg{display:block;width:100%;height:auto}
+.diagram-cap{text-align:center;font-size:13px;color:var(--ink-3);margin-top:6px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:600px){.pair{grid-template-columns:1fr}}
+.pair .diagram{margin:6px 0}
+.jumpicon{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:var(--formula);color:var(--surface);text-decoration:none;font-size:11px;font-weight:700;vertical-align:middle;margin-left:4px}
+.src{font-size:12.5px;color:var(--ink-3)}
+</style>
+
+<div class="wrap">
+<h1>પાઠ 3 · कोऽरुक्</h1>
+<p class="subtitle">ધોરણ 7 સંસ્કૃત (પ્રથમ સત્ર) · GSEB ગુજરાતી માધ્યમ · પાન 7–9</p>
+<div class="legend">
+<div class="legend-item"><span class="dot why"></span>કેમ / રોજિંદું ઉદાહરણ</div>
+<div class="legend-item"><span class="dot concept"></span>સમજવું જ પડે</div>
+<div class="legend-item"><span class="dot formula"></span>યાદ રાખવું — મુખ્ય મુદ્દો</div>
+<div class="legend-item"><span class="dot exam"></span>પરીક્ષામાં વારંવાર</div>
+<div class="legend-item"><span class="dot mistake"></span>સામાન્ય ભૂલ</div>
+<div class="legend-item"><span class="dot check"></span>જાતે ચકાસો</div>
+</div>
+<div class="toc">
+<b>પ્રકરણનો નકશો</b> — અંતિમ લક્ષ્ય: પાઠનો અનુવાદ, શબ્દાર્થ, વ્યાકરણ અને પરીક્ષાના જવાબ.
+<ol>
+<li><span class="n">00</span><a href="#intro">પાઠ એક નજરે</a> — ચિત્રકથા</li><li><span class="n">01</span><a href="#p1">પાઠ અને અનુવાદ</a> — વાક્ય / શ્લોક પ્રમાણે</li><li><span class="n">02</span><a href="#p2">શબ્દાર્થ</a> — ટિપ્પણી + ज्ञातव्यम्</li><li><span class="n">03</span><a href="#p3">વ્યાકરણ / ભાષાસજ્જતા</a> — આ પાઠમાં જે નિયમ દેખાય છે</li><li><span class="n">04</span><a href="#p4">પરીક્ષાના પ્રશ્નો</a> — નમૂનારૂપ પ્રશ્ન-જવાબ</li><li><span class="n">05</span><a href="#p5">સારાંશ</a></li>
+</ol>
+</div>
+
+<!-- ============ PART 00 ============ -->
+<div class="part" id="intro">
+<h2><span class="num">00</span>પાઠ એક નજરે</h2>
+<p class="part-why">શા માટે ભણવું: નીરોગી રહેવાનો સંદેશ — હિતભુક્, મિતભુક્, ઋતભુક્; સાથે ક્રિયાપદ -ति / -न्ति અને વાક્યરચના.</p>
+<div class="outcome"><span class="label">આ પ્રકરણ પછી તમે</span>
+પાઠ વાંચી-બોલી શકશો, દરેક વાક્ય/શ્લોકનો ગુજરાતી અનુવાદ કહી શકશો, શબ્દાર્થ યાદ રાખી શકશો અને પરીક્ષાના પ્રશ્નોના જવાબ સંસ્કૃત-ગુજરાતીમાં લખી શકશો.</div><div class="tblwrap"><table><tr><th>વિગત</th><th>માહિતી</th></tr><tr><td class="rowlabel">પાઠ</td><td class="l">3. कोऽरुक् — કોણ નીરોગી?</td></tr><tr><td class="rowlabel">પ્રકાર</td><td class="l">ચિત્રકથા</td></tr><tr><td class="rowlabel">પાઠ્યપુસ્તક પાન</td><td class="l">પાન 7–9</td></tr></table></div><div class="concept-box box"><span class="label">‘कोऽरुक्’ — શબ્દ ભાગ પાડો</span><p><b>कः + अरुक्</b> = કોણ + રોગ વિનાનો (<b>अ-रुक्</b>: रुक् = રોગ/પીડા). એટલે <b>‘કોણ નીરોગી છે?’</b> પક્ષીનો અવાજ ‘કોઽરુક્’ જેવો સંભળાય, તેથી પુસ્તકે એમ લખ્યું (વિશેષ).</p></div><div class="concept-box box"><span class="label">ત્રણ ગુણ — ભુક્ (ખાનાર)</span><div class="tblwrap"><table><tr><th>શબ્દ</th><th>અર્થ</th><th>રોજિંદું ઉદાહરણ</th></tr><tr><td class="rowlabel"><b>हित</b>भुक्</td><td class="l">હિતકારી (ગુણકારી) ભોજન કરનાર</td><td class="l">દાળ-શાક-રોટલી, લીલોતરી; મોળું-તળેલું ઓછું</td></tr><tr><td class="rowlabel"><b>मित</b>भुक्</td><td class="l">યોગ્ય માત્રામાં (માપસર) ખાનાર</td><td class="l">ભૂખ કરતાં થોડું ઓછું ખાવું, વારંવાર ન ખાવું</td></tr><tr><td class="rowlabel"><b>ऋत</b>भुक्</td><td class="l">ઋતુ અનુસાર ખાનાર</td><td class="l">ઉનાળે છાશ-શેરડીનો રસ; શિયાળે અડદિયા-લીલોતરી; ચોમાસે હળવું ભોજન</td></tr></table></div><p><b>भुक्</b> = <b>भुज्</b> (ખાવું) પરથી. આ ત્રણ ટેવ પાળે તે <b>नीरोगः</b> (નીરોગી).</p></div><div class="concept-box box"><span class="label">વાગ્ભટ્ટ કોણ? (વધારાની માહિતી — પરીક્ષા માટે જરૂરી નથી)</span><p>પુસ્તક: <b>वैद्यर्षिः वाग्भट्टः</b> = વૈદ્ય (આયુર્વેદના જાણકાર) ઋષિ. વાગ્ભટ્ટ પ્રાચીન આયુર્વેદાચાર્ય તરીકે જાણીતા છે.</p></div>
+<div class="next-line">→ <b>આગળ:</b> અનુવાદ → શબ્દાર્થ → વ્યાકરણ → પરીક્ષાના પ્રશ્નો</div>
+</div>
+
+
+<!-- ============ PART 01 ============ -->
+<div class="part" id="p1">
+<h2><span class="num">01</span>પાઠ અને અનુવાદ</h2>
+<p class="part-why">શા માટે ભણવું: શ્લોકના અનુવાદ [2B] અને સંસ્કૃત વાક્યોનો ગુજરાતી અનુવાદ [4A] — બંને સીધા આના પર આધારિત છે.</p>
+<h3>વાર્તા — ક્રમ પ્રમાણે</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત</th><th>ગુજરાતી અનુવાદ</th></tr><tr><td class="rowlabel">एकः पक्षी अस्ति ।</td><td class="l">એક પક્ષી છે.</td></tr><tr><td class="rowlabel">सः आकाशे अत्र तत्र गच्छति ।</td><td class="l">તે આકાશમાં અહીં-તહીં ઊડે (જાય) છે.</td></tr><tr><td class="rowlabel">सः पुनः पुनः वदति “कोऽरुक्” ?</td><td class="l">તે વારંવાર બોલે છે “કોણ નીરોગી?”</td></tr><tr><td class="rowlabel">पक्षी द्वारं द्वारम् अटति ।</td><td class="l">પક્ષી બારણે બારણે (ઘેર ઘેર) ફરે છે.</td></tr><tr><td class="rowlabel">एकम् एव प्रश्नं पृच्छति ।</td><td class="l">એક જ પ્રશ્ન પૂછે છે.</td></tr><tr><td class="rowlabel">जनाः उपहासं कुर्वन्ति ।</td><td class="l">લોકો મજાક કરે છે.</td></tr><tr><td class="rowlabel">कः अपि उत्तरं न ददाति ।</td><td class="l">કોઈ પણ જવાબ આપતું નથી.</td></tr><tr><td class="rowlabel">पक्षी निराशः भवति ।</td><td class="l">પક્ષી નિરાશ થાય છે.</td></tr><tr><td class="rowlabel">सः वनं गच्छति वृक्षे उपविशति च ।</td><td class="l">તે વનમાં જાય છે અને વૃક્ષ પર બેસે છે.</td></tr><tr><td class="rowlabel">वृक्षस्य अधः वैद्यर्षिः वाग्भट्टः अस्ति ।</td><td class="l">વૃક્ષની નીચે વૈદ્યઋષિ વાગ્ભટ્ટ છે.</td></tr><tr><td class="rowlabel">पक्षी पुनः वदति, ‘कोऽरुक् ? कोऽरुक् ? इति’ ।</td><td class="l">પક્ષી ફરી બોલે છે, ‘કોણ નીરોગી? કોણ નીરોગી?’ એમ.</td></tr><tr><td class="rowlabel">वाग्भट्टः शृणोति ।</td><td class="l">વાગ્ભટ્ટ સાંભળે છે.</td></tr><tr><td class="rowlabel">सः वदति, “हितभुक्, मितभुक् ऋतभुक्” इति ।</td><td class="l">તે કહે છે, “હિતભુક્, મિતભુક્, ઋતભુક્” એમ.</td></tr><tr><td class="rowlabel">अर्थः अस्ति, यः हितकारी भोजनं करोति,</td><td class="l">અર્થ છે: જે ગુણકારી (હિતકારી) ભોજન કરે છે,</td></tr><tr><td class="rowlabel">यः मितं भोजनं करोति,</td><td class="l">જે માપસર ભોજન કરે છે,</td></tr><tr><td class="rowlabel">यः ऋतु-अनुसारं भोजनं करोति सः एव नीरोगः भवति इति ।</td><td class="l">જે ઋતુ અનુસાર ભોજન કરે છે, તે જ નીરોગી થાય છે, એમ.</td></tr><tr><td class="rowlabel">सन्तुष्टः पक्षी ऋषिसमीपम् आगच्छति ।</td><td class="l">સંતુષ્ટ થયેલો પક્ષી ઋષિ પાસે આવે છે.</td></tr><tr><td class="rowlabel">सः ऋषिं नमति ।</td><td class="l">તે ઋષિને નમે છે.</td></tr><tr><td class="rowlabel">अनन्तरं स्वस्थानं गच्छति ।</td><td class="l">પછી પોતાના સ્થાને જાય છે.</td></tr></table></div><p><b>નોંધ:</b> પુસ્તકમાં ‘श्रृणोति’ છપાયું છે; શુદ્ધ જોડણી <b>शृणोति</b> (સાંભળે છે).</p>
+<div class="next-line">→ <b>આગળ:</b> શબ્દાર્થ</div>
+</div>
+
+
+<!-- ============ PART 02 ============ -->
+<div class="part" id="p2">
+<h2><span class="num">02</span>શબ્દાર્થ</h2>
+<p class="part-why">શા માટે ભણવું: સંસ્કૃત શબ્દના અર્થ વિકલ્પોમાંથી શોધો [4C] — અર્થ યાદ હોય તો 5 ગુણ પાકા.</p>
+<h3>ટિપ્પણી — પાઠ્યપુસ્તકના શબ્દાર્થ</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત શબ્દ</th><th>ગુજરાતી અર્થ</th></tr><tr><td class="rowlabel">कोऽरुक्</td><td class="l">कः अरुक् — કોણ નીરોગી?</td></tr><tr><td class="rowlabel">अटति</td><td class="l">ફરે છે</td></tr><tr><td class="rowlabel">उपहासम्</td><td class="l">મજાક</td></tr><tr><td class="rowlabel">वैद्यर्षिः</td><td class="l">વૈદ્યઋષિ</td></tr><tr><td class="rowlabel">हितभुक्</td><td class="l">હિતકારી ભોજન કરનાર</td></tr><tr><td class="rowlabel">मितभुक्</td><td class="l">યોગ્ય માત્રામાં ભોજન કરનાર</td></tr><tr><td class="rowlabel">ऋतभुक्</td><td class="l">ઋતુ અનુસાર ભોજન કરનાર</td></tr><tr><td class="rowlabel">स्वस्थानम्</td><td class="l">પોતાના સ્થાને</td></tr></table></div><h3>પાઠના બીજા શબ્દો (અર્થ અમારા, પાઠ પ્રમાણે)</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત શબ્દ</th><th>ગુજરાતી અર્થ</th></tr><tr><td class="rowlabel">पृच्छति</td><td class="l">પૂછે છે</td></tr><tr><td class="rowlabel">ददाति</td><td class="l">આપે છે</td></tr><tr><td class="rowlabel">कुर्वन्ति</td><td class="l">કરે છે (ઘણા)</td></tr><tr><td class="rowlabel">निराशः</td><td class="l">નિરાશ</td></tr><tr><td class="rowlabel">सन्तुष्टः</td><td class="l">સંતુષ્ટ</td></tr><tr><td class="rowlabel">उपविशति</td><td class="l">બેસે છે</td></tr><tr><td class="rowlabel">शृणोति</td><td class="l">સાંભળે છે</td></tr><tr><td class="rowlabel">नमति</td><td class="l">નમે છે</td></tr><tr><td class="rowlabel">आगच्छति</td><td class="l">આવે છે</td></tr><tr><td class="rowlabel">अनन्तरम्</td><td class="l">પછી</td></tr><tr><td class="rowlabel">अधः</td><td class="l">નીચે</td></tr><tr><td class="rowlabel">जनाः</td><td class="l">લોકો</td></tr><tr><td class="rowlabel">मितम्</td><td class="l">માપસર</td></tr></table></div>
+<div class="next-line">→ <b>આગળ:</b> વ્યાકરણ</div>
+</div>
+
+
+<!-- ============ PART 03 ============ -->
+<div class="part" id="p3">
+<h2><span class="num">03</span>વ્યાકરણ / ભાષાસજ્જતા</h2>
+<p class="part-why">શા માટે ભણવું: નિયમ સમજ્યા પછી નવાં વાક્યો જાતે બનાવી શકાય — રટવું ઓછું પડે.</p>
+<p><b>1. એક કર્તા — -ति; ઘણા કર્તા — -न्ति</b></p><div class="tblwrap"><table><tr><th>એક (-ति)</th><th>ઘણા (-न्ति)</th><th>અર્થ</th></tr><tr><td class="rowlabel">करोति</td><td class="l">कुर्वन्ति</td><td class="l">કરે છે / કરે છે (ઘણા)</td></tr><tr><td class="rowlabel">गच्छति</td><td class="l">गच्छन्ति</td><td class="l">જાય છે / જાય છે (ઘણા)</td></tr><tr><td class="rowlabel">पश्यति</td><td class="l">पश्यन्ति</td><td class="l">જુએ છે / જુએ છે (ઘણા)</td></tr><tr><td class="rowlabel">पठति</td><td class="l">पठन्ति</td><td class="l">ભણે છે / ભણે છે (ઘણા)</td></tr></table></div><p>પાઠમાં: <b>जनाः (લોકો) कुर्वन्ति</b> — ‘ઘણા’ એટલે -न्ति.</p><p><b>2. ‘ને / તરફ’ અને ‘પર / માં’ — શબ્દના છેડે ફેર</b></p><div class="tblwrap"><table><tr><th>ભાવ</th><th>છેડો</th><th>ઉદાહરણ</th></tr><tr><td class="rowlabel">જવું/જોવું — ‘ને, તરફ’</td><td class="l">-म् (દ્વિતીયા)</td><td class="l">वनं गच्छति (વનમાં/તરફ જાય છે) · द्वारं पश्यति</td></tr><tr><td class="rowlabel">બેસવું — ‘પર, માં’</td><td class="l">-े (સપ્તમી)</td><td class="l">वृक्षे उपविशति (વૃક્ષ પર બેસે છે)</td></tr></table></div><p><b>3. બેવડો શબ્દ = દરેક:</b> द्वारं द्वारम् = બારણે બારણે; पुनः पुनः = ફરી ફરી.</p>
+<div class="next-line">→ <b>આગળ:</b> પરીક્ષાના પ્રશ્નો</div>
+</div>
+
+
+<!-- ============ PART 04 ============ -->
+<div class="part" id="p4">
+<h2><span class="num">04</span>પરીક્ષાના પ્રશ્નો</h2>
+<p class="part-why">શા માટે ભણવું: દરેક પ્રશ્ન-પ્રકારની પ્રૅક્ટિસ — પેપર જેવી જ રીતે.</p>
+<div class="why-box box"><span class="label">નોંધ</span>નીચેના પ્રશ્નો <b>અમે બનાવેલા નમૂના</b> છે (પાઠ્યપુસ્તકના સ્વાધ્યાયના પ્રશ્નો નથી). સ્વાધ્યાય-સ્વાધ્યાયપોથી-પ્રૅક્ટિસ બુકના જવાબ, તે ત્રણે મળ્યા પછી જ બનશે. પેપર-પદ્ધતિ (80 ગુણ): 1A વિકલ્પ [10] · 1B ✓/✗ [10] · 2A ખાલી જગ્યા [10] · 2B શ્લોકનો અનુવાદ [10] · 3A ગુજરાતીમાં જવાબ (ગમે તે 5) [10] · 3B સંસ્કૃતમાં જવાબ (ગમે તે 5) [10] · 4A અનુવાદ [10] · 4B સમાનાર્થી [5] · 4C અર્થ [5].</div><h3>1A · સાચો વિકલ્પ પસંદ કરો</h3><div class="tblwrap"><table><tr><th>પ્રશ્ન</th><th>વિકલ્પો</th><th>જવાબ</th></tr><tr><td class="rowlabel">‘हितभुक्’ એટલે?</td><td class="l">(અ) ગુણકારી ભોજન કરનાર &nbsp;·&nbsp; (બ) ઓછું ખાનાર &nbsp;·&nbsp; (ક) ઋતુ મુજબ ખાનાર &nbsp;·&nbsp; (ડ) ખૂબ ખાનાર</td><td class="l">ગુણકારી ભોજન કરનાર</td></tr><tr><td class="rowlabel">‘ऋतभुक्’ એટલે?</td><td class="l">(અ) ઋતુ અનુસાર ખાનાર &nbsp;·&nbsp; (બ) માપસર ખાનાર &nbsp;·&nbsp; (ક) ભૂખ્યો &nbsp;·&nbsp; (ડ) રોગી</td><td class="l">ઋતુ અનુસાર ખાનાર</td></tr><tr><td class="rowlabel">‘उपहासम्’ એટલે?</td><td class="l">(અ) મજાક &nbsp;·&nbsp; (બ) ભોજન &nbsp;·&nbsp; (ક) ઊંઘ &nbsp;·&nbsp; (ડ) આનંદ</td><td class="l">મજાક</td></tr><tr><td class="rowlabel">‘अटति’ એટલે?</td><td class="l">(અ) ફરે છે &nbsp;·&nbsp; (બ) બેસે છે &nbsp;·&nbsp; (ક) ખાય છે &nbsp;·&nbsp; (ડ) સૂએ છે</td><td class="l">ફરે છે</td></tr><tr><td class="rowlabel">‘कुर्वन्ति’ કોના માટે વપરાય?</td><td class="l">(અ) ઘણા લોકો &nbsp;·&nbsp; (બ) એક જણ &nbsp;·&nbsp; (ક) ફક્ત હું &nbsp;·&nbsp; (ડ) ફક્ત તું</td><td class="l">ઘણા લોકો</td></tr><tr><td class="rowlabel">વૃક્ષ નીચે કોણ હતું?</td><td class="l">(અ) વૈદ્યઋષિ વાગ્ભટ્ટ &nbsp;·&nbsp; (બ) શિયાળ &nbsp;·&nbsp; (ક) ખેડૂત &nbsp;·&nbsp; (ડ) રાજા</td><td class="l">વૈદ્યઋષિ વાગ્ભટ્ટ</td></tr></table></div><h3>1B · ✓ કે ✗ કરો</h3><div class="tblwrap"><table><tr><th>વિધાન</th><th>જવાબ</th></tr><tr><td class="rowlabel">પક્ષી એક જ પ્રશ્ન વારંવાર પૂછે છે.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">બધા લોકોએ પક્ષીને સાચો જવાબ આપ્યો.</td><td class="l">✘ ખોટું</td></tr><tr><td class="rowlabel">‘मितभुक्’ = માપસર ખાનાર.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">પક્ષી ઋષિને નમીને સ્વસ્થાને જાય છે.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">‘वनं गच्छति’ માં ‘वनम्’ નો અર્થ ઘર છે.</td><td class="l">✘ ખોટું</td></tr><tr><td class="rowlabel">‘कोऽरुक्’ = कः + अरुक्.</td><td class="l">✔ સાચું</td></tr></table></div><h3>2A · ખાલી જગ્યા પૂરો</h3><div class="tblwrap"><table><tr><th>વાક્ય</th><th>ખૂટતો શબ્દ</th></tr><tr><td class="rowlabel">पक्षी ____ ____ अटति । (બારણે બારણે)</td><td class="l">द्वारं द्वारम्</td></tr><tr><td class="rowlabel">जनाः उपहासं ____ । (કરે છે)</td><td class="l">कुर्वन्ति</td></tr><tr><td class="rowlabel">वृक्षस्य ____ ऋषिः अस्ति । (નીચે)</td><td class="l">अधः</td></tr><tr><td class="rowlabel">सः ऋषिं ____ । (નમે છે)</td><td class="l">नमति</td></tr><tr><td class="rowlabel">____ पक्षी ऋषिसमीपम् आगच्छति । (સંતુષ્ટ)</td><td class="l">सन्तुष्टः</td></tr></table></div><h3>2B · શ્લોકનો અનુવાદ</h3><p>ઉપરના <a href="#p1">‘પાઠ અને અનુવાદ’</a> વિભાગમાં દરેક શ્લોક/પંક્તિનો અનુવાદ છે — આ વિભાગ મોઢે કરો; પરીક્ષામાં શ્લોક આપીને તેનો ગુજરાતી અર્થ પૂછાય છે.</p><h3>3A · એક વાક્યમાં જવાબ (ગુજરાતીમાં)</h3><div class="example"><span class="label">એક વાક્ય</span><div class="step"><b>પ્ર.</b> ‘कोऽरुक्’ નો અર્થ શું?</div><div class="step"><b>જ.</b> કોણ નીરોગી છે?</div><div class="step"><b>પ્ર.</b> લોકોએ પક્ષીના પ્રશ્ન પર શું કર્યું?</div><div class="step"><b>જ.</b> મજાક કરી અને કોઈએ જવાબ ન આપ્યો.</div><div class="step"><b>પ્ર.</b> વાગ્ભટ્ટે નીરોગી થવાના કયા ત્રણ ગુણ કહ્યા?</div><div class="step"><b>જ.</b> હિતભુક્, મિતભુક્, ઋતભુક્.</div><div class="step"><b>પ્ર.</b> ‘ऋतभुक्’ નો અર્થ લખો.</div><div class="step"><b>જ.</b> ઋતુ અનુસાર ભોજન કરનાર.</div><div class="step"><b>પ્ર.</b> જવાબ મળતાં પક્ષીએ શું કર્યું?</div><div class="step"><b>જ.</b> સંતુષ્ટ થઈ ઋષિને નમ્યો અને પોતાના સ્થાને ગયો.</div></div><h3>3B · એક વાક્યમાં જવાબ (સંસ્કૃતમાં)</h3><div class="example"><span class="label">સંસ્કૃતમાં</span><div class="step"><b>પ્ર.</b> पक्षी कुत्र उपविशति ?</div><div class="step"><b>જ.</b> <b>पक्षी वृक्षे उपविशति ।</b><br><span style="color:var(--ink-3)">(અર્થ: પક્ષી વૃક્ષ પર બેસે છે.)</span></div><div class="step"><b>પ્ર.</b> जनाः किं कुर्वन्ति ?</div><div class="step"><b>જ.</b> <b>जनाः उपहासं कुर्वन्ति ।</b><br><span style="color:var(--ink-3)">(અર્થ: લોકો મજાક કરે છે.)</span></div><div class="step"><b>પ્ર.</b> वाग्भट्टः कः अस्ति ?</div><div class="step"><b>જ.</b> <b>वाग्भट्टः वैद्यर्षिः अस्ति ।</b><br><span style="color:var(--ink-3)">(અર્થ: વાગ્ભટ્ટ વૈદ્યઋષિ છે.)</span></div><div class="step"><b>પ્ર.</b> पक्षी कः भवति ? (નિરાશ થતાં)</div><div class="step"><b>જ.</b> <b>पक्षी निराशः भवति ।</b><br><span style="color:var(--ink-3)">(અર્થ: પક્ષી નિરાશ થાય છે.)</span></div><div class="step"><b>પ્ર.</b> सः एव कः भवति ?</div><div class="step"><b>જ.</b> <b>सः एव नीरोगः भवति ।</b><br><span style="color:var(--ink-3)">(અર્થ: તે જ નીરોગી થાય છે.)</span></div></div><h3>4A · સંસ્કૃત વાક્યોનો ગુજરાતીમાં અનુવાદ</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત વાક્ય</th><th>ગુજરાતી</th></tr><tr><td class="rowlabel">पक्षी द्वारं द्वारम् अटति ।</td><td class="l">પક્ષી બારણે બારણે ફરે છે.</td></tr><tr><td class="rowlabel">जनाः उपहासं कुर्वन्ति ।</td><td class="l">લોકો મજાક કરે છે.</td></tr><tr><td class="rowlabel">सः ऋषिं नमति ।</td><td class="l">તે ઋષિને નમે છે.</td></tr><tr><td class="rowlabel">वाग्भट्टः शृणोति ।</td><td class="l">વાગ્ભટ્ટ સાંભળે છે.</td></tr><tr><td class="rowlabel">सः स्वस्थानं गच्छति ।</td><td class="l">તે પોતાના સ્થાને જાય છે.</td></tr></table></div><h3>4B · સમાનાર્થી શબ્દ શોધો</h3><div class="tblwrap"><table><tr><th>શબ્દ</th><th>વિકલ્પો</th><th>સમાનાર્થી</th></tr><tr><td class="rowlabel">पक्षी</td><td class="l">(અ) विहगः &nbsp;·&nbsp; (બ) वृक्षः &nbsp;·&nbsp; (ક) ऋषिः &nbsp;·&nbsp; (ડ) जनः</td><td class="l">विहगः</td></tr><tr><td class="rowlabel">नीरोगः</td><td class="l">(અ) अरुक् &nbsp;·&nbsp; (બ) निराशः &nbsp;·&nbsp; (ક) सन्तुष्टः &nbsp;·&nbsp; (ડ) मितः</td><td class="l">अरुक्</td></tr><tr><td class="rowlabel">वैद्यः</td><td class="l">(અ) चिकित्सकः &nbsp;·&nbsp; (બ) कृषकः &nbsp;·&nbsp; (ક) चोरः &nbsp;·&nbsp; (ડ) पक्षी</td><td class="l">चिकित्सकः</td></tr></table></div><h3>4C · સંસ્કૃત શબ્દનો અર્થ શોધો</h3><div class="tblwrap"><table><tr><th>શબ્દ</th><th>વિકલ્પો</th><th>અર્થ</th></tr><tr><td class="rowlabel">अनन्तरम्</td><td class="l">(અ) પછી &nbsp;·&nbsp; (બ) પહેલાં &nbsp;·&nbsp; (ક) નીચે &nbsp;·&nbsp; (ડ) ઉપર</td><td class="l">પછી</td></tr><tr><td class="rowlabel">स्वस्थानम्</td><td class="l">(અ) પોતાનું સ્થાન &nbsp;·&nbsp; (બ) પારકું ઘર &nbsp;·&nbsp; (ક) ખેતર &nbsp;·&nbsp; (ડ) વન</td><td class="l">પોતાનું સ્થાન</td></tr><tr><td class="rowlabel">सन्तुष्टः</td><td class="l">(અ) સંતુષ્ટ &nbsp;·&nbsp; (બ) નિરાશ &nbsp;·&nbsp; (ક) ભૂખ્યો &nbsp;·&nbsp; (ડ) થાકેલો</td><td class="l">સંતુષ્ટ</td></tr><tr><td class="rowlabel">उपविशति</td><td class="l">(અ) બેસે છે &nbsp;·&nbsp; (બ) ઊભો રહે છે &nbsp;·&nbsp; (ક) ફરે છે &nbsp;·&nbsp; (ડ) બોલે છે</td><td class="l">બેસે છે</td></tr><tr><td class="rowlabel">निराशः</td><td class="l">(અ) નિરાશ &nbsp;·&nbsp; (બ) ખુશ &nbsp;·&nbsp; (ક) ક્રોધી &nbsp;·&nbsp; (ડ) ભૂખ્યો</td><td class="l">નિરાશ</td></tr></table></div>
+<div class="next-line">→ <b>આગળ:</b> સારાંશ</div>
+</div>
+
+
+<!-- ============ PART 05 ============ -->
+<div class="part" id="p5">
+<h2><span class="num">05</span>સારાંશ — યાદ રાખો</h2>
+<p class="part-why">શા માટે ભણવું: છેલ્લી ઘડીએ એક નજરમાં પુનરાવર્તન.</p>
+<div class="remember"><span class="label">યાદ રાખો</span><ol><li>कोऽरुक् = कः + अरुक् = કોણ નીરોગી?</li><li>નીરોગીના ત્રણ ગુણ: हितभुक् (ગુણકારી) · मितभुक् (માપસર) · ऋतभुक् (ઋતુ મુજબ).</li><li>एक: -ति (करोति); ઘણા: -न्ति (कुर्वन्ति).</li><li>वनं (ને/તરફ, -म्) ↔ वृक्षे (પર/માં, -े).</li><li>द्वारं द्वारम् = બારણે બારણે.</li></ol></div><div class="why-box box"><span class="label">વાલી માટે</span>ભોજનમાં ત્રણે ટેવ પર ચર્ચા કરો — આજની થાળીમાં ગુણકારી શું છે? ઋતુ મુજબ શું ખાઈએ?</div>
+</div>
+
+</div>
+</body></html>

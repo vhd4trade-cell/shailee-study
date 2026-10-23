@@ -1,0 +1,208 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>પરિભાષિક શબ્દો (Key-words) — સ્વાધ્યાયપોથી</title>
+<style>/* Shailee Study design system: copied 2026-10-15 from the Std 11 Maths chapter pages (Straight Lines.html).
+   Source of truth lives in this folder. Paste into each chapter HTML <style>, after <meta charset="utf-8"> is set. */
+:root{
+  --bg:#FBF9F4; --surface:#FFFFFF; --surface-2:#F3F0E7;
+  --ink:#241F16; --ink-2:#5B5647; --ink-3:#8C8672;
+  --line:#E4DFD0;
+  --accent:#8B5E34; --accent-ink:#3E2A17; --accent-bg:#F1E4D3;
+  --formula:#1F4E42; --formula-bg:#E3F0EA; --formula-line:#9FC6B7;
+  --exam:#7A2E2E; --exam-bg:#F6E4E1; --exam-line:#DBA9A4;
+  --mistake:#8A5A00; --mistake-bg:#FDF1D9; --mistake-line:#E9C877;
+  --check:#2E4E7A; --check-bg:#E4ECF6; --check-line:#A9C0DB;
+  --why:#5B5647; --why-bg:#F3F0E7; --why-line:#DAD4C2;
+  --font-display:'Fraunces',Georgia,serif;
+  --font-body:'Source Sans 3','Noto Sans Gujarati',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+    --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+    --line:#3A3428;
+    --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+    --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+    --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+    --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+    --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+    --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+  --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+  --line:#3A3428;
+  --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+  --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+  --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+  --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+  --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+  --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.7;padding:0 16px}
+.wrap{max-width:760px;margin:0 auto;padding-block:32px 80px}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;text-wrap:balance;color:var(--ink)}
+h1{font-size:clamp(28px,6vw,38px);margin:0 0 6px}
+.subtitle{color:var(--ink-2);font-size:15px;margin:0 0 28px}
+h2{font-size:24px;margin:0 0 4px;display:flex;align-items:baseline;gap:10px}
+h2 .num{color:var(--accent);font-family:var(--font-mono);font-size:15px;font-weight:600}
+.part-why{color:var(--ink-2);font-size:14.5px;margin:0 0 18px;font-style:italic}
+h3{font-size:18px;margin:30px 0 10px;color:var(--accent-ink)}
+h4{font-size:14.5px;margin:16px 0 6px;color:var(--ink-2);font-family:var(--font-body);font-weight:600}
+p{margin:0 0 12px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:36px}
+.legend-item{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-2)}
+.dot{width:10px;height:10px;border-radius:3px;flex:none}
+.dot.formula{background:var(--formula)}
+.dot.exam{background:var(--exam)}
+.dot.mistake{background:var(--mistake)}
+.dot.check{background:var(--check)}
+.dot.concept{background:var(--accent)}
+.dot.why{background:var(--why)}
+.part{padding:32px 0;border-top:1px solid var(--line)}
+.part:first-of-type{border-top:none}
+.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:32px}
+.toc ol{margin:8px 0 0;padding-left:20px}
+.toc li{margin-bottom:5px;font-size:14.5px}
+.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ink-3)}
+
+.box{border-radius:12px;padding:14px 18px;margin:14px 0;border:1px solid;font-size:15px}
+.box .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;display:block}
+
+.formula-box{background:var(--formula-bg);border-color:var(--formula-line)}
+.formula-box .label{color:var(--formula)}
+.formula-box .f{font-family:var(--font-mono);font-size:18px;color:var(--formula);font-weight:600;margin:4px 0}
+.formula-box .meaning{color:var(--ink-2);font-size:13.5px}
+
+.concept-box{background:var(--surface);border-color:var(--line);border-left:3px solid var(--accent)}
+.concept-box .label{color:var(--accent)}
+
+.exam-box{background:var(--exam-bg);border-color:var(--exam-line)}
+.exam-box .label{color:var(--exam)}
+
+.mistake-box{background:var(--mistake-bg);border-color:var(--mistake-line)}
+.mistake-box .label{color:var(--mistake)}
+
+.check-box{background:var(--check-bg);border-color:var(--check-line)}
+.check-box .label{color:var(--check)}
+
+.why-box{background:var(--why-bg);border-color:var(--why-line)}
+.why-box .label{color:var(--why)}
+
+.outcome{background:var(--surface);border:1px solid var(--accent);border-radius:12px;padding:14px 18px;margin:0 0 16px}
+.outcome .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;display:block}
+
+.submap{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 6px}
+.submap span{background:var(--surface-2);border:1px solid var(--line);border-radius:20px;padding:4px 12px;font-size:12.5px;color:var(--ink-2);font-family:var(--font-mono)}
+
+.next-line{font-size:14px;color:var(--ink-2);margin-top:18px;padding-top:14px;border-top:1px dashed var(--line)}
+.next-line b{color:var(--ink)}
+
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{padding:8px 10px;border:1px solid var(--line);text-align:center}
+th{background:var(--surface-2);font-weight:600;color:var(--ink-2);font-size:12.5px}
+td.rowlabel{text-align:left;color:var(--ink-2);font-weight:600;background:var(--surface-2)}
+.tblwrap{overflow-x:auto}
+
+.example{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:14px 0;font-size:14.5px}
+.example .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px;display:block}
+.example .step{margin:3px 0}
+.example .step b{color:var(--ink-2);font-weight:600}
+
+.mono{font-family:var(--font-mono)}
+sup,sub{font-size:.7em}
+
+.remember{background:var(--accent-bg);border:1px solid var(--accent);border-radius:12px;padding:16px 20px;margin:16px 0}
+.remember .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:8px;display:block}
+.remember ol{margin:0;padding-left:18px}
+.remember li{margin-bottom:5px}
+
+.badge{display:inline-block;font-size:11px;font-family:var(--font-mono);padding:2px 8px;border-radius:20px;background:var(--exam-bg);color:var(--exam);border:1px solid var(--exam-line);margin-left:6px;vertical-align:middle}
+
+.diagram{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px;margin:16px 0}
+.diagram svg{display:block;width:100%;height:auto}
+.diagram-cap{text-align:center;font-size:12.5px;color:var(--ink-3);margin-top:6px}
+
+.t{font-size:13px;fill:var(--ink)}
+.ts{font-size:11.5px;fill:var(--ink-2)}
+.th{font-size:13px;fill:var(--ink);font-weight:600}
+
+body{line-height:1.65}
+h1{font-size:clamp(24px,5.5vw,32px)}
+.status{background:var(--check-bg);border:1px solid var(--check-line);border-radius:10px;padding:10px 14px;font-size:13px;color:var(--check);margin-bottom:22px}
+.status b{color:var(--ink)} .status ul{margin:6px 0 2px;padding-left:18px} .status li{margin-bottom:2px}
+.section-divider{margin:40px 0 16px;padding-bottom:6px;border-bottom:2px solid var(--accent);color:var(--accent-ink);font-family:var(--font-body);font-size:16px;font-weight:600}
+.section-divider .n{font-family:var(--font-mono);font-size:13px;color:var(--accent);margin-right:8px}
+.src-note{font-size:12.5px;color:var(--ink-3);margin:-8px 0 14px}
+.qcard{border:1px solid var(--line);border-top:6px solid var(--accent);border-radius:14px;padding:18px 20px;margin-bottom:34px;background:var(--surface);position:relative}
+.qhead{display:flex;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap;background:var(--accent-bg);border:1px solid var(--accent);border-radius:10px;padding:8px 12px}
+.qnum{font-family:var(--font-mono);font-size:20px;font-weight:800;color:var(--surface);background:var(--accent);padding:3px 14px;border-radius:8px}
+.qsrc{font-size:12px;color:var(--accent-ink);font-family:var(--font-mono);font-weight:600}
+.qtext{background:var(--surface-2);border-radius:10px;padding:12px 14px;font-size:15px;margin:6px 0 14px}
+.qtext .opts{margin-top:6px;color:var(--ink-2);font-size:13.5px}
+.step{margin:12px 0}
+.step .lbl{font-family:var(--font-body);font-size:12px;font-weight:600;margin-bottom:5px;display:flex;align-items:center;gap:7px}
+.step .lbl .no{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;font-size:11px;font-family:var(--font-mono);color:var(--surface);flex:none}
+.step-body{font-size:14.5px;padding:10px 14px;border-radius:8px;border:1px solid}
+.s1 .no{background:var(--check)} .s1 .lbl{color:var(--check)} .s1 .step-body{background:var(--check-bg);border-color:var(--check-line)}
+.s2 .no{background:var(--accent)} .s2 .lbl{color:var(--accent)} .s2 .step-body{background:var(--accent-bg);border-color:var(--accent)}
+.s3 .no{background:var(--mistake)} .s3 .lbl{color:var(--mistake)} .s3 .step-body{background:var(--mistake-bg);border-color:var(--mistake-line)}
+.s4 .no{background:var(--exam)} .s4 .lbl{color:var(--exam)} .s4 .step-body{background:var(--exam-bg);border-color:var(--exam-line)}
+.s5 .no{background:var(--formula)} .s5 .lbl{color:var(--formula)} .s5 .step-body{background:var(--formula-bg);border-color:var(--formula-line)}
+.s6 .no{background:var(--ink)} .s6 .lbl{color:var(--ink)} .s6 .step-body{background:var(--surface);border-color:var(--line)}
+.s7 .no{background:var(--ink-3)} .s7 .lbl{color:var(--ink-3)} .s7 .step-body{background:var(--surface);border-color:var(--line);border-style:dashed}
+.s8 .no{background:var(--exam)} .s8 .lbl{color:var(--exam)} .s8 .step-body{background:var(--exam-bg);border-color:var(--exam-line);font-weight:600}
+.s9{border-top:1px dashed var(--line);padding-top:10px;margin-top:14px}
+.s9 .no{background:var(--formula)} .s9 .lbl{color:var(--formula)} .s9 .step-body{background:var(--surface-2);border-color:var(--line)}
+.calc{font-family:var(--font-mono);font-size:13.5px;margin:4px 0;overflow-x:auto}
+.calc.t{font-family:var(--font-body);font-size:14px;fill:initial}
+.ans{font-family:var(--font-mono);font-weight:600;color:var(--formula);background:var(--formula-bg);border:1px solid var(--formula-line);border-radius:6px;padding:4px 10px;display:inline-block;margin-top:4px}
+ol,ul{margin:4px 0;padding-left:20px} li{margin-bottom:3px}
+.step-body a{color:inherit;font-weight:600;text-decoration:none;border-bottom:1.5px dotted currentColor}
+.jumpicon{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--formula);color:var(--surface)!important;text-decoration:none;font-size:13px;font-weight:700;vertical-align:middle;border-bottom:0!important}
+.flag{background:var(--mistake-bg);border:1px solid var(--mistake-line);color:var(--mistake);border-radius:8px;padding:10px 14px;font-size:13.5px;margin:10px 0}
+.pending{background:var(--why-bg);border:1px dashed var(--why-line);color:var(--ink-2);border-radius:10px;padding:12px 16px;font-size:14px;margin:14px 0}
+.dupnote{font-size:13px;color:var(--ink-2);margin:6px 0 0}
+.keyok{font-size:12px;color:var(--ink-3)}
+.space{margin-top:8px;font-size:12.5px;color:var(--ink-3);font-style:italic}
+/* compact 4-step cards (1-mark items) */
+.setcard{border:1px solid var(--line);border-top:5px solid var(--accent);border-radius:14px;padding:14px 16px 8px;margin-bottom:30px;background:var(--surface)}
+.setcard .qhead{margin-bottom:8px}
+.setcard .setq{background:var(--surface-2);border-radius:10px;padding:10px 14px;font-size:15px;margin:0 0 10px}
+.c4{border:1px solid var(--line);border-left:4px solid var(--formula);border-radius:10px;padding:8px 12px;margin:8px 0;background:var(--bg)}
+.c4 .r{display:grid;grid-template-columns:84px 1fr;gap:8px;font-size:14px;margin:3px 0;align-items:baseline}
+.c4 .k{font-size:11.5px;font-weight:600;color:var(--ink-3)}
+.c4 .r.q .v{font-weight:600}
+.c4 .ansv{font-family:var(--font-mono);font-weight:600;color:var(--formula);background:var(--formula-bg);border:1px solid var(--formula-line);border-radius:6px;padding:2px 8px;display:inline-block}
+.c4 .r.trap .v{color:var(--mistake)}
+.c4 .r.why .v a{font-weight:600}
+.c4 .n{font-family:var(--font-mono);font-size:11px;color:var(--accent);font-weight:700;margin-right:4px}
+.tools{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-top:20px}
+.tools h3{font-family:var(--font-display);font-size:17px;margin:18px 0 8px;color:var(--accent-ink)} .tools h3:first-child{margin-top:0}
+.fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;line-height:1.15;margin:0 2px;font-size:.95em}
+.fr>span:first-child{border-bottom:1.3px solid currentColor;padding:0 3px}
+.mixed{display:inline-flex;align-items:center;gap:1px}
+.toc{margin-bottom:24px} .toc li{margin-bottom:3px} .toc .n{font-family:var(--font-mono);color:var(--accent);font-size:13px;margin-right:6px}
+.diagram{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:8px;margin:8px 0}
+.diagram svg{display:block;width:100%;height:auto;max-height:380px}
+.diagram-cap{text-align:center;font-size:12.5px;color:var(--ink-2);margin-top:4px}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@500;600&family=Noto+Sans+Gujarati:wght@400;600&display=swap" rel="stylesheet">
+<div class="wrap">
+<h1>પરિભાષિક શબ્દો (Key-words) — સ્વાધ્યાયપોથી</h1>
+<p class="subtitle">સ્વાધ્યાયપોથી · ધોરણ 7 ગણિત · ભાગ 1 · 107 શબ્દો</p>
+<div class="status"><b>સ્ત્રોત:</b> ગાલા ગણિત સ્વાધ્યાયપોથી, ધોરણ 7 (ભાગ 1) — પરિભાષિક શબ્દો, પાન 50–51 (107 શબ્દ) · સ્કૅન: <i>Maths\VHD submitted scans\Swadhyay Pothi Part 1 - Key-words (pp 50-51, rotated scan).pdf</i><br><b>કેમ આ ગોઠવણી:</b> પુસ્તકમાં શબ્દો અકારાદિ ક્રમે છે; અહીં શબ્દો પ્રકરણ પ્રમાણે જૂથમાં (ક્રમાંક પુસ્તક પ્રમાણે જ) — ભણતી વખતે સાથે યાદ રહે.<br><b>ચકાસણી:</b> English શબ્દો સ્કૅનમાં સ્પષ્ટ; ગુજરાતી શબ્દો ઝાંખા છે — ચકાસેલી નકલમાંથી લીધા (ટાઇપ-ભૂલ ટાળવા ફરી ટાઇપ કર્યા નથી). દરેક ક્રમાંક 1–107 બરાબર એક વાર આવ્યો ✓. "અર્થ / ઓળખ" સ્તંભ અમારો લખેલો છે, પુસ્તકનો નથી. #89 "વિરોધી" ગુજરાતી વાંચન સૌથી ઓછું ચોક્કસ (English "Inverse" સ્પષ્ટ).</div>
+<div class="toc"><b>અનુક્રમણિકા</b><ol style="list-style:none;padding-left:0;margin:8px 0 0"><li><span class="n">1</span><a href="#sec1">પ્રકરણ 1 · પૂર્ણાંક સંખ્યાઓ</a></li><li><span class="n">2</span><a href="#sec2">પ્રકરણ 2 · અપૂર્ણાંક અને દશાંશ સંખ્યાઓ</a></li><li><span class="n">3</span><a href="#sec3">પ્રકરણ 3 · માહિતીનું નિયમન</a></li><li><span class="n">4</span><a href="#sec4">પ્રકરણ 4 · સાદાં સમીકરણ</a></li><li><span class="n">5</span><a href="#sec5">પ્રકરણ 5 · રેખા અને ખૂણા</a></li><li><span class="n">6</span><a href="#sec6">પ્રકરણ 6 · ત્રિકોણ અને તેના ગુણધર્મો</a></li><li><span class="n">7</span><a href="#sec7">ગૂંચવાતા શબ્દોની જોડ</a></li></ol></div>
+<div class="section-divider" id="sec1"><span class="n">1</span>પ્રકરણ 1 · પૂર્ણાંક સંખ્યાઓ</div><div class="src-note">સ્વાધ્યાયપોથી · પરિભાષિક શબ્દો (પાન 50–51) · 12 શબ્દ</div>
+<p class="src-note">નોટ્સમાં આ પ્રકરણ ખોલો: <a href="../Chapter%20Notes/Ch01%20Integers.html#p9" target="integersChapterNotes">પ્રકરણ 1 · સારાંશ</a></p><div class="tblwrap"><table><tr><th>#</th><th>ગુજરાતી</th><th>English</th><th>અર્થ / ઓળખ</th></tr><tr><td class="rowlabel">23</td><td><b>ઋણ પૂર્ણાંક</b></td><td>Negative Integer</td><td>0 થી નાના પૂર્ણાંક: (−1), (−2), …</td></tr><tr><td class="rowlabel">46</td><td><b>ધન પૂર્ણાંક</b></td><td>Positive Integer</td><td>0 થી મોટા પૂર્ણાંક: 1, 2, 3, …</td></tr><tr><td class="rowlabel">54</td><td><b>પૂર્ણાંક સંખ્યાઓ</b></td><td>Integers</td><td>પ્રકરણ 1; …, (−2), (−1), 0, 1, 2, …</td></tr><tr><td class="rowlabel">95</td><td><b>સંખ્યારેખા</b></td><td>Number Line</td><td>પૂર્ણાંક દર્શાવતી સીધી રેખા</td></tr><tr><td class="rowlabel">29</td><td><b>ક્રમનો ગુણધર્મ</b></td><td>Commutative Property</td><td>a + b = b + a  અને  a × b = b × a</td></tr><tr><td class="rowlabel">30</td><td><b>ક્રમનો નિયમ</b></td><td>Commutative Property</td><td>ઉપરનો જ ગુણધર્મ — બીજું નામ (Commutative)</td></tr><tr><td class="rowlabel">41</td><td><b>જૂથનો ગુણધર્મ</b></td><td>Associative Property</td><td>(a + b) + c = a + (b + c);  (a × b) × c = a × (b × c)</td></tr><tr><td class="rowlabel">88</td><td><b>વિભાજનનો ગુણધર્મ</b></td><td>Distributive Property</td><td>a × (b + c) = a × b + a × c</td></tr><tr><td class="rowlabel">32</td><td><b>ગુણાકારની તટસ્થ સંખ્યા</b></td><td>Multiplicative Identity</td><td>1 — a × 1 = a</td></tr><tr><td class="rowlabel">102</td><td><b>સરવાળાની તટસ્થ સંખ્યા</b></td><td>Additive Identity</td><td>0 — a + 0 = a</td></tr><tr><td class="rowlabel">89</td><td><b>વિરોધી</b></td><td>Inverse</td><td>a + (−a) = 0 — (−a) એ a નો સરવાળાનો વિરોધી</td></tr><tr><td class="rowlabel">107</td><td><b>સ્થાનકિંમત</b></td><td>Place Value</td><td>અંકની સ્થાન પ્રમાણે કિંમત</td></tr></table></div><div class="section-divider" id="sec2"><span class="n">2</span>પ્રકરણ 2 · અપૂર્ણાંક અને દશાંશ સંખ્યાઓ</div><div class="src-note">સ્વાધ્યાયપોથી · પરિભાષિક શબ્દો (પાન 50–51) · 21 શબ્દ</div>
+<p class="src-note">નોટ્સમાં આ પ્રકરણ ખોલો: <a href="../Chapter%20Notes/Ch02%20Fractions%20and%20Decimals.html#p7" target="fractionsChapterNotes">પ્રકરણ 2 · સારાંશ</a></p><div class="tblwrap"><table><tr><th>#</th><th>ગુજરાતી</th><th>English</th><th>અર્થ / ઓળખ</th></tr><tr><td class="rowlabel">10</td><td><b>અપૂર્ણાંક</b></td><td>Fraction</td><td>પૂર્ણનો ભાગ — અંશ ÷ છેદ</td></tr><tr><td class="rowlabel">11</td><td><b>અપૂર્ણાંક અને દશાંશ સંખ્યાઓ</b></td><td>Fractions and Decimals</td><td>પ્રકરણ 2નું નામ</td></tr><tr><td class="rowlabel">14</td><td><b>અશુદ્ધ</b></td><td>Improper</td><td>અંશ છેદથી મોટો કે સરખો, દા.ત. <span class="fr"><span>7</span><span>4</span></span></td></tr><tr><td class="rowlabel">94</td><td><b>શુદ્ધ</b></td><td>Proper</td><td>અંશ છેદથી નાનો, દા.ત. <span class="fr"><span>3</span><span>4</span></span></td></tr><tr><td class="rowlabel">73</td><td><b>મિશ્ર</b></td><td>Mixed</td><td>પૂર્ણ + અપૂર્ણ ભાગ, દા.ત. 3<span class="fr"><span>1</span><span>2</span></span></td></tr><tr><td class="rowlabel">92</td><td><b>વ્યસ્ત</b></td><td>Reciprocal</td><td>ઊંધો અપૂર્ણાંક — <span class="fr"><span>a</span><span>b</span></span> નો <span class="fr"><span>b</span><span>a</span></span>; ગુણાકાર 1</td></tr><tr><td class="rowlabel">8</td><td><b>અતિસંક્ષિપ્ત સ્વરૂપ</b></td><td>Simplification Form</td><td>અપૂર્ણાંકનું સૌથી સાદું રૂપ (અંશ-છેદનો સામાન્ય અવયવ 1)</td></tr><tr><td class="rowlabel">105</td><td><b>સાદું રૂપ</b></td><td>Simplification</td><td>ક્રિયા કરી મળતું ટૂંકું રૂપ</td></tr><tr><td class="rowlabel">74</td><td><b>મોટી સંખ્યા</b></td><td>Greater Number</td><td>બેમાંથી મોટી સંખ્યા</td></tr><tr><td class="rowlabel">52</td><td><b>પાંચમો ભાગ</b></td><td>One Fifth</td><td><span class="fr"><span>1</span><span>5</span></span></td></tr><tr><td class="rowlabel">61</td><td><b>બેગણા</b></td><td>Two Times</td><td>2 × (એક સંખ્યા)</td></tr><tr><td class="rowlabel">43</td><td><b>ત્રણ ગણા</b></td><td>Three Times</td><td>3 × (એક સંખ્યા)</td></tr><tr><td class="rowlabel">38</td><td><b>ચાર ગણા</b></td><td>Four Times</td><td>4 × (એક સંખ્યા)</td></tr><tr><td class="rowlabel">25</td><td><b>કિગ્રા</b></td><td>kg</td><td>કિલોગ્રામ; 1 કિગ્રા = 1000 ગ્રામ</td></tr><tr><td class="rowlabel">34</td><td><b>ગ્રામ</b></td><td>Gram</td><td>વજનનો એકમ; 1000 ગ્રામ = 1 કિગ્રા</td></tr><tr><td class="rowlabel">72</td><td><b>મિલીલિટર</b></td><td>ml (Millilitre)</td><td>1000 મિલી = 1 લિટર</td></tr><tr><td class="rowlabel">84</td><td><b>લિટર</b></td><td>l (Litre)</td><td>પ્રવાહીનો એકમ</td></tr><tr><td class="rowlabel">85</td><td><b>વજન</b></td><td>Weight</td><td>ભારનું માપ (કિગ્રા, ગ્રામ)</td></tr><tr><td class="rowlabel">83</td><td><b>લંબાઈ</b></td><td>Length</td><td>એક છેડેથી બીજા છેડા સુધીનું માપ</td></tr><tr><td class="rowlabel">5</td><td><b>અંતર</b></td><td>Distance</td><td>બે બિંદુ વચ્ચેની લંબાઈ</td></tr><tr><td class="rowlabel">47</td><td><b>નિયમિત બહુકોણ</b></td><td>Regular Polygon</td><td>બધી બાજુ અને બધા ખૂણા સરખા (સમબાજુ ત્રિકોણ, ચોરસ)</td></tr></table></div><div class="section-divider" id="sec3"><span class="n">3</span>પ્રકરણ 3 · માહિતીનું નિયમન</div><div class="src-note">સ્વાધ્યાયપોથી · પરિભાષિક શબ્દો (પાન 50–51) · 20 શબ્દ</div>
+<p class="src-note">નોટ્સમાં આ પ્રકરણ ખોલો: <a href="../Chapter%20Notes/Ch03%20Data%20Handling.html#p6" target="dataChapterNotes">પ્રકરણ 3 · સારાંશ</a></p><div class="tblwrap"><table><tr><th>#</th><th>ગુજરાતી</th><th>English</th><th>અર્થ / ઓળખ</th></tr><tr><td class="rowlabel">71</td><td><b>માહિતીનું નિયમન</b></td><td>Data Handling</td><td>પ્રકરણ 3નું નામ</td></tr><tr><td class="rowlabel">70</td><td><b>માહિતી</b></td><td>Data</td><td>અવલોકનોનો સમૂહ</td></tr><tr><td class="rowlabel">13</td><td><b>અવલોકન</b></td><td>Observation</td><td>માહિતીમાં મેળવેલી એક કિંમત</td></tr><tr><td class="rowlabel">57</td><td><b>પ્રાપ્તાંક</b></td><td>Value of Observation</td><td>અવલોકનની કિંમત</td></tr><tr><td class="rowlabel">16</td><td><b>આવૃત્તિ-વિતરણ</b></td><td>Frequency Distribution</td><td>દરેક અવલોકન કેટલી વાર આવ્યું તેનું કોષ્ટક</td></tr><tr><td class="rowlabel">22</td><td><b>ઊતરતો ક્રમ</b></td><td>Descending Order</td><td>મોટાથી નાના ક્રમમાં</td></tr><tr><td class="rowlabel">35</td><td><b>ચડતો ક્રમ</b></td><td>Ascending Order</td><td>નાનાથી મોટા ક્રમમાં</td></tr><tr><td class="rowlabel">1</td><td><b>અંકગણિતીય સરાસરી</b></td><td>Arithmetic Mean</td><td>બધાં અવલોકનોનો સરવાળો ÷ અવલોકનોની સંખ્યા (= મધ્યક)</td></tr><tr><td class="rowlabel">103</td><td><b>સરાસરી</b></td><td>Average</td><td>બધા અવલોકનોની સરેરાશ (= મધ્યક)</td></tr><tr><td class="rowlabel">64</td><td><b>મધ્યક</b></td><td>Mean</td><td>સરવાળો ÷ સંખ્યા</td></tr><tr><td class="rowlabel">68</td><td><b>મધ્યસ્થ</b></td><td>Median</td><td>ક્રમમાં બરાબર વચ્ચેનું અવલોકન</td></tr><tr><td class="rowlabel">59</td><td><b>બહુલક</b></td><td>Mode</td><td>સૌથી વધુ વાર આવતું અવલોકન</td></tr><tr><td class="rowlabel">90</td><td><b>વિસ્તાર</b></td><td>Range</td><td>મહત્તમ − ન્યૂનતમ</td></tr><tr><td class="rowlabel">67</td><td><b>મધ્યવર્તી સ્થિતિનું માપ</b></td><td>Measure of Central Tendency</td><td>માહિતીનું કેન્દ્ર બતાવતાં માપ — મધ્યક, મધ્યસ્થ, બહુલક</td></tr><tr><td class="rowlabel">69</td><td><b>મહત્તમ</b></td><td>Highest</td><td>સૌથી મોટું અવલોકન</td></tr><tr><td class="rowlabel">48</td><td><b>ન્યૂનતમ</b></td><td>Lowest</td><td>સૌથી નાનું અવલોકન</td></tr><tr><td class="rowlabel">82</td><td><b>લંબ આલેખ</b></td><td>Bar Graph</td><td>સ્તંભોથી માહિતી; ઊંચાઈ કિંમતના પ્રમાણમાં</td></tr><tr><td class="rowlabel">45</td><td><b>દ્વિ-લંબ આલેખ</b></td><td>Double Bar Graph</td><td>દરેક નામ પાસે બે સ્તંભ — બે માહિતીની સરખામણી</td></tr><tr><td class="rowlabel">55</td><td><b>પ્રમાણમાપ</b></td><td>Scale</td><td>આલેખમાં 1 સેમી = કેટલી કિંમત</td></tr><tr><td class="rowlabel">20</td><td><b>ઊંચાઈ</b></td><td>Height</td><td>ઉપર તરફનું માપ; આલેખમાં સ્તંભની ઊંચાઈ = કિંમત ÷ પ્રમાણમાપ</td></tr></table></div><div class="section-divider" id="sec4"><span class="n">4</span>પ્રકરણ 4 · સાદાં સમીકરણ</div><div class="src-note">સ્વાધ્યાયપોથી · પરિભાષિક શબ્દો (પાન 50–51) · 9 શબ્દ</div>
+<p class="src-note">નોટ્સમાં આ પ્રકરણ ખોલો: <a href="../Chapter%20Notes/Ch04%20Simple%20Equations.html#p6" target="equationsChapterNotes">પ્રકરણ 4 · સારાંશ</a></p><div class="tblwrap"><table><tr><th>#</th><th>ગુજરાતી</th><th>English</th><th>અર્થ / ઓળખ</th></tr><tr><td class="rowlabel">104</td><td><b>સાદાં સમીકરણ</b></td><td>Simple Equations</td><td>પ્રકરણ 4નું નામ</td></tr><tr><td class="rowlabel">37</td><td><b>ચલ</b></td><td>Variable</td><td>જેની કિંમત બદલાઈ શકે તે (x, y)</td></tr><tr><td class="rowlabel">18</td><td><b>ઉકેલ</b></td><td>Solution</td><td>સમીકરણને સાચું બનાવતી ચલની કિંમત</td></tr><tr><td class="rowlabel">87</td><td><b>વિધાન</b></td><td>Statement</td><td>ખરું કે ખોટું કહી શકાય તેવું વાક્ય</td></tr><tr><td class="rowlabel">96</td><td><b>સમતા</b></td><td>Equality</td><td>બંને બાજુ સરખી (=)</td></tr><tr><td class="rowlabel">101</td><td><b>સમીકરણ સ્વરૂપ</b></td><td>Equation Form</td><td>વિધાનને સમીકરણ તરીકે લખવું</td></tr><tr><td class="rowlabel">42</td><td><b>તફાવત</b></td><td>Difference</td><td>બાદબાકીનો જવાબ — મોટું − નાનું</td></tr><tr><td class="rowlabel">28</td><td><b>કોયડો</b></td><td>Puzzle</td><td>ઉકેલ શોધવાનો સવાલ; શાબ્દિક દાખલો</td></tr><tr><td class="rowlabel">56</td><td><b>પ્રવૃત્તિ</b></td><td>Activity</td><td>જાતે કરવાનું કાર્ય</td></tr></table></div><div class="section-divider" id="sec5"><span class="n">5</span>પ્રકરણ 5 · રેખા અને ખૂણા</div><div class="src-note">સ્વાધ્યાયપોથી · પરિભાષિક શબ્દો (પાન 50–51) · 26 શબ્દ</div>
+<p class="src-note">નોટ્સમાં આ પ્રકરણ ખોલો: <a href="../Chapter%20Notes/Ch05%20Lines%20and%20Angles.html#p6" target="anglesChapterNotes">પ્રકરણ 5 · સારાંશ</a></p><div class="tblwrap"><table><tr><th>#</th><th>ગુજરાતી</th><th>English</th><th>અર્થ / ઓળખ</th></tr><tr><td class="rowlabel">76</td><td><b>રેખા અને ખૂણા</b></td><td>Lines and Angles</td><td>પ્રકરણ 5નું નામ</td></tr><tr><td class="rowlabel">75</td><td><b>રેખા</b></td><td>Line</td><td>બંને તરફ અનંત જતી સીધી રેખા</td></tr><tr><td class="rowlabel">26</td><td><b>કિરણ</b></td><td>Ray</td><td>એક છેડેથી શરૂ થઈ એક બાજુ અનંત જતી સીધી રેખા</td></tr><tr><td class="rowlabel">77</td><td><b>રેખાખંડ</b></td><td>Line Segment</td><td>બે છેડાવાળો સીધી રેખાનો ભાગ (માપી શકાય)</td></tr><tr><td class="rowlabel">66</td><td><b>મધ્યબિંદુ</b></td><td>Midpoint</td><td>રેખાખંડનું બરાબર વચ્ચેનું બિંદુ</td></tr><tr><td class="rowlabel">62</td><td><b>ભાગ</b></td><td>Part</td><td>આખાનો ટુકડો</td></tr><tr><td class="rowlabel">31</td><td><b>ખૂણો</b></td><td>Angle</td><td>બે કિરણ એક બિંદુએ મળે ત્યારે બને; માપ અંશ (°) માં</td></tr><tr><td class="rowlabel">63</td><td><b>ભુજ</b></td><td>Arm</td><td>ખૂણાની બે કિરણ-બાજુ</td></tr><tr><td class="rowlabel">19</td><td><b>ઉભયબિંદુ</b></td><td>Common end Point</td><td>બે કિરણ/રેખાખંડનું સામાન્ય અંતિમ બિંદુ (શિરોબિંદુ)</td></tr><tr><td class="rowlabel">24</td><td><b>કાટકોણ</b></td><td>Right Angle</td><td>90° નો ખૂણો</td></tr><tr><td class="rowlabel">79</td><td><b>લઘુકોણ</b></td><td>Acute Angle</td><td>0° થી મોટો, 90° થી નાનો</td></tr><tr><td class="rowlabel">33</td><td><b>ગુરુકોણ</b></td><td>Obtuse Angle</td><td>90° થી મોટો અને 180° થી નાનો</td></tr><tr><td class="rowlabel">80</td><td><b>લંબ</b></td><td>Perpendicular</td><td>90° ખૂણે મળતી રેખા</td></tr><tr><td class="rowlabel">81</td><td><b>લંબ અંતર</b></td><td>Perpendicular Distance</td><td>બિંદુથી રેખા સુધીનું સૌથી ટૂંકું અંતર — લંબ દ્વારા</td></tr><tr><td class="rowlabel">27</td><td><b>કોટિકોણ</b></td><td>Complementary Angle</td><td>જેમનો સરવાળો 90° હોય તે બે ખૂણા</td></tr><tr><td class="rowlabel">53</td><td><b>પૂરકકોણ</b></td><td>Supplementary Angle</td><td>જેમનો સરવાળો 180° હોય તે બે ખૂણા</td></tr><tr><td class="rowlabel">17</td><td><b>આસન્નકોણ</b></td><td>Adjacent Angle</td><td>સામાન્ય શિરોબિંદુ અને સામાન્ય ભુજવાળા, પાસેના ખૂણા</td></tr><tr><td class="rowlabel">51</td><td><b>પાસપાસેના</b></td><td>Adjacent</td><td>બાજુ-બાજુમાં આવેલા</td></tr><tr><td class="rowlabel">78</td><td><b>રૈખિક જોડ</b></td><td>Linear Pair</td><td>પાસેના ખૂણા જેમનો સરવાળો 180° (બાહ્ય ભુજ સુરેખ)</td></tr><tr><td class="rowlabel">12</td><td><b>અભિકોણ</b></td><td>Vertically Opposite Angle</td><td>છેદતી બે રેખાથી બનતા સામસામેના ખૂણા; હંમેશાં સરખા</td></tr><tr><td class="rowlabel">39</td><td><b>છેદવું</b></td><td>Intersect</td><td>એકબીજાને કાપવું — રેખાઓ એક બિંદુએ મળે</td></tr><tr><td class="rowlabel">40</td><td><b>છેદિકા</b></td><td>Transversal</td><td>બે કે વધુ રેખાઓને જુદાં બિંદુએ છેદતી રેખા</td></tr><tr><td class="rowlabel">3</td><td><b>અંતઃયુગ્મકોણ</b></td><td>Alternate Interior Angle</td><td>છેદિકાની બે બાજુ, બે રેખાઓની વચ્ચેના ઊલટી બાજુના ખૂણાની જોડ; સમાંતર રેખામાં સરખા</td></tr><tr><td class="rowlabel">9</td><td><b>અનુકોણ</b></td><td>Corresponding Angle</td><td>છેદિકાની એક જ બાજુ, સરખા સ્થાનના ખૂણા; સમાંતર રેખામાં સરખા</td></tr><tr><td class="rowlabel">100</td><td><b>સમાંતર રેખા</b></td><td>Parallel Line</td><td>સરખા અંતરે રહેલી, ક્યારેય ન મળતી રેખાઓ</td></tr><tr><td class="rowlabel">49</td><td><b>પરસ્પર</b></td><td>Each Other</td><td>એકબીજાને — દા.ત. વિકર્ણ પરસ્પર લંબ</td></tr></table></div><div class="section-divider" id="sec6"><span class="n">6</span>પ્રકરણ 6 · ત્રિકોણ અને તેના ગુણધર્મો</div><div class="src-note">સ્વાધ્યાયપોથી · પરિભાષિક શબ્દો (પાન 50–51) · 19 શબ્દ</div>
+<p class="src-note">નોટ્સમાં આ પ્રકરણ ખોલો: <a href="../Chapter%20Notes/Ch06%20The%20Triangle%20and%20its%20Properties.html#p7" target="triangleChapterNotes">પ્રકરણ 6 · સારાંશ</a></p><div class="tblwrap"><table><tr><th>#</th><th>ગુજરાતી</th><th>English</th><th>અર્થ / ઓળખ</th></tr><tr><td class="rowlabel">44</td><td><b>ત્રિકોણ અને તેના ગુણધર્મો</b></td><td>The Triangle and its Properties</td><td>પ્રકરણ 6નું નામ</td></tr><tr><td class="rowlabel">2</td><td><b>અંગ</b></td><td>Part</td><td>ત્રિકોણનાં છ અંગ = ત્રણ બાજુ + ત્રણ ખૂણા</td></tr><tr><td class="rowlabel">60</td><td><b>બાજુ</b></td><td>Side</td><td>આકૃતિનો રેખાખંડ-ભાગ</td></tr><tr><td class="rowlabel">93</td><td><b>શિરોબિંદુ</b></td><td>Vertex</td><td>બે બાજુ મળતાં બિંદુ</td></tr><tr><td class="rowlabel">6</td><td><b>અંતર્ગત ખૂણો</b></td><td>Included Angle</td><td>બે બાજુની વચ્ચેનો ખૂણો</td></tr><tr><td class="rowlabel">7</td><td><b>અંતર્ગત બાજુ</b></td><td>Included Side</td><td>બે ખૂણાની વચ્ચેની બાજુ</td></tr><tr><td class="rowlabel">106</td><td><b>સામેની બાજુ</b></td><td>Opposite Side</td><td>ખૂણાની સામેની બાજુ</td></tr><tr><td class="rowlabel">36</td><td><b>ચતુષ્કોણ</b></td><td>Quadrilateral</td><td>ચાર બાજુવાળી બંધ આકૃતિ</td></tr><tr><td class="rowlabel">86</td><td><b>વિકર્ણ</b></td><td>Diagonal</td><td>ચતુષ્કોણના સામસામેના શિરોબિંદુ જોડતો રેખાખંડ</td></tr><tr><td class="rowlabel">50</td><td><b>પરિમિતિ</b></td><td>Perimeter</td><td>બધી બાજુઓની લંબાઈનો સરવાળો</td></tr><tr><td class="rowlabel">99</td><td><b>સમબાજુ ત્રિકોણ</b></td><td>Equilateral Triangle</td><td>ત્રણે બાજુ સરખી; દરેક ખૂણો 60°</td></tr><tr><td class="rowlabel">97</td><td><b>સમદ્વિબાજુ ત્રિકોણ</b></td><td>Isosceles Triangle</td><td>બે બાજુ સરખી; સામેના ખૂણા સરખા</td></tr><tr><td class="rowlabel">98</td><td><b>સમબાજુ ચતુષ્કોણ</b></td><td>Rhombus</td><td>ચારેય બાજુ સરખી; વિકર્ણ એકબીજાને લંબ</td></tr><tr><td class="rowlabel">21</td><td><b>ઊંડું</b></td><td>Depth</td><td>નીચે તરફનું માપ (દા.ત. ભોંયરું, ઋણ ઊંડાઈ)</td></tr><tr><td class="rowlabel">91</td><td><b>વેધ</b></td><td>Altitude</td><td>શિરોબિંદુથી સામેની બાજુ પર દોરેલો લંબ</td></tr><tr><td class="rowlabel">65</td><td><b>મધ્યગા</b></td><td>Median</td><td>શિરોબિંદુને સામેની બાજુના મધ્યબિંદુ સાથે જોડતો રેખાખંડ (છાપેલ English "Median", મધ્યસ્થ જેવું જ — અહીં ત્રિકોણની મધ્યગા)</td></tr><tr><td class="rowlabel">58</td><td><b>બહિષ્કોણ</b></td><td>Exterior Angle</td><td>ત્રિકોણની બાજુ લંબાવતાં બહાર બનતો ખૂણો</td></tr><tr><td class="rowlabel">4</td><td><b>અંતઃસંમુખકોણ</b></td><td>Interior Opposite Angle</td><td>બહિષ્કોણથી દૂરના ત્રિકોણના બે અંદરના ખૂણા; બહિષ્કોણ = તેમનો સરવાળો</td></tr><tr><td class="rowlabel">15</td><td><b>અસમતા</b></td><td>Inequality</td><td>સરખા ન હોવાનો સંબંધ (&gt;, &lt;)</td></tr></table></div><div class="tools" id="sec7"><h3><span class="n" style="font-family:var(--font-mono);color:var(--accent);margin-right:8px">7</span>ગૂંચવાતા શબ્દોની જોડ</h3><ul><li><b>કોટિકોણ</b> = 90° ; <b>પૂરકકોણ</b> = 180°.</li><li><b>અભિકોણ</b> = સામસામેના (સરખા); <b>આસન્નકોણ</b> = પાસેના.</li><li><b>અનુકોણ</b> = છેદિકાની એક બાજુ, સરખા સ્થાને; <b>અંતઃયુગ્મકોણ</b> = વચ્ચે, ઊલટી બાજુ.</li><li><b>મધ્યસ્થ</b> (માહિતીનું વચ્ચેનું અવલોકન) ≠ <b>મધ્યગા</b> (ત્રિકોણનો રેખાખંડ) — છાપેલા English માં બંને "Median".</li><li><b>મધ્યક</b> = <b>સરાસરી</b> = <b>અંકગણિતીય સરાસરી</b> (Mean / Average).</li><li><b>ક્રમનો ગુણધર્મ</b> = <b>ક્રમનો નિયમ</b> (Commutative); <b>જૂથ</b> = કૌંસ બદલાય.</li><li><b>શુદ્ધ</b> અપૂર્ણાંક: અંશ &lt; છેદ; <b>અશુદ્ધ</b>: અંશ ≥ છેદ.</li></ul></div>
+</div>

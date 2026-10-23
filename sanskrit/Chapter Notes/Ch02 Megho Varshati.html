@@ -1,0 +1,184 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>मेघो वर्षति — Chapter Notes</title>
+<style>:root{
+  --bg:#FBF9F4; --surface:#FFFFFF; --surface-2:#F3F0E7;
+  --ink:#241F16; --ink-2:#5B5647; --ink-3:#8C8672;
+  --line:#E4DFD0;
+  --accent:#8B5E34; --accent-ink:#3E2A17; --accent-bg:#F1E4D3;
+  --formula:#1F4E42; --formula-bg:#E3F0EA; --formula-line:#9FC6B7;
+  --exam:#7A2E2E; --exam-bg:#F6E4E1; --exam-line:#DBA9A4;
+  --mistake:#8A5A00; --mistake-bg:#FDF1D9; --mistake-line:#E9C877;
+  --check:#2E4E7A; --check-bg:#E4ECF6; --check-line:#A9C0DB;
+  --why:#5B5647; --why-bg:#F3F0E7; --why-line:#DAD4C2;
+  --font-display:'Fraunces','Noto Sans Gujarati',Georgia,serif;
+  --font-body:'Source Sans 3','Noto Sans Gujarati',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+    --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+    --line:#3A3428;
+    --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+    --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+    --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+    --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+    --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+    --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+  --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+  --line:#3A3428;
+  --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+  --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+  --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+  --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+  --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+  --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.75;padding:0 16px;font-size:16px}
+.wrap{max-width:760px;margin:0 auto;padding-block:32px 80px}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;text-wrap:balance;color:var(--ink)}
+h1{font-size:clamp(28px,6vw,38px);margin:0 0 6px}
+.subtitle{color:var(--ink-2);font-size:15px;margin:0 0 28px}
+h2{font-size:24px;margin:0 0 4px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+h2 .num{color:var(--accent);font-family:var(--font-mono);font-size:15px;font-weight:600}
+.part-why{color:var(--ink-2);font-size:14.5px;margin:0 0 18px;font-style:italic}
+h3{font-size:18px;margin:30px 0 10px;color:var(--accent-ink)}
+p{margin:0 0 12px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:36px}
+.legend-item{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-2)}
+.dot{width:10px;height:10px;border-radius:3px;flex:none}
+.dot.formula{background:var(--formula)} .dot.exam{background:var(--exam)} .dot.mistake{background:var(--mistake)}
+.dot.check{background:var(--check)} .dot.concept{background:var(--accent)} .dot.why{background:var(--why)}
+.part{padding:32px 0;border-top:1px solid var(--line)}
+.part:first-of-type{border-top:none}
+.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:32px}
+.toc ol{margin:8px 0 0;padding-left:0;list-style:none}
+.toc li{margin-bottom:5px;font-size:14.5px}
+.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ink-3)}
+.toc .n{font-family:var(--font-mono);color:var(--accent);font-size:13px;font-weight:600;margin-right:6px}
+.box{border-radius:12px;padding:14px 18px;margin:14px 0;border:1px solid;font-size:15px}
+.box .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;display:block}
+.formula-box{background:var(--formula-bg);border-color:var(--formula-line)}
+.formula-box .label{color:var(--formula)}
+.formula-box .f{font-family:var(--font-mono);font-size:18px;color:var(--formula);font-weight:600;margin:4px 0}
+.formula-box .meaning{color:var(--ink-2);font-size:14px}
+.concept-box{background:var(--surface);border-color:var(--line);border-left:3px solid var(--accent)}
+.concept-box .label{color:var(--accent)}
+.exam-box{background:var(--exam-bg);border-color:var(--exam-line)} .exam-box .label{color:var(--exam)}
+.mistake-box{background:var(--mistake-bg);border-color:var(--mistake-line)} .mistake-box .label{color:var(--mistake)}
+.check-box{background:var(--check-bg);border-color:var(--check-line)} .check-box .label{color:var(--check)}
+.why-box{background:var(--why-bg);border-color:var(--why-line)} .why-box .label{color:var(--why)}
+.extra-box{background:var(--surface);border:1px dashed var(--ink-3)} .extra-box .label{color:var(--ink-3)}
+.parent-box{background:var(--accent-bg);border-color:var(--accent)} .parent-box .label{color:var(--accent-ink)}
+.outcome{background:var(--surface);border:1px solid var(--accent);border-radius:12px;padding:14px 18px;margin:0 0 16px}
+.outcome .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;display:block}
+.submap{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 6px}
+.submap span{background:var(--surface-2);border:1px solid var(--line);border-radius:20px;padding:4px 12px;font-size:12.5px;color:var(--ink-2)}
+.next-line{font-size:14px;color:var(--ink-2);margin-top:18px;padding-top:14px;border-top:1px dashed var(--line)}
+.next-line b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{padding:8px 10px;border:1px solid var(--line);text-align:center}
+th{background:var(--surface-2);font-weight:600;color:var(--ink-2);font-size:12.5px}
+td.rowlabel{text-align:left;color:var(--ink-2);font-weight:600;background:var(--surface-2)}
+td.l{text-align:left}
+.tblwrap{overflow-x:auto}
+.example{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:14px 0;font-size:15px}
+.example .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px;display:block}
+.example .step{margin:3px 0}
+.example .step b{color:var(--ink-2);font-weight:600}
+.mono{font-family:var(--font-mono)}
+.remember{background:var(--accent-bg);border:1px solid var(--accent);border-radius:12px;padding:16px 20px;margin:16px 0}
+.remember .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:8px;display:block}
+.remember ol{margin:0;padding-left:18px} .remember li{margin-bottom:5px}
+.badge{display:inline-block;font-size:11px;font-family:var(--font-mono);padding:2px 8px;border-radius:20px;background:var(--exam-bg);color:var(--exam);border:1px solid var(--exam-line);margin-left:6px;vertical-align:middle}
+.diagram{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px;margin:16px 0}
+.diagram svg{display:block;width:100%;height:auto}
+.diagram-cap{text-align:center;font-size:13px;color:var(--ink-3);margin-top:6px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:600px){.pair{grid-template-columns:1fr}}
+.pair .diagram{margin:6px 0}
+.jumpicon{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:var(--formula);color:var(--surface);text-decoration:none;font-size:11px;font-weight:700;vertical-align:middle;margin-left:4px}
+.src{font-size:12.5px;color:var(--ink-3)}
+</style>
+
+<div class="wrap">
+<h1>પાઠ 2 · मेघो वर्षति</h1>
+<p class="subtitle">ધોરણ 7 સંસ્કૃત (પ્રથમ સત્ર) · GSEB ગુજરાતી માધ્યમ · પાન 5–6</p>
+<div class="legend">
+<div class="legend-item"><span class="dot why"></span>કેમ / રોજિંદું ઉદાહરણ</div>
+<div class="legend-item"><span class="dot concept"></span>સમજવું જ પડે</div>
+<div class="legend-item"><span class="dot formula"></span>યાદ રાખવું — મુખ્ય મુદ્દો</div>
+<div class="legend-item"><span class="dot exam"></span>પરીક્ષામાં વારંવાર</div>
+<div class="legend-item"><span class="dot mistake"></span>સામાન્ય ભૂલ</div>
+<div class="legend-item"><span class="dot check"></span>જાતે ચકાસો</div>
+</div>
+<div class="toc">
+<b>પ્રકરણનો નકશો</b> — અંતિમ લક્ષ્ય: પાઠનો અનુવાદ, શબ્દાર્થ, વ્યાકરણ અને પરીક્ષાના જવાબ.
+<ol>
+<li><span class="n">00</span><a href="#intro">પાઠ એક નજરે</a> — કાવ્ય — વર્ષાગીત</li><li><span class="n">01</span><a href="#p1">પાઠ અને અનુવાદ</a> — વાક્ય / શ્લોક પ્રમાણે</li><li><span class="n">02</span><a href="#p2">શબ્દાર્થ</a> — ટિપ્પણી + ज्ञातव्यम्</li><li><span class="n">03</span><a href="#p3">વ્યાકરણ / ભાષાસજ્જતા</a> — આ પાઠમાં જે નિયમ દેખાય છે</li><li><span class="n">04</span><a href="#p4">પરીક્ષાના પ્રશ્નો</a> — નમૂનારૂપ પ્રશ્ન-જવાબ</li><li><span class="n">05</span><a href="#p5">સારાંશ</a></li>
+</ol>
+</div>
+
+<!-- ============ PART 00 ============ -->
+<div class="part" id="intro">
+<h2><span class="num">00</span>પાઠ એક નજરે</h2>
+<p class="part-why">શા માટે ભણવું: વરસાદથી ખેડૂત-ખેતર-પાકની સાંકળ: ક્રિયાપદ (-ति) ઓળખતાં શીખવતું ટૂંકું કાવ્ય; [2B] માં આ કાવ્યના શ્લોકના અનુવાદ પૂછાય.</p>
+<div class="outcome"><span class="label">આ પ્રકરણ પછી તમે</span>
+પાઠ વાંચી-બોલી શકશો, દરેક વાક્ય/શ્લોકનો ગુજરાતી અનુવાદ કહી શકશો, શબ્દાર્થ યાદ રાખી શકશો અને પરીક્ષાના પ્રશ્નોના જવાબ સંસ્કૃત-ગુજરાતીમાં લખી શકશો.</div><div class="tblwrap"><table><tr><th>વિગત</th><th>માહિતી</th></tr><tr><td class="rowlabel">પાઠ</td><td class="l">2. मेघो वर्षति — વાદળ વરસે છે</td></tr><tr><td class="rowlabel">પ્રકાર</td><td class="l">કાવ્ય — વર્ષાગીત</td></tr><tr><td class="rowlabel">કવિ / સ્રોત</td><td class="l">મહાબલેશ્વરભટ્ટ</td></tr><tr><td class="rowlabel">પાઠ્યપુસ્તક પાન</td><td class="l">પાન 5–6</td></tr></table></div><div class="concept-box box"><span class="label">‘मेघो वर्षति’ — શબ્દ કેવી રીતે જોડાયો?</span><p><b>मेघः + वर्षति → मेघो वर्षति</b> (પુસ્તકનું ‘વિશેષ’). <b>हलम् + अपि → हलमपि</b>. એટલે લખવામાં બે શબ્દ જોડાયેલા દેખાય, બોલવામાં સરળતા.</p></div><div class="concept-box box"><span class="label">કાવ્યની સાંકળ</span><p>વાદળ વરસે → પાણી વહે → ખેડૂત રાજી → બળદ-હળ → ખેડ → બીજ → પાક → સમૃદ્ધિ અને માનવકુળની વૃદ્ધિ. <b>દરેક પંક્તિ એક ક્રિયા</b> છે.</p></div>
+<div class="next-line">→ <b>આગળ:</b> અનુવાદ → શબ્દાર્થ → વ્યાકરણ → પરીક્ષાના પ્રશ્નો</div>
+</div>
+
+
+<!-- ============ PART 01 ============ -->
+<div class="part" id="p1">
+<h2><span class="num">01</span>પાઠ અને અનુવાદ</h2>
+<p class="part-why">શા માટે ભણવું: શ્લોકના અનુવાદ [2B] અને સંસ્કૃત વાક્યોનો ગુજરાતી અનુવાદ [4A] — બંને સીધા આના પર આધારિત છે.</p>
+<h3>કાવ્ય — પંક્તિ પ્રમાણે</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત</th><th>ગુજરાતી અનુવાદ</th></tr><tr><td class="rowlabel">मेघो वर्षति</td><td class="l">વાદળ વરસે છે,</td></tr><tr><td class="rowlabel">प्रवहति नीरम् ।</td><td class="l">પાણી વહે છે.</td></tr><tr><td class="rowlabel">तुष्यति कृषकः</td><td class="l">ખેડૂત સંતુષ્ટ (રાજી) થાય છે,</td></tr><tr><td class="rowlabel">गच्छति गोष्ठम् ॥</td><td class="l">(તે) પશુઓના વાડા તરફ જાય છે.</td></tr><tr><td class="rowlabel">नयति च वृषभं</td><td class="l">અને બળદને લઈ જાય છે,</td></tr><tr><td class="rowlabel">हलमपि वहति ।</td><td class="l">હળ પણ ઉપાડી જાય છે.</td></tr><tr><td class="rowlabel">कर्षति क्षेत्रं</td><td class="l">ખેતર ખેડે છે</td></tr><tr><td class="rowlabel">वपति च बीजम् ॥</td><td class="l">અને બીજ વાવે છે.</td></tr><tr><td class="rowlabel">रोहति सस्यं</td><td class="l">ધાન્ય (પાક) ઊગે છે,</td></tr><tr><td class="rowlabel">फलति प्रकामम् ।</td><td class="l">પુષ્કળ ફળે છે.</td></tr><tr><td class="rowlabel">भवति समृद्धिः</td><td class="l">સમૃદ્ધિ થાય છે</td></tr><tr><td class="rowlabel">मनुकुलवृद्धिः ॥</td><td class="l">અને માનવકુળની વૃદ્ધિ (આબાદી) થાય છે.</td></tr></table></div><p><b>નોંધ:</b> પુસ્તકમાં ‘मनुकुलवृद्धिः’ છપાયેલું છે — પરીક્ષામાં પુસ્તક મુજબ જ લખો. કવિ: <b>महाबलेश्वरभट्टः</b>.</p>
+<div class="next-line">→ <b>આગળ:</b> શબ્દાર્થ</div>
+</div>
+
+
+<!-- ============ PART 02 ============ -->
+<div class="part" id="p2">
+<h2><span class="num">02</span>શબ્દાર્થ</h2>
+<p class="part-why">શા માટે ભણવું: સંસ્કૃત શબ્દના અર્થ વિકલ્પોમાંથી શોધો [4C] — અર્થ યાદ હોય તો 5 ગુણ પાકા.</p>
+<h3>ટિપ્પણી — પાઠ્યપુસ્તકના શબ્દાર્થ</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત શબ્દ</th><th>ગુજરાતી અર્થ</th></tr><tr><td class="rowlabel">वर्षति</td><td class="l">વરસે છે</td></tr><tr><td class="rowlabel">प्रवहति</td><td class="l">વહે છે</td></tr><tr><td class="rowlabel">तुष्यति</td><td class="l">સંતુષ્ટ થાય છે</td></tr><tr><td class="rowlabel">कृषकः</td><td class="l">ખેડૂત</td></tr><tr><td class="rowlabel">गोष्ठम्</td><td class="l">પશુઓનો વાડો</td></tr><tr><td class="rowlabel">वृषभः</td><td class="l">બળદ</td></tr><tr><td class="rowlabel">कर्षति</td><td class="l">ખેડે છે</td></tr><tr><td class="rowlabel">क्षेत्रम्</td><td class="l">ખેતર</td></tr><tr><td class="rowlabel">वपति</td><td class="l">વાવે છે</td></tr><tr><td class="rowlabel">रोहति</td><td class="l">ઊગે છે</td></tr><tr><td class="rowlabel">सस्यम्</td><td class="l">ધાન્ય</td></tr><tr><td class="rowlabel">प्रकामम्</td><td class="l">પુષ્કળ</td></tr></table></div><h3>પાઠના બીજા શબ્દો (અર્થ અમારા, પાઠ પ્રમાણે)</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત શબ્દ</th><th>ગુજરાતી અર્થ</th></tr><tr><td class="rowlabel">मेघः</td><td class="l">વાદળ</td></tr><tr><td class="rowlabel">नीरम्</td><td class="l">પાણી</td></tr><tr><td class="rowlabel">नयति</td><td class="l">લઈ જાય છે</td></tr><tr><td class="rowlabel">हलम्</td><td class="l">હળ</td></tr><tr><td class="rowlabel">वहति</td><td class="l">ઉપાડે છે, વહન કરે છે</td></tr><tr><td class="rowlabel">बीजम्</td><td class="l">બીજ</td></tr><tr><td class="rowlabel">फलति</td><td class="l">ફળે છે</td></tr><tr><td class="rowlabel">समृद्धिः</td><td class="l">સમૃદ્ધિ</td></tr><tr><td class="rowlabel">भवति</td><td class="l">થાય છે</td></tr></table></div><h3>ज्ञातव्यम् (પુસ્તકમાંથી — જાણવા જેવું)</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત</th><th>ગુજરાતી</th></tr><tr><td class="rowlabel">श्रावणमासस्य पूर्णिमा</td><td class="l">શ્રાવણ મહિનાની પૂનમ — રક્ષાબંધન સાથે ‘સંસ્કૃત દિવસ’ તરીકે પણ મનાય છે</td></tr><tr><td class="rowlabel">रामायणम् तथा महाभारतम्</td><td class="l">આપણાં આર્ષ (ઋષિરચિત) મહાકાવ્યો તરીકે પ્રસિદ્ધ</td></tr><tr><td class="rowlabel">विलियमजोन्समहोदयः</td><td class="l">યુરોપમાં સંસ્કૃત ભાષાના અભ્યાસનો પ્રારંભ તેમણે કર્યો</td></tr></table></div>
+<div class="next-line">→ <b>આગળ:</b> વ્યાકરણ</div>
+</div>
+
+
+<!-- ============ PART 03 ============ -->
+<div class="part" id="p3">
+<h2><span class="num">03</span>વ્યાકરણ / ભાષાસજ્જતા</h2>
+<p class="part-why">શા માટે ભણવું: નિયમ સમજ્યા પછી નવાં વાક્યો જાતે બનાવી શકાય — રટવું ઓછું પડે.</p>
+<p><b>ક્રિયાપદ ઓળખવાની રીત:</b> કાવ્યનાં ઘણાં શબ્દો <b>-ति</b> થી પૂરા થાય છે — એ ક્રિયાપદ (વર્તમાનકાળ, ‘તે … છે/કરે છે’).</p><div class="tblwrap"><table><tr><th>ક્રિયાપદ</th><th>મૂળ ધાતુ</th><th>અર્થ</th></tr><tr><td class="rowlabel">वर्षति</td><td class="l">वृष्</td><td class="l">વરસે છે</td></tr><tr><td class="rowlabel">प्रवहति</td><td class="l">प्र + वह्</td><td class="l">વહે છે</td></tr><tr><td class="rowlabel">तुष्यति</td><td class="l">तुष्</td><td class="l">રાજી થાય છે</td></tr><tr><td class="rowlabel">गच्छति</td><td class="l">गम् (→ गच्छ)</td><td class="l">જાય છે</td></tr><tr><td class="rowlabel">नयति</td><td class="l">नी</td><td class="l">લઈ જાય છે</td></tr><tr><td class="rowlabel">कर्षति</td><td class="l">कृष्</td><td class="l">ખેડે છે</td></tr><tr><td class="rowlabel">वपति</td><td class="l">वप्</td><td class="l">વાવે છે</td></tr><tr><td class="rowlabel">रोहति</td><td class="l">रुह्</td><td class="l">ઊગે છે</td></tr><tr><td class="rowlabel">फलति</td><td class="l">फल्</td><td class="l">ફળે છે</td></tr><tr><td class="rowlabel">भवति</td><td class="l">भू</td><td class="l">થાય છે</td></tr></table></div><p><b>ટિપ:</b> કર્તા એક હોય તો -ति; ઘણા હોય તો -न्ति (પાઠ 3 માં: जनाः कुर्वन्ति).</p>
+<div class="next-line">→ <b>આગળ:</b> પરીક્ષાના પ્રશ્નો</div>
+</div>
+
+
+<!-- ============ PART 04 ============ -->
+<div class="part" id="p4">
+<h2><span class="num">04</span>પરીક્ષાના પ્રશ્નો</h2>
+<p class="part-why">શા માટે ભણવું: દરેક પ્રશ્ન-પ્રકારની પ્રૅક્ટિસ — પેપર જેવી જ રીતે.</p>
+<div class="why-box box"><span class="label">નોંધ</span>નીચેના પ્રશ્નો <b>અમે બનાવેલા નમૂના</b> છે (પાઠ્યપુસ્તકના સ્વાધ્યાયના પ્રશ્નો નથી). સ્વાધ્યાય-સ્વાધ્યાયપોથી-પ્રૅક્ટિસ બુકના જવાબ, તે ત્રણે મળ્યા પછી જ બનશે. પેપર-પદ્ધતિ (80 ગુણ): 1A વિકલ્પ [10] · 1B ✓/✗ [10] · 2A ખાલી જગ્યા [10] · 2B શ્લોકનો અનુવાદ [10] · 3A ગુજરાતીમાં જવાબ (ગમે તે 5) [10] · 3B સંસ્કૃતમાં જવાબ (ગમે તે 5) [10] · 4A અનુવાદ [10] · 4B સમાનાર્થી [5] · 4C અર્થ [5].</div><h3>1A · સાચો વિકલ્પ પસંદ કરો</h3><div class="tblwrap"><table><tr><th>પ્રશ્ન</th><th>વિકલ્પો</th><th>જવાબ</th></tr><tr><td class="rowlabel">‘वर्षति’ એટલે?</td><td class="l">(અ) વરસે છે &nbsp;·&nbsp; (બ) ઊગે છે &nbsp;·&nbsp; (ક) વાવે છે &nbsp;·&nbsp; (ડ) વહે છે</td><td class="l">વરસે છે</td></tr><tr><td class="rowlabel">‘वृषभः’ એટલે?</td><td class="l">(અ) બળદ &nbsp;·&nbsp; (બ) ખેડૂત &nbsp;·&nbsp; (ક) હળ &nbsp;·&nbsp; (ડ) ખેતર</td><td class="l">બળદ</td></tr><tr><td class="rowlabel">‘क्षेत्रम्’ એટલે?</td><td class="l">(અ) ખેતર &nbsp;·&nbsp; (બ) પાણી &nbsp;·&nbsp; (ક) ધાન્ય &nbsp;·&nbsp; (ડ) બીજ</td><td class="l">ખેતર</td></tr><tr><td class="rowlabel">‘सस्यम्’ એટલે?</td><td class="l">(અ) ધાન્ય &nbsp;·&nbsp; (બ) વાદળ &nbsp;·&nbsp; (ક) બળદ &nbsp;·&nbsp; (ડ) વાડો</td><td class="l">ધાન્ય</td></tr><tr><td class="rowlabel">‘प्रकामम्’ એટલે?</td><td class="l">(અ) પુષ્કળ &nbsp;·&nbsp; (બ) થોડું &nbsp;·&nbsp; (ક) ધીમે &nbsp;·&nbsp; (ડ) હંમેશાં</td><td class="l">પુષ્કળ</td></tr><tr><td class="rowlabel">‘गोष्ठम्’ એટલે?</td><td class="l">(અ) પશુઓનો વાડો &nbsp;·&nbsp; (બ) ખેતર &nbsp;·&nbsp; (ક) ઘર &nbsp;·&nbsp; (ડ) નદી</td><td class="l">પશુઓનો વાડો</td></tr></table></div><h3>1B · ✓ કે ✗ કરો</h3><div class="tblwrap"><table><tr><th>વિધાન</th><th>જવાબ</th></tr><tr><td class="rowlabel">કાવ્યના કવિ મહાબલેશ્વરભટ્ટ છે.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">‘कर्षति’ એટલે વાવે છે.</td><td class="l">✘ ખોટું</td></tr><tr><td class="rowlabel">‘वपति’ એટલે વાવે છે.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">‘तुष्यति’ એટલે સંતુષ્ટ થાય છે.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">કાવ્યના અંતે સમૃદ્ધિ અને માનવકુળની વૃદ્ધિ થાય છે.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">‘नीरम्’ એટલે બીજ.</td><td class="l">✘ ખોટું</td></tr></table></div><h3>2A · ખાલી જગ્યા પૂરો</h3><div class="tblwrap"><table><tr><th>વાક્ય</th><th>ખૂટતો શબ્દ</th></tr><tr><td class="rowlabel">____ वर्षति । (વાદળ)</td><td class="l">मेघः (મેઘો)</td></tr><tr><td class="rowlabel">प्रवहति ____ । (પાણી)</td><td class="l">नीरम्</td></tr><tr><td class="rowlabel">तुष्यति ____ । (ખેડૂત)</td><td class="l">कृषकः</td></tr><tr><td class="rowlabel">कर्षति ____ । (ખેતર)</td><td class="l">क्षेत्रम्</td></tr><tr><td class="rowlabel">फलति ____ । (પુષ્કળ)</td><td class="l">प्रकामम्</td></tr></table></div><h3>2B · શ્લોકનો અનુવાદ</h3><p>ઉપરના <a href="#p1">‘પાઠ અને અનુવાદ’</a> વિભાગમાં દરેક શ્લોક/પંક્તિનો અનુવાદ છે — આ વિભાગ મોઢે કરો; પરીક્ષામાં શ્લોક આપીને તેનો ગુજરાતી અર્થ પૂછાય છે.</p><h3>3A · એક વાક્યમાં જવાબ (ગુજરાતીમાં)</h3><div class="example"><span class="label">એક વાક્ય</span><div class="step"><b>પ્ર.</b> કાવ્યના કવિ કોણ છે?</div><div class="step"><b>જ.</b> મહાબલેશ્વરભટ્ટ.</div><div class="step"><b>પ્ર.</b> વાદળ વરસે ત્યારે શું વહે છે?</div><div class="step"><b>જ.</b> પાણી.</div><div class="step"><b>પ્ર.</b> ખેડૂત બળદ સાથે શું ઉપાડી જાય છે?</div><div class="step"><b>જ.</b> હળ.</div><div class="step"><b>પ્ર.</b> બીજ વાવ્યા પછી શું થાય છે?</div><div class="step"><b>જ.</b> ધાન્ય (પાક) ઊગે છે અને પુષ્કળ ફળે છે.</div><div class="step"><b>પ્ર.</b> કાવ્યના અંતે શું વધે છે?</div><div class="step"><b>જ.</b> સમૃદ્ધિ અને માનવકુળની વૃદ્ધિ.</div></div><h3>3B · એક વાક્યમાં જવાબ (સંસ્કૃતમાં)</h3><div class="example"><span class="label">સંસ્કૃતમાં</span><div class="step"><b>પ્ર.</b> कः तुष्यति ?</div><div class="step"><b>જ.</b> <b>कृषकः तुष्यति ।</b><br><span style="color:var(--ink-3)">(અર્થ: ખેડૂત રાજી થાય છે.)</span></div><div class="step"><b>પ્ર.</b> कृषकः किं कर्षति ?</div><div class="step"><b>જ.</b> <b>कृषकः क्षेत्रं कर्षति ।</b><br><span style="color:var(--ink-3)">(અર્થ: ખેડૂત ખેતર ખેડે છે.)</span></div><div class="step"><b>પ્ર.</b> कः वृषभं नयति ?</div><div class="step"><b>જ.</b> <b>कृषकः वृषभं नयति ।</b><br><span style="color:var(--ink-3)">(અર્થ: ખેડૂત બળદને લઈ જાય છે.)</span></div><div class="step"><b>પ્ર.</b> किं रोहति ?</div><div class="step"><b>જ.</b> <b>सस्यं रोहति ।</b><br><span style="color:var(--ink-3)">(અર્થ: ધાન્ય ઊગે છે.)</span></div><div class="step"><b>પ્ર.</b> का भवति ?</div><div class="step"><b>જ.</b> <b>समृद्धिः भवति ।</b><br><span style="color:var(--ink-3)">(અર્થ: સમૃદ્ધિ થાય છે.)</span></div></div><h3>4A · સંસ્કૃત વાક્યોનો ગુજરાતીમાં અનુવાદ</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત વાક્ય</th><th>ગુજરાતી</th></tr><tr><td class="rowlabel">मेघः वर्षति ।</td><td class="l">વાદળ વરસે છે.</td></tr><tr><td class="rowlabel">कृषकः बीजं वपति ।</td><td class="l">ખેડૂત બીજ વાવે છે.</td></tr><tr><td class="rowlabel">नीरं प्रवहति ।</td><td class="l">પાણી વહે છે.</td></tr><tr><td class="rowlabel">वृषभः हलं वहति ।</td><td class="l">બળદ હળ ખેંચે/ઉપાડે છે.</td></tr><tr><td class="rowlabel">क्षेत्रे सस्यं रोहति ।</td><td class="l">ખેતરમાં ધાન્ય ઊગે છે.</td></tr></table></div><h3>4B · સમાનાર્થી શબ્દ શોધો</h3><div class="tblwrap"><table><tr><th>શબ્દ</th><th>વિકલ્પો</th><th>સમાનાર્થી</th></tr><tr><td class="rowlabel">नीरम्</td><td class="l">(અ) जलम् &nbsp;·&nbsp; (બ) बीजम् &nbsp;·&nbsp; (ક) सस्यम् &nbsp;·&nbsp; (ડ) हलम्</td><td class="l">जलम्</td></tr><tr><td class="rowlabel">कृषकः</td><td class="l">(અ) कर्षकः &nbsp;·&nbsp; (બ) वैद्यः &nbsp;·&nbsp; (ક) चोरः &nbsp;·&nbsp; (ડ) शिक्षकः</td><td class="l">कर्षकः</td></tr><tr><td class="rowlabel">मेघः</td><td class="l">(અ) जलदः &nbsp;·&nbsp; (બ) वृषभः &nbsp;·&nbsp; (ક) क्षेत्रम् &nbsp;·&nbsp; (ડ) कृषकः</td><td class="l">जलदः</td></tr></table></div><h3>4C · સંસ્કૃત શબ્દનો અર્થ શોધો</h3><div class="tblwrap"><table><tr><th>શબ્દ</th><th>વિકલ્પો</th><th>અર્થ</th></tr><tr><td class="rowlabel">गोष्ठम्</td><td class="l">(અ) પશુઓનો વાડો &nbsp;·&nbsp; (બ) ખેતર &nbsp;·&nbsp; (ક) બળદ &nbsp;·&nbsp; (ડ) હળ</td><td class="l">પશુઓનો વાડો</td></tr><tr><td class="rowlabel">रोहति</td><td class="l">(અ) ઊગે છે &nbsp;·&nbsp; (બ) વાવે છે &nbsp;·&nbsp; (ક) ખેડે છે &nbsp;·&nbsp; (ડ) જાય છે</td><td class="l">ઊગે છે</td></tr><tr><td class="rowlabel">समृद्धिः</td><td class="l">(અ) સમૃદ્ધિ &nbsp;·&nbsp; (બ) ભય &nbsp;·&nbsp; (ક) થાક &nbsp;·&nbsp; (ડ) ક્રોધ</td><td class="l">સમૃદ્ધિ</td></tr><tr><td class="rowlabel">बीजम्</td><td class="l">(અ) બીજ &nbsp;·&nbsp; (બ) પાણી &nbsp;·&nbsp; (ક) ખેતર &nbsp;·&nbsp; (ડ) બળદ</td><td class="l">બીજ</td></tr><tr><td class="rowlabel">हलम्</td><td class="l">(અ) હળ &nbsp;·&nbsp; (બ) વાદળ &nbsp;·&nbsp; (ક) ધાન્ય &nbsp;·&nbsp; (ડ) ખેડૂત</td><td class="l">હળ</td></tr></table></div>
+<div class="next-line">→ <b>આગળ:</b> સારાંશ</div>
+</div>
+
+
+<!-- ============ PART 05 ============ -->
+<div class="part" id="p5">
+<h2><span class="num">05</span>સારાંશ — યાદ રાખો</h2>
+<p class="part-why">શા માટે ભણવું: છેલ્લી ઘડીએ એક નજરમાં પુનરાવર્તન.</p>
+<div class="remember"><span class="label">યાદ રાખો</span><ol><li>કાવ્યની સાંકળ: વાદળ → પાણી → ખેડૂત → બળદ-હળ → ખેડ → બીજ → પાક → સમૃદ્ધિ.</li><li>-ति = ક્રિયાપદ (તે કરે છે): वर्षति, कर्षति, वपति, रोहति, फलति.</li><li>विशेष: मेघः+वर्षति = मेघो वर्षति; हलम्+अपि = हलमपि.</li><li>કવિ: મહાબલેશ્વરભટ્ટ.</li></ol></div><div class="why-box box"><span class="label">વાલી માટે</span>બાળક પાસે કાવ્ય ગવડાવો અને દરેક પંક્તિ ખેડૂતની ક્રિયા તરીકે અભિનય કરાવો.</div>
+</div>
+
+</div>
+</body></html>
