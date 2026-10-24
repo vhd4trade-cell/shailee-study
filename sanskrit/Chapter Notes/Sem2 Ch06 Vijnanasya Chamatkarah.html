@@ -1,0 +1,184 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>विज्ञानस्य चमत्काराः — Chapter Notes</title>
+<style>:root{
+  --bg:#FBF9F4; --surface:#FFFFFF; --surface-2:#F3F0E7;
+  --ink:#241F16; --ink-2:#5B5647; --ink-3:#8C8672;
+  --line:#E4DFD0;
+  --accent:#8B5E34; --accent-ink:#3E2A17; --accent-bg:#F1E4D3;
+  --formula:#1F4E42; --formula-bg:#E3F0EA; --formula-line:#9FC6B7;
+  --exam:#7A2E2E; --exam-bg:#F6E4E1; --exam-line:#DBA9A4;
+  --mistake:#8A5A00; --mistake-bg:#FDF1D9; --mistake-line:#E9C877;
+  --check:#2E4E7A; --check-bg:#E4ECF6; --check-line:#A9C0DB;
+  --why:#5B5647; --why-bg:#F3F0E7; --why-line:#DAD4C2;
+  --font-display:'Fraunces','Noto Sans Gujarati',Georgia,serif;
+  --font-body:'Source Sans 3','Noto Sans Gujarati',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+    --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+    --line:#3A3428;
+    --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+    --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+    --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+    --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+    --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+    --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+  --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+  --line:#3A3428;
+  --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+  --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+  --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+  --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+  --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+  --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.75;padding:0 16px;font-size:16px}
+.wrap{max-width:760px;margin:0 auto;padding-block:32px 80px}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;text-wrap:balance;color:var(--ink)}
+h1{font-size:clamp(28px,6vw,38px);margin:0 0 6px}
+.subtitle{color:var(--ink-2);font-size:15px;margin:0 0 28px}
+h2{font-size:24px;margin:0 0 4px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+h2 .num{color:var(--accent);font-family:var(--font-mono);font-size:15px;font-weight:600}
+.part-why{color:var(--ink-2);font-size:14.5px;margin:0 0 18px;font-style:italic}
+h3{font-size:18px;margin:30px 0 10px;color:var(--accent-ink)}
+p{margin:0 0 12px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:36px}
+.legend-item{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-2)}
+.dot{width:10px;height:10px;border-radius:3px;flex:none}
+.dot.formula{background:var(--formula)} .dot.exam{background:var(--exam)} .dot.mistake{background:var(--mistake)}
+.dot.check{background:var(--check)} .dot.concept{background:var(--accent)} .dot.why{background:var(--why)}
+.part{padding:32px 0;border-top:1px solid var(--line)}
+.part:first-of-type{border-top:none}
+.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:32px}
+.toc ol{margin:8px 0 0;padding-left:0;list-style:none}
+.toc li{margin-bottom:5px;font-size:14.5px}
+.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ink-3)}
+.toc .n{font-family:var(--font-mono);color:var(--accent);font-size:13px;font-weight:600;margin-right:6px}
+.box{border-radius:12px;padding:14px 18px;margin:14px 0;border:1px solid;font-size:15px}
+.box .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;display:block}
+.formula-box{background:var(--formula-bg);border-color:var(--formula-line)}
+.formula-box .label{color:var(--formula)}
+.formula-box .f{font-family:var(--font-mono);font-size:18px;color:var(--formula);font-weight:600;margin:4px 0}
+.formula-box .meaning{color:var(--ink-2);font-size:14px}
+.concept-box{background:var(--surface);border-color:var(--line);border-left:3px solid var(--accent)}
+.concept-box .label{color:var(--accent)}
+.exam-box{background:var(--exam-bg);border-color:var(--exam-line)} .exam-box .label{color:var(--exam)}
+.mistake-box{background:var(--mistake-bg);border-color:var(--mistake-line)} .mistake-box .label{color:var(--mistake)}
+.check-box{background:var(--check-bg);border-color:var(--check-line)} .check-box .label{color:var(--check)}
+.why-box{background:var(--why-bg);border-color:var(--why-line)} .why-box .label{color:var(--why)}
+.extra-box{background:var(--surface);border:1px dashed var(--ink-3)} .extra-box .label{color:var(--ink-3)}
+.parent-box{background:var(--accent-bg);border-color:var(--accent)} .parent-box .label{color:var(--accent-ink)}
+.outcome{background:var(--surface);border:1px solid var(--accent);border-radius:12px;padding:14px 18px;margin:0 0 16px}
+.outcome .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;display:block}
+.submap{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 6px}
+.submap span{background:var(--surface-2);border:1px solid var(--line);border-radius:20px;padding:4px 12px;font-size:12.5px;color:var(--ink-2)}
+.next-line{font-size:14px;color:var(--ink-2);margin-top:18px;padding-top:14px;border-top:1px dashed var(--line)}
+.next-line b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{padding:8px 10px;border:1px solid var(--line);text-align:center}
+th{background:var(--surface-2);font-weight:600;color:var(--ink-2);font-size:12.5px}
+td.rowlabel{text-align:left;color:var(--ink-2);font-weight:600;background:var(--surface-2)}
+td.l{text-align:left}
+.tblwrap{overflow-x:auto}
+.example{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:14px 0;font-size:15px}
+.example .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px;display:block}
+.example .step{margin:3px 0}
+.example .step b{color:var(--ink-2);font-weight:600}
+.mono{font-family:var(--font-mono)}
+.remember{background:var(--accent-bg);border:1px solid var(--accent);border-radius:12px;padding:16px 20px;margin:16px 0}
+.remember .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:8px;display:block}
+.remember ol{margin:0;padding-left:18px} .remember li{margin-bottom:5px}
+.badge{display:inline-block;font-size:11px;font-family:var(--font-mono);padding:2px 8px;border-radius:20px;background:var(--exam-bg);color:var(--exam);border:1px solid var(--exam-line);margin-left:6px;vertical-align:middle}
+.diagram{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px;margin:16px 0}
+.diagram svg{display:block;width:100%;height:auto}
+.diagram-cap{text-align:center;font-size:13px;color:var(--ink-3);margin-top:6px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:600px){.pair{grid-template-columns:1fr}}
+.pair .diagram{margin:6px 0}
+.jumpicon{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:var(--formula);color:var(--surface);text-decoration:none;font-size:11px;font-weight:700;vertical-align:middle;margin-left:4px}
+.src{font-size:12.5px;color:var(--ink-3)}
+</style>
+
+<div class="wrap">
+<h1>પાઠ 6 · विज्ञानस्य चमत्काराः</h1>
+<p class="subtitle">ધોરણ 7 સંસ્કૃત (દ્વિતીય સત્ર) · GSEB ગુજરાતી માધ્યમ · પાન 20–23</p>
+<div class="legend">
+<div class="legend-item"><span class="dot why"></span>કેમ / રોજિંદું ઉદાહરણ</div>
+<div class="legend-item"><span class="dot concept"></span>સમજવું જ પડે</div>
+<div class="legend-item"><span class="dot formula"></span>યાદ રાખવું — મુખ્ય મુદ્દો</div>
+<div class="legend-item"><span class="dot exam"></span>પરીક્ષામાં વારંવાર</div>
+<div class="legend-item"><span class="dot mistake"></span>સામાન્ય ભૂલ</div>
+<div class="legend-item"><span class="dot check"></span>જાતે ચકાસો</div>
+</div>
+<div class="toc">
+<b>પ્રકરણનો નકશો</b> — અંતિમ લક્ષ્ય: પાઠનો અનુવાદ, શબ્દાર્થ, વ્યાકરણ અને પરીક્ષાના જવાબ.
+<ol>
+<li><span class="n">00</span><a href="#intro">પાઠ એક નજરે</a> — ચિત્રો દ્વારા 6 ઉપકરણોનો પરિચય</li><li><span class="n">01</span><a href="#p1">પાઠ અને અનુવાદ</a> — વાક્ય / શ્લોક પ્રમાણે</li><li><span class="n">02</span><a href="#p2">શબ્દાર્થ</a> — ટિપ્પણી + ज्ञातव्यम्</li><li><span class="n">03</span><a href="#p3">વ્યાકરણ / ભાષાસજ્જતા</a> — આ પાઠમાં જે નિયમ દેખાય છે</li><li><span class="n">04</span><a href="#p4">પરીક્ષાના પ્રશ્નો</a> — નમૂનારૂપ પ્રશ્ન-જવાબ</li><li><span class="n">05</span><a href="#p5">સારાંશ</a></li>
+</ol>
+</div>
+
+<!-- ============ PART 00 ============ -->
+<div class="part" id="intro">
+<h2><span class="num">00</span>પાઠ એક નજરે</h2>
+<p class="part-why">શા માટે ભણવું: ચિત્ર-ઓળખ (સંસ્કૃત નામ લખો), બહુવચન ક્રિયાપદ, અને ‘-ેન’ (વડે) નાં રૂપો — મોબાઈલ, ફ્રિજ, કમ્પ્યૂટર, ટી.વી., વિમાન, પંખો.</p>
+<div class="outcome"><span class="label">આ પ્રકરણ પછી તમે</span>
+પાઠ વાંચી-બોલી શકશો, દરેક વાક્ય/શ્લોકનો ગુજરાતી અનુવાદ કહી શકશો, શબ્દાર્થ યાદ રાખી શકશો અને પરીક્ષાના પ્રશ્નોના જવાબ સંસ્કૃત-ગુજરાતીમાં લખી શકશો.</div><div class="tblwrap"><table><tr><th>વિગત</th><th>માહિતી</th></tr><tr><td class="rowlabel">પાઠ</td><td class="l">6. विज्ञानस्य चमत्काराः — વિજ્ઞાનના ચમત્કારો</td></tr><tr><td class="rowlabel">પ્રકાર</td><td class="l">ચિત્રો દ્વારા 6 ઉપકરણોનો પરિચય</td></tr><tr><td class="rowlabel">પાઠ્યપુસ્તક પાન</td><td class="l">પાન 20–23</td></tr></table></div><div class="concept-box box"><span class="label">‘विज्ञानस्य चमत्काराः’ કેવી રીતે બન્યો?</span><p><b>विज्ञानम्</b> = વિશેષ જ્ઞાન (વિજ્ઞાન) → <b>विज्ञानस्य</b> = વિજ્ઞાનના + <b>चमत्कारः</b> = આશ્ચર્ય, ચમત્કાર → <b>चमत्काराः</b> = ચમત્કારો (બહુવચન).</p></div><div class="concept-box box"><span class="label">ઉપકરણોનાં સંસ્કૃત નામ — કેમ આવાં?</span><div class="tblwrap"><table><tr><th>સંસ્કૃત</th><th>ગુજરાતી</th><th>નામનો અર્થ</th></tr><tr><td class="rowlabel">भ्रमणभाषः</td><td class="l">મોબાઈલ</td><td class="l">भ्रमण (ફરવું) + भाष (બોલવું) — ફરતાં બોલાય</td></tr><tr><td class="rowlabel">शीतकम्</td><td class="l">ફ્રિજ</td><td class="l">शीत (ઠંડુ) કરનાર</td></tr><tr><td class="rowlabel">सङ्गणकम्</td><td class="l">કમ્પ્યૂટર</td><td class="l">ગણતરી કરનાર (गण = ગણવું)</td></tr><tr><td class="rowlabel">दूरदर्शनम्</td><td class="l">ટી.વી.</td><td class="l">दूर (દૂર) + दर्शन (જોવું)</td></tr><tr><td class="rowlabel">विमानम्</td><td class="l">વિમાન</td><td class="l">આકાશમાં ફરતું યાન</td></tr><tr><td class="rowlabel">व्यजनम्</td><td class="l">પંખો</td><td class="l">હવા નાખનાર</td></tr></table></div></div>
+<div class="next-line">→ <b>આગળ:</b> અનુવાદ → શબ્દાર્થ → વ્યાકરણ → પરીક્ષાના પ્રશ્નો</div>
+</div>
+
+
+<!-- ============ PART 01 ============ -->
+<div class="part" id="p1">
+<h2><span class="num">01</span>પાઠ અને અનુવાદ</h2>
+<p class="part-why">શા માટે ભણવું: શ્લોકના અનુવાદ [2B] અને સંસ્કૃત વાક્યોનો ગુજરાતી અનુવાદ [4A] — બંને સીધા આના પર આધારિત છે.</p>
+<h3>પરિચય</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત</th><th>ગુજરાતી અનુવાદ</th></tr><tr><td class="rowlabel">एतत् विज्ञानस्य युगम् ।</td><td class="l">આ વિજ્ઞાનનો યુગ છે.</td></tr><tr><td class="rowlabel">अत्र तत्र सर्वत्र विज्ञानस्य चमत्कारान् वयं पश्यामः ।</td><td class="l">અહીં, ત્યાં, સર્વત્ર અમે વિજ્ઞાનના ચમત્કારો જોઈએ છીએ.</td></tr></table></div><h3>ભ્રમણભાષ (મોબાઈલ)</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત</th><th>ગુજરાતી અનુવાદ</th></tr><tr><td class="rowlabel">एषः भ्रमणभाषः ।</td><td class="l">આ મોબાઈલ છે.</td></tr><tr><td class="rowlabel">जनाः भ्रमणभाषेण परस्परं वार्तालापं कुर्वन्ति ।</td><td class="l">લોકો મોબાઈલ વડે પરસ્પર વાતચીત કરે છે.</td></tr></table></div><h3>શીતક (ફ્રિજ)</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત</th><th>ગુજરાતી અનુવાદ</th></tr><tr><td class="rowlabel">एतत् शीतकम् ।</td><td class="l">આ ફ્રિજ છે.</td></tr><tr><td class="rowlabel">जनाः शीतकस्य शीतपेयं (जलं) पिबन्ति ।</td><td class="l">લોકો ફ્રિજનું ઠંડું પાણી પીએ છે.</td></tr></table></div><h3>સઙ્ગણક (કમ્પ્યૂટર)</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત</th><th>ગુજરાતી અનુવાદ</th></tr><tr><td class="rowlabel">एतत् सङ्गणकम् । यशः संङ्गणकं चालयति ।</td><td class="l">આ કમ્પ્યૂટર છે. યશ કમ્પ્યૂટર ચલાવે છે.</td></tr><tr><td class="rowlabel">संङ्गणकेन विविधानि कार्याणि सरलं शीघ्रं च भवन्ति ।</td><td class="l">કમ્પ્યૂટર વડે જુદાં જુદાં કામ સરળતાથી અને ઝડપથી થાય છે.</td></tr></table></div><h3>દૂરદર્શન (ટી.વી.)</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત</th><th>ગુજરાતી અનુવાદ</th></tr><tr><td class="rowlabel">एतत् दूरदर्शनम् ।</td><td class="l">આ ટી.વી. છે.</td></tr><tr><td class="rowlabel">जनाः दूरदर्शन माध्यमेन वार्ताः चलचित्राणि विविधान् कार्यक्रमान् पश्यन्ति, शृण्वन्ति च ।</td><td class="l">લોકો ટી.વી. માધ્યમ દ્વારા સમાચાર, ચલચિત્રો અને જુદા જુદા કાર્યક્રમો જુએ છે અને સાંભળે છે.</td></tr></table></div><h3>વિમાન</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત</th><th>ગુજરાતી અનુવાદ</th></tr><tr><td class="rowlabel">एतत् विमानम् अस्ति । विमानम् आकाशमार्गे चलति ।</td><td class="l">આ વિમાન છે. વિમાન આકાશમાર્ગે ચાલે છે.</td></tr><tr><td class="rowlabel">विमानयात्रा रोमाञ्चं ददाति । विमानेन दूरस्थानस्य यात्रा शीघ्रं पूर्णा भवति ।</td><td class="l">વિમાનની યાત્રા રોમાંચ આપે છે. વિમાન વડે દૂરના સ્થળની યાત્રા ઝડપથી પૂરી થાય છે.</td></tr></table></div><h3>વ્યજન (પંખો)</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત</th><th>ગુજરાતી અનુવાદ</th></tr><tr><td class="rowlabel">एतत् व्यजनम् । व्यजनं भ्रमणं करोति । व्यजनं तापं हरति ।</td><td class="l">આ પંખો છે. પંખો ફરે છે. પંખો તાપ (ગરમી) હરે છે.</td></tr></table></div><p><b>નોંધ:</b> પુસ્તકમાં ‘संङ्गणकम्’ (સંઙ્ગણકમ્) અને ‘सङ्गणकम्’ બંને જોડણી છપાઈ છે — પરીક્ષામાં પુસ્તક પ્રમાણે જ લખો. શીતકસ્ય શીતપેયં (જલં) = ફ્રિજનું ઠંડું પાણી.</p>
+<div class="next-line">→ <b>આગળ:</b> શબ્દાર્થ</div>
+</div>
+
+
+<!-- ============ PART 02 ============ -->
+<div class="part" id="p2">
+<h2><span class="num">02</span>શબ્દાર્થ</h2>
+<p class="part-why">શા માટે ભણવું: સંસ્કૃત શબ્દના અર્થ વિકલ્પોમાંથી શોધો [4C] — અર્થ યાદ હોય તો 5 ગુણ પાકા.</p>
+<h3>ટિપ્પણી — પાઠ્યપુસ્તકના શબ્દાર્થ</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત શબ્દ</th><th>ગુજરાતી અર્થ</th></tr><tr><td class="rowlabel">भ्रमणभाषः</td><td class="l">મોબાઈલ</td></tr><tr><td class="rowlabel">सङ्गणकम्</td><td class="l">કમ્પ્યૂટર</td></tr><tr><td class="rowlabel">चालयति</td><td class="l">ચલાવે છે</td></tr><tr><td class="rowlabel">शीतकम्</td><td class="l">ફ્રિજ</td></tr><tr><td class="rowlabel">वार्ता</td><td class="l">સમાચાર</td></tr><tr><td class="rowlabel">व्यजनम्</td><td class="l">પંખો</td></tr></table></div><h3>પાઠના બીજા શબ્દો (અર્થ અમારા, પાઠ પ્રમાણે)</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત શબ્દ</th><th>ગુજરાતી અર્થ</th></tr><tr><td class="rowlabel">विज्ञानम्</td><td class="l">વિજ્ઞાન</td></tr><tr><td class="rowlabel">युगम्</td><td class="l">યુગ</td></tr><tr><td class="rowlabel">चमत्कारः</td><td class="l">ચમત્કાર, આશ્ચર્ય</td></tr><tr><td class="rowlabel">जनाः</td><td class="l">લોકો</td></tr><tr><td class="rowlabel">परस्परम्</td><td class="l">પરસ્પર</td></tr><tr><td class="rowlabel">वार्तालापः</td><td class="l">વાતચીત</td></tr><tr><td class="rowlabel">शीतपेयम्</td><td class="l">ઠંડું પીણું</td></tr><tr><td class="rowlabel">दूरदर्शनम्</td><td class="l">ટી.વી.</td></tr><tr><td class="rowlabel">चलचित्रम्</td><td class="l">ચલચિત્ર, ફિલ્મ</td></tr><tr><td class="rowlabel">कार्यक्रमः</td><td class="l">કાર્યક્રમ</td></tr><tr><td class="rowlabel">माध्यमम्</td><td class="l">માધ્યમ</td></tr><tr><td class="rowlabel">विमानम्</td><td class="l">વિમાન</td></tr><tr><td class="rowlabel">आकाशमार्गः</td><td class="l">આકાશમાર્ગ</td></tr><tr><td class="rowlabel">यात्रा</td><td class="l">યાત્રા, પ્રવાસ</td></tr><tr><td class="rowlabel">रोमाञ्चः</td><td class="l">રોમાંચ</td></tr><tr><td class="rowlabel">सरलम्</td><td class="l">સરળ</td></tr><tr><td class="rowlabel">शीघ्रम्</td><td class="l">ઝડપથી</td></tr><tr><td class="rowlabel">तापः</td><td class="l">તાપ, ગરમી</td></tr><tr><td class="rowlabel">हरति</td><td class="l">હરે છે, દૂર કરે છે</td></tr></table></div>
+<div class="next-line">→ <b>આગળ:</b> વ્યાકરણ</div>
+</div>
+
+
+<!-- ============ PART 03 ============ -->
+<div class="part" id="p3">
+<h2><span class="num">03</span>વ્યાકરણ / ભાષાસજ્જતા</h2>
+<p class="part-why">શા માટે ભણવું: નિયમ સમજ્યા પછી નવાં વાક્યો જાતે બનાવી શકાય — રટવું ઓછું પડે.</p>
+<p><b>1. તૃતીયા — ‘વડે / થી’ : -ेन</b> (પુંલિંગ/નપુંસક -अ-કારાન્ત):</p><div class="tblwrap"><table><tr><th>શબ્દ</th><th>‘…વડે’</th><th>પાઠમાં</th></tr><tr><td class="rowlabel">भ्रमणभाषः</td><td class="l">भ्रमणभाषेण</td><td class="l">મોબાઈલ વડે</td></tr><tr><td class="rowlabel">सङ्गणकम्</td><td class="l">सङ्गणकेन</td><td class="l">કમ્પ્યૂટર વડે</td></tr><tr><td class="rowlabel">माध्यमम्</td><td class="l">माध्यमेन</td><td class="l">દૂરદર્શન માધ્યમ દ્વારા</td></tr><tr><td class="rowlabel">विमानम्</td><td class="l">विमानेन</td><td class="l">વિમાન વડે</td></tr><tr><td class="rowlabel">पुस्तकम्</td><td class="l">पुस्तकेन</td><td class="l">પુસ્તક વડે (અમારું ઉદાહરણ)</td></tr></table></div><p><b>2. બહુવચન — કર્તા અને ક્રિયાપદ બંને બદલાય:</b> <b>जनः जलं पिबति → जनाः जलं पिबन्ति</b> (એક: -ति → ઘણા: -न्ति).</p><div class="tblwrap"><table><tr><th>એકવચન</th><th>બહુવચન</th></tr><tr><td class="rowlabel">बालकः पुस्तकं पठति</td><td class="l">बालकाः पुस्तकानि पठन्ति</td></tr><tr><td class="rowlabel">जनः पश्यति</td><td class="l">जनाः पश्यन्ति</td></tr><tr><td class="rowlabel">सः शृणोति</td><td class="l">ते शृण्वन्ति</td></tr><tr><td class="rowlabel">जनः कुरुते / करोति</td><td class="l">जनाः कुर्वन्ति</td></tr></table></div><p>પાઠમાં: <b>कुर्वन्ति</b> (કરે છે — ઘણા), <b>पिबन्ति</b> (પીએ છે), <b>पश्यन्ति</b> (જુએ છે), <b>शृण्वन्ति</b> (સાંભળે છે).</p><p><b>3. દ્વિતીયા (કર્મ, ‘ને’) — -म्:</b> सङ्गणकम् (કમ્પ્યૂટરને) चालयति · वार्तालापं कुर्वन्ति · कार्यक्रमान् (ઘણા કાર્યક્રમોને) पश्यन्ति.</p><p><b>4. ‘એષઃ / એતત્’ = આ:</b> પુંલિંગ <b>एषः</b> (एषः भ्रमणभाषः) · નપુંસક <b>एतत्</b> (एतत् शीतकम्, एतत् विमानम्). સ્ત્રીલિંગ <b>एषा</b>.</p>
+<div class="next-line">→ <b>આગળ:</b> પરીક્ષાના પ્રશ્નો</div>
+</div>
+
+
+<!-- ============ PART 04 ============ -->
+<div class="part" id="p4">
+<h2><span class="num">04</span>પરીક્ષાના પ્રશ્નો</h2>
+<p class="part-why">શા માટે ભણવું: દરેક પ્રશ્ન-પ્રકારની પ્રૅક્ટિસ — પેપર જેવી જ રીતે.</p>
+<div class="why-box box"><span class="label">નોંધ</span>નીચેના પ્રશ્નો <b>અમે બનાવેલા નમૂના</b> છે (પાઠ્યપુસ્તકના સ્વાધ્યાયના પ્રશ્નો નથી). સ્વાધ્યાય-સ્વાધ્યાયપોથી-પ્રૅક્ટિસ બુકના જવાબ, તે ત્રણે મળ્યા પછી જ બનશે. દ્વિતીય સત્રની પેપર-પદ્ધતિ હજી મળી નથી; પ્રથમ સત્રની પદ્ધતિ મુજબ નમૂના: પેપર-પદ્ધતિ (80 ગુણ): 1A વિકલ્પ [10] · 1B ✓/✗ [10] · 2A ખાલી જગ્યા [10] · 2B શ્લોકનો અનુવાદ [10] · 3A ગુજરાતીમાં જવાબ (ગમે તે 5) [10] · 3B સંસ્કૃતમાં જવાબ (ગમે તે 5) [10] · 4A અનુવાદ [10] · 4B સમાનાર્થી [5] · 4C અર્થ [5].</div><h3>1A · સાચો વિકલ્પ પસંદ કરો</h3><div class="tblwrap"><table><tr><th>પ્રશ્ન</th><th>વિકલ્પો</th><th>જવાબ</th></tr><tr><td class="rowlabel">‘सङ्गणकम्’ એટલે?</td><td class="l">(અ) કમ્પ્યૂટર &nbsp;·&nbsp; (બ) ફ્રિજ &nbsp;·&nbsp; (ક) પંખો &nbsp;·&nbsp; (ડ) વિમાન</td><td class="l">કમ્પ્યૂટર</td></tr><tr><td class="rowlabel">‘शीतकम्’ એટલે?</td><td class="l">(અ) ફ્રિજ &nbsp;·&nbsp; (બ) ટી.વી. &nbsp;·&nbsp; (ક) મોબાઈલ &nbsp;·&nbsp; (ડ) પંખો</td><td class="l">ફ્રિજ</td></tr><tr><td class="rowlabel">‘व्यजनम्’ એટલે?</td><td class="l">(અ) પંખો &nbsp;·&nbsp; (બ) શાક &nbsp;·&nbsp; (ક) ઘડિયાળ &nbsp;·&nbsp; (ડ) બારી</td><td class="l">પંખો</td></tr><tr><td class="rowlabel">‘वार्ता’ એટલે?</td><td class="l">(અ) સમાચાર &nbsp;·&nbsp; (બ) ચિત્ર &nbsp;·&nbsp; (ક) ગીત &nbsp;·&nbsp; (ડ) રમત</td><td class="l">સમાચાર</td></tr><tr><td class="rowlabel">‘चालयति’ એટલે?</td><td class="l">(અ) ચલાવે છે &nbsp;·&nbsp; (બ) બંધ કરે છે &nbsp;·&nbsp; (ક) ખાય છે &nbsp;·&nbsp; (ડ) લખે છે</td><td class="l">ચલાવે છે</td></tr><tr><td class="rowlabel">‘भ्रमणभाषः’ એટલે?</td><td class="l">(અ) મોબાઈલ &nbsp;·&nbsp; (બ) ટી.વી. &nbsp;·&nbsp; (ક) રેડિયો &nbsp;·&nbsp; (ડ) કમ્પ્યૂટર</td><td class="l">મોબાઈલ</td></tr><tr><td class="rowlabel">‘विमानेन’ એટલે?</td><td class="l">(અ) વિમાન વડે &nbsp;·&nbsp; (બ) વિમાનમાં &nbsp;·&nbsp; (ક) વિમાનને &nbsp;·&nbsp; (ડ) વિમાનનું</td><td class="l">વિમાન વડે</td></tr></table></div><h3>1B · ✓ કે ✗ કરો</h3><div class="tblwrap"><table><tr><th>વિધાન</th><th>જવાબ</th></tr><tr><td class="rowlabel">‘दूरदर्शनम्’ = ટી.વી.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">પંખો તાપ હરે છે.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">વિમાન જમીન માર્ગે ચાલે છે.</td><td class="l">✘ ખોટું</td></tr><tr><td class="rowlabel">‘जनाः’ બહુવચન છે.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">શીતક = કમ્પ્યૂટર.</td><td class="l">✘ ખોટું</td></tr><tr><td class="rowlabel">કમ્પ્યૂટર વડે કામ સરળ અને ઝડપી થાય.</td><td class="l">✔ સાચું</td></tr></table></div><h3>2A · ખાલી જગ્યા પૂરો</h3><div class="tblwrap"><table><tr><th>વાક્ય</th><th>ખૂટતો શબ્દ</th></tr><tr><td class="rowlabel">एषः ____ । (મોબાઈલ)</td><td class="l">भ्रमणभाषः</td></tr><tr><td class="rowlabel">एतत् ____ । (ફ્રિજ)</td><td class="l">शीतकम्</td></tr><tr><td class="rowlabel">यशः ____ चालयति । (કમ્પ્યૂટર)</td><td class="l">सङ्गणकं</td></tr><tr><td class="rowlabel">जनाः दूरदर्शन ____ पश्यन्ति । (માધ્યમ દ્વારા)</td><td class="l">माध्यमेन</td></tr><tr><td class="rowlabel">विमानम् आकाशमार्गे ____ । (ચાલે છે)</td><td class="l">चलति</td></tr><tr><td class="rowlabel">व्यजनं ____ हरति । (તાપ)</td><td class="l">तापं</td></tr></table></div><h3>2B · શ્લોકનો અનુવાદ</h3><p>ઉપરના <a href="#p1">‘પાઠ અને અનુવાદ’</a> વિભાગમાં દરેક શ્લોક/પંક્તિનો અનુવાદ છે — આ વિભાગ મોઢે કરો; પરીક્ષામાં શ્લોક આપીને તેનો ગુજરાતી અર્થ પૂછાય છે.</p><h3>3A · એક વાક્યમાં જવાબ (ગુજરાતીમાં)</h3><div class="example"><span class="label">એક વાક્ય</span><div class="step"><b>પ્ર.</b> લોકો મોબાઈલથી શું કરે છે?</div><div class="step"><b>જ.</b> પરસ્પર વાતચીત કરે છે.</div><div class="step"><b>પ્ર.</b> ફ્રિજનો શું ઉપયોગ?</div><div class="step"><b>જ.</b> ઠંડું પાણી પીવા વગેરે (શીતપેય).</div><div class="step"><b>પ્ર.</b> કમ્પ્યૂટર વડે શું થાય?</div><div class="step"><b>જ.</b> જુદાં જુદાં કામ સરળતાથી અને ઝડપથી થાય.</div><div class="step"><b>પ્ર.</b> વિમાનયાત્રા શું આપે છે?</div><div class="step"><b>જ.</b> રોમાંચ — અને દૂરની યાત્રા ઝડપથી પૂરી થાય.</div></div><h3>3B · એક વાક્યમાં જવાબ (સંસ્કૃતમાં)</h3><div class="example"><span class="label">સંસ્કૃતમાં</span><div class="step"><b>પ્ર.</b> जनाः भ्रमणभाषेण किं कुर्वन्ति ?</div><div class="step"><b>જ.</b> <b>जनाः भ्रमणभाषेण वार्तालापं कुर्वन्ति ।</b><br><span style="color:var(--ink-3)">(અર્થ: લોકો મોબાઈલ વડે વાતચીત કરે છે.)</span></div><div class="step"><b>પ્ર.</b> यशः किं चालयति ?</div><div class="step"><b>જ.</b> <b>यशः सङ्गणकं चालयति ।</b><br><span style="color:var(--ink-3)">(અર્થ: યશ કમ્પ્યૂટર ચલાવે છે.)</span></div><div class="step"><b>પ્ર.</b> व्यजनं किं हरति ?</div><div class="step"><b>જ.</b> <b>व्यजनं तापं हरति ।</b><br><span style="color:var(--ink-3)">(અર્થ: પંખો તાપ હરે છે.)</span></div></div><h3>4A · સંસ્કૃત વાક્યોનો ગુજરાતીમાં અનુવાદ</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત વાક્ય</th><th>ગુજરાતી</th></tr><tr><td class="rowlabel">एतत् विमानम् अस्ति ।</td><td class="l">આ વિમાન છે.</td></tr><tr><td class="rowlabel">जनाः दूरदर्शनं पश्यन्ति ।</td><td class="l">લોકો ટી.વી. જુએ છે.</td></tr><tr><td class="rowlabel">सङ्गणकेन कार्याणि शीघ्रं भवन्ति ।</td><td class="l">કમ્પ્યૂટર વડે કામ ઝડપથી થાય છે.</td></tr><tr><td class="rowlabel">एषः भ्रमणभाषः ।</td><td class="l">આ મોબાઈલ છે.</td></tr><tr><td class="rowlabel">व्यजनं भ्रमणं करोति ।</td><td class="l">પંખો ફરે છે.</td></tr></table></div><h3>4B · સમાનાર્થી શબ્દ શોધો</h3><div class="tblwrap"><table><tr><th>શબ્દ</th><th>વિકલ્પો</th><th>સમાનાર્થી</th></tr><tr><td class="rowlabel">विमानम्</td><td class="l">(અ) यानम् &nbsp;·&nbsp; (બ) पुष्पम् &nbsp;·&nbsp; (ક) वृक्षः &nbsp;·&nbsp; (ડ) जलम्</td><td class="l">यानम्</td></tr><tr><td class="rowlabel">शीघ्रम्</td><td class="l">(અ) द्रुतम् &nbsp;·&nbsp; (બ) मन्दम् &nbsp;·&nbsp; (ક) अग्रे &nbsp;·&nbsp; (ડ) अद्य</td><td class="l">द्रुतम्</td></tr><tr><td class="rowlabel">जनाः</td><td class="l">(અ) लोकाः &nbsp;·&nbsp; (બ) वृक्षाः &nbsp;·&nbsp; (ક) मृगाः &nbsp;·&nbsp; (ડ) पुत्राः</td><td class="l">लोकाः</td></tr><tr><td class="rowlabel">वार्ता</td><td class="l">(અ) समाचारः &nbsp;·&nbsp; (બ) चित्रम् &nbsp;·&nbsp; (ક) गृहम् &nbsp;·&nbsp; (ડ) जलम्</td><td class="l">समाचारः</td></tr></table></div><h3>4C · સંસ્કૃત શબ્દનો અર્થ શોધો</h3><div class="tblwrap"><table><tr><th>શબ્દ</th><th>વિકલ્પો</th><th>અર્થ</th></tr><tr><td class="rowlabel">चमत्कारः</td><td class="l">(અ) આશ્ચર્ય &nbsp;·&nbsp; (બ) ભય &nbsp;·&nbsp; (ક) ક્રોધ &nbsp;·&nbsp; (ડ) શરમ</td><td class="l">આશ્ચર્ય</td></tr><tr><td class="rowlabel">परस्परम्</td><td class="l">(અ) પરસ્પર &nbsp;·&nbsp; (બ) એકલા &nbsp;·&nbsp; (ક) હંમેશાં &nbsp;·&nbsp; (ડ) ક્યારેક</td><td class="l">પરસ્પર</td></tr><tr><td class="rowlabel">सरलम्</td><td class="l">(અ) સરળ &nbsp;·&nbsp; (બ) અઘરું &nbsp;·&nbsp; (ક) ભારે &nbsp;·&nbsp; (ડ) નાનું</td><td class="l">સરળ</td></tr><tr><td class="rowlabel">यात्रा</td><td class="l">(અ) પ્રવાસ &nbsp;·&nbsp; (બ) ભોજન &nbsp;·&nbsp; (ક) ગીત &nbsp;·&nbsp; (ડ) રમત</td><td class="l">પ્રવાસ</td></tr><tr><td class="rowlabel">रोमाञ्चः</td><td class="l">(અ) રોમાંચ &nbsp;·&nbsp; (બ) ઉદાસી &nbsp;·&nbsp; (ક) ભય &nbsp;·&nbsp; (ડ) થાક</td><td class="l">રોમાંચ</td></tr></table></div>
+<div class="next-line">→ <b>આગળ:</b> સારાંશ</div>
+</div>
+
+
+<!-- ============ PART 05 ============ -->
+<div class="part" id="p5">
+<h2><span class="num">05</span>સારાંશ — યાદ રાખો</h2>
+<p class="part-why">શા માટે ભણવું: છેલ્લી ઘડીએ એક નજરમાં પુનરાવર્તન.</p>
+<div class="remember"><span class="label">યાદ રાખો</span><ol><li>છ ઉપકરણ: भ्रमणभाषः (મોબાઈલ) · शीतकम् (ફ્રિજ) · सङ्गणकम् (કમ્પ્યૂટર) · दूरदर्शनम् (ટી.વી.) · विमानम् · व्यजनम् (પંખો).</li><li>એષઃ (પુ.) / એતત્ (નપુ.) = આ.</li><li>તૃતીયા -ेन: भ्रमणभाषेण · सङ्गणकेन · विमानेन · माध्यमेन.</li><li>બહુવચન ક્રિયા -न्ति: कुर्वन्ति · पिबन्ति · पश्यन्ति · शृण्वन्ति.</li></ol></div><div class="why-box box"><span class="label">વાલી માટે</span>ઘરમાંના આ ઉપકરણો બતાવી સંસ્કૃત નામ બોલાવડાવો; ‘…વડે શું થાય?’ વાક્ય (સઙ્ગણકેન …) બનાવડાવો.</div>
+</div>
+
+</div>
+</body></html>

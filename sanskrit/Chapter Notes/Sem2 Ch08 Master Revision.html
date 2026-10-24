@@ -1,0 +1,184 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>દ્વિતીય સત્ર — એક નજરે (માસ્ટર પુનરાવર્તન) — Chapter Notes</title>
+<style>:root{
+  --bg:#FBF9F4; --surface:#FFFFFF; --surface-2:#F3F0E7;
+  --ink:#241F16; --ink-2:#5B5647; --ink-3:#8C8672;
+  --line:#E4DFD0;
+  --accent:#8B5E34; --accent-ink:#3E2A17; --accent-bg:#F1E4D3;
+  --formula:#1F4E42; --formula-bg:#E3F0EA; --formula-line:#9FC6B7;
+  --exam:#7A2E2E; --exam-bg:#F6E4E1; --exam-line:#DBA9A4;
+  --mistake:#8A5A00; --mistake-bg:#FDF1D9; --mistake-line:#E9C877;
+  --check:#2E4E7A; --check-bg:#E4ECF6; --check-line:#A9C0DB;
+  --why:#5B5647; --why-bg:#F3F0E7; --why-line:#DAD4C2;
+  --font-display:'Fraunces','Noto Sans Gujarati',Georgia,serif;
+  --font-body:'Source Sans 3','Noto Sans Gujarati',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+    --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+    --line:#3A3428;
+    --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+    --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+    --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+    --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+    --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+    --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+  --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+  --line:#3A3428;
+  --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+  --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+  --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+  --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+  --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+  --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.75;padding:0 16px;font-size:16px}
+.wrap{max-width:760px;margin:0 auto;padding-block:32px 80px}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;text-wrap:balance;color:var(--ink)}
+h1{font-size:clamp(28px,6vw,38px);margin:0 0 6px}
+.subtitle{color:var(--ink-2);font-size:15px;margin:0 0 28px}
+h2{font-size:24px;margin:0 0 4px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+h2 .num{color:var(--accent);font-family:var(--font-mono);font-size:15px;font-weight:600}
+.part-why{color:var(--ink-2);font-size:14.5px;margin:0 0 18px;font-style:italic}
+h3{font-size:18px;margin:30px 0 10px;color:var(--accent-ink)}
+p{margin:0 0 12px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:36px}
+.legend-item{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-2)}
+.dot{width:10px;height:10px;border-radius:3px;flex:none}
+.dot.formula{background:var(--formula)} .dot.exam{background:var(--exam)} .dot.mistake{background:var(--mistake)}
+.dot.check{background:var(--check)} .dot.concept{background:var(--accent)} .dot.why{background:var(--why)}
+.part{padding:32px 0;border-top:1px solid var(--line)}
+.part:first-of-type{border-top:none}
+.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:32px}
+.toc ol{margin:8px 0 0;padding-left:0;list-style:none}
+.toc li{margin-bottom:5px;font-size:14.5px}
+.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ink-3)}
+.toc .n{font-family:var(--font-mono);color:var(--accent);font-size:13px;font-weight:600;margin-right:6px}
+.box{border-radius:12px;padding:14px 18px;margin:14px 0;border:1px solid;font-size:15px}
+.box .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;display:block}
+.formula-box{background:var(--formula-bg);border-color:var(--formula-line)}
+.formula-box .label{color:var(--formula)}
+.formula-box .f{font-family:var(--font-mono);font-size:18px;color:var(--formula);font-weight:600;margin:4px 0}
+.formula-box .meaning{color:var(--ink-2);font-size:14px}
+.concept-box{background:var(--surface);border-color:var(--line);border-left:3px solid var(--accent)}
+.concept-box .label{color:var(--accent)}
+.exam-box{background:var(--exam-bg);border-color:var(--exam-line)} .exam-box .label{color:var(--exam)}
+.mistake-box{background:var(--mistake-bg);border-color:var(--mistake-line)} .mistake-box .label{color:var(--mistake)}
+.check-box{background:var(--check-bg);border-color:var(--check-line)} .check-box .label{color:var(--check)}
+.why-box{background:var(--why-bg);border-color:var(--why-line)} .why-box .label{color:var(--why)}
+.extra-box{background:var(--surface);border:1px dashed var(--ink-3)} .extra-box .label{color:var(--ink-3)}
+.parent-box{background:var(--accent-bg);border-color:var(--accent)} .parent-box .label{color:var(--accent-ink)}
+.outcome{background:var(--surface);border:1px solid var(--accent);border-radius:12px;padding:14px 18px;margin:0 0 16px}
+.outcome .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;display:block}
+.submap{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 6px}
+.submap span{background:var(--surface-2);border:1px solid var(--line);border-radius:20px;padding:4px 12px;font-size:12.5px;color:var(--ink-2)}
+.next-line{font-size:14px;color:var(--ink-2);margin-top:18px;padding-top:14px;border-top:1px dashed var(--line)}
+.next-line b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{padding:8px 10px;border:1px solid var(--line);text-align:center}
+th{background:var(--surface-2);font-weight:600;color:var(--ink-2);font-size:12.5px}
+td.rowlabel{text-align:left;color:var(--ink-2);font-weight:600;background:var(--surface-2)}
+td.l{text-align:left}
+.tblwrap{overflow-x:auto}
+.example{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:14px 0;font-size:15px}
+.example .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px;display:block}
+.example .step{margin:3px 0}
+.example .step b{color:var(--ink-2);font-weight:600}
+.mono{font-family:var(--font-mono)}
+.remember{background:var(--accent-bg);border:1px solid var(--accent);border-radius:12px;padding:16px 20px;margin:16px 0}
+.remember .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:8px;display:block}
+.remember ol{margin:0;padding-left:18px} .remember li{margin-bottom:5px}
+.badge{display:inline-block;font-size:11px;font-family:var(--font-mono);padding:2px 8px;border-radius:20px;background:var(--exam-bg);color:var(--exam);border:1px solid var(--exam-line);margin-left:6px;vertical-align:middle}
+.diagram{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px;margin:16px 0}
+.diagram svg{display:block;width:100%;height:auto}
+.diagram-cap{text-align:center;font-size:13px;color:var(--ink-3);margin-top:6px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:600px){.pair{grid-template-columns:1fr}}
+.pair .diagram{margin:6px 0}
+.jumpicon{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:var(--formula);color:var(--surface);text-decoration:none;font-size:11px;font-weight:700;vertical-align:middle;margin-left:4px}
+.src{font-size:12.5px;color:var(--ink-3)}
+</style>
+
+<div class="wrap">
+<h1>પાઠ 8 · દ્વિતીય સત્ર — એક નજરે (માસ્ટર પુનરાવર્તન)</h1>
+<p class="subtitle">ધોરણ 7 સંસ્કૃત (દ્વિતીય સત્ર) · GSEB ગુજરાતી માધ્યમ · પાન 1–28 (પુનરાવર્તનમ્ 1 પાન 18–19, પુનરાવર્તનમ્ 2 પાન 26–28)</p>
+<div class="legend">
+<div class="legend-item"><span class="dot why"></span>કેમ / રોજિંદું ઉદાહરણ</div>
+<div class="legend-item"><span class="dot concept"></span>સમજવું જ પડે</div>
+<div class="legend-item"><span class="dot formula"></span>યાદ રાખવું — મુખ્ય મુદ્દો</div>
+<div class="legend-item"><span class="dot exam"></span>પરીક્ષામાં વારંવાર</div>
+<div class="legend-item"><span class="dot mistake"></span>સામાન્ય ભૂલ</div>
+<div class="legend-item"><span class="dot check"></span>જાતે ચકાસો</div>
+</div>
+<div class="toc">
+<b>પ્રકરણનો નકશો</b> — અંતિમ લક્ષ્ય: પાઠનો અનુવાદ, શબ્દાર્થ, વ્યાકરણ અને પરીક્ષાના જવાબ.
+<ol>
+<li><span class="n">00</span><a href="#intro">પાઠ એક નજરે</a> — બધા પાઠના નિયમ, શબ્દભંડોળ અને પુનરાવર્તન-ભાગનું સ્વરૂપ</li><li><span class="n">01</span><a href="#p1">પાઠ અને અનુવાદ</a> — વાક્ય / શ્લોક પ્રમાણે</li><li><span class="n">02</span><a href="#p2">શબ્દાર્થ</a> — ટિપ્પણી + ज्ञातव्यम्</li><li><span class="n">03</span><a href="#p3">વ્યાકરણ / ભાષાસજ્જતા</a> — આ પાઠમાં જે નિયમ દેખાય છે</li><li><span class="n">04</span><a href="#p4">પરીક્ષાના પ્રશ્નો</a> — નમૂનારૂપ પ્રશ્ન-જવાબ</li><li><span class="n">05</span><a href="#p5">સારાંશ</a></li>
+</ol>
+</div>
+
+<!-- ============ PART 00 ============ -->
+<div class="part" id="intro">
+<h2><span class="num">00</span>પાઠ એક નજરે</h2>
+<p class="part-why">શા માટે ભણવું: પરીક્ષા પહેલાંની છેલ્લી રાતે એક જ જગ્યાએ: વિભક્તિ-રૂપો, ક્રિયાપદ, સંધિ, શબ્દગુચ્છો અને સંબંધ-શબ્દો (ज्ञातव्यम्).</p>
+<div class="outcome"><span class="label">આ પ્રકરણ પછી તમે</span>
+દ્વિતીય સત્રના બધા પાઠના નિયમ એક જગ્યાએ જોઈ શકશો અને ઝડપથી પુનરાવર્તન કરી શકશો.</div><div class="tblwrap"><table><tr><th>વિગત</th><th>માહિતી</th></tr><tr><td class="rowlabel">પાઠ</td><td class="l">8. દ્વિતીય સત્ર — એક નજરે (માસ્ટર પુનરાવર્તન) — પાઠ 1–7 + પુનરાવર્તનમ્ 1–2</td></tr><tr><td class="rowlabel">પ્રકાર</td><td class="l">બધા પાઠના નિયમ, શબ્દભંડોળ અને પુનરાવર્તન-ભાગનું સ્વરૂપ</td></tr><tr><td class="rowlabel">પાઠ્યપુસ્તક પાન</td><td class="l">પાન 1–28 (પુનરાવર્તનમ્ 1 પાન 18–19, પુનરાવર્તનમ્ 2 પાન 26–28)</td></tr></table></div><div class="concept-box box"><span class="label">પુનરાવર્તનમ્ 1 અને 2 શું માગે છે? (પુસ્તકના પ્રકાર — જવાબો નથી)</span><div class="tblwrap"><table><tr><th>ભાગ</th><th>પ્રશ્ન-પ્રકાર</th><th>કયા પાઠ પરથી</th></tr><tr><td class="rowlabel">પુનરાવર્તનમ્ 1 (પાન 18–19)</td><td class="l">આરોહ-અવરોહ સાથે ગાન · પંક્તિ-પૂર્તિ · ક્રિયાપદોનો ‘સૂર્ય’ (આયુષી હસતિ… ) · આદર્શ વાચન (સંવાદ) · સંસ્કૃતમાં ઉત્તર · આમ્/ન · જુદો શબ્દ શોધવો · વાર્તાલાપ-નાટિકા</td><td class="l">પાઠ 1, 2, 3, 4</td></tr><tr><td class="rowlabel">પુનરાવર્તનમ્ 2 (પાન 26–28)</td><td class="l">સૂક્તિઓનું લયબદ્ધ પઠન · ફકરાનું સુંદર લેખન (કાગડા–સાપની કથા) · ચિત્ર-શબ્દ જોડકાં · પાંચ પાત્રોનું નાટક/પપેટ-શો · ઘટનાક્રમ ગોઠવો · ચિત્ર દોરવું · અશુદ્ધ વાક્ય પર ✗ · ગુજરાતી વાક્યોનો સંસ્કૃત અનુવાદ</td><td class="l">પાઠ 5, 6, 7</td></tr></table></div><p>આ પ્રશ્નોના જવાબ સ્વાધ્યાયપોથી/પ્રૅક્ટિસ બુક મળતાં અલગથી બનશે; અહીં નિયમ અને શબ્દયાદી છે.</p></div>
+<div class="next-line">→ <b>આગળ:</b> અનુવાદ → શબ્દાર્થ → વ્યાકરણ → પરીક્ષાના પ્રશ્નો</div>
+</div>
+
+
+<!-- ============ PART 01 ============ -->
+<div class="part" id="p1">
+<h2><span class="num">01</span>પાઠ અને અનુવાદ</h2>
+<p class="part-why">શા માટે ભણવું: શ્લોકના અનુવાદ [2B] અને સંસ્કૃત વાક્યોનો ગુજરાતી અનુવાદ [4A] — બંને સીધા આના પર આધારિત છે.</p>
+<h3>પુનરાવર્તનમ્ 2 — ફકરો: કાગડા–સાપની કથા (પુસ્તકનો પાઠ, સાચા અક્ષરે લખવા માટે)</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત</th><th>ગુજરાતી અનુવાદ</th></tr><tr><td class="rowlabel">एकस्मिन् वने एकः वटवृक्षः अस्ति ।</td><td class="l">એક વનમાં એક વડનું ઝાડ છે.</td></tr><tr><td class="rowlabel">तत्र काकः वसति ।</td><td class="l">ત્યાં કાગડો રહે છે.</td></tr><tr><td class="rowlabel">काकस्य पत्नी शावकैः सह तत्रैव वसति ।</td><td class="l">કાગડાની પત્ની બચ્ચાં સાથે ત્યાં જ રહે છે.</td></tr><tr><td class="rowlabel">तस्य वृक्षस्य अधः कोटरे एकः सर्पः वसति ।</td><td class="l">તે ઝાડની નીચે બખોલમાં એક સાપ રહે છે.</td></tr><tr><td class="rowlabel">एकदा काकः पत्न्या सह आहारार्थं गच्छति ।</td><td class="l">એક વાર કાગડો પત્ની સાથે ખોરાક માટે જાય છે.</td></tr><tr><td class="rowlabel">तदा सर्पः एकं शावकं खादति ।</td><td class="l">ત્યારે સાપ એક બચ્ચું ખાય છે.</td></tr><tr><td class="rowlabel">काकः आगच्छति पश्यति च ।</td><td class="l">કાગડો આવે છે અને જુએ છે.</td></tr></table></div><p><b>નોંધ:</b> ‘तत्रैव’ = तत्र + एव (ત્યાં જ) · ‘आहारार्थम्’ = आहार + अर्थम् (ખોરાક માટે). ફકરો પુસ્તકમાં અહીં સુધી જ છે.</p>
+<div class="next-line">→ <b>આગળ:</b> શબ્દાર્થ</div>
+</div>
+
+
+<!-- ============ PART 02 ============ -->
+<div class="part" id="p2">
+<h2><span class="num">02</span>શબ્દાર્થ</h2>
+<p class="part-why">શા માટે ભણવું: સંસ્કૃત શબ્દના અર્થ વિકલ્પોમાંથી શોધો [4C] — અર્થ યાદ હોય તો 5 ગુણ પાકા.</p>
+<h3>ચાવીરૂપ શબ્દગુચ્છો — પાઠ 1–7</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત શબ્દ</th><th>ગુજરાતી અર્થ</th></tr><tr><td class="rowlabel">प्रहेलिका · पक्षिराजः · शूलपाणिः · मार्जारी · कातरः</td><td class="l">પહેલી · ગરુડ · શંકર · બિલાડી · કાયર</td></tr><tr><td class="rowlabel">व्यञ्जनम् · अवलेहः · तक्रम् · मोदकः · लवणम्</td><td class="l">શાક · ચટણી · છાશ · લાડુ · મીઠું</td></tr><tr><td class="rowlabel">उद्यमः · साहसम् · धैर्यम् · बुद्धिः · शक्तिः · पराक्रमः</td><td class="l">છ ગુણ (સુભાષિત 4)</td></tr><tr><td class="rowlabel">पूर्वदिशायाम् · पश्चिमदिशायाम् · उत्तरदिशायाम्</td><td class="l">પૂર્વ · પશ્ચિમ · ઉત્તર દિશામાં</td></tr><tr><td class="rowlabel">उष्ट्रः · शुकः · कुक्कुरः · बकः · शृगालः</td><td class="l">ઊંટ · પોપટ · કૂતરો · બગલો · શિયાળ</td></tr><tr><td class="rowlabel">चञ्चुः · पुच्छम् · ग्रीवा</td><td class="l">ચાંચ · પૂંછડી · ગરદન</td></tr><tr><td class="rowlabel">भ्रमणभाषः · शीतकम् · सङ्गणकम् · दूरदर्शनम् · विमानम् · व्यजनम्</td><td class="l">મોબાઈલ · ફ્રિજ · કમ્પ્યૂટર · ટી.વી. · વિમાન · પંખો</td></tr><tr><td class="rowlabel">जननी · जन्मभूमिः · मित्रम् · शरीरम्</td><td class="l">માતા · માતૃભૂમિ · મિત્ર · શરીર</td></tr></table></div><h3>ज्ञातव्यम् — સંબંધ-વાચક શબ્દો (પાઠ્યપુસ્તક પાન 28)</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત</th><th>ગુજરાતી</th></tr><tr><td class="rowlabel">पितृव्यः / पितृव्या</td><td class="l">કાકા / કાકી</td></tr><tr><td class="rowlabel">भ्रातृव्यः / भ्रातृव्या</td><td class="l">ભત્રીજો / ભત્રીજી</td></tr><tr><td class="rowlabel">मातुलः / मातुलानी</td><td class="l">મામા / મામી</td></tr><tr><td class="rowlabel">मातुलेयः / मातुलेया</td><td class="l">મામાનો દીકરો / મામાની દીકરી</td></tr><tr><td class="rowlabel">भागिनेयः / भागिनेया</td><td class="l">ભાણેજ / ભાણી</td></tr><tr><td class="rowlabel">पितृष्वसा</td><td class="l">ફઈ</td></tr><tr><td class="rowlabel">पितृष्वसेयः / पितृष्वसेया</td><td class="l">ફઈનો દીકરો / ફઈની દીકરી</td></tr><tr><td class="rowlabel">भ्रातृजाया</td><td class="l">ભાભી</td></tr><tr><td class="rowlabel">देवरः</td><td class="l">દિયર</td></tr><tr><td class="rowlabel">ननान्दा</td><td class="l">નણંદ</td></tr></table></div><h3>સંધિ — પાઠોમાંથી</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત</th><th>ગુજરાતી</th></tr><tr><td class="rowlabel">न + अस्ति = नास्ति</td><td class="l">ના + અસ્તિ</td></tr><tr><td class="rowlabel">मा + अस्तु = मास्तु</td><td class="l">મા + અસ્તુ</td></tr><tr><td class="rowlabel">वसुधा + एव = वसुधैव</td><td class="l">આ + એ → ઐ</td></tr><tr><td class="rowlabel">पिबेत् + जलम् = पिबेज्जलम्</td><td class="l">ત્ + જ → જ્જ</td></tr><tr><td class="rowlabel">शुष्कवृक्षः + च = शुष्कवृक्षाश्च</td><td class="l">ઃ + ચ → શ્ચ</td></tr><tr><td class="rowlabel">स्वर्गात् + अपि = स्वर्गादपि</td><td class="l">ત્ + અ → દ</td></tr><tr><td class="rowlabel">अमन्त्रम् अक्षरम् = अमन्त्रमक्षरम्</td><td class="l">મ્ + અ → મ</td></tr><tr><td class="rowlabel">योजकः तत्र = योजकस्तत्र</td><td class="l">ઃ + ત → સ્ત</td></tr><tr><td class="rowlabel">जन्मभूमिः + च = जन्मभूमिश्च</td><td class="l">ઃ + ચ → શ્ચ</td></tr></table></div>
+<div class="next-line">→ <b>આગળ:</b> વ્યાકરણ</div>
+</div>
+
+
+<!-- ============ PART 03 ============ -->
+<div class="part" id="p3">
+<h2><span class="num">03</span>વ્યાકરણ / ભાષાસજ્જતા</h2>
+<p class="part-why">શા માટે ભણવું: નિયમ સમજ્યા પછી નવાં વાક્યો જાતે બનાવી શકાય — રટવું ઓછું પડે.</p>
+<p><b>1. વર્તમાન ક્રિયાપદ — એક / ઘણા (તે)</b></p><div class="tblwrap"><table><tr><th>એકવચન (તે …)</th><th>બહુવચન (તેઓ …)</th><th>પાઠમાં</th></tr><tr><td class="rowlabel">-ति</td><td class="l">-न्ति</td><td class="l">पठति → पठन्ति · पश्यति → पश्यन्ति · पिबति → पिबन्ति</td></tr><tr><td class="rowlabel">नमति</td><td class="l">नमन्ति</td><td class="l">પાઠ 3</td></tr><tr><td class="rowlabel">करोति</td><td class="l">कुर्वन्ति</td><td class="l">પાઠ 6</td></tr><tr><td class="rowlabel">शृणोति</td><td class="l">शृण्वन्ति</td><td class="l">પાઠ 6</td></tr><tr><td class="rowlabel">वर्तते</td><td class="l">वर्तन्ते</td><td class="l">પાઠ 3</td></tr></table></div><p><b>2. વિનંતી/આજ્ઞા -तु:</b> स्वीकरोतु · ददातु · उपविशतु · आगच्छतु · परिवेशयतु · करोतु (પાઠ 2). <b>નિષેધ:</b> मा / न + -तु.</p><p><b>3. ‘…જોઈએ’ — -एत् (વિધિલિંગ):</b> न्यसेत् · पिबेत् · वदेत् · समाचरेत् (પાઠ 3).</p><p><b>4. વિભક્તિ — પાઠ 1–7 નાં રૂપો</b></p><div class="tblwrap"><table><tr><th>વિભક્તિ</th><th>અર્થ</th><th>રૂપ (-अ કારાન્ત પુ./નપુ.)</th><th>સ્ત્રીલિંગ (-आ / -ई)</th><th>ઉદાહરણ</th></tr><tr><td class="rowlabel">પ્રથમા</td><td class="l">કર્તા</td><td class="l">शुकः / जलम्</td><td class="l">चञ्चुः / नदी</td><td class="l">शुकः पश्यति</td></tr><tr><td class="rowlabel">દ્વિતીયા</td><td class="l">ને</td><td class="l">-म् : जलम् / वनम्</td><td class="l">-ाम् : रोटिकाम्</td><td class="l">क्रियां विना · रोटिकाम्</td></tr><tr><td class="rowlabel">તૃતીયા</td><td class="l">વડે</td><td class="l">-ेन : सङ्गणकेन</td><td class="l">—</td><td class="l">विमानेन</td></tr><tr><td class="rowlabel">ચતુર્થી</td><td class="l">ને (કહેવું)</td><td class="l">-ाय : शुकाय</td><td class="l">—</td><td class="l">शुकाय कथयति</td></tr><tr><td class="rowlabel">પંચમી</td><td class="l">થી / કરતાં</td><td class="l">-ात् : स्वर्गात्</td><td class="l">—</td><td class="l">स्वर्गादपि</td></tr><tr><td class="rowlabel">ષષ્ઠી</td><td class="l">નો/ની/નું</td><td class="l">-स्य : शुकस्य</td><td class="l">-ायाः / -याः : ग्रीवायाः, साभ्रमत्याः</td><td class="l">सिंहस्य · चञ्चोः</td></tr><tr><td class="rowlabel">સપ્તમી</td><td class="l">માં/પર</td><td class="l">-े : सङ्घे, तटे</td><td class="l">-ायाम् : दिशायाम् · -ि : आपदि</td><td class="l">दिशायाम् · आपदि</td></tr></table></div><p><b>5. લિંગ મુજબ વિશેષણ:</b> वक्रः (પુ.) · वक्रा (સ્ત્રી.) · वक्रम् (નપુ.) — उष्ट्रः वक्रः · चञ्चुः वक्रा · पुच्छं वक्रम्. <b>‘આ’:</b> एषः (પુ.) · एषा (સ્ત્રી.) · एतत् (નપુ.).</p><p><b>6. કૃદંત:</b> -त्वा = …ને (दृष्ट्वा) · -तुम् = …વા (वक्तुम्, स्वीकर्तुम्). <b>-वान् = …વાળો:</b> श्रद्धावान्, बुद्धिमान्.</p><p><b>7. કર્તા–ક્રિયા વચન-મેળ:</b> એક કર્તા → -ति (बालकः गच्छति) · ઘણા કર્તા → -न्ति (बालकाः गच्छन्ति). બહુવચન કર્તા સાથે એકવચન ક્રિયા (બાલિકાઃ ગચ્છતિ) ભૂલ.</p><p><b>8. ‘अस्ति / नास्ति’ અને ‘किन्तु’:</b> X अस्ति किन्तु Y नास्ति (પાઠ 1, 5 ની રીત).</p>
+<div class="next-line">→ <b>આગળ:</b> પરીક્ષાના પ્રશ્નો</div>
+</div>
+
+
+<!-- ============ PART 04 ============ -->
+<div class="part" id="p4">
+<h2><span class="num">04</span>પરીક્ષાના પ્રશ્નો</h2>
+<p class="part-why">શા માટે ભણવું: દરેક પ્રશ્ન-પ્રકારની પ્રૅક્ટિસ — પેપર જેવી જ રીતે.</p>
+<div class="why-box box"><span class="label">નોંધ</span>નીચેના પ્રશ્નો <b>અમે બનાવેલા નમૂના</b> છે (પાઠ્યપુસ્તકના સ્વાધ્યાયના પ્રશ્નો નથી). સ્વાધ્યાય-સ્વાધ્યાયપોથી-પ્રૅક્ટિસ બુકના જવાબ, તે ત્રણે મળ્યા પછી જ બનશે. દ્વિતીય સત્રની પેપર-પદ્ધતિ હજી મળી નથી; પ્રથમ સત્રની પદ્ધતિ મુજબ નમૂના: પેપર-પદ્ધતિ (80 ગુણ): 1A વિકલ્પ [10] · 1B ✓/✗ [10] · 2A ખાલી જગ્યા [10] · 2B શ્લોકનો અનુવાદ [10] · 3A ગુજરાતીમાં જવાબ (ગમે તે 5) [10] · 3B સંસ્કૃતમાં જવાબ (ગમે તે 5) [10] · 4A અનુવાદ [10] · 4B સમાનાર્થી [5] · 4C અર્થ [5].</div><h3>1A · સાચો વિકલ્પ પસંદ કરો</h3><div class="tblwrap"><table><tr><th>પ્રશ્ન</th><th>વિકલ્પો</th><th>જવાબ</th></tr><tr><td class="rowlabel">‘मातुलः’ કોણ?</td><td class="l">(અ) મામા &nbsp;·&nbsp; (બ) કાકા &nbsp;·&nbsp; (ક) દિયર &nbsp;·&nbsp; (ડ) ભાણેજ</td><td class="l">મામા</td></tr><tr><td class="rowlabel">‘पितृष्वसा’ કોણ?</td><td class="l">(અ) ફઈ &nbsp;·&nbsp; (બ) માસી &nbsp;·&nbsp; (ક) કાકી &nbsp;·&nbsp; (ડ) નણંદ</td><td class="l">ફઈ</td></tr><tr><td class="rowlabel">‘भ्रातृजाया’ કોણ?</td><td class="l">(અ) ભાભી &nbsp;·&nbsp; (બ) નણંદ &nbsp;·&nbsp; (ક) ભત્રીજી &nbsp;·&nbsp; (ડ) ભાણી</td><td class="l">ભાભી</td></tr><tr><td class="rowlabel">‘ननान्दा’ કોણ?</td><td class="l">(અ) નણંદ &nbsp;·&nbsp; (બ) દિયર &nbsp;·&nbsp; (ક) ભાભી &nbsp;·&nbsp; (ડ) ફઈ</td><td class="l">નણંદ</td></tr><tr><td class="rowlabel">‘शुकाय’ કઈ વિભક્તિ?</td><td class="l">(અ) ચતુર્થી (ને) &nbsp;·&nbsp; (બ) તૃતીયા (વડે) &nbsp;·&nbsp; (ક) પંચમી (થી) &nbsp;·&nbsp; (ડ) સપ્તમી (માં)</td><td class="l">ચતુર્થી (ને)</td></tr><tr><td class="rowlabel">‘सङ्गणकेन’ નો અર્થ?</td><td class="l">(અ) કમ્પ્યૂટર વડે &nbsp;·&nbsp; (બ) કમ્પ્યૂટરમાં &nbsp;·&nbsp; (ક) કમ્પ્યૂટરને &nbsp;·&nbsp; (ડ) કમ્પ્યૂટરનું</td><td class="l">કમ્પ્યૂટર વડે</td></tr><tr><td class="rowlabel">‘स्वर्गादपि’ માં ‘स्वर्गात्’?</td><td class="l">(અ) પંચમી (…થી/કરતાં) &nbsp;·&nbsp; (બ) ષષ્ઠી &nbsp;·&nbsp; (ક) સપ્તમી &nbsp;·&nbsp; (ડ) તૃતીયા</td><td class="l">પંચમી (…થી/કરતાં)</td></tr><tr><td class="rowlabel">‘साभ्रमत्याः’?</td><td class="l">(અ) ષષ્ઠી (સાબરમતીનો) &nbsp;·&nbsp; (બ) સપ્તમી &nbsp;·&nbsp; (ક) દ્વિતીયા &nbsp;·&nbsp; (ડ) પ્રથમા</td><td class="l">ષષ્ઠી (સાબરમતીનો)</td></tr></table></div><h3>1B · ✓ કે ✗ કરો</h3><div class="tblwrap"><table><tr><th>વિધાન</th><th>જવાબ</th></tr><tr><td class="rowlabel">‘जनाः पठन्ति’ શુદ્ધ વાક્ય છે.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">‘बालिकाः गच्छति’ શુદ્ધ વાક્ય છે.</td><td class="l">✘ ખોટું</td></tr><tr><td class="rowlabel">‘वक्रा’ સ્ત્રીલિંગનું વિશેષણ છે.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">‘न + अस्ति’ = ‘नास्ति’.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">‘पिबेज्जलम्’ = पिबेत् + जलम्.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">‘देवरः’ = નણંદ.</td><td class="l">✘ ખોટું</td></tr></table></div><h3>2A · ખાલી જગ્યા પૂરો</h3><div class="tblwrap"><table><tr><th>વાક્ય</th><th>ખૂટતો શબ્દ</th></tr><tr><td class="rowlabel">जनाः जलं ____ । (પીએ છે)</td><td class="l">पिबन्ति</td></tr><tr><td class="rowlabel">बालकः पुस्तकं ____ । (ભણે છે)</td><td class="l">पठति</td></tr><tr><td class="rowlabel">एषः ____ । (મોબાઈલ)</td><td class="l">भ्रमणभाषः</td></tr><tr><td class="rowlabel">चञ्चुः ____ अस्ति । (વાંકી)</td><td class="l">वक्रा</td></tr><tr><td class="rowlabel">पुच्छं ____ अस्ति । (વાંકી)</td><td class="l">वक्रम्</td></tr><tr><td class="rowlabel">साभ्रमत्याः इतिहासः ____ । (વિશાળ)</td><td class="l">विशालः</td></tr></table></div><h3>2B · શ્લોકનો અનુવાદ</h3><p>ઉપરના <a href="#p1">‘પાઠ અને અનુવાદ’</a> વિભાગમાં દરેક શ્લોક/પંક્તિનો અનુવાદ છે — આ વિભાગ મોઢે કરો; પરીક્ષામાં શ્લોક આપીને તેનો ગુજરાતી અર્થ પૂછાય છે.</p><h3>3A · એક વાક્યમાં જવાબ (ગુજરાતીમાં)</h3><div class="example"><span class="label">એક વાક્ય</span><div class="step"><b>પ્ર.</b> ‘અશુદ્ધ વાક્ય’ ઓળખવા કઈ ત્રણ બાબતો તપાસશો?</div><div class="step"><b>જ.</b> કર્તા–ક્રિયાનું વચન, કર્તા–વિશેષણ–સર્વનામનું લિંગ, અને વિભક્તિનું રૂપ.</div><div class="step"><b>પ્ર.</b> ‘योजकः’ કોણ?</div><div class="step"><b>જ.</b> બધાને યોગ્ય જગ્યાએ જોડનાર, યોજના કરનાર — તે દુર્લભ છે.</div><div class="step"><b>પ્ર.</b> સૂક્તિ ‘ज्ञानं भारः क्रियां विना’ નો ભાવ?</div><div class="step"><b>જ.</b> આચરણ વિનાનું જ્ઞાન ભારરૂપ છે.</div></div><h3>3B · એક વાક્યમાં જવાબ (સંસ્કૃતમાં)</h3><div class="example"><span class="label">સંસ્કૃતમાં</span><div class="step"><b>પ્ર.</b> उष्ट्रः कुत्र अटति ?</div><div class="step"><b>જ.</b> <b>उष्ट्रः वने अटति ।</b><br><span style="color:var(--ink-3)">(અર્થ: ઊંટ વનમાં ફરે છે.)</span></div><div class="step"><b>પ્ર.</b> कः तापं हरति ?</div><div class="step"><b>જ.</b> <b>व्यजनं तापं हरति ।</b><br><span style="color:var(--ink-3)">(અર્થ: પંખો તાપ હરે છે.)</span></div><div class="step"><b>પ્ર.</b> काकस्य पत्नी कुत्र वसति ?</div><div class="step"><b>જ.</b> <b>काकस्य पत्नी वृक्षे वसति ।</b><br><span style="color:var(--ink-3)">(અર્થ: કાગડાની પત્ની ઝાડ પર રહે છે.)</span></div></div><h3>4A · સંસ્કૃત વાક્યોનો ગુજરાતીમાં અનુવાદ</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત વાક્ય</th><th>ગુજરાતી</th></tr><tr><td class="rowlabel">जनाः जलं पिबन्ति ।</td><td class="l">લોકો પાણી પીએ છે.</td></tr><tr><td class="rowlabel">बालकाः गच्छन्ति ।</td><td class="l">બાળકો જાય છે.</td></tr><tr><td class="rowlabel">एषः भ्रमणभाषः ।</td><td class="l">આ મોબાઈલ છે.</td></tr><tr><td class="rowlabel">अहं गृहं गच्छामि ।</td><td class="l">હું ઘરે જાઉં છું.</td></tr><tr><td class="rowlabel">सः लज्जाम् अनुभवति ।</td><td class="l">તે શરમ અનુભવે છે.</td></tr></table></div><h3>4B · સમાનાર્થી શબ્દ શોધો</h3><div class="tblwrap"><table><tr><th>શબ્દ</th><th>વિકલ્પો</th><th>સમાનાર્થી</th></tr><tr><td class="rowlabel">पुत्रः</td><td class="l">(અ) सुतः &nbsp;·&nbsp; (બ) पिता &nbsp;·&nbsp; (ક) माता &nbsp;·&nbsp; (ડ) गुरुः</td><td class="l">सुतः</td></tr><tr><td class="rowlabel">गृहम्</td><td class="l">(અ) भवनम् &nbsp;·&nbsp; (બ) वनम् &nbsp;·&nbsp; (ક) नदी &nbsp;·&nbsp; (ડ) वृक्षः</td><td class="l">भवनम्</td></tr><tr><td class="rowlabel">वृक्षः</td><td class="l">(અ) तरुः &nbsp;·&nbsp; (બ) मृगः &nbsp;·&nbsp; (ક) पाषाणः &nbsp;·&nbsp; (ડ) जलम्</td><td class="l">तरुः</td></tr><tr><td class="rowlabel">पक्षी</td><td class="l">(અ) खगः &nbsp;·&nbsp; (બ) सिंहः &nbsp;·&nbsp; (ક) मत्स्यः &nbsp;·&nbsp; (ડ) अश्वः</td><td class="l">खगः</td></tr></table></div><h3>4C · સંસ્કૃત શબ્દનો અર્થ શોધો</h3><div class="tblwrap"><table><tr><th>શબ્દ</th><th>વિકલ્પો</th><th>અર્થ</th></tr><tr><td class="rowlabel">मातुलानी</td><td class="l">(અ) મામી &nbsp;·&nbsp; (બ) માસી &nbsp;·&nbsp; (ક) ફઈ &nbsp;·&nbsp; (ડ) કાકી</td><td class="l">મામી</td></tr><tr><td class="rowlabel">भागिनेयः</td><td class="l">(અ) ભાણેજ &nbsp;·&nbsp; (બ) ભત્રીજો &nbsp;·&nbsp; (ક) દિયર &nbsp;·&nbsp; (ડ) જમાઈ</td><td class="l">ભાણેજ</td></tr><tr><td class="rowlabel">भ्रातृव्यः</td><td class="l">(અ) ભત્રીજો &nbsp;·&nbsp; (બ) ભાણેજ &nbsp;·&nbsp; (ક) કાકા &nbsp;·&nbsp; (ડ) દિયર</td><td class="l">ભત્રીજો</td></tr><tr><td class="rowlabel">पितृव्यः</td><td class="l">(અ) કાકા &nbsp;·&nbsp; (બ) મામા &nbsp;·&nbsp; (ક) દાદા &nbsp;·&nbsp; (ડ) નાના</td><td class="l">કાકા</td></tr><tr><td class="rowlabel">कोटरः</td><td class="l">(અ) ઝાડની બખોલ &nbsp;·&nbsp; (બ) ગુફા &nbsp;·&nbsp; (ક) ઘર &nbsp;·&nbsp; (ડ) કૂવો</td><td class="l">ઝાડની બખોલ</td></tr></table></div>
+<div class="next-line">→ <b>આગળ:</b> સારાંશ</div>
+</div>
+
+
+<!-- ============ PART 05 ============ -->
+<div class="part" id="p5">
+<h2><span class="num">05</span>સારાંશ — યાદ રાખો</h2>
+<p class="part-why">શા માટે ભણવું: છેલ્લી ઘડીએ એક નજરમાં પુનરાવર્તન.</p>
+<div class="remember"><span class="label">યાદ રાખો</span><ol><li>ક્રિયા: -ति / -न्ति · વિનંતી -तु · …જોઈએ -एत् · -त्वा / -तुम् · -वान्.</li><li>વિભક્તિ: -म् (ને) · -ेन (વડે) · -ाय (ને-કહેવું) · -ात् (થી) · -स्य / -ायाः (નો-ની) · -े / -ायाम् / -ि (માં).</li><li>સંધિ: नास्ति · मास्तु · वसुधैव · पिबेज्जलम् · शुष्कवृक्षाश्च · स्वर्गादपि · योजकस्तत्र.</li><li>સંબંધ: पितृव्यः=કાકા · मातुलः=મામા · भागिनेयः=ભાણેજ · पितृष्वसा=ફઈ · भ्रातृजाया=ભાભી · देवरः=દિયર · ननान्दा=નણંદ.</li><li>પાઠ: 1 પહેલી · 2 વાર્તાલાપ · 3 સુભાષિત · 4 ગુર્જર ગીત · 5 ઊંટની વાર્તા · 6 વિજ્ઞાન · 7 સૂક્તિ.</li></ol></div><div class="why-box box"><span class="label">વાલી માટે</span>પરીક્ષા પહેલાંની સાંજે આ પાનું મોટેથી વંચાવો; સંબંધ-શબ્દો ઘરના સભ્યો માટે બોલાવડાવો (मातुलः, पितृव्यः…).</div>
+</div>
+
+</div>
+</body></html>

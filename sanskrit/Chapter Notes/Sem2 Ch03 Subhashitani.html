@@ -1,0 +1,184 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>सुभाषितानि — Chapter Notes</title>
+<style>:root{
+  --bg:#FBF9F4; --surface:#FFFFFF; --surface-2:#F3F0E7;
+  --ink:#241F16; --ink-2:#5B5647; --ink-3:#8C8672;
+  --line:#E4DFD0;
+  --accent:#8B5E34; --accent-ink:#3E2A17; --accent-bg:#F1E4D3;
+  --formula:#1F4E42; --formula-bg:#E3F0EA; --formula-line:#9FC6B7;
+  --exam:#7A2E2E; --exam-bg:#F6E4E1; --exam-line:#DBA9A4;
+  --mistake:#8A5A00; --mistake-bg:#FDF1D9; --mistake-line:#E9C877;
+  --check:#2E4E7A; --check-bg:#E4ECF6; --check-line:#A9C0DB;
+  --why:#5B5647; --why-bg:#F3F0E7; --why-line:#DAD4C2;
+  --font-display:'Fraunces','Noto Sans Gujarati',Georgia,serif;
+  --font-body:'Source Sans 3','Noto Sans Gujarati',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+    --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+    --line:#3A3428;
+    --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+    --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+    --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+    --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+    --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+    --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+  --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+  --line:#3A3428;
+  --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+  --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+  --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+  --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+  --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+  --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.75;padding:0 16px;font-size:16px}
+.wrap{max-width:760px;margin:0 auto;padding-block:32px 80px}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;text-wrap:balance;color:var(--ink)}
+h1{font-size:clamp(28px,6vw,38px);margin:0 0 6px}
+.subtitle{color:var(--ink-2);font-size:15px;margin:0 0 28px}
+h2{font-size:24px;margin:0 0 4px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+h2 .num{color:var(--accent);font-family:var(--font-mono);font-size:15px;font-weight:600}
+.part-why{color:var(--ink-2);font-size:14.5px;margin:0 0 18px;font-style:italic}
+h3{font-size:18px;margin:30px 0 10px;color:var(--accent-ink)}
+p{margin:0 0 12px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:36px}
+.legend-item{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-2)}
+.dot{width:10px;height:10px;border-radius:3px;flex:none}
+.dot.formula{background:var(--formula)} .dot.exam{background:var(--exam)} .dot.mistake{background:var(--mistake)}
+.dot.check{background:var(--check)} .dot.concept{background:var(--accent)} .dot.why{background:var(--why)}
+.part{padding:32px 0;border-top:1px solid var(--line)}
+.part:first-of-type{border-top:none}
+.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:32px}
+.toc ol{margin:8px 0 0;padding-left:0;list-style:none}
+.toc li{margin-bottom:5px;font-size:14.5px}
+.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ink-3)}
+.toc .n{font-family:var(--font-mono);color:var(--accent);font-size:13px;font-weight:600;margin-right:6px}
+.box{border-radius:12px;padding:14px 18px;margin:14px 0;border:1px solid;font-size:15px}
+.box .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;display:block}
+.formula-box{background:var(--formula-bg);border-color:var(--formula-line)}
+.formula-box .label{color:var(--formula)}
+.formula-box .f{font-family:var(--font-mono);font-size:18px;color:var(--formula);font-weight:600;margin:4px 0}
+.formula-box .meaning{color:var(--ink-2);font-size:14px}
+.concept-box{background:var(--surface);border-color:var(--line);border-left:3px solid var(--accent)}
+.concept-box .label{color:var(--accent)}
+.exam-box{background:var(--exam-bg);border-color:var(--exam-line)} .exam-box .label{color:var(--exam)}
+.mistake-box{background:var(--mistake-bg);border-color:var(--mistake-line)} .mistake-box .label{color:var(--mistake)}
+.check-box{background:var(--check-bg);border-color:var(--check-line)} .check-box .label{color:var(--check)}
+.why-box{background:var(--why-bg);border-color:var(--why-line)} .why-box .label{color:var(--why)}
+.extra-box{background:var(--surface);border:1px dashed var(--ink-3)} .extra-box .label{color:var(--ink-3)}
+.parent-box{background:var(--accent-bg);border-color:var(--accent)} .parent-box .label{color:var(--accent-ink)}
+.outcome{background:var(--surface);border:1px solid var(--accent);border-radius:12px;padding:14px 18px;margin:0 0 16px}
+.outcome .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;display:block}
+.submap{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 6px}
+.submap span{background:var(--surface-2);border:1px solid var(--line);border-radius:20px;padding:4px 12px;font-size:12.5px;color:var(--ink-2)}
+.next-line{font-size:14px;color:var(--ink-2);margin-top:18px;padding-top:14px;border-top:1px dashed var(--line)}
+.next-line b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{padding:8px 10px;border:1px solid var(--line);text-align:center}
+th{background:var(--surface-2);font-weight:600;color:var(--ink-2);font-size:12.5px}
+td.rowlabel{text-align:left;color:var(--ink-2);font-weight:600;background:var(--surface-2)}
+td.l{text-align:left}
+.tblwrap{overflow-x:auto}
+.example{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:14px 0;font-size:15px}
+.example .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px;display:block}
+.example .step{margin:3px 0}
+.example .step b{color:var(--ink-2);font-weight:600}
+.mono{font-family:var(--font-mono)}
+.remember{background:var(--accent-bg);border:1px solid var(--accent);border-radius:12px;padding:16px 20px;margin:16px 0}
+.remember .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:8px;display:block}
+.remember ol{margin:0;padding-left:18px} .remember li{margin-bottom:5px}
+.badge{display:inline-block;font-size:11px;font-family:var(--font-mono);padding:2px 8px;border-radius:20px;background:var(--exam-bg);color:var(--exam);border:1px solid var(--exam-line);margin-left:6px;vertical-align:middle}
+.diagram{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px;margin:16px 0}
+.diagram svg{display:block;width:100%;height:auto}
+.diagram-cap{text-align:center;font-size:13px;color:var(--ink-3);margin-top:6px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:600px){.pair{grid-template-columns:1fr}}
+.pair .diagram{margin:6px 0}
+.jumpicon{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:var(--formula);color:var(--surface);text-decoration:none;font-size:11px;font-weight:700;vertical-align:middle;margin-left:4px}
+.src{font-size:12.5px;color:var(--ink-3)}
+</style>
+
+<div class="wrap">
+<h1>પાઠ 3 · सुभाषितानि</h1>
+<p class="subtitle">ધોરણ 7 સંસ્કૃત (દ્વિતીય સત્ર) · GSEB ગુજરાતી માધ્યમ · પાન 6–10</p>
+<div class="legend">
+<div class="legend-item"><span class="dot why"></span>કેમ / રોજિંદું ઉદાહરણ</div>
+<div class="legend-item"><span class="dot concept"></span>સમજવું જ પડે</div>
+<div class="legend-item"><span class="dot formula"></span>યાદ રાખવું — મુખ્ય મુદ્દો</div>
+<div class="legend-item"><span class="dot exam"></span>પરીક્ષામાં વારંવાર</div>
+<div class="legend-item"><span class="dot mistake"></span>સામાન્ય ભૂલ</div>
+<div class="legend-item"><span class="dot check"></span>જાતે ચકાસો</div>
+</div>
+<div class="toc">
+<b>પ્રકરણનો નકશો</b> — અંતિમ લક્ષ્ય: પાઠનો અનુવાદ, શબ્દાર્થ, વ્યાકરણ અને પરીક્ષાના જવાબ.
+<ol>
+<li><span class="n">00</span><a href="#intro">પાઠ એક નજરે</a> — છ સુભાષિતો</li><li><span class="n">01</span><a href="#p1">પાઠ અને અનુવાદ</a> — વાક્ય / શ્લોક પ્રમાણે</li><li><span class="n">02</span><a href="#p2">શબ્દાર્થ</a> — ટિપ્પણી + ज्ञातव्यम्</li><li><span class="n">03</span><a href="#p3">વ્યાકરણ / ભાષાસજ્જતા</a> — આ પાઠમાં જે નિયમ દેખાય છે</li><li><span class="n">04</span><a href="#p4">પરીક્ષાના પ્રશ્નો</a> — નમૂનારૂપ પ્રશ્ન-જવાબ</li><li><span class="n">05</span><a href="#p5">સારાંશ</a></li>
+</ol>
+</div>
+
+<!-- ============ PART 00 ============ -->
+<div class="part" id="intro">
+<h2><span class="num">00</span>પાઠ એક નજરે</h2>
+<p class="part-why">શા માટે ભણવું: શ્લોકનો અનુવાદ [2B] અહીંથી સૌથી વધુ; સુભાષિતોનાં ‘ખાલી જગ્યા’, પાદપૂર્તિ, અર્થ — અને ષષ્ઠી/બહુવચન રૂપો.</p>
+<div class="outcome"><span class="label">આ પ્રકરણ પછી તમે</span>
+પાઠ વાંચી-બોલી શકશો, દરેક વાક્ય/શ્લોકનો ગુજરાતી અનુવાદ કહી શકશો, શબ્દાર્થ યાદ રાખી શકશો અને પરીક્ષાના પ્રશ્નોના જવાબ સંસ્કૃત-ગુજરાતીમાં લખી શકશો.</div><div class="tblwrap"><table><tr><th>વિગત</th><th>માહિતી</th></tr><tr><td class="rowlabel">પાઠ</td><td class="l">3. सुभाषितानि — સારાં વચનો (સુભાષિતો)</td></tr><tr><td class="rowlabel">પ્રકાર</td><td class="l">છ સુભાષિતો</td></tr><tr><td class="rowlabel">પાઠ્યપુસ્તક પાન</td><td class="l">પાન 6–10</td></tr></table></div><div class="concept-box box"><span class="label">‘सुभाषितम्’ કેવી રીતે બન્યો?</span><p><b>सु</b> = સારું + <b>भाषितम्</b> = બોલાયેલું (भाष् = બોલવું). એટલે ‘સારું બોલાયેલું વચન’. ગુજરાતીમાં સુભાષિત.</p></div><div class="concept-box box"><span class="label">છ સુભાષિતો — એક વાક્યમાં સાર</span><div class="tblwrap"><table><tr><th>#</th><th>શબ્દ-સંકેત</th><th>સાર</th></tr><tr><td class="rowlabel">१</td><td class="l">जलम् · अन्नम् · सुभाषितम्</td><td class="l">સાચાં રત્નો ત્રણ: જળ, અન્ન, સુભાષિત</td></tr><tr><td class="rowlabel">२</td><td class="l">वसुधैव कुटुम्बकम्</td><td class="l">ઉદાર માટે આખી પૃથ્વી કુટુંબ</td></tr><tr><td class="rowlabel">३</td><td class="l">नमन्ति फलिनो वृक्षाः</td><td class="l">ફળવાળાં નમે, સૂકાં-મૂર્ખ ન નમે</td></tr><tr><td class="rowlabel">४</td><td class="l">षडेते (उद्यमः…)</td><td class="l">ઉદ્યમ, સાહસ, ધૈર્ય, બુદ્ધિ, શક્તિ, પરાક્રમ — છ ગુણ</td></tr><tr><td class="rowlabel">५</td><td class="l">उद्यमेन हि सिध्यन्ति</td><td class="l">કાર્ય ઉદ્યમથી, મનોરથથી નહિ</td></tr><tr><td class="rowlabel">६</td><td class="l">दृष्टिपूतं · वस्त्रपूतं · शास्त्रपूतां · मनःपूतं</td><td class="l">ચાર પવિત્રતા: જોઈને ચાલો, ગાળીને પીઓ, શાસ્ત્રસંમત બોલો, મનથી આચરો</td></tr></table></div></div>
+<div class="next-line">→ <b>આગળ:</b> અનુવાદ → શબ્દાર્થ → વ્યાકરણ → પરીક્ષાના પ્રશ્નો</div>
+</div>
+
+
+<!-- ============ PART 01 ============ -->
+<div class="part" id="p1">
+<h2><span class="num">01</span>પાઠ અને અનુવાદ</h2>
+<p class="part-why">શા માટે ભણવું: શ્લોકના અનુવાદ [2B] અને સંસ્કૃત વાક્યોનો ગુજરાતી અનુવાદ [4A] — બંને સીધા આના પર આધારિત છે.</p>
+<h3>સુભાષિત ૧</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત</th><th>ગુજરાતી અનુવાદ</th></tr><tr><td class="rowlabel">पृथिव्यां त्रीणि रत्नानि जलमन्नं सुभाषितम् ।</td><td class="l">પૃથ્વી પર ત્રણ રત્નો છે — જળ, અન્ન અને સુભાષિત;</td></tr><tr><td class="rowlabel">मूढैः पाषाणखण्डेषु रत्नसंज्ञा विधीयते ॥ १ ॥</td><td class="l">પણ મૂર્ખાઓ વડે પથ્થરના ટુકડાઓને ‘રત્ન’ નામ આપી દેવાય છે.</td></tr></table></div><h3>સુભાષિત ૨</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત</th><th>ગુજરાતી અનુવાદ</th></tr><tr><td class="rowlabel">अयं निजः परो वेति गणना लघुचेतसाम् ।</td><td class="l">‘આ મારો, આ પારકો’ એવી ગણતરી સંકુચિત મનવાળાઓની હોય છે;</td></tr><tr><td class="rowlabel">उदारचरितानां तु वसुधैव कुटुम्बकम् ॥ २ ॥</td><td class="l">ઉદાર ચરિત્રવાળાઓ માટે તો પૃથ્વી જ કુટુંબ છે.</td></tr></table></div><h3>સુભાષિત ૩</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત</th><th>ગુજરાતી અનુવાદ</th></tr><tr><td class="rowlabel">नमन्ति फलिनो वृक्षाः नमन्ति गुणिनो जनाः ।</td><td class="l">ફળવાળાં વૃક્ષો નમે છે, ગુણવાન માણસો નમે છે;</td></tr><tr><td class="rowlabel">शुष्कवृक्षाश्च मूर्खाश्च न नमन्ति कदाचन ॥ ३ ॥</td><td class="l">સૂકાં વૃક્ષો અને મૂર્ખ માણસો ક્યારેય નમતા નથી.</td></tr></table></div><h3>સુભાષિત ૪</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત</th><th>ગુજરાતી અનુવાદ</th></tr><tr><td class="rowlabel">उद्यमः साहसं धैर्यं बुद्धिः शक्तिः पराक्रमः ।</td><td class="l">ઉદ્યમ, સાહસ, ધૈર્ય, બુદ્ધિ, શક્તિ અને પરાક્રમ —</td></tr><tr><td class="rowlabel">षडेते यत्र वर्तन्ते तत्र देवः सहायकृत् ॥ ४ ॥</td><td class="l">આ છ જ્યાં રહે છે ત્યાં દેવ સહાય કરનાર બને છે.</td></tr></table></div><h3>સુભાષિત ૫</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત</th><th>ગુજરાતી અનુવાદ</th></tr><tr><td class="rowlabel">उद्यमेन हि सिध्यन्ति कार्याणि न मनोरथैः ।</td><td class="l">કાર્યો ઉદ્યમથી જ સિદ્ધ થાય છે, ઇચ્છાઓ (મનોરથો)થી નહિ;</td></tr><tr><td class="rowlabel">न हि सुप्तस्य सिंहस्य प्रविशन्ति मुखे मृगाः ॥ ५ ॥</td><td class="l">ખરેખર સૂતેલા સિંહના મુખમાં હરણો પ્રવેશતાં નથી.</td></tr></table></div><h3>સુભાષિત ૬</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત</th><th>ગુજરાતી અનુવાદ</th></tr><tr><td class="rowlabel">दृष्टिपूतं न्यसेत् पादं वस्त्रपूतं पिबेज्जलम् ।</td><td class="l">નજરથી શુદ્ધ કરીને (જોઈને) પગ મૂકવો, કપડાથી ગાળેલું પાણી પીવું;</td></tr><tr><td class="rowlabel">शास्त्रपूतां वदेत् वाणीं मनःपूतं समाचरेत् ॥ ६ ॥</td><td class="l">શાસ્ત્રથી પવિત્ર વાણી બોલવી અને મનથી પવિત્ર આચરણ કરવું.</td></tr></table></div><p><b>નોંધ:</b> સન્ધયઃ (પુસ્તક): परो वेति = परः वा इति · शुष्कवृक्षाश्च = शुष्कवृक्षः च · मूर्खाश्च = मूर्खाः च · पिबेज्जलम् = पिबेत् जलम्.</p>
+<div class="next-line">→ <b>આગળ:</b> શબ્દાર્થ</div>
+</div>
+
+
+<!-- ============ PART 02 ============ -->
+<div class="part" id="p2">
+<h2><span class="num">02</span>શબ્દાર્થ</h2>
+<p class="part-why">શા માટે ભણવું: સંસ્કૃત શબ્દના અર્થ વિકલ્પોમાંથી શોધો [4C] — અર્થ યાદ હોય તો 5 ગુણ પાકા.</p>
+<h3>ટિપ્પણી — પાઠ્યપુસ્તકના શબ્દાર્થ</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત શબ્દ</th><th>ગુજરાતી અર્થ</th></tr><tr><td class="rowlabel">पाषाणः</td><td class="l">પથ્થર</td></tr><tr><td class="rowlabel">खण्डेषु</td><td class="l">ટુકડાઓમાં</td></tr><tr><td class="rowlabel">मूढैः</td><td class="l">મૂર્ખાઓ વડે</td></tr><tr><td class="rowlabel">विधीयते</td><td class="l">મનાય છે, સમજાય છે</td></tr><tr><td class="rowlabel">परः</td><td class="l">પારકો</td></tr><tr><td class="rowlabel">लघुचेतसाम्</td><td class="l">સંકુચિત મનવાળાઓની</td></tr><tr><td class="rowlabel">उदारचरितानाम्</td><td class="l">ઉદાર ચરિત્રવાળાંની</td></tr><tr><td class="rowlabel">शुष्कवृक्षः</td><td class="l">સૂકાં વૃક્ષો</td></tr><tr><td class="rowlabel">कदाचन</td><td class="l">ક્યારેય</td></tr><tr><td class="rowlabel">उद्यमेन</td><td class="l">પરિશ્રમથી</td></tr><tr><td class="rowlabel">सिध्यन्ति</td><td class="l">સિદ્ધ થાય છે</td></tr><tr><td class="rowlabel">दृष्टिपूतम्</td><td class="l">આંખ વડે જોયેલ</td></tr><tr><td class="rowlabel">न्यसेत्</td><td class="l">મૂકવું જોઈએ</td></tr><tr><td class="rowlabel">पादम्</td><td class="l">પગલું</td></tr><tr><td class="rowlabel">समाचरेत्</td><td class="l">આચરણ કરવું જોઈએ</td></tr></table></div><h3>પાઠના બીજા શબ્દો (અર્થ અમારા, પાઠ પ્રમાણે)</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત શબ્દ</th><th>ગુજરાતી અર્થ</th></tr><tr><td class="rowlabel">रत्नम्</td><td class="l">રત્ન</td></tr><tr><td class="rowlabel">अन्नम्</td><td class="l">અનાજ, ભોજન</td></tr><tr><td class="rowlabel">वसुधा</td><td class="l">પૃથ્વી</td></tr><tr><td class="rowlabel">कुटुम्बकम्</td><td class="l">કુટુંબ</td></tr><tr><td class="rowlabel">फलिनः</td><td class="l">ફળવાળા</td></tr><tr><td class="rowlabel">गुणिनः</td><td class="l">ગુણવાન</td></tr><tr><td class="rowlabel">उद्यमः</td><td class="l">ઉદ્યમ, મહેનત</td></tr><tr><td class="rowlabel">साहसम्</td><td class="l">સાહસ</td></tr><tr><td class="rowlabel">धैर्यम्</td><td class="l">ધીરજ</td></tr><tr><td class="rowlabel">बुद्धिः</td><td class="l">બુદ્ધિ</td></tr><tr><td class="rowlabel">शक्तिः</td><td class="l">શક્તિ</td></tr><tr><td class="rowlabel">पराक्रमः</td><td class="l">પરાક્રમ</td></tr><tr><td class="rowlabel">देवः</td><td class="l">દેવ, ભાગ્ય</td></tr><tr><td class="rowlabel">मनोरथः</td><td class="l">ઇચ્છા, મનોરથ</td></tr><tr><td class="rowlabel">सुप्तः</td><td class="l">સૂતેલો</td></tr><tr><td class="rowlabel">सिंहः</td><td class="l">સિંહ</td></tr><tr><td class="rowlabel">मृगः</td><td class="l">હરણ</td></tr><tr><td class="rowlabel">वाणी</td><td class="l">વાણી</td></tr><tr><td class="rowlabel">वस्त्रपूतम्</td><td class="l">કપડાથી ગાળેલું</td></tr></table></div>
+<div class="next-line">→ <b>આગળ:</b> વ્યાકરણ</div>
+</div>
+
+
+<!-- ============ PART 03 ============ -->
+<div class="part" id="p3">
+<h2><span class="num">03</span>વ્યાકરણ / ભાષાસજ્જતા</h2>
+<p class="part-why">શા માટે ભણવું: નિયમ સમજ્યા પછી નવાં વાક્યો જાતે બનાવી શકાય — રટવું ઓછું પડે.</p>
+<p><b>1. ષષ્ઠી (‘નો / ની / નું’) — -स्य</b> (પુંલિંગ ‘-अ’ વાળા શબ્દો):</p><div class="tblwrap"><table><tr><th>પ્રથમા (કર્તા)</th><th>ષષ્ઠી (…નો)</th><th>પાઠમાં / ઉદાહરણ</th></tr><tr><td class="rowlabel">सिंहः</td><td class="l">सिंहस्य</td><td class="l">सुप्तस्य सिंहस्य मुखे (સૂતેલા સિંહના મુખમાં)</td></tr><tr><td class="rowlabel">बालकः</td><td class="l">बालकस्य</td><td class="l">બાળકનો</td></tr><tr><td class="rowlabel">देवः</td><td class="l">देवस्य</td><td class="l">દેવનો</td></tr><tr><td class="rowlabel">छात्रः</td><td class="l">छात्रस्य</td><td class="l">છાત્રનો</td></tr><tr><td class="rowlabel">ग्रामः</td><td class="l">ग्रामस्य</td><td class="l">ગામનો</td></tr></table></div><p><b>2. બહુવચન પ્રથમા — -ाः</b> (એક: -ः → ઘણા: -ाः):</p><div class="tblwrap"><table><tr><th>એક</th><th>ઘણા</th><th>પાઠમાં</th></tr><tr><td class="rowlabel">वृक्षः</td><td class="l">वृक्षाः</td><td class="l">फलिनो वृक्षाः (ફળવાળાં વૃક્ષો)</td></tr><tr><td class="rowlabel">जनः</td><td class="l">जनाः</td><td class="l">गुणिनो जनाः</td></tr><tr><td class="rowlabel">मृगः</td><td class="l">मृगाः</td><td class="l">मुखे मृगाः</td></tr><tr><td class="rowlabel">मूर्खः</td><td class="l">मूर्खाः</td><td class="l">मूर्खाश्च</td></tr></table></div><p><b>3. ક્રિયાપદ — વર્તમાન બહુવચન (તેઓ …) -न्ति:</b> <b>नमति → नमन्ति</b>, <b>सिध्यति → सिध्यन्ति</b>, <b>वर्तते → वर्तन्ते</b>, <b>प्रविशति → प्रविशन्ति</b>.</p><p><b>4. ‘विधिलिङ्’ — ‘…કરવું જોઈએ’ (-एत्):</b> <b>न्यसेत्</b> (મૂકવું જોઈએ), <b>पिबेत्</b> (પીવું જોઈએ), <b>वदेत्</b> (બોલવું જોઈએ), <b>समाचरेत्</b> (આચરવું જોઈએ). મૂળ + <b>-एत्</b>: पा(पिब्) → <b>पिबेत्</b>.</p><p><b>5. સંધિ:</b> <b>वसुधा + एव = वसुधैव</b> (आ + ए → ऐ) · <b>पिबेत् + जलम् = पिबेज्जलम्</b> (त् + ज → ज्ज) · <b>शुष्कवृक्षाः + च = शुष्कवृक्षाश्च</b> (ः + च → श्च).</p>
+<div class="next-line">→ <b>આગળ:</b> પરીક્ષાના પ્રશ્નો</div>
+</div>
+
+
+<!-- ============ PART 04 ============ -->
+<div class="part" id="p4">
+<h2><span class="num">04</span>પરીક્ષાના પ્રશ્નો</h2>
+<p class="part-why">શા માટે ભણવું: દરેક પ્રશ્ન-પ્રકારની પ્રૅક્ટિસ — પેપર જેવી જ રીતે.</p>
+<div class="why-box box"><span class="label">નોંધ</span>નીચેના પ્રશ્નો <b>અમે બનાવેલા નમૂના</b> છે (પાઠ્યપુસ્તકના સ્વાધ્યાયના પ્રશ્નો નથી). સ્વાધ્યાય-સ્વાધ્યાયપોથી-પ્રૅક્ટિસ બુકના જવાબ, તે ત્રણે મળ્યા પછી જ બનશે. દ્વિતીય સત્રની પેપર-પદ્ધતિ હજી મળી નથી; પ્રથમ સત્રની પદ્ધતિ મુજબ નમૂના: પેપર-પદ્ધતિ (80 ગુણ): 1A વિકલ્પ [10] · 1B ✓/✗ [10] · 2A ખાલી જગ્યા [10] · 2B શ્લોકનો અનુવાદ [10] · 3A ગુજરાતીમાં જવાબ (ગમે તે 5) [10] · 3B સંસ્કૃતમાં જવાબ (ગમે તે 5) [10] · 4A અનુવાદ [10] · 4B સમાનાર્થી [5] · 4C અર્થ [5].</div><h3>1A · સાચો વિકલ્પ પસંદ કરો</h3><div class="tblwrap"><table><tr><th>પ્રશ્ન</th><th>વિકલ્પો</th><th>જવાબ</th></tr><tr><td class="rowlabel">‘उद्यमः’ એટલે?</td><td class="l">(અ) પરિશ્રમ &nbsp;·&nbsp; (બ) આળસ &nbsp;·&nbsp; (ક) ભય &nbsp;·&nbsp; (ડ) ક્રોધ</td><td class="l">પરિશ્રમ</td></tr><tr><td class="rowlabel">‘वसुधा’ એટલે?</td><td class="l">(અ) પૃથ્વી &nbsp;·&nbsp; (બ) આકાશ &nbsp;·&nbsp; (ક) સમુદ્ર &nbsp;·&nbsp; (ડ) પર્વત</td><td class="l">પૃથ્વી</td></tr><tr><td class="rowlabel">‘पाषाणः’ એટલે?</td><td class="l">(અ) પથ્થર &nbsp;·&nbsp; (બ) પાણી &nbsp;·&nbsp; (ક) અનાજ &nbsp;·&nbsp; (ડ) ઝાડ</td><td class="l">પથ્થર</td></tr><tr><td class="rowlabel">‘सुप्तः’ એટલે?</td><td class="l">(અ) સૂતેલો &nbsp;·&nbsp; (બ) ઊભેલો &nbsp;·&nbsp; (ક) દોડતો &nbsp;·&nbsp; (ડ) બોલતો</td><td class="l">સૂતેલો</td></tr><tr><td class="rowlabel">‘षडेते’ માં ‘षट्’ = ?</td><td class="l">(અ) છ &nbsp;·&nbsp; (બ) સાત &nbsp;·&nbsp; (ક) પાંચ &nbsp;·&nbsp; (ડ) ચાર</td><td class="l">છ</td></tr><tr><td class="rowlabel">‘नमन्ति’ કોણ નમે છે (સુભાષિત 3)?</td><td class="l">(અ) ફળવાળાં વૃક્ષો અને ગુણવાન લોકો &nbsp;·&nbsp; (બ) સૂકાં વૃક્ષો &nbsp;·&nbsp; (ક) મૂર્ખ લોકો &nbsp;·&nbsp; (ડ) સિંહ</td><td class="l">ફળવાળાં વૃક્ષો અને ગુણવાન લોકો</td></tr><tr><td class="rowlabel">‘वसुधैव कुटुम्बकम्’ એટલે?</td><td class="l">(અ) પૃથ્વી જ કુટુંબ &nbsp;·&nbsp; (બ) ઘર જ કુટુંબ &nbsp;·&nbsp; (ક) ગામ જ કુટુંબ &nbsp;·&nbsp; (ડ) દેશ જ કુટુંબ</td><td class="l">પૃથ્વી જ કુટુંબ</td></tr></table></div><h3>1B · ✓ કે ✗ કરો</h3><div class="tblwrap"><table><tr><th>વિધાન</th><th>જવાબ</th></tr><tr><td class="rowlabel">સુભાષિત 1 માં ત્રણ રત્ન જળ, અન્ન અને સુભાષિત છે.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">સૂકાં વૃક્ષો હંમેશાં નમે છે.</td><td class="l">✘ ખોટું</td></tr><tr><td class="rowlabel">કાર્યો ઉદ્યમથી સિદ્ધ થાય છે.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">સૂતેલા સિંહના મુખમાં હરણ પોતે આવે છે.</td><td class="l">✘ ખોટું</td></tr><tr><td class="rowlabel">‘वस्त्रपूतं जलम्’ = કપડાથી ગાળેલું પાણી.</td><td class="l">✔ સાચું</td></tr><tr><td class="rowlabel">‘षडेते’ એટલે ‘ચાર’.</td><td class="l">✘ ખોટું</td></tr></table></div><h3>2A · ખાલી જગ્યા પૂરો</h3><div class="tblwrap"><table><tr><th>વાક્ય</th><th>ખૂટતો શબ્દ</th></tr><tr><td class="rowlabel">पृथिव्यां त्रीणि ____ । (રત્નો)</td><td class="l">रत्नानि</td></tr><tr><td class="rowlabel">नमन्ति फलिनो ____ । (વૃક્ષો)</td><td class="l">वृक्षाः</td></tr><tr><td class="rowlabel">उद्यमेन हि सिध्यन्ति ____ । (કાર્યો)</td><td class="l">कार्याणि</td></tr><tr><td class="rowlabel">दृष्टिपूतं ____ पादम् । (મૂકવું)</td><td class="l">न्यसेत्</td></tr><tr><td class="rowlabel">वस्त्रपूतं ____ जलम् । (પીવું)</td><td class="l">पिबेत्</td></tr><tr><td class="rowlabel">शास्त्रपूतां ____ वाणीम् । (બોલવી)</td><td class="l">वदेत्</td></tr></table></div><h3>2B · શ્લોકનો અનુવાદ</h3><p>ઉપરના <a href="#p1">‘પાઠ અને અનુવાદ’</a> વિભાગમાં દરેક શ્લોક/પંક્તિનો અનુવાદ છે — આ વિભાગ મોઢે કરો; પરીક્ષામાં શ્લોક આપીને તેનો ગુજરાતી અર્થ પૂછાય છે.</p><h3>3A · એક વાક્યમાં જવાબ (ગુજરાતીમાં)</h3><div class="example"><span class="label">એક વાક્ય</span><div class="step"><b>પ્ર.</b> સુભાષિત 1 માં ત્રણ રત્નો કયાં?</div><div class="step"><b>જ.</b> જળ, અન્ન અને સુભાષિત.</div><div class="step"><b>પ્ર.</b> કોણ ક્યારેય નમતા નથી?</div><div class="step"><b>જ.</b> સૂકાં વૃક્ષો અને મૂર્ખ માણસો.</div><div class="step"><b>પ્ર.</b> છ ગુણ કયા (સુભાષિત 4)?</div><div class="step"><b>જ.</b> ઉદ્યમ, સાહસ, ધૈર્ય, બુદ્ધિ, શક્તિ, પરાક્રમ.</div><div class="step"><b>પ્ર.</b> સુભાષિત 5 નો સંદેશ શું છે?</div><div class="step"><b>જ.</b> ફક્ત ઇચ્છાથી નહિ, ઉદ્યમ (મહેનત) કરવાથી કાર્ય સિદ્ધ થાય.</div><div class="step"><b>પ્ર.</b> ‘वसुधैव कुटुम्बकम्’ નો અર્થ શું?</div><div class="step"><b>જ.</b> સમગ્ર પૃથ્વી એક કુટુંબ છે — ઉદાર લોકો બધાંને પોતાના ગણે.</div></div><h3>3B · એક વાક્યમાં જવાબ (સંસ્કૃતમાં)</h3><div class="example"><span class="label">સંસ્કૃતમાં</span><div class="step"><b>પ્ર.</b> कानि त्रीणि रत्नानि ?</div><div class="step"><b>જ.</b> <b>जलम् अन्नं सुभाषितं च त्रीणि रत्नानि ।</b><br><span style="color:var(--ink-3)">(અર્થ: જળ, અન્ન અને સુભાષિત — ત્રણ રત્નો.)</span></div><div class="step"><b>પ્ર.</b> केन कार्याणि सिध्यन्ति ?</div><div class="step"><b>જ.</b> <b>उद्यमेन कार्याणि सिध्यन्ति ।</b><br><span style="color:var(--ink-3)">(અર્થ: ઉદ્યમથી કાર્યો સિદ્ધ થાય છે.)</span></div><div class="step"><b>પ્ર.</b> के कदाचन न नमन्ति ?</div><div class="step"><b>જ.</b> <b>शुष्कवृक्षाः मूर्खाः च कदाचन न नमन्ति ।</b><br><span style="color:var(--ink-3)">(અર્થ: સૂકાં વૃક્ષો અને મૂર્ખ ક્યારેય નમતા નથી.)</span></div><div class="step"><b>પ્ર.</b> कीदृशं जलं पिबेत् ?</div><div class="step"><b>જ.</b> <b>वस्त्रपूतं जलं पिबेत् ।</b><br><span style="color:var(--ink-3)">(અર્થ: કપડાથી ગાળેલું પાણી પીવું.)</span></div></div><h3>4A · સંસ્કૃત વાક્યોનો ગુજરાતીમાં અનુવાદ</h3><div class="tblwrap"><table><tr><th>સંસ્કૃત વાક્ય</th><th>ગુજરાતી</th></tr><tr><td class="rowlabel">उद्यमेन कार्याणि सिध्यन्ति ।</td><td class="l">ઉદ્યમથી કાર્યો સિદ્ધ થાય છે.</td></tr><tr><td class="rowlabel">वृक्षाः नमन्ति ।</td><td class="l">વૃક્ષો નમે છે.</td></tr><tr><td class="rowlabel">मृगाः मुखे न प्रविशन्ति ।</td><td class="l">હરણો મુખમાં પ્રવેશતાં નથી.</td></tr><tr><td class="rowlabel">दृष्टिपूतं पादं न्यसेत् ।</td><td class="l">નજરથી શુદ્ધ કરી (જોઈને) પગ મૂકવો.</td></tr><tr><td class="rowlabel">वसुधैव कुटुम्बकम् ।</td><td class="l">પૃથ્વી જ કુટુંબ છે.</td></tr></table></div><h3>4B · સમાનાર્થી શબ્દ શોધો</h3><div class="tblwrap"><table><tr><th>શબ્દ</th><th>વિકલ્પો</th><th>સમાનાર્થી</th></tr><tr><td class="rowlabel">वृक्षः</td><td class="l">(અ) तरुः &nbsp;·&nbsp; (બ) मृगः &nbsp;·&nbsp; (ક) सिंहः &nbsp;·&nbsp; (ડ) पाषाणः</td><td class="l">तरुः</td></tr><tr><td class="rowlabel">जलम्</td><td class="l">(અ) नीरम् &nbsp;·&nbsp; (બ) अन्नम् &nbsp;·&nbsp; (ક) वस्त्रम् &nbsp;·&nbsp; (ડ) पादः</td><td class="l">नीरम्</td></tr><tr><td class="rowlabel">पृथिवी</td><td class="l">(અ) भूमिः &nbsp;·&nbsp; (બ) आकाशम् &nbsp;·&nbsp; (ક) वायुः &nbsp;·&nbsp; (ડ) जलम्</td><td class="l">भूमिः</td></tr><tr><td class="rowlabel">सिंहः</td><td class="l">(અ) केसरी &nbsp;·&nbsp; (બ) मृगः &nbsp;·&nbsp; (ક) वृक्षः &nbsp;·&nbsp; (ડ) पाषाणः</td><td class="l">केसरी</td></tr><tr><td class="rowlabel">रत्नम्</td><td class="l">(અ) मणिः &nbsp;·&nbsp; (બ) जलम् &nbsp;·&nbsp; (ક) वृक्षः &nbsp;·&nbsp; (ડ) अन्नम्</td><td class="l">मणिः</td></tr></table></div><h3>4C · સંસ્કૃત શબ્દનો અર્થ શોધો</h3><div class="tblwrap"><table><tr><th>શબ્દ</th><th>વિકલ્પો</th><th>અર્થ</th></tr><tr><td class="rowlabel">कदाचन</td><td class="l">(અ) ક્યારેય &nbsp;·&nbsp; (બ) હંમેશાં &nbsp;·&nbsp; (ક) રોજ &nbsp;·&nbsp; (ડ) અહીં</td><td class="l">ક્યારેય</td></tr><tr><td class="rowlabel">लघुचेतसाम्</td><td class="l">(અ) સંકુચિત મનવાળાઓની &nbsp;·&nbsp; (બ) ઉદાર મનવાળાઓની &nbsp;·&nbsp; (ક) ગુણવાનની &nbsp;·&nbsp; (ડ) ધનવાનની</td><td class="l">સંકુચિત મનવાળાઓની</td></tr><tr><td class="rowlabel">समाचरेत्</td><td class="l">(અ) આચરણ કરવું જોઈએ &nbsp;·&nbsp; (બ) વાંચવું જોઈએ &nbsp;·&nbsp; (ક) જોવું જોઈએ &nbsp;·&nbsp; (ડ) ખાવું જોઈએ</td><td class="l">આચરણ કરવું જોઈએ</td></tr><tr><td class="rowlabel">मनोरथः</td><td class="l">(અ) ઇચ્છા &nbsp;·&nbsp; (બ) મહેનત &nbsp;·&nbsp; (ક) ક્રોધ &nbsp;·&nbsp; (ડ) ભય</td><td class="l">ઇચ્છા</td></tr><tr><td class="rowlabel">सहायकृत्</td><td class="l">(અ) સહાય કરનાર &nbsp;·&nbsp; (બ) નાશ કરનાર &nbsp;·&nbsp; (ક) રોકનાર &nbsp;·&nbsp; (ડ) ભણાવનાર</td><td class="l">સહાય કરનાર</td></tr></table></div>
+<div class="next-line">→ <b>આગળ:</b> સારાંશ</div>
+</div>
+
+
+<!-- ============ PART 05 ============ -->
+<div class="part" id="p5">
+<h2><span class="num">05</span>સારાંશ — યાદ રાખો</h2>
+<p class="part-why">શા માટે ભણવું: છેલ્લી ઘડીએ એક નજરમાં પુનરાવર્તન.</p>
+<div class="remember"><span class="label">યાદ રાખો</span><ol><li>ત્રણ રત્ન: જળ, અન્ન, સુભાષિત · वसुधैव कुटुम्बकम् (ઉદાર માટે પૃથ્વી = કુટુંબ).</li><li>ફળવાળાં વૃક્ષો, ગુણવાનો નમે; સૂકાં વૃક્ષો, મૂર્ખ ન નમે.</li><li>છ ગુણ: ઉદ્યમ, સાહસ, ધૈર્ય, બુદ્ધિ, શક્તિ, પરાક્રમ → દેવ સહાય કરે.</li><li>ઉદ્યમથી કાર્ય, મનોરથથી નહિ; ચાર પવિત્રતા: દૃષ્ટિ, વસ્ત્ર, શાસ્ત્ર, મન.</li><li>રૂપ: -स्य (ષષ્ઠી) · -ाः (બહુવચન) · -न्ति (ક્રિયા) · -एत् (…જોઈએ).</li></ol></div><div class="why-box box"><span class="label">વાલી માટે</span>દરેક સુભાષિત રોજ એક સવારે બોલાવડાવો અને પોતાના શબ્દોમાં ‘આ આપણા જીવનમાં ક્યાં લાગુ પડે?’ પૂછો.</div>
+</div>
+
+</div>
+</body></html>
